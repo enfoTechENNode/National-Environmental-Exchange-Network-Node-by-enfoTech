@@ -11,10 +11,11 @@ Features
 
 Major features of the EN-Node software include:
 
--Supports both Exchange Network v1.1 and v2.1 Node specifications
--Supports both on-demand and recurring-schedule exchanges
--Includes integrated Node Client
--Integrated Data Flow engine allows users to configure and add new dataflows with no coding, deployment, or third-party software
--Integrated "Operation Manager" enables optional validation and review of XML files prior to outbound submission
--Integrated "Data Viewer" enables viewing of parsed inbound data, which can be configured for any existing or future data flow
--Includes quick-start templates for common data exchange scenarios
+<br>-Supports both Exchange Network v1.1 and v2.1 Node specifications
+<br>-Supports both on-demand and recurring-schedule exchanges
+<br>-Includes integrated Node Client
+<br>-Integrated Data Flow engine allows users to configure and add new dataflows with no coding, deployment, or third-party software
+<br>-Integrated "Operation Manager" enables optional validation and review of XML files prior to outbound submission
+<br>-Integrated "Data Viewer" enables viewing of parsed inbound data, which can be configured for any existing or future data flow
+<br>-Includes quick-start templates for common data exchange scenarios
+
