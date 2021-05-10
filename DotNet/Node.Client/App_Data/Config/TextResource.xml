@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<textResource splitter=".">
+	<pageScope>
+		<folder key="Pages">
+			<page key="Authenticate">
+				<type key="bbl">
+					<label key="YellowBubble" value="Obtain Security Token for Identity of Node User" />
+				</type>
+			</page>
+			<page key="Download">
+				<type key="bbl">
+					<label key="YellowBubble" value="Download Documents from a Node" />
+				</type>
+			</page>
+			<page key="GetServices">
+				<type key="bbl">
+					<label key="YellowBubble" value="Get a List of Services Available from a Node" />
+				</type>
+			</page>
+			<page key="GetStatus">
+				<type key="bbl">
+					<label key="YellowBubble" value="Get the Status of a Node Transaction" />
+				</type>
+			</page>
+			<page key="NodePing">
+				<type key="bbl">
+					<label key="YellowBubble" value="Test Existance and Readiness of a Node" />
+				</type>
+			</page>
+			<page key="Query">
+				<type key="bbl">
+					<label key="YellowBubble" value="Query a Node for Data" />
+				</type>
+			</page>
+			<page key="Solicit">
+				<type key="bbl">
+					<label key="YellowBubble" value="Asynchronously Query a Node for Data" />
+				</type>
+			</page>
+			<page key="Submit">
+				<type key="bbl">
+					<label key="YellowBubble" value="Submit Documents to a Node" />
+				</type>
+			</page>
+			<page key="Notify">
+				<type key="bbl">
+					<label key="YellowBubble" value="Notify Nodes of an Event or Status" />
+				</type>
+			</page>
+			<page key="Execute">
+				<type key="bbl">
+					<label key="YellowBubble" value="Execute a Nodes for Data" />
+				</type>
+			</page>
+      <page key="Error">
+        <label key="main" value="Oops!  The application got some errors!" />
+        <type key="bbl">
+          <label key="YellowBubble" value="Node.Client errors!" />
+        </type>
+      </page>
+		</folder>
+  </pageScope>
+</textResource>

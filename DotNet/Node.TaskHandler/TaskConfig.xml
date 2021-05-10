@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tasks>
+	<Task status="I">
+		<TaskID>1</TaskID>
+		<TaskName>For Display</TaskName>
+		<TaskMode>exe</TaskMode>
+		<TaskFullPath>D:\NodeV2\Node.TaskService\Node.TaskHandler\Node.TaskHandler.exe</TaskFullPath>
+		<!--
+		<Comment by Ann Chen, dated 2007/07/12>
+		<TaskFullPath>D:\Fairbank\Node\v2.0\SystemSide\Develop\src\Node.TaskService\Node.TaskHandler\Node.TaskHandler.exe</TaskFullPath>
+		-->
+		<TaskParameter>Parameter List</TaskParameter>
+		<TaskType/>
+		<Schedule status="A">
+			<StartDateTime>8/5/2005 2:45:00 PM</StartDateTime>
+			<EndDateTime>8/5/2015 2:45:00 PM</EndDateTime>
+			<DailySchedule status="A">
+				<IntervalMinutes status="A">10</IntervalMinutes>
+				<IntervalDays status="I">1</IntervalDays>
+			</DailySchedule>
+			<WeeklySchedule status="A">
+				<IntervalWeeks>2</IntervalWeeks>
+				<DayOfWeek>1</DayOfWeek>
+			</WeeklySchedule>
+			<MonthlySchedule status="I">
+				<IntervalDays status="A">
+					<DayOfMonth/>
+				</IntervalDays>
+				<IntervalWeeks status="I">
+					<WeekOfMonth/>
+					<DayOfWeek/>
+				</IntervalWeeks>
+				<MonthOfYear/>
+			</MonthlySchedule>
+		</Schedule>
+	</Task>
+</Tasks>

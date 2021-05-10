@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82322ECB-7DDB-4945-A5C9-26A27568D05C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Node.Lib</RootNamespace>
+    <AssemblyName>Node.Lib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2|AnyCPU'">
+    <OutputPath>bin\Release2\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSystem\EmailLog.cs" />
+    <Compile Include="AppSystem\EmailManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppSystem\EmailTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppSystem\LogManager.cs" />
+    <Compile Include="AppSystem\SystemConfig.cs" />
+    <Compile Include="AppSystem\Task.cs" />
+    <Compile Include="AppSystem\TaskManager.cs" />
+    <Compile Include="AppSystem\TaskSchedule.cs" />
+    <Compile Include="Audit\AuditExceptionHandler.cs" />
+    <Compile Include="Audit\Log.cs" />
+    <Compile Include="Audit\LogLevel.cs" />
+    <Compile Include="Data\DataConfigReader.cs" />
+    <Compile Include="Data\DataExceptionHandler.cs" />
+    <Compile Include="Data\DBAdapter.cs" />
+    <Compile Include="Data\Parameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Security\PasswordGenerator.cs" />
+    <Compile Include="Security\SecurityExceptionHandler.cs" />
+    <Compile Include="UI\Base\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DataDictionary\ClientScriptRegID.cs" />
+    <Compile Include="UI\Elements\GridViewAgent.cs" />
+    <Compile Include="UI\Elements\GridViewField.cs" />
+    <Compile Include="UI\Elements\GridViewView.cs" />
+    <Compile Include="UI\Elements\PageFlowProvider.cs" />
+    <Compile Include="UI\Elements\TextResourceProvider.cs" />
+    <Compile Include="UI\Elements\XmlTree.cs" />
+    <Compile Include="UI\Elements\XmlTreeNode.cs" />
+    <Compile Include="UI\Elements\XmlTreeNodeCollection.cs" />
+    <Compile Include="UI\HttpModules\HttpPerformanceMonitor.cs" />
+    <Compile Include="UI\Provider\CustPersonalizationProvider.cs" />
+    <Compile Include="UI\Provider\CustProfileProvider.cs" />
+    <Compile Include="UI\WebControls\AjaxContentEventArgs.cs" />
+    <Compile Include="UI\WebControls\AJAXContentHolder.cs" />
+    <Compile Include="UI\WebControls\AJAXContentTemplate.cs" />
+    <Compile Include="UI\WebControls\AJAXWaitingTemplate.cs" />
+    <Compile Include="UI\WebControls\ButtonTable.cs" />
+    <Compile Include="UI\WebControls\DatePicker.cs" />
+    <Compile Include="UI\WebControls\DynamicControlPanel.cs" />
+    <Compile Include="UI\WebControls\EAFBoundField.cs" />
+    <Compile Include="UI\WebControls\EAFButton.cs" />
+    <Compile Include="UI\WebControls\EAFGridView.cs" />
+    <Compile Include="UI\WebControls\EAFTreeNode.cs" />
+    <Compile Include="UI\WebControls\FloatWinLink.cs" />
+    <Compile Include="UI\WebControls\FloatWinPanel.cs" />
+    <Compile Include="UI\WebControls\FormDescField.cs" />
+    <Compile Include="UI\WebControls\FormDisplayField.cs" />
+    <Compile Include="UI\WebControls\FormFieldBase.cs" />
+    <Compile Include="UI\WebControls\FormInputField.cs" />
+    <Compile Include="UI\WebControls\FormSectionBlock.cs" />
+    <Compile Include="UI\WebControls\FormSepLineField.cs" />
+    <Compile Include="UI\WebControls\GridCheckBoxField.cs" />
+    <Compile Include="UI\WebControls\GridRadioButton.cs" />
+    <Compile Include="UI\WebControls\InputFormTable.cs" />
+    <Compile Include="UI\WebControls\LeftButtons.cs" />
+    <Compile Include="UI\WebControls\MessageLabel.cs" />
+    <Compile Include="UI\WebControls\MultiColumnPanel.cs" />
+    <Compile Include="UI\WebControls\MultiViewTabs.cs" />
+    <Compile Include="UI\WebControls\PanelItem.cs" />
+    <Compile Include="UI\WebControls\PanelItemCollection.cs" />
+    <Compile Include="UI\WebControls\PanelList.cs" />
+    <Compile Include="UI\WebControls\PhoneTextBox.cs" />
+    <Compile Include="UI\WebControls\RightButtons.cs" />
+    <Compile Include="UI\WebControls\SelectTextBox.cs" />
+    <Compile Include="UI\WebControls\StylerPanel.cs" />
+    <Compile Include="UI\WebControls\TabControl.cs" />
+    <Compile Include="UI\WebControls\TabItem.cs" />
+    <Compile Include="UI\WebControls\TextResourceLabel.cs" />
+    <Compile Include="UI\WebControls\ViewTab.cs" />
+    <Compile Include="UI\WebControls\ZipCodeTextBox.cs" />
+    <Compile Include="UI\WebUtils\PageFlow.cs" />
+    <Compile Include="UI\WebUtils\PageUtility.cs" />
+    <Compile Include="UI\WebUtils\TextResource.cs" />
+    <Compile Include="UI\WebUtils\WebUtility.cs" />
+    <Compile Include="Utility\Email.cs" />
+    <Compile Include="Utility\ReflectionHelper.cs" />
+    <Compile Include="Utility\WinZip.cs" />
+    <Compile Include="Utility\XmlUtility.cs" />
+    <Compile Include="Utility\Zip\Checksums\Adler32.cs" />
+    <Compile Include="Utility\Zip\Checksums\CRC32.cs" />
+    <Compile Include="Utility\Zip\Checksums\IChecksum.cs" />
+    <Compile Include="Utility\Zip\Checksums\StrangeCRC.cs" />
+    <Compile Include="Utility\Zip\Compression\Deflater.cs" />
+    <Compile Include="Utility\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Utility\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Utility\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Utility\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Utility\Zip\Compression\Inflater.cs" />
+    <Compile Include="Utility\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Utility\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Utility\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Utility\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Utility\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Utility\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Utility\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Utility\Zip\Core\FileSystemScanner.cs" />
+    <Compile Include="Utility\Zip\Core\INameTransform.cs" />
+    <Compile Include="Utility\Zip\Core\NameFilter.cs" />
+    <Compile Include="Utility\Zip\Core\PathFilter.cs" />
+    <Compile Include="Utility\Zip\Encryption\PkzipClassic.cs" />
+    <Compile Include="Utility\Zip\FastZip.cs" />
+    <Compile Include="Utility\Zip\SharpZipBaseException.cs" />
+    <Compile Include="Utility\Zip\ZipConstants.cs" />
+    <Compile Include="Utility\Zip\ZipEntry.cs" />
+    <Compile Include="Utility\Zip\ZipException.cs" />
+    <Compile Include="Utility\Zip\ZipFile.cs" />
+    <Compile Include="Utility\Zip\ZipInputStream.cs" />
+    <Compile Include="Utility\Zip\ZipNameTransform.cs" />
+    <Compile Include="Utility\Zip\ZipOutputStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

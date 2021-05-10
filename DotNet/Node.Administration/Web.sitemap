@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Default.aspx" title="Logout"  description="Click here to logout and login as a different user">
+		<siteMapNode url="~/Pages/Monitoring/SearchLogs.aspx" title="Node Monitoring"  description="Monitoring the Status of Node Operations">
+			<siteMapNode url="~/Pages/Monitoring/ViewLog.aspx" title="View Log" description="View the Details of Node Transaction" />
+		</siteMapNode>
+		<siteMapNode url="~/Pages/Configuration/NodeConfiguration.aspx" title="Node Configuration"  description="Configuring the Node" />
+		<siteMapNode url="~/Pages/Configuration/NAASConfiguration.aspx" title="NAAS Server Configuration"  description="Configuring the NAAS Authentication/Authorization Server" />
+		<siteMapNode url="~/Pages/Configuration/EmailConfiguration.aspx" title="Email Server Configuration"  description="Configuring the Email Server" />
+		<siteMapNode url="~/Pages/Configuration/AppServerConfiguration.aspx" title="Application Server Configuration"  description="Configuring the Application Server" />
+		<siteMapNode url="~/Pages/Configuration/ClientConfiguration.aspx" title="Web Services Client Configuration"  description="Configuring the Web Services Client Application" />
+		<siteMapNode url="~/Pages/Document/SearchDocuments.aspx" title="Search Documents" description="Search the Node Database for Node Documents">
+			<siteMapNode url="~/Pages/Document/UploadFile.aspx" title="Upload File" description="Upload a New Node Document to the Node Database" />
+			<siteMapNode url="~/Pages/Document/UpdateFile.aspx" title="Update File" description="View Details and/or Update Node Document Details" />
+		</siteMapNode>
+		<siteMapNode url="~/Pages/User/SearchUsers.aspx" title="Search Users" description="Search the Node Database and the NAAS System for Users">
+			<siteMapNode url="~/Pages/User/NewConsoleUser.aspx" title="Create New Console User" description="Create a new user for administering Node Dataflows" />
+			<siteMapNode url="~/Pages/User/NewLocalUser.aspx" title="Create New Local Node User" description="Create a new, locally-managed user to call Node Web Services" />
+			<siteMapNode url="~/Pages/User/NewNAASUser.aspx" title="Create New NAAS Node User" description="Create a new, NAAS-managed user to call Node Web Services" />
+			<siteMapNode url="~/Pages/User/ViewConsoleUser.aspx" title="Update Console User" description="Update an user for administering Node Dataflows" />
+			<siteMapNode url="~/Pages/User/ViewLocalUser.aspx" title="Update Local Node User" description="Update a locally-managed user to call Node Web Services" />
+			<siteMapNode url="~/Pages/User/ViewNAASUser.aspx" title="Update NAAS Node User" description="Update a NAAS-managed user to call Node Web Services" />
+		</siteMapNode>
+		<siteMapNode url="~/Pages/Domain/SearchDomains.aspx" title="Search Domains" description="Search the Node Database for Domains">
+			<siteMapNode url="~/Pages/Domain/NewDomain.aspx" title="New Domain" description="Create a New Domain" />
+			<siteMapNode url="~/Pages/Domain/ViewDomain.aspx" title="View/Edit Domain" description="View or Edit a Domain">
+				<siteMapNode url="~/Pages/Operation/SearchOperations.aspx" title="Search Operations" description="Search the Node Database for Operations">
+					<siteMapNode url="~/Pages/Operation/NewOperation.aspx" title="New Operation" description="Create a New Operation" />
+					<siteMapNode url="~/Pages/Operation/NewWSOpSelection.aspx" title="Web Service Selection" description="Choose a Web Service" />
+					<siteMapNode url="~/Pages/Operation/NewWSOperation.aspx" title="Web Service Configuration" description="Configure the Web Service Operation" />
+					<siteMapNode url="~/Pages/Operation/NewTaskOperation.aspx" title="Scheduled Task Configuration" description="Configure the Scheduled Task Operation" />
+					<siteMapNode url="~/Pages/Operation/ViewOperation.aspx" title="Operation Configuration" description="Update the Operation" />
+				</siteMapNode>
+			</siteMapNode>
+		</siteMapNode>
+    <siteMapNode url="~/Pages/RCRASubmission/RCRAViewSubmissions.aspx" title="RCRA Submitted Files" description="Current RCRA submitted files and their status">
+      <siteMapNode url="~/Pages/RCRASubmission/ViewXML.aspx" title="Detailed View" description="View Detail for the selected RCRA submitted file" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

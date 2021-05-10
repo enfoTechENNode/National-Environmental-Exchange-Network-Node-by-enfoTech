@@ -1,0 +1,36 @@
+[11/13/2013 12:27:53 PM]
+System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\zxcfsdf' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\zxcfsdf'
+   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Node.Core.Biz.Manageable.DllManager.GetClass(String dllName, String className) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Manageable\DllManager.cs:line 376
+   at Node.Core.Biz.Manageable.DllManager.GetNodePingPostProcess(String dllName, String className) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Manageable\DllManager.cs:line 167
+   at Node.Core.Biz.Handler.WebMethods.NodePingHandler.ExecutePostProcess(String dllName, String className, PostParam param) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Handler\WebMethods\NodePingHandler.cs:line 120
+   at Node.Core.Biz.Handler.BaseHandler.PostProcess() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Handler\BaseHandler.cs:line 400
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+[11/13/2013 12:27:54 PM]
+System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\zxcfsdf' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\10.0\zxcfsdf'
+   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Node.Core.Biz.Manageable.DllManager.GetClass(String dllName, String className) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Manageable\DllManager.cs:line 376
+   at Node.Core.Biz.Manageable.DllManager.GetNodePingPostProcess(String dllName, String className) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Manageable\DllManager.cs:line 167
+   at Node.Core.Biz.Handler.WebMethods.NodePingHandler.ExecutePostProcess(String dllName, String className, PostParam param) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Handler\WebMethods\NodePingHandler.cs:line 120
+   at Node.Core.Biz.Handler.BaseHandler.PostProcess() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Handler\BaseHandler.cs:line 400
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+

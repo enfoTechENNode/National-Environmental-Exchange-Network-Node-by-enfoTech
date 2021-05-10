@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EmailTemplate>
+  <Template name="User Account" status="A">
+    <From>nodeadmin@enfotech.com</From>
+    <ToList />
+    <CcList>
+    </CcList>
+    <BccList>node_support@enfotech.com</BccList>
+    <Subject>Node User Account</Subject>
+    <Content format="text">
+      Node System Message:
+
+      This email has been sent in response to your Node account updated on %Updated Date%.  Your new account information is as follows:
+
+      Account Type: %Account Type%
+      Login Name:  %Account User Name%
+      User Password:  %User Password%
+
+      %Custom Message%
+    </Content>
+  </Template>
+  <Template name="Task Status" status="A">
+    <From>nodestatus@enfotech.com</From>
+    <ToList />
+    <CcList>
+    </CcList>
+    <BccList>
+    </BccList>
+    <Subject>Task Status</Subject>
+    <Content format="text">
+      Node System Message:
+
+      This email has been sent update you on the results of a Scheduled Task.  The status of the Scheduled Task is as follows::
+
+      Task Status:  %Task Status%
+      Start Date: %Start Date%
+      End Date: %End Date%
+
+      You can view more details regarding the history of this task by logging into the Node Administration site.
+    </Content>
+  </Template>
+  <Template name="Submit Recipient" status="A">
+    <From>nodestatus@enfotech.com</From>
+    <ToList />
+    <CcList>
+    </CcList>
+    <BccList>
+    </BccList>
+    <Subject>Submission Received</Subject>
+    <Content format="text">
+      Node System Message:
+
+      This email has been sent update you on the results of a submission:
+
+      Transaction ID:  %TransactionID%
+      Receiving Node address: %ReceivingNodeAddress%
+      Originating Node address: %OriginatingNodeAddress%
+
+      You can download the submission by provided transaction id.
+    </Content>
+  </Template>
+  <Template name="Submit Notification" status="A">
+    <From>nodestatus@enfotech.com</From>
+    <ToList />
+    <CcList>
+    </CcList>
+    <BccList>
+    </BccList>
+    <Subject>Notification of submission</Subject>
+    <Content format="text">
+      Node System Message:
+
+      This email has been sent for notification of submission.
+
+      Transaction ID:  %TransactionID%
+      Status Code: %StatusCode%
+      Status Detail: %StatusDetail%
+      
+    </Content>
+  </Template>
+  <Template name="Solicit Recipient" status="A">
+    <From>nodestatus@enfotech.com</From>
+    <ToList />
+    <CcList>
+    </CcList>
+    <BccList>
+    </BccList>
+    <Subject>Solicit Received</Subject>
+    <Content format="text">
+      Node System Message:
+
+      This email has been sent update you on the results of a solicit:
+
+      Transaction ID:  %TransactionID%
+      Receiving Node address: %ReceivingNodeAddress%
+      Originating Node address: %OriginatingNodeAddress%
+
+    </Content>
+  </Template>
+  <Template name="Solicit Notification" status="A">
+    <From>nodestatus@enfotech.com</From>
+    <ToList />
+    <CcList>
+    </CcList>
+    <BccList>
+    </BccList>
+    <Subject>Notification of Solicit</Subject>
+    <Content format="text">
+      Node System Message:
+
+      This email has been sent for notification of solicit.
+
+      Transaction ID:  %TransactionID%
+      Status Code: %StatusCode%
+      Status Detail: %StatusDetail%
+
+    </Content>
+  </Template>
+</EmailTemplate>

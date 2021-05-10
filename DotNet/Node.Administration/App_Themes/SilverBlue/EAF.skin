@@ -1,0 +1,156 @@
+
+<%-- skin file of EAF.Lib Web Controls --%>
+<%--
+<eaf:DatePicker runat="server" CssClass="asp_TBBlur" Width="100px" 
+    onFocus="Utils.setObjClass(this,'asp_TBFocus');"
+    onBlur="Utils.setObjClass(this,'asp_TBBlur');
+            Utils.checkDateFormat(this,eaf_DatePicker.DateFormat,eaf_DatePicker.DateSpliter,eaf_DatePicker.CalStartYear,eaf_DatePicker.CalEndYear);" />
+
+<eaf:SelectTextBox runat="server" CssClass="asp_TBBlur" 
+    onFocus="Utils.setObjClass(this,'asp_TBFocus');" onBlur="Utils.setObjClass(this,'asp_TBBlur');" />
+
+<eaf:PhoneTextBox runat="server" Width="150px" CssClass="asp_TBBlur" 
+    onFocus="Utils.setObjClass(this,'asp_TBFocus');" onBlur="Utils.setObjClass(this,'asp_TBBlur');" />
+
+<eaf:ZipCodeTextBox runat="server" Width="150px" CssClass="asp_TBBlur" 
+    onFocus="Utils.setObjClass(this,'asp_TBFocus');" onBlur="Utils.setObjClass(this,'asp_TBBlur');" />
+--%>
+
+<eaf:EAFGridView runat="server" GridLines="Vertical" CssClass="asp_GVFrame" AutoGenerateColumns="false" AllowPaging="true" ShowResultMessage="false">
+    <FooterStyle CssClass="asp_GVFooter" />    
+    <RowStyle CssClass="asp_GVRow" />
+    <PagerStyle CssClass="asp_GVPager" />
+    <HeaderStyle CssClass="asp_GVHeader" />
+    <AlternatingRowStyle CssClass="asp_GVRowAlt" />
+    <SelectedRowStyle CssClass="asp_GVRowSelected" />
+    <PagerSettings  Mode="Numeric" 
+                    NextPageImageUrl="img/arrow_right.gif" 
+                    PreviousPageImageUrl="img/arrow_left.gif" 
+                    LastPageImageUrl="img/arrow_right.gif" 
+                    FirstPageImageUrl="img/arrow_left.gif" 
+                    Position="Bottom" 
+                    PageButtonCount="20" />
+</eaf:EAFGridView>
+
+<%-- 
+    Here are some predefined skin for ASP conrtols. 
+    You can comment out these if you want to define your own ASP controls.
+--%>
+
+<%-- default skin --%>
+
+<asp:sitemappath runat="server" cssclass="asp_SiteMap" />
+
+<%--
+<asp:TextBox runat="server" CssClass="asp_TBBlur" 
+    onFocus="Utils.setObjClass(this,'asp_TBFocus');"
+    onBlur="Utils.setObjClass(this,'asp_TBBlur');" />
+--%>
+
+<asp:DropDownList CssClass="asp_DDL" runat="server" />
+
+<asp:GridView runat="server" GridLines="Vertical" CssClass="asp_GVFrame" AutoGenerateColumns="false" AllowPaging="true">
+    <FooterStyle CssClass="asp_GVFooter" />    
+    <RowStyle CssClass="asp_GVRow" />
+    <PagerStyle CssClass="asp_GVPager" />
+    <HeaderStyle CssClass="asp_GVHeader" />
+    <AlternatingRowStyle CssClass="asp_GVRowAlt" />
+    <SelectedRowStyle CssClass="asp_GVRowSelected" />
+    <PagerSettings  Mode="Numeric" 
+                    NextPageImageUrl="img/arrow_right.gif" 
+                    PreviousPageImageUrl="img/arrow_left.gif" 
+                    LastPageImageUrl="img/arrow_right.gif" 
+                    FirstPageImageUrl="img/arrow_left.gif" 
+                    Position="Bottom" 
+                    PageButtonCount="10" />
+</asp:GridView>
+
+<asp:webpartzone runat="server" CssClass="asp_WPZ" BorderColor="#DDDDDD" Width="100%" Height="100%" DragHighlightColor="#C00000" BorderStyle="Dotted" Padding="5"
+    EmptyZoneText="Add a content to this zone by dropping it here, or select from Content Panel." >
+    
+    <HeaderStyle CssClass="asp_WPZHeader"></HeaderStyle>
+    <PartTitleStyle CssClass="asp_WPTitle"></PartTitleStyle>
+    <PartChromeStyle CssClass="asp_WPChrome"></PartChromeStyle>
+    <MenuPopupStyle BorderStyle="Solid" ShadowColor="#999999" BackColor="#CCDDFF" Font-Names="Tahoma,Arial" Font-Size="8pt" BorderColor="#7E9EC9" BorderWidth="1px"></MenuPopupStyle>
+    <MenuVerbHoverStyle BackColor="White"></MenuVerbHoverStyle>
+    <MenuLabelHoverStyle BackColor="#CCDDFF" ForeColor="Black"></MenuLabelHoverStyle>
+    <MenuVerbStyle ForeColor="Black"></MenuVerbStyle>
+    <PartStyle CssClass="asp_WPItem"></PartStyle>
+    <EmptyZoneTextStyle CssClass="asp_WPZEmpty" />
+</asp:webpartzone>
+
+<asp:catalogzone runat="server" BorderColor="#C04000" BackColor="#FFFFDD" BorderWidth="0px" BorderStyle="Solid" Padding="8" PartChromeType="TitleAndBorder" CssClass="asp_CatZone">
+    
+    <PartTitleStyle CssClass="asp_CatPartTtl" />
+    <FooterStyle CssClass="asp_CatFooter" />
+    <CloseVerb Visible="False" />
+    <PartChromeStyle BorderStyle="None" BorderWidth="0px" />
+    <HeaderStyle CssClass="asp_CatHead" />    
+    <PartStyle CssClass="asp_CatPart" />
+    <PartLinkStyle CssClass="asp_CatPartLink" />
+    <SelectedPartLinkStyle CssClass="asp_CatPartLinkSelected" />
+    <InstructionTextStyle CssClass="asp_CatInstrTxt" />
+    
+</asp:catalogzone>       
+
+
+<asp:Menu runat="server">
+    <StaticMenuStyle CssClass="asp_SMnuSB" />
+    <StaticSelectedStyle CssClass="asp_SMnuSelectedSB" BorderStyle="Solid" BorderWidth="1px" BorderColor="#FF9966" BackColor="#FFFFCC" />
+    <StaticMenuItemStyle CssClass="asp_SMnuItmSB" Font-Size="60%" BorderStyle="Solid" BorderWidth="1px" BorderColor="#F2F5F7" />
+    <StaticHoverStyle CssClass="asp_SMnuHoverSB" ForeColor="#990000" BackColor="#DDEEFF" BorderStyle="Solid" BorderWidth="1px" BorderColor="#316AC5" />    
+    <DynamicMenuStyle CssClass="asp_DMnuSB" />
+    <DynamicSelectedStyle CssClass="asp_DMnuSelectedSB" BorderStyle="Solid" BorderWidth="1px" BorderColor="#FF9966" BackColor="#FFFFCC" />
+    <DynamicMenuItemStyle CssClass="asp_DMnuItmSB" Font-Size="70%" BorderStyle="Solid" BorderWidth="1px" BorderColor="#F2F5F7" />
+    <DynamicHoverStyle CssClass="asp_DMnuHoverSB"  ForeColor="#990000" BackColor="#DDEEFF" BorderStyle="Solid" BorderWidth="1px" BorderColor="#316AC5" />      
+</asp:Menu>
+
+
+<%-- sepecific skin --%>
+
+<asp:GridView SkinID="ListGrid" GridLines="None" runat="server" AutoGenerateColumns="False" AllowPaging="true" CssClass="asp_LGFrame">
+    <RowStyle CssClass="asp_LGRow" />
+    <HeaderStyle CssClass="asp_LGHeader" />
+    <AlternatingRowStyle CssClass="asp_LGRowAlt" />
+    <SelectedRowStyle CssClass="asp_LGRowSelected" />
+</asp:GridView>
+
+<asp:Menu SkinID="Smoky" runat="server" >
+    <StaticMenuStyle CssClass="asp_SMnuSmoky" />
+    <StaticSelectedStyle CssClass="asp_SMnuSelectedSmoky" />
+    <StaticMenuItemStyle CssClass="asp_SMnuItmSmoky"  Font-Size="8pt" />
+    <StaticHoverStyle CssClass="asp_SMnuHoverSmoky" BackColor="#FFFFFF" />    
+    <DynamicMenuStyle CssClass="asp_DMnuSmoky" />
+    <DynamicSelectedStyle CssClass="asp_DMnuSelectedSmoky" />
+    <DynamicMenuItemStyle CssClass="asp_DMnuItmSmoky" Font-Size="8pt" />
+    <DynamicHoverStyle CssClass="asp_DMnuHoverSmoky"  BackColor="#FFFFFF" />      
+</asp:Menu>
+
+<asp:Menu SkinID="XPBlue" runat="server" >
+    <StaticMenuStyle CssClass="asp_SMnuXPBlue" />
+    <StaticSelectedStyle CssClass="asp_SMnuSelectedXPBlue" />
+    <StaticMenuItemStyle CssClass="asp_SMnuItmXPBlue"  Font-Size="9pt" />
+    <StaticHoverStyle CssClass="asp_SMnuHoverXPBlue" BackColor="#FFFF99" />    
+    <DynamicMenuStyle CssClass="asp_DMnuXPBlue" />
+    <DynamicSelectedStyle CssClass="asp_DMnuSelectedXPBlue" />
+    <DynamicMenuItemStyle CssClass="asp_DMnuItmXPBlue" Font-Size="8pt" />
+    <DynamicHoverStyle CssClass="asp_DMnuHoverXPBlue"  BackColor="#FFFF99" />      
+</asp:Menu>
+
+<asp:webpartzone SkinID="Blue" runat="server" Padding="5" BorderColor="#CCCCCC" BorderStyle="Dotted">
+
+    <VerbStyle Font-Size="0.6em" Font-Underline="False" ForeColor="White"></VerbStyle>
+    <HeaderStyle HorizontalAlign="Center" Font-Size="0.7em" BackColor="#CCCCCC" ForeColor="White" CssClass="asp_WPZHeader"></HeaderStyle>
+    <EmptyZoneTextStyle Font-Size="0.8em"></EmptyZoneTextStyle>
+    
+    <MenuLabelStyle ForeColor="White"></MenuLabelStyle>
+    <MenuPopupStyle BackColor="#507CD1" Font-Names="Tahoma" Font-Size="0.7em" BorderColor="#CCCCCC" BorderWidth="1px"></MenuPopupStyle>
+    <MenuVerbHoverStyle BorderStyle="Solid" BorderWidth="1px" BorderColor="#CCCCCC" BackColor="#EFF3FB" ForeColor="#333333"></MenuVerbHoverStyle>
+    <MenuLabelHoverStyle ForeColor="#D1DDF1"></MenuLabelHoverStyle>
+    <MenuVerbStyle BorderStyle="Solid" BorderWidth="1px" BorderColor="#507CD1" ForeColor="White"></MenuVerbStyle>
+    
+    <PartTitleStyle CssClass="asp_WPTtl" />
+    <PartChromeStyle CssClass="asp_WPChrome" />
+    <PartStyle CssClass="asp_WPItm" />
+    
+</asp:webpartzone>

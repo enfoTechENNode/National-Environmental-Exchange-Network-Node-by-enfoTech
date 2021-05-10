@@ -1,0 +1,41 @@
+<%@ Master Language="C#" AutoEventWireup="false" CodeFile="Client.master.cs" Inherits="Client" %>
+<%@ Register TagPrefix="Node" TagName="Header" Src="~/PageControls/Header.ascx" %>
+
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head id="Head1" runat="server">
+        <title>Node Client Utility</title>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div id="m_MasterFrame">
+                <asp:ContentPlaceHolder ID="headerContent" runat="server">
+                    <Node:Header ID="header" runat="server" />
+                </asp:ContentPlaceHolder>
+                <!-- main table structure -->    
+                <table id="m_Column" cellspacing="0" width="800">
+                    <tr valign="top">
+                        <td id="m_ColumnLeft">
+                            <asp:contentplaceholder id="leftContent" runat="server" />
+                        </td>
+                        <td id="m_ColumnCenter">
+                            <div id="m_PageTitle">
+                                <asp:SiteMapPath ID="siteMapPath" runat="server" />
+                                <h1><img id="ttl" src="<%= this.ImageURL %>" alt="" /></h1>
+                            </div>
+                            <div id="m_MainCnt">
+                                <eaf:StylerPanel ID="yellowBub" PanelStyle="yellowbubble" runat="server" stylewidth="600px">
+                                    <div id="pageDesc" runat="server" style="font-size: 8pt;"></div>
+                                </eaf:StylerPanel><br />
+                                <a id="skipNavLink" name="skipNavLink"></a>
+                                <asp:contentplaceholder id="mainContent" runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

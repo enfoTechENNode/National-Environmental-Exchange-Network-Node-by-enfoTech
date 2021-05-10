@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataFlows>
+	<DataFlow Name="Demo">
+		<DBConnection>
+			<ProviderName>System.Data.SqlClient</ProviderName>
+			<ConnectionString>Server=nbw7tsaic03;Database=ennode2;UID=nodeadmin;PWD=nodeadmin</ConnectionString>
+		</DBConnection>
+		<Tables>
+			<Table>
+				<Name>Operation Manager</Name>
+				<Key>SUBMIT_ID</Key>
+				<SQL>
+					SELECT [SUBMIT_ID] as Files
+					,[OPERATION_NAME]
+					,[STATUS_CD]
+					,[SUBMITTED_DTTM]
+					,[SUBMITTED_URL]
+					,[VERSION_NO]
+					,[TRANS_ID]
+					,[SUPPLIED_TRANS_ID]
+					,[DATA_FLOW]
+					,[SUBMIT_ID]
+					FROM [NODE_OPERATION_MANAGER]
+				</SQL>
+				<SQLSuffix>order by SUBMITTED_DTTM</SQLSuffix>
+				<CascadeTables>
+				</CascadeTables>
+				<Filters>
+					<Filter>
+						<Control>OpName</Control>
+						<ControlType>DropDown</ControlType>
+						<Column>OPERATION_NAME</Column>
+						<Label>Operation Name</Label>
+						<SQL>select distinct OPERATION_NAME from NODE_OPERATION_MANAGER order by OPERATION_NAME</SQL>
+					</Filter>
+					<Filter>
+						<Control>TransID</Control>
+						<ControlType>DropDown</ControlType>
+						<Column>TRANS_ID</Column>
+						<Label>Transation ID</Label>
+						<SQL>select distinct TRANS_ID from NODE_OPERATION_MANAGER</SQL>
+					</Filter>
+					<Filter>
+						<Control>SuppTransID</Control>
+						<ControlType>DropDown</ControlType>
+						<Column>SUPPLIED_TRANS_ID</Column>
+						<Label>EPA Transation ID</Label>
+						<SQL>select distinct SUPPLIED_TRANS_ID from NODE_OPERATION_MANAGER</SQL>
+					</Filter>
+					<Filter>
+						<Control>SubmissionDate</Control>
+						<ControlType>Date</ControlType>
+						<Label>Submission Date</Label>
+						<Column>SUBMITTED_DTTM</Column>
+					</Filter>
+				</Filters>
+				<Downloads>
+					<Download>
+						<Column>Files</Column>
+						<SQL>
+							SELECT 'zip', FILE_CONTENT
+							FROM NODE_OPERATION_MANAGER
+							WHERE (SUBMIT_ID = '@Files@')
+						</SQL>
+						<SQLSuffix/>
+					</Download>
+				</Downloads>
+			</Table>
+			<Table>
+				<Name>NODE_OPERATION_LOG</Name>
+				<Key>OPERATION_LOG_ID</Key>
+				<SQL>
+					SELECT NODE_OPERATION_LOG.OPERATION_LOG_ID,
+					NODE_OPERATION_LOG.OPERATION_LOG_ID as [Status],
+					NODE_OPERATION_LOG.OPERATION_LOG_ID as [Parameter],
+					NODE_OPERATION_LOG.TRANS_ID as [File],
+					NODE_OPERATION_LOG.TRANS_ID as [Files],
+					NODE_OPERATION_LOG.TRANS_ID,NODE_OPERATION.OPERATION_NAME, NODE_OPERATION_LOG.START_DTTM, NODE_OPERATION_LOG.END_DTTM,
+					NODE_OPERATION_LOG.HOST_NAME, NODE_OPERATION_LOG.CREATED_DTTM, NODE_OPERATION_LOG.CREATED_BY
+					FROM  NODE_OPERATION INNER JOIN
+					NODE_OPERATION_LOG ON NODE_OPERATION.OPERATION_ID = NODE_OPERATION_LOG.OPERATION_ID
+					Where NODE_OPERATION.OPERATION_NAME not in ('PASSWORD','PASSWORD2','NODE','NODE2')
+				</SQL>
+				<SQLSuffix>
+				</SQLSuffix>
+				<CascadeTables>
+				</CascadeTables>
+				<Filters>
+					<Filter>
+						<Control>OpName</Control>
+						<ControlType>DropDown</ControlType>
+						<Column>OPERATION_NAME</Column>
+						<SQL>select distinct OPERATION_NAME from NODE_OPERATION where OPERATION_NAME not in ('PASSWORD','PASSWORD2','NODE','NODE2')</SQL>
+					</Filter>
+					<Filter>
+						<Control>TransID</Control>
+						<ControlType>Text</ControlType>
+						<Column>TRANS_ID</Column>
+						<SQL/>
+					</Filter>
+					<Filter>
+						<Control>DateUpdated</Control>
+						<ControlType>Date</ControlType>
+						<Column>UPDATED_DTTM</Column>
+					</Filter>
+				</Filters>
+				<ChildTables>
+					<ChildTable>
+						<Column>Status</Column>
+						<SQL>
+							SELECT STATUS_CD, MESSAGE
+							FROM NODE_OPERATION_LOG_STATUS
+							WHERE (OPERATION_LOG_ID = @Status@)
+						</SQL>
+						<SQLSuffix/>
+					</ChildTable>
+					<ChildTable>
+						<Column>Parameter</Column>
+						<SQL>
+							SELECT     PARAMETER_NAME, PARAMETER_VALUE
+							FROM         NODE_OPERATION_LOG_PARAMETER
+							WHERE     (OPERATION_LOG_ID = @Parameter@)
+						</SQL>
+						<SQLSuffix/>
+					</ChildTable>
+				</ChildTables>
+				<Transforms>
+					<Transform>
+						<Column>File</Column>
+						<SQL>
+							SELECT FILE_TYPE, FILE_CONTENT
+							FROM NODE_FILE_CABIN
+							WHERE (TRANS_ID = '@File@')
+						</SQL>
+						<SQLSuffix/>
+						<XSLT/>
+					</Transform>
+				</Transforms>
+				<Downloads>
+					<Download>
+						<Column>Files</Column>
+						<SQL>
+							SELECT FILE_TYPE, FILE_CONTENT
+							FROM NODE_FILE_CABIN
+							WHERE (TRANS_ID = '@Files@')
+						</SQL>
+						<SQLSuffix/>
+						<XSLT/>
+					</Download>
+				</Downloads>
+			</Table>
+		</Tables>
+	</DataFlow>
+</DataFlows>

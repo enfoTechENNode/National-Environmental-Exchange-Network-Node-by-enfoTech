@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Simple.master.cs" Inherits="MasterPages_Simple" %>
+
+<%@ Register TagPrefix="Node" TagName="Header" Src="~/PageControls/Share/Header.ascx" %>
+<%@ Register TagPrefix="Node" TagName="Footer" Src="~/PageControls/Share/Footer.ascx" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>ASP.NET 3.5 Web Application</title>
+<%--    <meta http-equiv="X-UA-Compatible" content="IE=9,8" />--%>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+        }
+        .MultiPnl
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .MultiPnlCol
+        {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            padding: 15px 20px;
+            width: 100%;
+            height: 100%;
+        }
+        .MultiPnlColLeft
+        {
+            border-right: 1px solid #CCCCCC;
+            background-color: #FAFAFA;
+            width: auto;
+        }
+        .HeaderText
+        {
+            font: 8pt Arial,Helvetica,sans-serif;
+            color: #ffffff;
+        }
+    </style>
+<%--    <script src="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/inspector.js"></script>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <script type="text/javascript" language="javascript">
+        var clientid;
+        function fnSetFocus(txtClientId) {
+            clientid = txtClientId;
+            setTimeout("fnFocus()", 1000);
+
+        }
+
+        function fnFocus() {
+            eval("document.getElementById('" + clientid + "').focus()");
+        }
+
+    </script>
+
+<%--    <asp:ScriptManager ID="scriptManager" runat="server" />--%>
+    <ajaxtoolkit:ToolkitScriptManager ID="tsm" runat="server"  />
+    <div id="m_MasterFrame">
+        <asp:ContentPlaceHolder ID="headerContent" runat="server">
+            <Node:Header ID="header" runat="server" />
+        </asp:ContentPlaceHolder>
+        <div id="m_SimpleCnt">
+            <asp:ContentPlaceHolder ID="mainContent" runat="server" />
+        </div>
+        <asp:ContentPlaceHolder ID="footerContent" runat="server">
+            <Node:Footer ID="footer" runat="server" />
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

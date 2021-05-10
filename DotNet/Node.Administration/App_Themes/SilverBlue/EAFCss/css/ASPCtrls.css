@@ -1,0 +1,432 @@
+
+/* TextBox 
+-----------------------------------------------------------*/
+.asp_TBFocus 
+{ 
+	padding:2px; border:1px solid #FF9933; 
+	background:#FFFF99 url(../img/textbox_BG.gif); 	
+}
+.asp_TBBlur 
+{ 
+	padding:2px; border:1px solid #999999; 	
+	background-image:url(../img/textbox_off_BG.gif);	
+}
+
+
+/* SiteMap
+----------------------*/
+.asp_SiteMap 
+{ 
+	margin:0; padding:3px 15px 0 15px; 
+	display:block; 
+	font:normal 8pt Tahoma,Arial,Helvetica,sans-serif; 
+}
+
+
+/* Menu (XP Blue)
+--------------------------------------------------------------------------------------------- */
+.asp_SMnuXPBlue 
+{ 
+	border:1px solid #006699; 
+	background-color:#EEEEEE; 	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#333333,Direction=180,Strength=2,positive=true); 
+}
+.asp_SMnuItmXPBlue 
+{ 
+	padding:5px; border-bottom:1px solid #FFFFFF; 
+	font-weight:bold; 	
+}
+.asp_SMnuItmHoverXPBlue {}
+
+.asp_DMnuXPBlue 
+{ 
+	border:1px solid #006699;
+	background:#FFFFFF url(../img/dMnuBG.gif) repeat-y; 	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_DMnuItmXPBlue 
+{ 
+	padding:0px 8px 0px 0px; height:24px; 
+	font-weight:bold; 
+}
+.asp_DMnuItmHoverXPBlue {}
+
+
+/* Menu (Smoky)
+--------------------------------------------------------------------------------------------- */
+.asp_SMnuSmoky 
+{ 
+	background-color:#EAEAEA; 
+}
+.asp_SMnuItmSmoky 
+{ 
+	padding:3px; 
+	font-family:Arial,Helvetica,sans-serif;
+}
+.asp_SMnuHoverSmoky {}
+.asp_DMnuSmoky 
+{ 
+	border:1px solid #999999;
+	background-color:#EAEAEA; 	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_DMnuItmSmoky 
+{ 
+	padding:4px 10px 4px 8px; 
+	font-family:Tahoma,Arial,Helvetica,sans-serif; 
+}
+.asp_DMnuItmHoverSmoky {}
+
+
+/* Menu (SilverBlue)
+--------------------------------------------------------------------------------------------- */
+.asp_SMnuSB 
+{ 
+	background-color:#F2F5F7; 
+}
+.asp_SMnuSB a:hover 
+{ 
+	text-decoration:none; 
+}
+.asp_SMnuItmSB 
+{ 
+	margin:0; padding:1px; 
+	font-family:Arial,Helvetica,sans-serif; 
+}
+.asp_SMnuHoverSB {}
+.asp_DMnuSB 
+{ 
+	border:1px solid #999999;
+	background-color:#F2F5F7; 	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_DMnuSB a:hover 
+{ 
+	text-decoration:none; 
+}
+.asp_DMnuItmSB 
+{ 
+	padding:4px; 
+	font-family:Arial,Helvetica,sans-serif; 
+}
+.asp_DMnuItmHoverSB {}
+
+
+/* DataList
+---------------------------------------------------------------------------------------------*/
+.asp_DLFrame 
+{ 
+	border:1px solid #CCCCCC; 
+}
+.asp_DLHeader, .asp_DLFooter  
+{ 
+	padding:5px; 
+	background:#CCDDFF url(../img/aqua_bar_darkblue_47.gif); 	
+	color:#FFFFFF; font-size:75%; 
+}
+
+.asp_DLItm, .asp_DLItmAlt 
+{ 	
+	padding:10px 8px; border:2px solid #CCCCCC; 
+}
+.asp_DLItmAlt 
+{ 
+	background:#EEEEEE;  
+}
+
+
+/* GrideView (SilverBlue)
+-----------------------------------------------------------------------------------------*/
+.asp_GVFrame 
+{ 
+	border:1px solid #CCCCCC; border-right-width:2px; border-bottom-width:2px;
+}
+.asp_GVHeader th 
+{
+	padding:7px; border-bottom:1px solid #999999; 
+	color:#666666; font:bold 11px Tahoma,Arial,Helvetica,sans-serif; 	
+	background:#999999 url(../img/GridHeader_Grey.gif); 	
+}
+.asp_GVHeader a { }
+.asp_GVHeader a:hover { }
+.asp_GVFooter 
+{ 
+	color:#FFFFFF;
+}
+.asp_GVRow td 
+{
+	padding:2px 7px; height:20px;
+	font:normal 70% Tahoma,Arial,Helvetica,sans-serif; 
+	background-color:#FFFFFF; 
+}
+.asp_GVRowAlt td 
+{
+	padding:2px 7px; height:20px; 
+	font:normal 70% Tahoma,Arial,Helvetica,sans-serif; 
+	background-color:#EDF3FE; 
+}
+.asp_GVRowSelected td 
+{
+	padding:2px 7px; height:20px; 
+	font:normal 70% Tahoma,Arial,Helvetica,sans-serif; 
+	background-color:#FFFFCC; 
+}
+
+.asp_GVRow td input, .asp_GVRow td textarea, .asp_GVRow td select,
+.asp_GVRowAlt td input, .asp_GVRowAlt td textarea, .asp_GVRowAlt td select,
+.asp_GVRowSelected td input, .asp_GVRowSelected td textarea, .asp_GVRowSelected td select
+{
+	font-size:100%; 
+}
+
+.asp_GVPager 
+{
+	font:bold 8pt Arial; 
+	background:#CCCCCC url(../img/PnlOverBG.gif); 
+}
+.asp_GVPager td 
+{
+	padding:4px; border-top:1px solid #CCCCCC; 	
+}
+.asp_GVPager table td 
+{
+	margin:0; padding:1px; border:0; 
+}
+.asp_GVPager span 
+{
+	padding:0 3px; border:1px solid #316AC5; 	
+	background-color:#316AC5; 
+	color:#FFFFFF; 
+}
+.asp_GVPager a 
+{	
+	padding:0 3px; border:1px solid #316AC5; 
+	color:#316AC5; text-decoration:none; 	
+}
+.asp_GVPager a:hover 
+{
+	text-decoration:none; 
+	background-color:#DDEEFF; 
+}
+
+
+/* GrideView (Simple Line)
+-----------------------------------------------------------------------------------------*/
+
+.asp_LGFrame 
+{
+	border-bottom:2px solid #598527; 
+}
+.asp_LGHeader th 
+{
+	padding:5px 7px; border-bottom:2px solid #598527; 
+	font:bold 11px Tahoma; color:#666666;
+}
+.asp_LGHeader a { }
+.asp_LGHeader a:hover { }
+
+.asp_LGRow td 
+{
+	padding:2px 7px; height:20px; 
+	font:normal 70% Tahoma; 
+	background:#FFFFFF; 
+}
+.asp_LGRowAlt td 
+{
+	padding:2px 7px; height:20px; 
+	font:normal 70% Tahoma; 
+	background-color:#F9F9F9;
+}
+.asp_LGRowSelected td 
+{
+	background-color:#FFFF99; 
+}
+
+
+/* WebParts 
+-----------------------------------------------------------------------------------------*/
+
+.asp_WPZ 
+{ }
+.asp_WPZHeader 
+{
+	padding:2px; 
+	color:#FFFFFF; font:bold 70% Tahoma,Arial; text-align:center; 
+	background-color:#CCCCCC; 	
+}
+.asp_WPZEmpty 
+{
+	font:normal 75% Arial; color:#999999; text-align:center; 
+}
+
+.asp_WPChrome 
+{
+	border:1px solid #DDDDDD; 	
+	background-color:#FFFFFF; 
+}
+.asp_WPTitle 
+{
+	padding:3px 5px; 
+	font:bold 11px Tahoma; color:#FFFFFF;
+	background:#507CD1 url(../img/BtnBG_Blue.gif);
+}
+.asp_WPItem 
+{
+	padding:8px; border:1px solid #7E9EC9; 
+}
+.asp_CatZone 
+{
+	padding:10px 0; 
+}
+.asp_CatHead 
+{
+	padding:3px 4px; 
+	font:bold 11px Tahoma; color:#660000; 
+	background-image:url(../img/wp_CatBG.gif); 
+}
+.asp_CatFooter
+{
+	padding:0 4px; 
+	font:bold 11px Tahoma; color:#660000; 
+	background-image:url(../img/wp_CatBG.gif); 
+}
+.asp_CatFooter input, .asp_CatFooter select 
+{
+	font-size:100%; 
+}
+
+.asp_CatInstrTxt 
+{
+	font:normal 70% Tahoma,Arial; 
+}
+
+.asp_CatPartLink, .asp_CatPartLinkSelected 
+{
+	padding:2px 5px 2px 13px;
+	font:bold 70% Tahoma,Arial; 	
+	background-repeat:no-repeat; 
+	background-position:left 5px;
+}
+.asp_CatPartLink 
+{ }
+.asp_CatPartLinkSelected 
+{
+	color:#333333; 
+	background-image:url(../img/ArrR_Small.gif); 
+}
+
+.asp_CatPartTtl 
+{
+	padding:0 4px 2px 4px;
+	font:bold 70% Tahoma,Arial; color:#006600; 	
+}
+.asp_CatPart 
+{
+	padding:3px; border-top:1px solid #006600; 
+	font:bold 70% Arial,Tahoma; color:#333333; 	
+}
+
+/* DropDownList 
+---------------------------*/
+.asp_DDL 
+{
+	margin:1px; 
+	background-image:url(../img/textbox_off_BG.gif); 
+}
+
+
+/* Button (Drak color)
+-------------------------------------------------------------------------------*/
+.asp_BtnRed 
+{
+	margin:0 2px; padding:2px; border:1px solid #FF9999; 
+	background:#990000 url(../img/BtnBG_Red.gif); 
+	color:#FFFFFF; font:bold 11px Arial,Helvetica,sans-serif; 
+	cursor:hand;	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_BtnBlue 
+{
+	margin:0 2px; padding:2px; border:1px solid #CCDDEE; 
+	background:#000099 url(../img/BtnBG_Blue.gif); 	
+	color:#FFFFFF;	font:bold 11px Arial,Helvetica,sans-serif; 
+	cursor:hand;	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_BtnGrey 
+{
+	margin:0 2px; padding:2px; border:1px solid #DDDDDD; 
+	background:#999999 url(../img/BtnBG_Grey.gif); 	
+	color:#FFFFFF;	font:bold 11px Arial,Helvetica,sans-serif; 
+	cursor:hand;	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_BtnGreen 
+{
+	margin:0 2px; padding:2px; border:1px solid #A3D39C; 
+	background:#006600 url(../img/BtnBG_Green.gif); 	
+	color:#FFFFFF;	font:bold 11px Arial,Helvetica,sans-serif; 
+	cursor:hand;	
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_BtnSilver 
+{
+	margin:0 2px; padding:2px; border:1px solid #666666; 
+	background:#CCCCCC url(../img/BtnBG_Silver.gif); 		
+	color:#000000;	font:bold 11px Arial,Helvetica,sans-serif; 
+	cursor:hand;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_BtnGold 
+{ 
+	margin:0 2px; padding:2px; border:1px solid #FF9933; 
+	background:#FFFF00 url(../img/BtnBG_Gold.gif); 	
+	color:#000000; font:bold 11px Arial,Helvetica,sans-serif;
+	cursor:hand;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+.asp_BtnDisabled 
+{
+	margin:0 2px; padding:2px; border:1px solid #CCCCCC;
+	color:#000000; font:bold 11px Arial,Helvetica,sans-serif; 
+	background:#EAEAEA url(../img/BtnBG_Silver.gif); 
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=2,positive=true); 
+}
+
+
+/* Button (Light color)
+-------------------------------------------------------------------------------*/
+.asp_sbRed 
+{
+	margin:1px 0; border:1px solid #ED7575; 
+	font:bold 8pt Arial; color:#333333; 
+	background-color:#FCDDDD; 
+	cursor:hand;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=1,positive=true); 
+}
+.asp_sbBlue 
+{
+	margin:1px 0; border:1px solid #75A3ED; 
+	font:bold 8pt Arial; color:#333333; 	
+	background-color:#D2E4FC; 
+	cursor:hand;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=1,positive=true); 
+}
+
+.asp_sbGreen 
+{
+	margin:1px 0; border:1px solid #9FBE4C; 
+	font:bold 8pt Arial; color:#333333; 	
+	background-color:#EEFCD2; 
+	cursor:hand;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=1,positive=true); 
+}
+
+.asp_sbOrange 
+{
+	margin:1px 0; border:1px solid #EC9E2E; 
+	font:bold 8pt Arial; color:#333333; 	
+	background-color:#FCEBB9; 
+	cursor:hand;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#999999,Direction=120,Strength=1,positive=true); 
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Operation>
+  <Process>
+    <ClassName>Node.VA.DataExchange.WebServices.Query.DefaultProcess</ClassName>
+    <DllName>Bin\Node.VA.DataExchange.dll</DllName>
+  </Process>
+  <PostProcess>
+    <Sequence number="1">
+      <ClassName>Node.VA.DataExchange.WebServices.Query.DataComposer</ClassName>
+      <DllName>Bin\Node.VA.DataExchange.dll</DllName>
+    </Sequence>
+    <Sequence number="2">
+      <ClassName>Node.VA.DataExchange.WebServices.Query.DataPopulator</ClassName>
+      <DllName>Bin\Node.VA.DataExchange.dll</DllName>
+    </Sequence>
+  </PostProcess>
+</Operation>

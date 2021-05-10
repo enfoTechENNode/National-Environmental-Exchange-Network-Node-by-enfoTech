@@ -1,0 +1,456 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Text;
+using System.Xml;
+using System.IO;
+
+using Node.Core.Biz.Objects;
+using Node.Core.Data;
+using Node.Core.Data.Interfaces;
+using Node.Core;
+
+public partial class Pages_Registration_NodeRegistration : Node.Core.UI.Base.AdminPageBase
+{
+    private ServiceRegistration reg = null;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        this.grdServices.RowCommand += new GridViewCommandEventHandler(grdServices_RowCommand);
+        this.grvParameter.RowCommand += new GridViewCommandEventHandler(grdParameter_RowCommand);
+        this.Master.PageDescription = "Node Registration Form";
+        this.reg = new ServiceRegistration();
+        if (!Page.IsPostBack)
+        {
+            ViewState["Parameters"] = null;
+            InitialValues();
+        }
+    }
+
+    #region Button Events
+    protected void btnBackToDashboard_Click(object sender, EventArgs e)
+    {
+        this.Response.Redirect("~/Pages/Main/Home.aspx", false);
+    }
+    protected void btnUploadMetadata_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string fileName = this.fulMetadata.FileName;
+
+            if (fulMetadata.HasFile)
+            {
+                // Check for file content type
+                if (fulMetadata.PostedFile.ContentType == "application/octet-stream")
+                {
+                    this.lblError.Text = "Please do not upload the executable file!";
+                    this.lblError.Visible = true;
+                    this.fulValidate.IsValid = false;
+                }
+                else
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load(this.fulMetadata.FileContent);
+                    ServiceRegistration reg = new ServiceRegistration(doc);
+                    reg.Save();
+                    Response.Redirect("~/Pages/Registration/NodeRegistration.aspx");
+                }
+            }
+            else
+            {
+                lblError.Visible = true;
+                lblError.Text = "The file " + fileName + " was not found";
+            }
+        }
+        catch (Exception ex)
+        {
+            lblError.Visible = true;
+            //lblError.Text = "System error." + Environment.NewLine + ex.ToString(); ;
+            lblError.Text = "System error." + Environment.NewLine + ex.Message;
+        }
+    }
+    protected void btnSaveToStep2_Click(object sender, EventArgs e)
+    {
+        reg.SetNodeIdentifier(this.txtNodeIdentifier.Text.Trim());
+        reg.SetNodeName(this.txtNodeName.Text.Trim());
+        reg.SetNodeAddress(this.txtNodeURL.Text.Trim());
+        reg.SetOrganizationIdentifier(this.txtOrgIdentifier.Text.Trim());
+        reg.SetNodeContact(this.txtNodeContact.Text.Trim());
+        reg.SetNodeVersionIdentifier(this.txtVersionID.Text.Trim());
+        reg.SetNodeDeploymentTypeCode(this.txtDeployTypeCD.Text.Trim());
+        reg.SetNodeStatus(this.txtStatus.Text.Trim());
+        reg.SetNodePropertyName(this.txtNodePropName.Text.Trim());
+        reg.SetNodePropertyValue(this.txtNodePropValue.Text.Trim());
+        reg.SetBoundingCoordinateEast(this.txtEast.Text.Trim());
+        reg.SetBoundingCoordinateNorth(this.txtNorth.Text.Trim());
+        reg.SetBoundingCoordinateSouth(this.txtSouth.Text.Trim());
+        reg.SetBoundingCoordinateWest(this.txtWest.Text.Trim());
+
+        reg.Save();
+
+        this.mvtTabs.ActiveViewIndex = 1; 
+    }
+    protected void btnBackToStep1_Click(object sender, EventArgs e)
+    {
+        this.mvtTabs.ActiveViewIndex = 0;
+    }
+    protected void btnSaveParam_Click(object sender, EventArgs e)
+    {
+        this.mvtTabs.ActiveViewIndex = 1;
+        SaveParamInfoToViewState();
+    }
+    protected void btnSaveService_Click(object sender, EventArgs e)
+    {
+        this.mvtTabs.ActiveViewIndex = 1;
+        string[] prop = new string[2];
+        prop[0] = this.txtServicePropName.Text.Trim();
+        prop[1] = this.txtServicePropValue.Text.Trim();
+
+        DataTable dtParams = new DataTable();
+        if (ViewState["Parameters"] != null)
+            dtParams = (DataTable)ViewState["Parameters"];
+        reg.UpdateService(this.ddlMethodName.SelectedValue, this.ddlDataFlow.SelectedValue, this.txtServiceIdentifier.Text.Trim(), this.txtServiceDESC.Text.Trim(),
+            this.txtServiceDocURL.Text.Trim(), prop, this.txtStyleSheetURL.Text.Trim(), dtParams);
+        reg.Save();
+
+        this.grdServices.CachedDataTable = reg.GetServices();
+        this.grdServices.DataBind();
+
+        ResetServiceInfo();
+        ResetParameterFields();
+    }
+    
+    protected void btnDownloadMetadata_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            this.lblError.Text = "";
+            this.lblError.Visible = false;
+
+            IConfigurations configDB = new DBManager().GetConfigurationsDB();
+            XmlDocument getService = configDB.GetServiceRegistration();
+
+            byte[] content = null;
+            System.Text.Encoding enc = System.Text.Encoding.GetEncoding("iso-8859-1");
+            content = enc.GetBytes(getService.InnerXml);            
+
+            if (content != null && content.Length > 0)
+            {
+                Response.Clear();
+                Response.ContentType = "text/xml";
+                Response.AppendHeader("content-disposition", "attachment; filename=getServices");
+                Response.OutputStream.Write(content, 0, content.Length);
+                Response.Flush();
+                Response.End();
+            }
+        }
+        catch (Exception ex)
+        {
+            this.HandleException(ex);
+            //throw ex;
+            //this.lblError.Text = "System error." + Environment.NewLine + ex.ToString();
+            this.lblError.Text = "System error." + Environment.NewLine + ex.Message;
+            this.lblError.Visible = true;
+        }
+    }
+    void grdServices_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (IsRealPostback())
+        {
+            if (e.CommandName == "Select" && !string.IsNullOrEmpty(e.CommandArgument.ToString()))
+            {
+                int rowNo = Convert.ToInt32(e.CommandArgument);
+                if (this.grdServices.CachedDataTable != null && this.grdServices.CachedDataTable.Rows.Count > 0)
+                {
+                    this.ShowServiceDetail(this.grdServices.CachedDataTable.Rows[rowNo]["METHOD_NAME"].ToString(),
+                        this.grdServices.CachedDataTable.Rows[rowNo]["DATA_FLOW"].ToString());
+                }
+            }
+            else if (e.CommandName == "DeleteService" && !string.IsNullOrEmpty(e.CommandArgument.ToString()))
+            {
+                int rowNo = Convert.ToInt32(e.CommandArgument);
+                if (this.grdServices.CachedDataTable != null && this.grdServices.CachedDataTable.Rows.Count > 0)
+                {
+                    //ServiceRegistration reg = new ServiceRegistration();
+                    reg.RemoveService(this.grdServices.CachedDataTable.Rows[rowNo]["METHOD_NAME"].ToString(),
+                        this.grdServices.CachedDataTable.Rows[rowNo]["DATA_FLOW"].ToString());
+                    reg.Save();
+                    this.grdServices.CachedDataTable = reg.GetServices();
+                    this.grdServices.DataBind();
+                }
+            }
+        }
+    }
+    void grdParameter_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (IsRealPostback())
+        {
+            if (e.CommandName == "DeleteParameter" && !string.IsNullOrEmpty(e.CommandArgument.ToString()))
+            {
+                int rowNo = Convert.ToInt32(e.CommandArgument);
+                if (ViewState["Parameters"] != null && ((DataTable)ViewState["Parameters"]).Rows.Count > 0)
+                {
+                    DataTable dtParams = (DataTable)ViewState["Parameters"];
+                    dtParams.Rows.RemoveAt(rowNo);
+                    dtParams.AcceptChanges();
+                    ViewState["Parameters"] = dtParams;
+                    this.grvParameter.CachedDataTable = dtParams;
+                    this.grvParameter.DataBind();
+                }
+            }
+            else if (e.CommandName == "EditParameter" && !string.IsNullOrEmpty(e.CommandArgument.ToString()))
+            {
+                int rowNo = Convert.ToInt32(e.CommandArgument);
+                if (ViewState["Parameters"] != null && ((DataTable)ViewState["Parameters"]).Rows.Count > 0)
+                {
+                    mpeParamDetail.Show();
+                    DataTable dtParams = (DataTable)ViewState["Parameters"];
+                    DataRow dr = dtParams.Rows[rowNo];
+                    SetParamInfo(dr);
+                    ViewState["Edit"] = true;
+                }
+            }
+        }
+    }
+    protected void ddlMethodName_IndexChanged(object sender, EventArgs e)
+    {
+        DBManager dbMgr = new DBManager();
+        if (ddlMethodName.SelectedValue.ToUpper() == Phrase.WEB_SERVICE_QUERY)
+        {
+            string[] queries = dbMgr.GetGetServicesDB().GetQueries();
+            if (queries != null && queries.Length > 0)
+            {
+                ddlDataFlow.Items.Clear();
+                for (int i = 0; i < queries.Length; i++)
+                {
+                    ddlDataFlow.Items.Add(new ListItem(queries[i], queries[i]));
+                }
+                ddlDataFlow.SelectedIndex = 0;
+                ddlDataFlow_IndexChanged(null, null);
+                this.fsbParamDetail.Visible = true;
+                this.fsbParamList.Visible = true;
+            }
+        }
+        else if (ddlMethodName.SelectedValue.ToUpper() == Phrase.WEB_SERVICE_SOLICIT)
+        {
+            string[] solicits = dbMgr.GetGetServicesDB().GetSolicits();
+            if (solicits != null && solicits.Length > 0)
+            {
+                ddlDataFlow.Items.Clear();
+                for (int i = 0; i < solicits.Length; i++)
+                {
+                    ddlDataFlow.Items.Add(new ListItem(solicits[i], solicits[i]));
+                }
+                ddlDataFlow.SelectedIndex = 0;
+                ddlDataFlow_IndexChanged(null, null);
+                this.fsbParamDetail.Visible = true;
+                this.fsbParamList.Visible = true;
+            }
+        }
+        else 
+        {
+            if (ddlDataFlow.Items.Count > 0)
+                ddlDataFlow.Items.Clear();
+            this.fsbParamDetail.Visible = false;
+            this.fsbParamList.Visible = false;
+        }
+    }
+    protected void ddlDataFlow_IndexChanged(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(ddlDataFlow.SelectedValue))
+        {
+            this.fsbParamDetail.Visible = true;
+            this.fsbParamList.Visible = true;
+            Operation op = new Operation(ddlDataFlow.SelectedValue, ddlMethodName.SelectedValue.ToUpper());
+            if (op != null)
+            {
+                OpProcess proc = op.Process;
+                DataTable parametersTable = new DataTable();
+                parametersTable.Columns.AddRange(new DataColumn[] { new DataColumn("PARAM_NAME"),
+                                                                    new DataColumn("PARAM_VALUE"),
+                                                                    new DataColumn("SORT_INDEX"),
+                                                                    new DataColumn("OCCURENCE_NO"),
+                                                                    new DataColumn("ENCODING"),
+                                                                    new DataColumn("PARAM_TYPE"),
+                                                                    new DataColumn("TYPE_DESC"),
+                                                                    new DataColumn("REQUIREDIND") });
+                if (ViewState["Parameters"] != null)//this.Session["QUERY_PARAMS"] != null)
+                    ViewState["Parameters"] = null;// this.Session.Remove("QUERY_PARAMS");
+                for (int i = 0; i < op.Parameters.Count; i++)
+                {
+                    OpParameter param = (OpParameter)op.Parameters[i];
+                    int temp = i + 1;
+                    DataRow dr = parametersTable.NewRow();
+                    //dr["SEQUENCE"] = "" + temp;
+                    dr["PARAM_NAME"] = param.Name;
+                    parametersTable.Rows.Add(dr);
+                }
+                ViewState["Parameters"] = parametersTable;
+                this.grvParameter.CachedDataTable = parametersTable;
+                this.grvParameter.DataBind();
+            }
+        }
+    }
+    #endregion
+
+    #region Private Methods
+    private void InitialValues()
+    {
+        //Node Information
+        //ServiceRegistration reg = new ServiceRegistration();
+        this.txtNodeIdentifier.Text = reg.GetNodeIdentifier();
+        this.txtNodeName.Text = reg.GetNodeName();
+        this.txtNodeURL.Text = reg.GetNodeAddress();
+        this.txtOrgIdentifier.Text = reg.GetOrganizationIdentifier();
+        this.txtNodeContact.Text = reg.GetNodeContact();
+        this.txtVersionID.Text = reg.GetNodeVersionIdentifier();
+        this.txtDeployTypeCD.Text = reg.GetNodeDeploymentTypeCode();
+        this.txtStatus.Text = reg.GetNodeStatus();
+        this.txtNodePropName.Text = reg.GetNodePropertyName();
+        this.txtNodePropValue.Text = reg.GetNodePropertyValue();
+        this.txtEast.Text = reg.GetBoundingCoordinateEast();
+        this.txtNorth.Text = reg.GetBoundingCoordinateNorth();
+        this.txtSouth.Text = reg.GetBoundingCoordinateSouth();
+        this.txtWest.Text = reg.GetBoundingCoordinateWest();
+
+        //Service GridView
+        this.grdServices.CachedDataTable = reg.GetServices();
+        this.grdServices.DataBind();
+    }
+    private void ShowServiceDetail(string methodName, string dataFlow)
+    {
+        //ServiceRegistration reg = new ServiceRegistration();
+        string[] serviceInfo = reg.GetServiceInfo(methodName, dataFlow);
+        if (serviceInfo != null && serviceInfo.Length > 0)
+        {
+            if (ddlMethodName.Items.Count > 0 && ddlMethodName.Items.FindByValue(serviceInfo[0]) != null)
+            {
+                this.ddlMethodName.SelectedValue = serviceInfo[0];
+                this.ddlMethodName_IndexChanged(null, null);
+            }
+            if (ddlDataFlow.Items.Count > 0 && ddlDataFlow.Items.FindByText(serviceInfo[1]) != null)
+            {
+                this.ddlDataFlow.SelectedValue = serviceInfo[1];
+            }
+            this.txtServiceIdentifier.Text = serviceInfo[2];
+            this.txtServiceDESC.Text = serviceInfo[3];
+            this.txtServiceDocURL.Text = serviceInfo[4];
+            this.txtStyleSheetURL.Text = serviceInfo[5];
+        }
+
+        string[] servicePropInfo = reg.GetServicePropertyInfo(methodName, dataFlow);
+        if (servicePropInfo != null && servicePropInfo.Length > 0)
+        {
+            this.txtServicePropName.Text = servicePropInfo[0];
+            this.txtServicePropValue.Text = servicePropInfo[1];
+        }
+
+        DataTable dtParams = reg.GetServiceParameters(methodName, dataFlow);
+        if (dtParams != null && dtParams.Rows.Count > 0)
+        {
+            this.grvParameter.CachedDataTable = dtParams;
+            this.grvParameter.DataBind();
+            ViewState["Parameters"] = dtParams;
+        }
+    }
+
+    private void SaveParamInfoToViewState()
+    {
+        DataTable dtParam = null;
+        if (ViewState["Parameters"] != null)
+            dtParam = (DataTable)ViewState["Parameters"];
+        else
+        {
+            dtParam = new DataTable();
+            dtParam.Columns.Add("PARAM_NAME");
+            dtParam.Columns.Add("PARAM_VALUE");
+            dtParam.Columns.Add("SORT_INDEX");
+            dtParam.Columns.Add("OCCURENCE_NO");
+            dtParam.Columns.Add("ENCODING");
+            dtParam.Columns.Add("PARAM_TYPE");
+            dtParam.Columns.Add("TYPE_DESC");
+            dtParam.Columns.Add("REQUIREDIND");
+        }
+        DataRow dr = null;
+        if (ViewState["Edit"] != null && (bool)ViewState["Edit"])
+        {
+            DataRow[] drArray = dtParam.Select("PARAM_NAME='" + this.txtParaName.Text.Trim() + "'");
+            if (drArray != null && drArray.Length > 0)
+                dr = drArray[0];
+            if (dr != null)
+            {
+                GetParamInfo(dr);
+            }
+        }
+        else
+        {
+            dr = dtParam.NewRow();
+            GetParamInfo(dr);
+            dtParam.Rows.Add(dr);
+        }            
+        dtParam.AcceptChanges();
+
+        ViewState["Parameters"] = dtParam;
+        this.grvParameter.CachedDataTable = dtParam;
+        this.grvParameter.DataBind();
+        ResetParameterFields();
+    }
+    private void ResetParameterFields()
+    {
+        this.txtParaTypeDesc.Text = "";
+        this.chkRequiredInd.Checked = false;
+        this.txtParamType.Text = "";
+        this.txtParaName.Text = "";
+        this.txtSortIndex.Text = "";
+        this.txtOccurenceNo.Text = "";
+        this.txtEncoding.Text = "";
+        this.txtParamValue.Text = "";
+    }
+    private void ResetServiceInfo()
+    {
+        this.ddlMethodName.SelectedIndex = 0;
+        this.ddlMethodName_IndexChanged(null, null);
+        if (this.ddlDataFlow.Items.Count > 0)
+            this.ddlDataFlow.SelectedIndex = 0;
+        this.txtServiceIdentifier.Text = "";
+        this.txtServiceDESC.Text = "";
+        this.txtServiceDocURL.Text = "";
+        this.txtServicePropName.Text = "";
+        this.txtServicePropValue.Text = "";
+        this.txtStyleSheetURL.Text = "";
+        ViewState["Parameters"] = null;
+    }
+    private void SetParamInfo(DataRow dr)
+    {
+        this.txtParaName.ReadOnly = true;
+        this.txtParaName.Text = dr["PARAM_NAME"].ToString();
+        this.txtParamValue.Text = dr["PARAM_VALUE"].ToString();
+        this.txtSortIndex.Text = dr["SORT_INDEX"].ToString();
+        this.txtOccurenceNo.Text = dr["OCCURENCE_NO"].ToString();
+        this.txtEncoding.Text = dr["ENCODING"].ToString();
+        this.txtParamType.Text = dr["PARAM_TYPE"].ToString();
+        this.txtParaTypeDesc.Text = dr["TYPE_DESC"].ToString();
+        this.chkRequiredInd.Checked = (dr["REQUIREDIND"].ToString() == "true");          
+    }
+    private void GetParamInfo(DataRow dr)
+    {
+        dr["REQUIREDIND"] = this.chkRequiredInd.Checked ? "true" : "false";
+        dr["PARAM_NAME"] = this.txtParaName.Text.Trim();
+        dr["PARAM_VALUE"] = this.txtParamValue.Text.Trim();
+        dr["SORT_INDEX"] = this.txtSortIndex.Text.Trim();
+        dr["OCCURENCE_NO"] = this.txtOccurenceNo.Text.Trim();
+        dr["ENCODING"] = this.txtEncoding.Text.Trim();
+        dr["PARAM_TYPE"] = this.txtParamType.Text.Trim();
+        dr["TYPE_DESC"] = this.txtParaTypeDesc.Text.Trim();
+    }
+    #endregion
+}

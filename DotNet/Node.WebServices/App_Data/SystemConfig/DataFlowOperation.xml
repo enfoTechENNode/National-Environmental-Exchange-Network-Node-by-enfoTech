@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<process>
+  <!-- type: XmlCompose, XmlPopulate, XmlValidate, XmlTransform, StoredProcedure, Email, Log, ExternalAPI, 
+    Compress, Decompress, Encrypt, Decrypt, NodeWebServices -->
+  <extension>
+    <operation name="" id="" domain="" webservice="" type="" version="" > 
+      <documentation></documentation>
+    </operation>
+  </extension>
+  
+  <partnerLinks>
+    <partnerLink name="XmlComposer" partnerLinkType="">
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="XmlPopulator" partnerLinkType="">
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="XmlValidator" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="XmlTransformer" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="StoredProcedure" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Email" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Logger" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="ExternalAPI" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Compressor" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Decompressor" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Encryptor" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Decryptor" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="NodeWebServices" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Evaluator" partnerLinkType="" >
+      <extension namespace="">
+        <component library="" class="" />
+      </extension>
+    </partnerLink>
+  </partnerLinks>
+  
+  <variables>
+    <variable name="dataflow" />
+    <variable name="transactionid" />
+    <variable name="secureToken" />
+    <variable name="request" />
+  </variables>
+  
+  <sequence>
+    <invoke partnerLink="XmlComposer">
+      <extension namespace="">
+        <component aliasName="GetAQXData" runAsThread="" />
+        <inputParameters>
+          <parameter name="source" value="" type="System.String" />
+          <parameter name="dataSource" value="" type="System.String" />
+          <parameter name="mapperFullName" value="" type="System.String" />
+        </inputParameters>
+        <outputParameters>
+          <parameter name="" value="" type="System.Object" />
+        </outputParameters>
+      </extension>
+      <documentation></documentation>
+      <catch faultName="" faultVariable="" faultMessageType="" faultElement="">
+      </catch>
+    </invoke>
+    <invoke partnerLink="XmlPopulator">
+      <extension namespace="SaveAQXData">
+        <component aliasName="" runAsThread="" />
+        <inputParameters>
+          <parameter name="source" value="{GetAQXData:output}" type="System.String" />
+          <parameter name="dataSource" value="{}" type="System.String" />
+          <parameter name="mapperFullName" value="" type="System.String" />
+        </inputParameters>
+        <outputParameters>
+          <parameter name="" value="" type="System.Object" />
+        </outputParameters>
+      </extension>
+      <documentation></documentation>
+      <catch faultName="" faultVariable="" faultMessageType="" faultElement="">
+      </catch>
+    </invoke>
+    <!--<if>
+      <condition>
+        {GetAQXData:output}>{GetData:output}
+      </condition>
+        <sequence>
+          <invoke partnerLink="XmlPopulator">
+            <extension namespace="SaveAQXData">
+              <component aliasName="" runAsThread="" />
+              <inputParameters>
+                <parameter name="source" value="{GetAQXData:output}" type="System.String" />
+                <parameter name="dataSource" value="{}" type="System.String" />
+                <parameter name="mapperFullName" value="" type="System.String" />
+              </inputParameters>
+              <outputParameters>
+                <parameter name="" value="" type="System.Object" />
+              </outputParameters>
+            </extension>
+            <documentation></documentation>
+            <catch faultName="" faultVariable="" faultMessageType="" faultElement="">
+            </catch>
+          </invoke>
+        </sequence>
+      <else>
+        <sequence>
+          <invoke partnerLink="XmlPopulator">
+            <extension namespace="SaveAQXData">
+              <component aliasName="" runAsThread="" />
+              <inputParameters>
+                <parameter name="source" value="{GetAQXData:output}" type="System.String" />
+                <parameter name="dataSource" value="{}" type="System.String" />
+                <parameter name="mapperFullName" value="" type="System.String" />
+              </inputParameters>
+              <outputParameters>
+                <parameter name="" value="" type="System.Object" />
+              </outputParameters>
+            </extension>
+            <documentation></documentation>
+            <catch faultName="" faultVariable="" faultMessageType="" faultElement="">
+            </catch>
+          </invoke>
+        </sequence>
+      </else>
+    </if>-->
+  </sequence>
+</process>

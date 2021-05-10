@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+	<Table>
+		<ID>1</ID>
+		<Action>Action 1</Action>
+		<Action_Type>Data Source</Action_Type>
+		<Created_By>admin</Created_By>
+		<Created_Date>2008/01/01</Created_Date>
+		<Priority>1</Priority>
+	</Table>
+	<Table>
+		<ID>2</ID>
+		<Action>Action 2</Action>
+		<Action_Type>eMail</Action_Type>
+		<Created_By>admin</Created_By>
+		<Created_Date>2008/01/01</Created_Date>
+		<Priority>2</Priority>
+	</Table>
+	<Table>
+		<ID>3</ID>
+		<Action>Action 3</Action>
+		<Action_Type>Transform</Action_Type>
+		<Created_By>admin</Created_By>
+		<Created_Date>2008/01/01</Created_Date>
+		<Priority>3</Priority>
+	</Table>
+	<Table>
+		<ID>4</ID>
+		<Action>Action 4</Action>
+		<Action_Type>Encyption</Action_Type>
+		<Created_By>admin</Created_By>
+		<Created_Date>2008/01/01</Created_Date>
+		<Priority>4</Priority>
+	</Table>
+	<Table>
+		<ID>5</ID>
+		<Action>Action 5</Action>
+		<Action_Type>Compression</Action_Type>
+		<Created_By>admin</Created_By>
+		<Created_Date>2008/01/01</Created_Date>
+		<Priority>5</Priority>
+	</Table>
+	<Table>
+		<ID>6</ID>
+		<Action>Action 6</Action>
+		<Action_Type>Invoke Web Services</Action_Type>
+		<Created_By>admin</Created_By>
+		<Created_Date>2008/01/01</Created_Date>
+		<Priority>6</Priority>
+	</Table>
+</NewDataSet>

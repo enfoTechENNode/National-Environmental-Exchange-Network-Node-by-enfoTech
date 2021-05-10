@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://exchangenetwork.net/schema/cdxSecurity.wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:typens="http://exchangenetwork.net/schema/cdxSecurity.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="cdxSecurity" targetNamespace="http://exchangenetwork.net/schema/cdxSecurity.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://exchangenetwork.net/schema/cdxSecurity.xsd">
+      <xsd:simpleType name="AuthMethod">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="password" />
+          <xsd:enumeration value="digest" />
+          <xsd:enumeration value="certificate" />
+          <xsd:enumeration value="xkms" />
+          <xsd:enumeration value="hmac" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="PasswordType">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Authenticate">
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="credential" type="typens:PasswordType" />
+    <wsdl:part name="authenticationMethod" type="typens:AuthMethod" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CentralAuth">
+    <wsdl:part name="uid" type="xsd:string" />
+    <wsdl:part name="cred" type="xsd:string" />
+    <wsdl:part name="authMethod" type="typens:AuthMethod" />
+    <wsdl:part name="clientHost" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CentralAuthResponse">
+    <wsdl:part name="authToken" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="Validate">
+    <wsdl:part name="authToken" type="xsd:string" />
+    <wsdl:part name="clientHost" type="xsd:string" />
+    <wsdl:part name="resourceURI" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="NetworkNodePortType">
+    <wsdl:operation name="Authenticate">
+      <documentation>Direct authentication for network users. The security token can then be used to access all participating network nodes. Network node should call the CentralAuth method instead.
+	  </documentation>
+      <wsdl:input message="tns:Authenticate" />
+      <wsdl:output message="tns:AuthenticateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CentralAuth">
+      <documentation>Central authentication method, used only by participating newwork nodes. Users should call the Auth method directly
+	  </documentation>
+      <wsdl:input message="tns:CentralAuth" />
+      <wsdl:output message="tns:CentralAuthResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <documentation>Validate a previously issued authToken.</documentation>
+      <wsdl:input message="tns:Validate" />
+      <wsdl:output message="tns:ValidateResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetworkSecurityBinding" type="tns:NetworkNodePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxSecurity.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxSecurity.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentralAuth">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxSecurity.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxSecurity.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxSecurity.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxSecurity.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="cdxSecurity">
+    <documentation>A set of security services for Network nodes.</documentation>
+    <wsdl:port name="NetworkSecurityPortType" binding="tns:NetworkSecurityBinding">
+      <soap:address location="https://naas.epacdxnode.net/xml/auth.wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="Home">
+		<siteMapNode url="~/Pages/Authenticate.aspx" title="Authenticate"  description="Authenticate a Node User" />
+		<siteMapNode url="~/Pages/Download.aspx" title="Download"  description="Download Document(s) from a Node" />
+		<siteMapNode url="~/Pages/GetServices.aspx" title="Get Services"  description="Get the Services offered by a Node" />
+		<siteMapNode url="~/Pages/GetStatus.aspx" title="Get Status"  description="Get the Status of a Node Transaction" />
+		<siteMapNode url="~/Pages/NodePing.aspx" title="Node Ping"  description="Ping a Node for existance" />
+		<siteMapNode url="~/Pages/Notify.aspx" title="Notify"  description="Notify a Node of an event, status, or availability" />
+		<siteMapNode url="~/Pages/Query.aspx" title="Query"  description="Query a Node for data" />
+		<siteMapNode url="~/Pages/Solicit.aspx" title="Solicit"  description="Asynchronously Query a Node for data" />
+		<siteMapNode url="~/Pages/Submit.aspx" title="Submit"  description="Submit Document to a Node" />
+    </siteMapNode>
+</siteMap>

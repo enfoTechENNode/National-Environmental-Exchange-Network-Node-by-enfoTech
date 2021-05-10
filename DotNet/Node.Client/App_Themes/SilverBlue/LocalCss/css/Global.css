@@ -1,0 +1,33 @@
+
+/*  HTML Elements 
+*********************************************************************/
+html, body, form 
+{
+	height:100%; 
+	margin:0; padding:0; 
+	font-family:Arial,Helvetica,sans-serif; 
+}
+
+a 
+{
+	color: #0000BB; text-decoration:none; 
+}
+a:hover 
+{
+	text-decoration:underline; 
+}
+
+input, textarea, select 
+{
+	font:bold 8pt Arial,Helvetica,sans-serif; 
+}
+
+img { border:0;}
+
+
+/* 
+*********************************************************************/
+
+/* for input form */
+.g_formLeadFld { width:100px; }
+.g_formVal { font-weight:bold; color:#CC0000; }

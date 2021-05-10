@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TemplateList>
+	<Table>
+		<TEMPLATE_ID>1</TEMPLATE_ID>
+		<TEMPLATE_NAME>Template 1</TEMPLATE_NAME> 
+	</Table>
+	<Table>
+		<TEMPLATE_ID>2</TEMPLATE_ID>
+		<TEMPLATE_NAME>Template 2</TEMPLATE_NAME>
+	</Table>
+	<Table>
+		<TEMPLATE_ID>3</TEMPLATE_ID>
+		<TEMPLATE_NAME>Template 3</TEMPLATE_NAME>
+	</Table>
+	<Table>
+		<TEMPLATE_ID>4</TEMPLATE_ID>
+		<TEMPLATE_NAME>Template 4</TEMPLATE_NAME>
+	</Table>
+</TemplateList>

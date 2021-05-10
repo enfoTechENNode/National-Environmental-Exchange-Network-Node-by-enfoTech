@@ -1,0 +1,101 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<%@ Register TagPrefix="Node" TagName="Header" Src="~/PageControls/Share/Header.ascx" %>
+<%@ Register TagPrefix="Node" TagName="Footer" Src="~/PageControls/Share/Footer.ascx" %>
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">--%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Node Administration Utility</title>
+<%--    <meta http-equiv="X-UA-Compatible" content="IE=9,8" />--%>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+        }
+        .MultiPnl
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .MultiPnlCol
+        {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            padding: 15px 20px;
+            width: 100%;
+            height: 100%;
+        }
+        .MultiPnlColLeft
+        {
+            border-right: 1px solid #CCCCCC;
+            background-color: #FAFAFA;
+            width: auto;
+        }
+        .HeaderText
+        {
+            font: 8pt Arial,Helvetica,sans-serif;
+            color: #ffffff;
+        }
+    </style>
+<%--    <script src="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/inspector.js"></script>--%>
+</head>
+<body class="m_Column">
+
+    <script src="<%=Request.ApplicationPath%>/App_Scripts/jquery-1.3.2.min.js" type="text/javascript">
+       
+
+    </script>
+
+    <form id="form1" runat="server">
+<%--    <asp:ScriptManager ID="scriptManager" runat="server" EnablePartialRendering="true"
+        EnablePageMethods="true" AsyncPostBackTimeout="480" />--%>
+        <ajaxtoolkit:ToolkitScriptManager ID="scriptManager" runat="server" EnablePartialRendering="true"
+        EnablePageMethods="true" AsyncPostBackTimeout="480" />
+    <div id="m_MasterFrame">
+        <asp:ContentPlaceHolder ID="headerContent" runat="server">
+            <Node:Header ID="header" runat="server" />
+        </asp:ContentPlaceHolder>
+        <!-- main table structure -->
+        <table id="m_Column" cellspacing="0" cellpadding="0" width="800">
+            <tr>
+                <th>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr valign="top">
+                <td id="m_ColumnLeft" width="150">
+                    <asp:ContentPlaceHolder ID="leftContent" runat="server" />
+                </td>
+                <td id="m_ColumnCenter" width="600">
+                    <div id="m_PageTitle">
+                        <%--<asp:SiteMapPath ID="siteMapPath" runat="server" width="500px"/>--%>
+                        <h1>
+                            <%--<asp:ImageButton ID="image0" runat="server" OnClick="image0_Click" CausesValidation="false" ImageUrl="~/App_Images/Node/Header/Node_Home_trans.gif" />--%>
+                            <a href="<%= Request.ApplicationPath %>/Pages/Main/Home.aspx">
+                                <img id="image0" runat="server" src="~/App_Images/Node/Header/Node_Home_trans.gif"
+                                    alt="Home" /></a>
+                            <asp:Label ID="lblVersion" runat="server"></asp:Label></h1>
+                    </div>
+                    <div id="m_MainCnt">
+                        <eaf:StylerPanel ID="yellowBub" PanelStyle="yellowbubble" runat="server" StyleWidth="100%">
+                            <div id="pageDesc" runat="server" style="font-size: 8pt;">
+                            </div>
+                        </eaf:StylerPanel>
+                        <br />
+                        <asp:ContentPlaceHolder ID="mainContent" runat="server" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="footerContent" runat="server">
+            <Node:Footer ID="footer" runat="server" />
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+</body>
+</html>

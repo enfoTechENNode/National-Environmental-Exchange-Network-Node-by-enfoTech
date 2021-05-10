@@ -1,0 +1,417 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPages/Admin.master" AutoEventWireup="true"
+    CodeFile="NodeRegistration.aspx.cs" Inherits="Pages_Registration_NodeRegistration"
+    Title="Node Registration Form" %>
+
+<%@ MasterType VirtualPath="~/MasterPages/Admin.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="mainContent" runat="Server">
+    <asp:Label ID="lblError" runat="server" CssClass="eaf_MsgLbl" ForeColor="DarkRed"
+        Visible="false" Width="500px" />
+    <eaf:MultiViewTabs ID="mvtTabs" runat="server">
+        <eaf:ViewTab ID="step1" runat="server" Caption="Node General Information" Description="Node General Information">
+            <eaf:FormSectionBlock ID="sec1" Caption="Upload/Modify Existed Metadata File" runat="server"
+                Visible="true">
+                <table class="cc_EntryForm" cellspacing="0" cellpadding="0" border="0">
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label1" runat="server" AssociatedControlID="fulMetadata">Upload Existed Metadata File:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:FileUpload ID="fulMetadata" runat="server" Width="450px" />
+                            <asp:CustomValidator ID="fulValidate" runat="server" ControlToValidate="fulMetadata"
+                                Display="Dynamic" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td>
+                        </td>
+                        <td>
+                            <eaf:EAFButton ID="btnUploadMetadata" runat="server" CausesValidation="false" CssClass="s_BtnBlue"
+                                Text="Upload File" OnClick="btnUploadMetadata_Click"></eaf:EAFButton>
+                        </td>
+                    </tr>
+                </table>
+            </eaf:FormSectionBlock>
+            <eaf:FormSectionBlock ID="FormSectionBlock1" Caption="Node Identification" runat="server"
+                Visible="true">
+                <table class="cc_EntryForm" cellspacing="0" cellpadding="0" border="0">
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label2" runat="server" AssociatedControlID="txtNodeIdentifier">Node Identifier:</asp:Label>
+                            <span style="color: red">*</span>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtNodeIdentifier" runat="server" Width="300px" />
+                            <asp:RequiredFieldValidator ID="reqNodeID" runat="server" ControlToValidate="txtNodeIdentifier"
+                                ErrorMessage="Method Name required" Display="Dynamic" ValidationGroup="Node"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label3" runat="server" AssociatedControlID="txtNodeName">Node Name:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtNodeName" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label4" runat="server" AssociatedControlID="txtNodeURL">Node Address(URL):</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtNodeURL" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label5" runat="server" AssociatedControlID="txtOrgIdentifier">Organization Identifier:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtOrgIdentifier" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label6" runat="server" AssociatedControlID="txtNodeContact">Node Contact:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtNodeContact" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label7" runat="server" AssociatedControlID="txtVersionID">Node Version Identifier:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtVersionID" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label8" runat="server" AssociatedControlID="txtDeployTypeCD">Node Deployment Type Code:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtDeployTypeCD" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label9" runat="server" AssociatedControlID="txtStatus">Node Status:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtStatus" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label10" runat="server" AssociatedControlID="txtNodePropName">Node Property Name:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtNodePropName" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label11" runat="server" AssociatedControlID="txtNodePropValue">Node Property Value:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtNodePropValue" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="lftfld">
+                            <asp:Label ID="Label12" runat="server" AssociatedControlID="">Bounding Box Details:</asp:Label>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td colspan="2">
+                            <table class="cc_EntryForm">
+                                <tr>
+                                    <td width="120px">
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label13" runat="server" AssociatedControlID="txtNorth">North:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtNorth" runat="server" Width="100px" />
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label14" runat="server" AssociatedControlID="txtEast">East:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtEast" runat="server" Width="100px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label15" runat="server" AssociatedControlID="txtSouth">South:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtSouth" runat="server" Width="100px" />
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label16" runat="server" AssociatedControlID="txtWest">West:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtWest" runat="server" Width="100px" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </eaf:FormSectionBlock>
+            <eaf:ButtonTable ID="btnPanel" runat="server" TableWidth="600px">
+                <eaf:LeftButtons ID="RightButtons1" runat="server">
+                    <eaf:EAFButton ID="btnBackToDashboard" runat="server" CssClass="s_BtnGrey" Text="Back To Dashboard"
+                        CausesValidation="false" OnClick="btnBackToDashboard_Click"></eaf:EAFButton>
+                </eaf:LeftButtons>
+                <eaf:RightButtons ID="rightBtnPanel" runat="server">
+                    <eaf:EAFButton ID="btnNext" runat="server" CssClass="s_BtnGreen" Text="Save/Next"
+                        OnClick="btnSaveToStep2_Click" CausesValidation="true" ValidationGroup="Node">
+                    </eaf:EAFButton>
+                </eaf:RightButtons>
+            </eaf:ButtonTable>
+        </eaf:ViewTab>
+        <eaf:ViewTab ID="step2" runat="server" Caption="Node Data Service/Parameters" Description="Node Data Service/Parameters Information">
+            <eaf:FormSectionBlock ID="FormSectionBlock5" Caption="Node Services" runat="server"
+                Visible="true">
+                <eaf:EAFGridView ID="grdServices" runat="server" AllowPaging="false" AllowSorting="true"
+                    AllowMultiColumnSorting="true" Width="100%">
+                    <Columns>
+                        <asp:ButtonField ButtonType="Image" CommandName="DeleteService" HeaderText="Delete"
+                            ImageUrl="~/App_Images/Node/PnlIco/pnlico_rejected.gif" />
+                        <asp:ButtonField ButtonType="Image" CommandName="Select" HeaderText="View" ImageUrl="~/App_Images/Node/Gen/file_blank.gif" />
+                        <asp:BoundField HeaderText="Method Name" Visible="true" DataField="METHOD_NAME" SortExpression="METHOD_NAME" />
+                        <asp:BoundField HeaderText="Data Flow" DataField="DATA_FLOW" SortExpression="DATA_FLOW" />
+                        <asp:BoundField HeaderText="Service Identifier" DataField="SERVICE_ID" SortExpression="SERVICE_ID" />
+                        <asp:BoundField HeaderText="Service Document URL" DataField="DOCUMENT_URL" SortExpression="DOCUMENT_URL" />
+                        <asp:BoundField HeaderText="Style Sheet URL" DataField="SS_URL" SortExpression="SS_URL" />
+                    </Columns>
+                </eaf:EAFGridView>
+            </eaf:FormSectionBlock>
+            <eaf:FormSectionBlock ID="FormSectionBlock2" Caption="Node Identification" runat="server"
+                Visible="true">
+                <table class="cc_EntryForm" cellspacing="0" cellpadding="0" border="0">
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label17" runat="server" AssociatedControlID="ddlMethodName">Method Name:</asp:Label>
+                            <span style="color: red">*</span>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlMethodName" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMethodName_IndexChanged">
+                                <asp:ListItem Text="Execute" Value="Execute"></asp:ListItem>
+                                <asp:ListItem Text="Query" Value="Query"></asp:ListItem>
+                                <asp:ListItem Text="Solicit" Value="Solicit"></asp:ListItem>
+                                <asp:ListItem Text="Submit" Value="Submit"></asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label18" runat="server" AssociatedControlID="ddlDataFlow">Data Flow:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlDataFlow" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlDataFlow_IndexChanged" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label19" runat="server" AssociatedControlID="txtServiceIdentifier">Service Identifier:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtServiceIdentifier" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label20" runat="server" AssociatedControlID="txtServiceDESC">Service Description:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtServiceDESC" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label21" runat="server" AssociatedControlID="txtServiceDocURL">Service Document URL:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtServiceDocURL" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label22" runat="server" AssociatedControlID="txtServicePropName">Service Property Name:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtServicePropName" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label23" runat="server" AssociatedControlID="txtServicePropValue">Service Property Value:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtServicePropValue" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td class="fld">
+                            <asp:Label ID="Label24" runat="server" AssociatedControlID="txtStyleSheetURL">Style Sheet URL:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtStyleSheetURL" runat="server" Width="300px" />
+                        </td>
+                    </tr>
+                </table>
+            </eaf:FormSectionBlock>
+            <eaf:FormSectionBlock ID="fsbParamList" Caption="Node Parameters" runat="server"
+                Visible="false">
+                <eaf:EAFGridView ID="grvParameter" runat="server" AllowPaging="false" AllowSorting="true"
+                    AllowMultiColumnSorting="true" Width="100%">
+                    <Columns>
+                        <asp:ButtonField ButtonType="Image" CommandName="DeleteParameter" HeaderText="Delete"
+                            ImageUrl="~/App_Images/Node/PnlIco/pnlico_rejected.gif" />
+                        <asp:ButtonField ButtonType="Image" CommandName="EditParameter" HeaderText="Edit"
+                            ImageUrl="~/App_Images/Node/PnlIco/pnlico_settings.gif" />
+                        <asp:BoundField HeaderText="Parameter Name" Visible="true" DataField="PARAM_NAME"
+                            SortExpression="PARAM_NAME" />
+                        <asp:BoundField HeaderText="Parameter Value" Visible="true" DataField="PARAM_VALUE"
+                            SortExpression="PARAM_VALUE" />
+                        <asp:BoundField HeaderText="Sort Index" DataField="SORT_INDEX" SortExpression="SORT_INDEX" />
+                        <asp:BoundField HeaderText="Occurence No." DataField="OCCURENCE_NO" SortExpression="OCCURENCE_NO" />
+                        <asp:BoundField HeaderText="Encoding" DataField="ENCODING" SortExpression="ENCODING" />
+                        <asp:BoundField HeaderText="Type" DataField="PARAM_TYPE" SortExpression="PARAM_TYPE" />
+                        <asp:BoundField HeaderText="Type Desc." DataField="TYPE_DESC" SortExpression="TYPE_DESC" />
+                        <asp:BoundField HeaderText="Required?" DataField="REQUIREDIND" SortExpression="REQUIREDIND" />
+                    </Columns>
+                </eaf:EAFGridView>
+                <eaf:EAFButton ID="btnAddNewParam" runat="server" CssClass="s_BtnGreen" Text="Add Parameter">
+                </eaf:EAFButton>
+                <ajaxToolkit:ModalPopupExtender ID="mpeParamDetail" runat="server" TargetControlID="btnAddNewParam"
+                    PopupControlID="pnlPopupParamInfo" CancelControlID="btnCloseParamInfo" DropShadow="true"
+                    BackgroundCssClass="modalBackground" />
+                <asp:Panel ID="pnlPopupParamInfo" runat="server" CssClass="detailPopup" Style="display: none">
+                    <div style="padding: 5px; background-color: #32528E; font-size: large; color: #FFFFFF;">
+                        Parameter Detail Information</div>
+                    <div style="padding: 20px; border: 1px solid #CCCCCC; background-color: #ffffdd;">
+                        <eaf:FormSectionBlock ID="fsbParamDetail" Caption="Parameter Detail" runat="server"
+                            Visible="false">
+                            <table class="cc_EntryForm" cellspacing="0" cellpadding="0" border="0">
+                                <tr valign="top">
+                                    <td class="fld">
+                                        <asp:Label ID="Label25" runat="server" AssociatedControlID="txtParaName">Parameter Name:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtParaName" runat="server" Width="100px" />
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label26" runat="server" AssociatedControlID="chkRequiredInd">Required Indicator:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:CheckBox ID="chkRequiredInd" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td class="fld">
+                                        <asp:Label ID="Label27" runat="server" AssociatedControlID="txtSortIndex">Sort Index:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtSortIndex" runat="server" Width="100px" />
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label28" runat="server" AssociatedControlID="txtEncoding">Parameter Encoding:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtEncoding" runat="server" Width="100px" />
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td class="fld">
+                                        <asp:Label ID="Label29" runat="server" AssociatedControlID="txtOccurenceNo">Occurence Number:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtOccurenceNo" runat="server" Width="100px" />
+                                    </td>
+                                    <td class="fld">
+                                        <asp:Label ID="Label30" runat="server" AssociatedControlID="txtParamType">Parameter Type:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtParamType" runat="server" Width="100px" />
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td class="fld">
+                                        <asp:Label ID="Label31" runat="server" AssociatedControlID="txtParamValue">Parameter Value:</asp:Label>
+                                    </td>
+                                    <td colspan="3">
+                                        <asp:TextBox ID="txtParamValue" runat="server" Width="350px" />
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td class="fld">
+                                        <asp:Label ID="Label32" runat="server" AssociatedControlID="txtParaTypeDesc">Parameter Type Description:</asp:Label>
+                                    </td>
+                                    <td colspan="3">
+                                        <asp:TextBox ID="txtParaTypeDesc" runat="server" Width="350px" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </eaf:FormSectionBlock>
+                        <eaf:ButtonTable ID="ButtonTable2" runat="server">
+                            <eaf:LeftButtons ID="LeftButtons2" runat="server">
+                                <eaf:EAFButton ID="btnCloseParamInfo" runat="server" CssClass="s_BtnGrey" Text="Close">
+                                </eaf:EAFButton>
+                            </eaf:LeftButtons>
+                            <eaf:RightButtons ID="RightButtons3" runat="server">
+                                <eaf:EAFButton ID="btnSaveParam" runat="server" CssClass="s_BtnGreen" Text="Save Parameter"
+                                    OnClick="btnSaveParam_Click"></eaf:EAFButton>
+                            </eaf:RightButtons>
+                        </eaf:ButtonTable>
+                    </div>
+                </asp:Panel>
+            </eaf:FormSectionBlock>
+            <eaf:ButtonTable ID="ButtonTable1" runat="server">
+                <eaf:LeftButtons ID="LeftButtons1" runat="server">
+                    <eaf:EAFButton ID="EAFButton1" runat="server" CssClass="s_BtnGrey" Text="Back" OnClick="btnBackToStep1_Click">
+                    </eaf:EAFButton>
+                </eaf:LeftButtons>
+                <eaf:RightButtons ID="RightButtons2" runat="server">
+                    <eaf:EAFButton ID="btnSaveService" runat="server" CausesValidation="true" ValidationGroup="service"
+                        CssClass="s_BtnGreen" Text="Save Service" ConfirmMessage="Are you sure?" OnClick="btnSaveService_Click">
+                    </eaf:EAFButton>
+                </eaf:RightButtons>
+            </eaf:ButtonTable>
+        </eaf:ViewTab>
+        <eaf:ViewTab ID="step3" runat="server" Caption="Node Metadata File Download" Description="Node Metadata File Download">
+            <eaf:FormSectionBlock ID="FormSectionBlock4" Caption="Node Metadata Download" runat="server"
+                Visible="true">
+                <table class="cc_EntryForm" cellspacing="0" cellpadding="0" border="0">
+                    <tr valign="top">
+                        <td>
+                            <asp:Label ID="lblDownloadXMLDesc" runat="server" Text="Please click 'Download XML File' to download the data service registration information and save it to your hard drive."
+                                CssClass="eaf_MsgLbl" Visible="true" ForeColor="DarkRed" Width="550px"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <eaf:EAFButton ID="btnDownloadMetadata" runat="server" CssClass="s_BtnGreen" Text="Download XML File"
+                                OnClick="btnDownloadMetadata_Click"></eaf:EAFButton>
+                        </td>
+                    </tr>
+                </table>
+            </eaf:FormSectionBlock>
+            <eaf:ButtonTable ID="ButtonTable3" runat="server" TableWidth="600px">
+                <eaf:LeftButtons ID="LeftButtons3" runat="server">
+                    <eaf:EAFButton ID="EAFButton6" runat="server" CssClass="s_BtnGrey" Text="Back To Dashboard"
+                        CausesValidation="false" OnClick="btnBackToDashboard_Click"></eaf:EAFButton>
+                </eaf:LeftButtons>
+                <eaf:RightButtons ID="RightButtons4" runat="server">
+                </eaf:RightButtons>
+            </eaf:ButtonTable>
+        </eaf:ViewTab>
+    </eaf:MultiViewTabs>
+</asp:Content>

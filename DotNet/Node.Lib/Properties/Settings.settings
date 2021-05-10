@@ -1,0 +1,132 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Node.Lib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConcurrencyMethod" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LAST_IN_WIN</Value>
+    </Setting>
+    <Setting Name="Severity" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LOW</Value>
+    </Setting>
+    <Setting Name="DBTrace" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PageFlowFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PageFlowFile</Value>
+    </Setting>
+    <Setting Name="AlertScriptOn" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AlertScriptMin" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="AlertScriptMsg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">You have not had any activities in more than 15 minutes, and Session will be expired in 5 minutes.\nPlease click 'OK' to continue the Session, or 'Cancel' if you don't want to.</Value>
+    </Setting>
+    <Setting Name="AlertRefreshUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/fresh.session</Value>
+    </Setting>
+    <Setting Name="AlertErrorUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/app/login.aspx</Value>
+    </Setting>
+    <Setting Name="TextResourceFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TextResource.xml</Value>
+    </Setting>
+    <Setting Name="TextResourceIgnoreKeyCases" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ScriptBase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ScriptBase</Value>
+    </Setting>
+    <Setting Name="ImageBase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/Images/EAF/</Value>
+    </Setting>
+    <Setting Name="DataSource" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogTableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogDetailMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogDateTime" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogCategory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogLevel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogSaveMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailTemplateSetting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EmailTemplate.xml</Value>
+    </Setting>
+    <Setting Name="EmailLogTableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogDetail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogDateTime" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogStatus" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogCategory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailLogAllowed" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SourceType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">File</Value>
+    </Setting>
+    <Setting Name="DataSource1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Table" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="KeyValue" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="KeyColumnName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SrcColumnName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Path" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TaskSetting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TaskConfig.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

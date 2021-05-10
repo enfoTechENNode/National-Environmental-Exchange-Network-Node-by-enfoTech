@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<textResource splitter=".">
+	<pageScope>
+		<folder key="Pages">
+			<folder key="Help">
+				<page key="GenericHelp">
+					<type key="title">
+						<label key="new" value="New To Node Administration" />
+					</type>
+					<type key="message">
+						<label key="new" value="This Web Application is for Administering Node Data Flows&lt;br/&gt;&lt;br/&gt;If you do not have a Domain Administrator User Name or Password, please contact the local Node Administrator" />
+					</type>
+				</page>
+			</folder>
+			<folder key="Main">
+        <page key="RestPassword">
+          <label key="YellowBubble" value="If you already have an account and forgot your password, please enter your email address in the box provided below. Your temporary password will be emailed to the email address your provided, and you will be asked to change the temporary password after logging in." />
+        </page>
+        <page key="ForgotPassword">
+					<label key="YellowBubble" value="If you already have an account and want a new password, please enter your login username in the box provided below. Your password will be emailed to the email address assigned to this user." />
+				</page>
+				<page key="Login">
+					<label key="main" value="Login Page for Node Administration Utility" />
+				</page>
+				<page key="ChangePassword">
+					<label key="main" value="To access the Node Administration Utility, please change your password." />
+				</page>
+			</folder>
+			<folder key="Monitoring">
+				<page key="SearchLogs">
+					<type key="bbl">
+						<label key="YellowBubble" value="Monitor the status and activity of Node Operations" />
+					</type>
+				</page>
+				<page key="ViewLog">
+					<type key="bbl">
+						<label key="YellowBubble" value="View the Details of a Node Transaction" />
+					</type>
+				</page>
+			</folder>
+			<folder key="Configuration">
+				<page key="NodeConfiguration">
+					<type key="bbl">
+						<label key="YellowBubble" value="Configuration of the Node" />
+					</type>
+				</page>
+				<page key="NAASConfiguration">
+					<type key="bbl">
+						<label key="YellowBubble" value="Configuration of the NAAS Authentication/Authorization Server&lt;br/&gt;&lt;br/&gt;If the Node Administrator Password is blank, the existing Node Administrator Password is left in the configuration.  To change the password, type in the updated password." />
+					</type>
+				</page>
+				<page key="EmailConfiguration">
+					<type key="bbl">
+						<label key="YellowBubble" value="Configuration of the Email Server" />
+					</type>
+				</page>
+				<page key="AppServerConfiguration">
+					<type key="bbl">
+						<label key="YellowBubble" value="Configuration of the Application Server" />
+					</type>
+				</page>
+				<page key="ClientConfiguration">
+					<type key="bbl">
+						<label key="YellowBubble" value="Configuration of the Web Services Client Application" />
+					</type>
+				</page>
+			</folder>
+			<folder key="Document">
+				<page key="SearchDocuments">
+					<type key="bbl">
+						<label key="YellowBubble" value="Search for Node Documents" />
+					</type>
+				</page>
+				<page key="UpdateFile">
+					<type key="bbl">
+						<label key="YellowBubble" value="Update an Existing Node Document" />
+					</type>
+				</page>
+				<page key="UploadFile">
+					<type key="bbl">
+						<label key="YellowBubble" value="Upload a New Node Document" />
+					</type>
+				</page>
+			</folder>
+			<folder key="User">
+				<page key="SearchUsers">
+					<type key="bbl">
+						<label key="YellowBubble" value="Search for Users" />
+					</type>
+				</page>
+				<page key="NewConsoleUser">
+					<type key="bbl">
+						<label key="YellowBubble" value="To Create a new Console User, enter in the information for the new user.&lt;br/&gt;A Console User has rights to log in to this application and administer the Node dataflows assigned to that user.&lt;br /&gt;Check the check boxes next to the Domains that the new Console User should have access to.&lt;br /&gt;To make this user a Node Administrator, click the checkbox next to the Node Domain." />
+					</type>
+				</page>
+				<page key="NewLocalUser">
+					<type key="bbl">
+						<label key="YellowBubble" value="To Create a new Local Node User, enter in the information for the new user.&lt;br/&gt;A Local Node User may have some rights to call certain Web Services on this Node.&lt;br /&gt;This Local Node User is managed locally, and its rights and policies only apply to this Node.&lt;br /&gt;Check the checkbox next to the Operations this Local Node User has rights to invoke on this Node." />
+					</type>
+				</page>
+				<page key="NewNAASUser">
+					<type key="bbl">
+						<label key="YellowBubble" value="To Create a new NAAS Node User, enter in the information for the new user.&lt;br/&gt;A NAAS Node User may have some rights to call certain Web Services on this Node.&lt;br /&gt;This NAAS Node User is managed centrally at the NAAS Server, and the rights and policies that are assigned through this application only apply to this Node, although this NAAS Node User may have rights and policies on other Nodes on the Exchange Network.&lt;br /&gt;Check the checkbox next to the Operations this NAAS Node User has rights to invoke on this Node." />
+					</type>
+				</page>
+				<page key="ViewConsoleUser">
+					<type key="bbl">
+						<label key="YellowBubble" value="To Update this Console User, enter or change the information for the user.&lt;br/&gt;A Console User has rights to log in to this application and administer the Node dataflows assigned to that user.&lt;br /&gt;Check the check boxes next to the Domains that the Console User should have access to.&lt;br /&gt;To make this user a Node Administrator, click the checkbox next to the Node Domain." />
+					</type>
+				</page>
+				<page key="ViewLocalUser">
+					<type key="bbl">
+						<label key="YellowBubble" value="To Update this Local Node User, enter or change the information for the user.&lt;br/&gt;A Local Node User may have some rights to call certain Web Services on this Node.&lt;br /&gt;This Local Node User is managed locally, and its rights and policies only apply to this Node.&lt;br /&gt;Check the checkbox next to the Operations this Local Node User has rights to invoke on this Node." />
+					</type>
+				</page>
+				<page key="ViewNAASUser">
+					<type key="bbl">
+						<label key="YellowBubble" value="To Update this NAAS Node User, enter or change the information for the user.&lt;br/&gt;A NAAS Node User may have some rights to call certain Web Services on this Node.&lt;br /&gt;This NAAS Node User is managed centrally at the NAAS Server, and the rights and policies that are assigned through this application only apply to this Node, although this NAAS Node User may have rights and policies on other Nodes on the Exchange Network.&lt;br /&gt;Check the checkbox next to the Operations this NAAS Node User has rights to invoke on this Node." />
+					</type>
+				</page>
+			</folder>
+			<folder key="Domain">
+				<page key="SearchDomains">
+					<type key="bbl">
+						<label key="YellowBubble" value="Search the Node Database for Domains" />
+					</type>
+				</page>
+				<page key="NewDomain">
+					<type key="bbl">
+						<label key="YellowBubble" value="Create a New Domain by entering the details of the Domain and clicking Save.&lt;br /&gt;Check the checkboxes next to the user names of the Console Users who will be Domain Administrators of this Domain." />
+					</type>
+				</page>
+				<page key="ViewDomain">
+					<type key="bbl">
+						<label key="YellowBubble" value="View and Edit the information of a Domain by examining and/or modifying the information of the Domain and then clicking Save.&lt;br /&gt;Check the checkboxes next to the user names of the Console Users who will be Domain Administrators of this Domain.&lt;br /&gt;Click on the Go To Operations button to view/edit/add a Domain's Operations." />
+					</type>
+				</page>
+			</folder>
+			<folder key="Operation">
+				<page key="SearchOperations">
+					<type key="bbl">
+						<label key="YellowBubble" value="Search the Node Database for Operations" />
+					</type>
+				</page>
+				<page key="NewOperation">
+					<type key="bbl">
+						<label key="YellowBubble" value="Enter in the base detail information for the new Operation.&lt;br /&gt;If you want to create an operation that is part of a Node Web Service, choose Web Service from the Operation Type drop down below.&lt;br /&gt;If you want to create an operation that is part of a Node Web Service, choose Scheduled Task from the Operation Type drop down below." />
+					</type>
+				</page>
+				<page key="NewWSOpSelection">
+					<type key="bbl">
+						<label key="YellowBubble" value="Please choose the Web Service for your new Web Service Operation." />
+					</type>
+				</page>
+				<page key="NewWSOperation">
+					<type key="bbl">
+						<label key="YellowBubble" value="Fill in the configuration for the new Web Service Operation.&lt;br /&gt;Add New Pre Processes or Post Processes by clicking the Add button.&lt;br /&gt;For Queries and Solicits, you must choose a dll and enter in the fully qualified class name.&lt;br /&gt;For Solicits, you can choose whether you only want to process outstanding solicits during the specified time range.&lt;br /&gt;Also for Solicits, you can enter in the User ID, Password, and Dataflow name you will use to Submit the result of the Solicit back to the Return URL specified as one of the input parameters.&lt;br /&gt;For all other Web Services, you can choose to perform the default Process for that Web Service, or you can choose a different Dll and Class Name that implements the correct interface." />
+					</type>
+				</page>
+				<page key="NewWSOperationForWizard">
+					<type key="bbl">
+						<label key="YellowBubble" value="Fill in the configuration for the new Web Service Operation.&lt;br /&gt;Add New Pre Processes or Post Processes by clicking the Add button.&lt;br /&gt;For Queries and Solicits, you must choose a dll and enter in the fully qualified class name.&lt;br /&gt;For Solicits, you can choose whether you only want to process outstanding solicits during the specified time range.&lt;br /&gt;Also for Solicits, you can enter in the User ID, Password, and Dataflow name you will use to Submit the result of the Solicit back to the Return URL specified as one of the input parameters.&lt;br /&gt;For all other Web Services, you can choose to perform the default Process for that Web Service, or you can choose a different Dll and Class Name that implements the correct interface." />
+					</type>
+				</page>
+				<page key="NewTaskOperation">
+					<type key="bbl">
+						<label key="YellowBubble" value="Fill in the configuration for the new Scheduled Task Operation.&lt;br /&gt;Add New Parameters by clicking the Add button.&lt;br /&gt;Choose the type of Task Schedule and fill in the appropriate configuration to schedule your Task." />
+					</type>
+				</page>
+				<page key="NewTaskOperationForWizard">
+					<type key="bbl">
+						<label key="YellowBubble" value="Fill in the configuration for the new Scheduled Task Operation.&lt;br /&gt;Add New Parameters by clicking the Add button.&lt;br /&gt;Choose the type of Task Schedule and fill in the appropriate configuration to schedule your Task." />
+					</type>
+				</page>
+				<page key="ViewOperation">
+					<type key="bbl">
+						<label key="YellowBubble" value="Update the Operation Configurations." />
+					</type>
+				</page>
+				<page key="ViewOperationWizard">
+					<type key="bbl">
+						<label key="YellowBubble" value="Update the Operation Configurations." />
+					</type>
+				</page>
+			</folder>
+			<folder key="Clients">
+				<folder key="AQS">
+					<page key="PreValidationSelection">
+						<type key="bbl">
+							<label key="YellowBubble" value="Select the action code, then selct the begining date and end date to search the records; or select the files to be deleted!"></label>
+						</type>
+						<type key="lbl">
+							<label key="fifTransactionSet" value="Transaction Set"></label>
+							<label key="fifActionCode" value="Action Code"></label>
+							<label key="fifMonitoringGroup" value="Monitoring Group"></label>
+							<label key="fifSampleDuration" value="Sample Duration"></label>
+							<label key="fifStartDate" value="Start Date"></label>
+							<label key="fifEnddate" value="End Date"></label>
+							<label key="fifunitecode" value="Unit Code"></label>
+							<label key="fifPresubmition" value="Prev. Submission"></label>
+							<label key="fifNAASAccount" value="NAAS Account"></label>
+							<label key="fifNASSpw" value="NAAS Password"></label>
+						</type>
+					</page>
+					<page key="PreValidationResult">
+						<type key="bbl">
+							<label key="YellowBubble" value="Display the records for Ready to be submitted or NotReady."></label>
+						</type>
+						<type key="lbl">
+							<label key="msgExecuteResult" value="Either the NAAS Account or the NAAS password is incorrected!  Please retry the submission!"></label>
+							<label key="fifTransactionSet" value="Transaction Set"></label>
+							<label key="fifActionCode" value="Action Code"></label>
+							<label key="fifMonitoringGroup" value="Monitoring Group"></label>
+							<label key="fifSampleDuration" value="Sample Duration"></label>
+							<label key="fifDateRange" value="Date Range"></label>
+							<label key="fifReadyRecords" value="# of Ready Records"></label>
+							<label key="fifNotReadyRecords" value="# of Not Ready Records"></label>
+							<label key="fifFileName" value="File Name"></label>
+							<label key="fifNAASAccount" value="NAAS Account"></label>
+							<label key="fifNASSpw" value="NAAS Password"></label>
+						</type>
+					</page>
+					<page key="ResultDetail">
+						<type key="bbl">
+							<label key="YellowBubble" value="Display detail records."></label>
+						</type>
+					</page>
+				</folder>
+				<folder key="DNREC">
+					<page key="TasksList">
+						<type key="bbl">
+							<label key="YellowBubble" value="This page allows users to add, modify, and access information for specific task configurations.  Users can edit/view/delete each task configuration, view the most recently updated task queue, and view the most recently updated task feedback.  "></label>
+						</type>
+					</page>
+					<page key="TaskConfig">
+						<type key="bbl">
+							<label key="YellowBubble" value="This page allows users to apply specific settings to the task configuration.  The Basic Info section requires that users specify the task configuration name, the node version, and the task status.  The Data Flow section requires users to input NAAS account information, end point URL, and data flow name.  The Task Schedule section allows users to schedule the tasks by schedule type: once, daily, weekly, or monthly.  The Error Handling section allows users to specify how many times a failed submission will retry, and how long to wait between each subsequent retries.  The Task Feedback Settings section allows users to specify a keyword for “Complete” and “Failed” submissions.  The Email List section allows users to add/delete e-mail subscribers.  In addition, users can choose which type of alerts (Submitted, Completed, Failed, or Error) they would like to receive."></label>
+						</type>
+					</page>
+					<page key="TaskFeedBack">
+						<type key="bbl">
+							<label key="YellowBubble" value="This page allows users to download the original submitted file as well as a processing report for this file.  In addition, information such as transaction ID, storage ID, and status of the file is given.  "></label>
+						</type>
+					</page>
+					<page key="TaskQueue">
+						<type key="bbl">
+							<label key="YellowBubble" value="This page shows all the tasks listed in the queue table for the specified task configuration.  From this table, users are able to view a more detailed summary of the specific task.  The table also includes information such as the queue type, the time stamp (past and next scheduled time for this task), the status of the task, and when it was last updated and who it was updated by."></label>
+						</type>
+					</page>
+				</folder>
+			</folder>
+			<folder key="RCRASubmission">
+				<page key="RCRAViewSubmissions">
+					<type key="bbl">
+						<label key="YellowBubble" value="Display the records ready submitted."></label>
+					</type>
+					<type key="lbl">
+						<label key="fifDateRange" value="Date Range"></label>
+						<label key="fifstatus" value="Status"></label>
+					</type>
+				</page>
+			</folder>
+			<folder key="DataWizard">
+				<page key="DataFlowWizard">
+					<type key="title">
+						<label key="new" value="Data Flow Wizard" />
+					</type>
+					<type key="message">
+						<label key="new" value="This Web Application is  Administering Node Data Flows Wizard" />
+					</type>
+				</page>
+			</folder>
+			<folder key="Utilities">
+				<page key="Error">
+					<label key="main" value="Oops!  The application got some errors!  Please go back to dashboard or just logout!" />
+					<type key="bbl">
+						<label key="YellowBubble" value="Node.Administration Errors!" />
+					</type>
+				</page>
+			</folder>
+			<folder key="DataViewer">
+				<page key="DataViewer">
+					<type key="bbl">
+						<label key="YellowBubble" value="Data Viewer" />
+					</type>
+				</page>
+			</folder>
+			<folder key="Registration">
+				<page key="NodeRegistration">
+					<type key="bbl">
+						<label key="YellowBubble" value="ENDS Service Registration" />
+					</type>
+				</page>
+				<page key="DEDLConfig">
+					<type key="bbl">
+						<label key="YellowBubble" value="DEDL Configuration" />
+					</type>
+				</page>
+			</folder>
+		</folder>
+	</pageScope>
+</textResource>

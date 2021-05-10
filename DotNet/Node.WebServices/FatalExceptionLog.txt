@@ -1,0 +1,94 @@
+[10/11/2013 3:16:54 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.InvalidOperationException: Attempt to load Oracle client libraries threw BadImageFormatException.  This problem will occur when running in 64 bit mode with the 32 bit Oracle client components installed. ---> System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+   at System.Data.Common.UnsafeNativeMethods.OCILobCopy2(IntPtr svchp, IntPtr errhp, IntPtr dst_locp, IntPtr src_locp, UInt64 amount, UInt64 dst_offset, UInt64 src_offset)
+   at System.Data.OracleClient.OCI.DetermineClientVersion()
+   --- End of inner exception stack trace ---
+   at System.Data.OracleClient.OCI.DetermineClientVersion()
+   at System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   at System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   at System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OracleClient.OracleConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.WebServices\Global.asax:line 23
+[10/11/2013 4:53:31 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.InvalidOperationException: Attempt to load Oracle client libraries threw BadImageFormatException.  This problem will occur when running in 64 bit mode with the 32 bit Oracle client components installed. ---> System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+   at System.Data.Common.UnsafeNativeMethods.OCILobCopy2(IntPtr svchp, IntPtr errhp, IntPtr dst_locp, IntPtr src_locp, UInt64 amount, UInt64 dst_offset, UInt64 src_offset)
+   at System.Data.OracleClient.OCI.DetermineClientVersion()
+   --- End of inner exception stack trace ---
+   at System.Data.OracleClient.OCI.DetermineClientVersion()
+   at System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   at System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   at System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OracleClient.OracleConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.WebServices\Global.asax:line 23
+[11/13/2013 12:26:14 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.WebServices\Global.asax:line 23
+[11/13/2013 12:27:01 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.WebServices\Global.asax:line 23

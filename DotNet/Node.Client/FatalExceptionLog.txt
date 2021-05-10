@@ -1,0 +1,20 @@
+[4/8/2013 12:14:37 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.Exception: System.Data.OracleClient requires Oracle client software version 8.1.7 or greater.
+   at System.Data.OracleClient.OCI.DetermineClientVersion()
+   at System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   at System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   at System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OracleClient.OracleConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\ts_dallas\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\ts_dallas\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\ts_dallas\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\ts_dallas\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\ts_dallas\eNode2008DotNet\V1_0\src\Node.Client\Global.asax:line 22

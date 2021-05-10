@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://neien.org/schema/usermgr.wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:typens="http://neien.org/schema/usermgr.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="UserMgr" targetNamespace="http://neien.org/schema/usermgr.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://neien.org/schema/usermgr.xsd">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:simpleType name="UserType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="user" />
+          <xsd:enumeration value="operator" />
+          <xsd:enumeration value="admin" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="PasswordType">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+      <xsd:simpleType name="StateId">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="" />
+          <xsd:enumeration value="AQS" />
+          <xsd:enumeration value="AQS_DM" />
+          <xsd:enumeration value="AL" />
+          <xsd:enumeration value="AK" />
+          <xsd:enumeration value="AK_TC" />
+          <xsd:enumeration value="AZ" />
+          <xsd:enumeration value="AZ_HT" />
+          <xsd:enumeration value="AZ_NN" />
+          <xsd:enumeration value="AZ_SRPMIC" />
+          <xsd:enumeration value="AR" />
+          <xsd:enumeration value="BPEL" />
+          <xsd:enumeration value="CA" />
+          <xsd:enumeration value="CA_DHS" />
+          <xsd:enumeration value="CA_Water" />
+          <xsd:enumeration value="CA_WB" />
+          <xsd:enumeration value="CA_ST" />
+          <xsd:enumeration value="CDX" />
+          <xsd:enumeration value="CDX_RMP" />
+          <xsd:enumeration value="CDXWeb" />
+          <xsd:enumeration value="CDXWebTemp" />
+          <xsd:enumeration value="CNMI" />
+          <xsd:enumeration value="REF" />
+          <xsd:enumeration value="CO" />
+          <xsd:enumeration value="CSC" />
+          <xsd:enumeration value="CT" />
+          <xsd:enumeration value="DE" />
+          <xsd:enumeration value="DE_DT" />
+          <xsd:enumeration value="DC" />
+          <xsd:enumeration value="ENFO" />
+          <xsd:enumeration value="EPA_R9" />
+          <xsd:enumeration value="EPA_R10" />
+          <xsd:enumeration value="ERG1" />
+          <xsd:enumeration value="ERG2" />
+          <xsd:enumeration value="FL" />
+          <xsd:enumeration value="GA" />
+          <xsd:enumeration value="GLNPO" />
+          <xsd:enumeration value="HI" />
+          <xsd:enumeration value="HERE" />
+          <xsd:enumeration value="ICIS" />
+          <xsd:enumeration value="ID" />
+          <xsd:enumeration value="ID_KT" />
+          <xsd:enumeration value="ID_WR" />
+          <xsd:enumeration value="IL" />
+          <xsd:enumeration value="IN" />
+          <xsd:enumeration value="IA" />
+          <xsd:enumeration value="KS" />
+          <xsd:enumeration value="KS_DA" />
+          <xsd:enumeration value="KY" />
+          <xsd:enumeration value="KY_DOGI" />
+          <xsd:enumeration value="LA" />
+          <xsd:enumeration value="LA_DEQ" />
+          <xsd:enumeration value="ME" />
+          <xsd:enumeration value="MD" />
+          <xsd:enumeration value="MA" />
+          <xsd:enumeration value="MI" />
+          <xsd:enumeration value="MN" />
+          <xsd:enumeration value="MN_NRRI" />
+          <xsd:enumeration value="MS" />
+          <xsd:enumeration value="MO" />
+          <xsd:enumeration value="MT" />
+          <xsd:enumeration value="NatureServe" />
+          <xsd:enumeration value="NE" />
+          <xsd:enumeration value="NE_OMAHA" />
+          <xsd:enumeration value="NE_HHSS" />
+          <xsd:enumeration value="NEI" />
+          <xsd:enumeration value="NH" />
+          <xsd:enumeration value="NV" />
+          <xsd:enumeration value="NJ" />
+          <xsd:enumeration value="NM" />
+          <xsd:enumeration value="NY" />
+          <xsd:enumeration value="NY_HEALTH" />
+          <xsd:enumeration value="NY_MHK" />
+          <xsd:enumeration value="NC" />
+          <xsd:enumeration value="ND" />
+          <xsd:enumeration value="OH" />
+          <xsd:enumeration value="OK" />
+          <xsd:enumeration value="OK_CN" />
+          <xsd:enumeration value="OK_ODA" />
+          <xsd:enumeration value="OR" />
+          <xsd:enumeration value="OR_CTUIR" />
+          <xsd:enumeration value="OregonRPC" />
+          <xsd:enumeration value="PA" />
+          <xsd:enumeration value="PR" />
+          <xsd:enumeration value="RI" />
+          <xsd:enumeration value="SAIC" />
+          <xsd:enumeration value="SC" />
+          <xsd:enumeration value="SD" />
+          <xsd:enumeration value="SD_MSIWRC" />
+          <xsd:enumeration value="TN" />
+          <xsd:enumeration value="TWX" />
+          <xsd:enumeration value="TX" />
+          <xsd:enumeration value="TrustService" />
+          <xsd:enumeration value="UIC" />
+          <xsd:enumeration value="UT" />
+          <xsd:enumeration value="VT" />
+          <xsd:enumeration value="VA" />
+          <xsd:enumeration value="WA" />
+          <xsd:enumeration value="WA_SIT" />
+          <xsd:enumeration value="WV" />
+          <xsd:enumeration value="WV_HRS" />
+          <xsd:enumeration value="WI" />
+          <xsd:enumeration value="WQX" />
+          <xsd:enumeration value="WY" />
+          <xsd:enumeration value="WA_SIN" />
+          <xsd:enumeration value="WA_DNR" />
+          <xsd:enumeration value="CA_YT" />
+          <xsd:enumeration value="WY_WRIR" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="UserInfo">
+        <xsd:sequence>
+          <xsd:element name="UserId" type="xsd:string" />
+          <xsd:element name="UserGroup" type="xsd:string" />
+          <xsd:element name="Owner" type="xsd:string" />
+          <xsd:element name="Node" type="xsd:string" />
+          <xsd:element name="Affiliate" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UserProperty">
+        <xsd:sequence>
+          <xsd:element name="UserId" type="xsd:string" />
+          <xsd:element name="CommonName" type="xsd:string" />
+          <xsd:element name="Organization" type="xsd:string" />
+          <xsd:element name="OrganizationUnit" type="xsd:string" />
+          <xsd:element name="Address" type="xsd:string" />
+          <xsd:element name="City" type="xsd:string" />
+          <xsd:element name="State" type="typens:StateId" />
+          <xsd:element name="ZipCode" type="xsd:string" />
+          <xsd:element name="Phone" type="xsd:string" />
+          <xsd:element name="Supervisor" type="xsd:string" />
+          <xsd:element name="SupervisorPhone" type="xsd:string" />
+          <xsd:element name="UserData" type="xsd:string" />
+          <xsd:element name="SecurityLevel" type="xsd:string" />
+          <xsd:element name="CertificateStatus" type="xsd:string" />
+          <xsd:element name="LastChange" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UserPropertyList">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="typens:UserProperty[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="UserList">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="typens:UserInfo[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AddUser">
+    <wsdl:part name="adminName" type="xsd:string" />
+    <wsdl:part name="adminPwd" type="typens:PasswordType" />
+    <wsdl:part name="userEmail" type="xsd:string" />
+    <wsdl:part name="userType" type="typens:UserType" />
+    <wsdl:part name="userPwd" type="typens:PasswordType" />
+    <wsdl:part name="confirmUserPwd" type="typens:PasswordType" />
+    <wsdl:part name="affiliate" type="typens:StateId" />
+  </wsdl:message>
+  <wsdl:message name="AddUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUser">
+    <wsdl:part name="adminName" type="xsd:string" />
+    <wsdl:part name="adminPwd" type="typens:PasswordType" />
+    <wsdl:part name="userEmail" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUser">
+    <wsdl:part name="adminName" type="xsd:string" />
+    <wsdl:part name="adminPwd" type="typens:PasswordType" />
+    <wsdl:part name="userEmail" type="xsd:string" />
+    <wsdl:part name="userType" type="typens:UserType" />
+    <wsdl:part name="userPwd" type="typens:PasswordType" />
+    <wsdl:part name="owner" type="xsd:string" />
+    <wsdl:part name="affiliate" type="typens:StateId" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SetUserProperty">
+    <wsdl:part name="adminName" type="xsd:string" />
+    <wsdl:part name="adminPwd" type="typens:PasswordType" />
+    <wsdl:part name="UserId" type="xsd:string" />
+    <wsdl:part name="CommonName" type="xsd:string" />
+    <wsdl:part name="Organization" type="xsd:string" />
+    <wsdl:part name="OrganizationUnit" type="xsd:string" />
+    <wsdl:part name="Address" type="xsd:string" />
+    <wsdl:part name="City" type="xsd:string" />
+    <wsdl:part name="State" type="typens:StateId" />
+    <wsdl:part name="ZipCode" type="xsd:string" />
+    <wsdl:part name="Phone" type="xsd:string" />
+    <wsdl:part name="Supervisor" type="xsd:string" />
+    <wsdl:part name="SupervisorPhone" type="xsd:string" />
+    <wsdl:part name="UserData" type="xsd:string" />
+    <wsdl:part name="SecurityLevel" type="xsd:string" />
+    <wsdl:part name="CertificateStatus" type="xsd:string" />
+    <wsdl:part name="LastChange" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPropertyResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserProperty">
+    <wsdl:part name="adminName" type="xsd:string" />
+    <wsdl:part name="adminPwd" type="typens:PasswordType" />
+    <wsdl:part name="userEmail" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPropertyResponse">
+    <wsdl:part name="return" type="typens:UserPropertyList" />
+  </wsdl:message>
+  <wsdl:message name="GetUserList">
+    <wsdl:part name="adminName" type="xsd:string" />
+    <wsdl:part name="adminPwd" type="typens:PasswordType" />
+    <wsdl:part name="userEmail" type="xsd:string" />
+    <wsdl:part name="userState" type="typens:StateId" />
+    <wsdl:part value="0" name="rowId" type="xsd:integer" />
+    <wsdl:part value="200" name="maxRows" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListResponse">
+    <wsdl:part name="return" type="typens:UserList" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwd">
+    <wsdl:part name="userEmail" type="xsd:string" />
+    <wsdl:part name="password" type="typens:PasswordType" />
+    <wsdl:part name="newPwd" type="typens:PasswordType" />
+  </wsdl:message>
+  <wsdl:message name="ChangePwdResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="UserMgrPortType">
+    <wsdl:operation name="AddUser">
+      <documentation>Add a new user.The system uses email address as the user id. All parameters are required.Password should contain a mix of lower case, upper case and numeric characters.</documentation>
+      <wsdl:input message="tns:AddUser" />
+      <wsdl:output message="tns:AddUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <documentation>Remove a user, you must be an administrator and the owner of the account.</documentation>
+      <wsdl:input message="tns:DeleteUser" />
+      <wsdl:output message="tns:DeleteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <documentation>Update a user account information. The Password should contain a mix of lower case, upper case and numeric characters</documentation>
+      <wsdl:input message="tns:UpdateUser" />
+      <wsdl:output message="tns:UpdateUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserProperty">
+      <documentation>Set additional user identity information.</documentation>
+      <wsdl:input message="tns:SetUserProperty" />
+      <wsdl:output message="tns:SetUserPropertyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProperty">
+      <documentation>Get additional user identity information.</documentation>
+      <wsdl:input message="tns:GetUserProperty" />
+      <wsdl:output message="tns:GetUserPropertyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <documentation>Get a list of users</documentation>
+      <wsdl:input message="tns:GetUserList" />
+      <wsdl:output message="tns:GetUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <documentation>The new password should contain a mix of lower case, upper case and numeric characters. The minimum password length is 8</documentation>
+      <wsdl:input message="tns:ChangePwd" />
+      <wsdl:output message="tns:ChangePwdResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserMgrBinding" type="tns:UserMgrPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserProperty">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProperty">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://neien.org/schema/usermgr.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="usermgr">
+    <documentation>A simple user identity management service. </documentation>
+    <wsdl:port name="UserMgrPortType" binding="tns:UserMgrBinding">
+      <soap:address location="https://naas.epacdxnode.net/xml/usermgr.wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

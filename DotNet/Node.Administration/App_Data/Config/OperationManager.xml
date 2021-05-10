@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<OperationList>
+	<Operation id="1" name="Operation1">
+		<Upload Enable="True"></Upload>
+		<Generate Enable="True"></Generate>
+		<Submit Enable="True">
+			<URL>TestURL</URL>
+			<UserName>Admin</UserName>
+			<Password>123</Password>
+		</Submit>
+		<View Enable="True">
+			<Template id="1">Template1</Template>
+			<Template id="2">Template2</Template>
+		</View>
+	</Operation>
+</OperationList>

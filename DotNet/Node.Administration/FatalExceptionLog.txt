@@ -1,0 +1,190 @@
+[7/25/2013 4:30:13 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
+   at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean& marsCapable)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Global.asax:line 21
+[7/25/2013 4:30:47 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
+   at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean& marsCapable)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 52
+[8/13/2013 3:45:28 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.Data.SqlClient.SqlException: The SELECT permission was denied on the object 'SYS_CONFIG', database 'ENNode2', schema 'dbo'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 857
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Global.asax:line 21
+[8/13/2013 3:45:45 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: The SELECT permission was denied on the object 'NODE_ACCOUNT_TYPE', database 'ENNode2', schema 'dbo'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 857
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 52
+[8/13/2013 4:05:06 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: Cannot open database "ennode2" requested by the login. The login failed.
+Login failed for user 'nodeadmin'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 52
+[11/4/2013 2:26:31 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select CONFIG_XML from SYS_CONFIG where CONFIG_NAME = 'system.config'
+ ---> System.Data.SqlClient.SqlException: Cannot open database "ENNode2" requested by the login. The login failed.
+Login failed for user 'nodeadmin'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.SQLServer.Configurations.GetSystemConfig() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Configurations.cs:line 86
+   at Node.Core.Biz.Objects.SystemConfiguration..ctor() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\SystemConfiguration.cs:line 27
+   at ASP.global_asax.Application_Start(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Global.asax:line 21
+[11/4/2013 2:26:59 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: Cannot open database "ENNode2" requested by the login. The login failed.
+Login failed for user 'nodeadmin'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 52
+[11/4/2013 2:27:05 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: Cannot open database "ENNode2" requested by the login. The login failed.
+Login failed for user 'nodeadmin'.
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 52

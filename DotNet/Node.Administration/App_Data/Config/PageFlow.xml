@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pageFlow redirect="false">
+	<pageActions>
+		<page id="Pages.Main.Login" page="/Pages/Main/Login.aspx">
+			<action name="login" forwardPageID="Pages.Monitoring.SearchLogs" />
+		</page>
+		<page id="Pages.Main.Home" page="/Pages/Main/Home.aspx">
+			<action name="default" forwardPageID="Pages.Main.Home" />
+		</page>
+		<!--<page id="Pages.PreValidation.PreValidationSelection" page="/Pages/PreValidation/PreValidationSelection.aspx">
+			<action name="default" forwardPageID="Pages.PreValidation.PreValidationSelection"></action>
+			<action name="Next" forwardPageID="Pages.PreValidation.PreValidationResult"></action>
+		</page>-->
+    <page id="Pages.RCRASubmission.RCRAViewSubmissions" page="/Pages/RCRASubmission/RCRAViewSubmissions.aspx">
+      <action name="default" forwardPageID="Pages.RCRASubmission.RCRAViewSubmissions"></action>
+      <action name="Next" forwardPageID="Pages.RCRASubmission.ViewXML"></action>
+    </page>
+  </pageActions>
+</pageFlow>

@@ -1,0 +1,5 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RCRALeftPanel.ascx.cs" Inherits="PageControls_Share_RCRALeftPanel" %>
+
+<nodeWC:PanelList ID="AdminRCRALeftPanel" PanelTitle="RCRA Data Flow" runat="server" width="150px">
+    <nodeWC:PanelItem ID="PanelItem_RCRA_Submissions" Caption="View RCRA Submissions" Link="~/Pages/RCRASubmission/RCRAViewSubmissions.aspx" ImageSrc="~/App_Images/Node/PnlIco/pnlico_new.gif" runat="server"></nodeWC:PanelItem>
+</nodeWC:PanelList>

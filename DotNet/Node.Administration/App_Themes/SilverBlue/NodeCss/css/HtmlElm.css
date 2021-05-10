@@ -1,0 +1,10 @@
+
+/* HTML Elements 
+****************************/
+html,body { height:100%; }
+body { margin:0px; padding:0px; font-family:Arial,Helvetica,sans-serif; }
+a {	color: #0000BB; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+input,textarea,select { font:bold 75% Arial,Helvetica,sans-serif; color:#0000BB; }
+input,select { margin:1px; }

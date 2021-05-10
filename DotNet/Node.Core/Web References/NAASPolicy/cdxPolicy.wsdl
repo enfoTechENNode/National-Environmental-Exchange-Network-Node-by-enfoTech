@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://exchangenetwork.net/schema/cdxPolicy.wsdl" xmlns:dime="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:typens="http://exchangenetwork.net/schema/cdxPolicy.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="cdxPolicy" targetNamespace="http://exchangenetwork.net/schema/cdxPolicy.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://exchangenetwork.net/schema/cdxPolicy.xsd">
+      <xsd:simpleType name="PasswordType">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+      <xsd:simpleType name="ActionType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Deny" />
+          <xsd:enumeration value="Permit" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MethodName">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Any" />
+          <xsd:enumeration value="Submit" />
+          <xsd:enumeration value="Download" />
+          <xsd:enumeration value="Authenticate" />
+          <xsd:enumeration value="Query" />
+          <xsd:enumeration value="GetStatus" />
+          <xsd:enumeration value="Notify" />
+          <xsd:enumeration value="Solicit" />
+          <xsd:enumeration value="GetServices" />
+          <xsd:enumeration value="Execute" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="NodeId">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="" />
+          <xsd:enumeration value="AL" />
+          <xsd:enumeration value="AK" />
+          <xsd:enumeration value="AZ" />
+          <xsd:enumeration value="AR" />
+          <xsd:enumeration value="CA" />
+          <xsd:enumeration value="CDX" />
+          <xsd:enumeration value="REF" />
+          <xsd:enumeration value="CO" />
+          <xsd:enumeration value="CT" />
+          <xsd:enumeration value="DE" />
+          <xsd:enumeration value="DC" />
+          <xsd:enumeration value="FL" />
+          <xsd:enumeration value="GA" />
+          <xsd:enumeration value="HI" />
+          <xsd:enumeration value="ID" />
+          <xsd:enumeration value="IL" />
+          <xsd:enumeration value="IN" />
+          <xsd:enumeration value="IA" />
+          <xsd:enumeration value="KS" />
+          <xsd:enumeration value="KY" />
+          <xsd:enumeration value="LA" />
+          <xsd:enumeration value="ME" />
+          <xsd:enumeration value="MD" />
+          <xsd:enumeration value="MA" />
+          <xsd:enumeration value="MI" />
+          <xsd:enumeration value="MN" />
+          <xsd:enumeration value="MS" />
+          <xsd:enumeration value="MO" />
+          <xsd:enumeration value="MT" />
+          <xsd:enumeration value="NE" />
+          <xsd:enumeration value="NH" />
+          <xsd:enumeration value="NV" />
+          <xsd:enumeration value="NJ" />
+          <xsd:enumeration value="NM" />
+          <xsd:enumeration value="NY" />
+          <xsd:enumeration value="NC" />
+          <xsd:enumeration value="ND" />
+          <xsd:enumeration value="OH" />
+          <xsd:enumeration value="OK" />
+          <xsd:enumeration value="OR" />
+          <xsd:enumeration value="PA" />
+          <xsd:enumeration value="RI" />
+          <xsd:enumeration value="SC" />
+          <xsd:enumeration value="SD" />
+          <xsd:enumeration value="TN" />
+          <xsd:enumeration value="TX" />
+          <xsd:enumeration value="UT" />
+          <xsd:enumeration value="VT" />
+          <xsd:enumeration value="VA" />
+          <xsd:enumeration value="WA" />
+          <xsd:enumeration value="WV" />
+          <xsd:enumeration value="WI" />
+          <xsd:enumeration value="WY" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="PolicyInfo">
+        <xsd:sequence>
+          <xsd:element name="PolicyId" type="xsd:string" />
+          <xsd:element name="Node" type="xsd:string" />
+          <xsd:element name="Subject" type="xsd:string" />
+          <xsd:element name="Method" type="xsd:string" />
+          <xsd:element name="Request" type="xsd:string" />
+          <xsd:element name="Params" type="xsd:string" />
+          <xsd:element name="Action" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolicyList">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="typens:PolicyInfo[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AuthEventType">
+        <xsd:sequence>
+          <xsd:element name="EventName" type="xsd:string" />
+          <xsd:element name="UserName" type="xsd:string" />
+          <xsd:element name="Subject" type="xsd:string" />
+          <xsd:element name="Description" type="xsd:string" />
+          <xsd:element name="IpAddress" type="xsd:string" />
+          <xsd:element name="TimeStamp" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AuthEventList">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="typens:AuthEventType[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SetPolicy">
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="credential" type="typens:PasswordType" />
+    <wsdl:part name="subject" type="xsd:string" />
+    <wsdl:part name="method" type="typens:MethodName" />
+    <wsdl:part name="request" type="xsd:string" />
+    <wsdl:part name="params" type="xsd:string" />
+    <wsdl:part name="decision" type="typens:ActionType" />
+  </wsdl:message>
+  <wsdl:message name="SetPolicyResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyList">
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="credential" type="typens:PasswordType" />
+    <wsdl:part name="subject" type="xsd:string" />
+    <wsdl:part value="0" name="rowId" type="xsd:integer" />
+    <wsdl:part value="100" name="maxRows" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyListResponse">
+    <wsdl:part name="return" type="typens:PolicyList" />
+  </wsdl:message>
+  <wsdl:message name="DeletePolicy">
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="credential" type="typens:PasswordType" />
+    <wsdl:part name="subject" type="xsd:string" />
+    <wsdl:part name="method" type="typens:MethodName" />
+    <wsdl:part name="request" type="xsd:string" />
+    <wsdl:part name="params" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePolicyResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyPolicy">
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="credential" type="typens:PasswordType" />
+    <wsdl:part name="subject" type="xsd:string" />
+    <wsdl:part name="node" type="typens:NodeId" />
+    <wsdl:part name="method" type="typens:MethodName" />
+    <wsdl:part name="request" type="xsd:string" />
+    <wsdl:part name="params" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyPolicyReponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthEvents">
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="credential" type="typens:PasswordType" />
+    <wsdl:part name="subject" type="xsd:string" />
+    <wsdl:part value="0" name="rowId" type="xsd:integer" />
+    <wsdl:part value="100" name="maxRows" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthEventsResponse">
+    <wsdl:part name="return" type="typens:AuthEventList" />
+  </wsdl:message>
+  <wsdl:portType name="NetworkPolicyPortType">
+    <wsdl:operation name="SetPolicy">
+      <documentation>Set authorization policy for a subject.Suject, node and method are required parameters.
+	  </documentation>
+      <wsdl:input message="tns:SetPolicy" />
+      <wsdl:output message="tns:SetPolicyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolicy">
+      <documentation>Remove an authorization policy
+	  </documentation>
+      <wsdl:input message="tns:DeletePolicy" />
+      <wsdl:output message="tns:DeletePolicyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyList">
+      <documentation>Get All Policy associated with a subject
+	  </documentation>
+      <wsdl:input message="tns:GetPolicyList" />
+      <wsdl:output message="tns:GetPolicyListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthEvents">
+      <documentation>Get a list of security events</documentation>
+      <wsdl:input message="tns:GetAuthEvents" />
+      <wsdl:output message="tns:GetAuthEventsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPolicy">
+      <documentation>Verify whether or not a person is authorized to access the specified resource.</documentation>
+      <wsdl:input message="tns:VerifyPolicy" />
+      <wsdl:output message="tns:VerifyPolicyReponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetworkPolicyBinding" type="tns:NetworkPolicyPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="SetPolicy">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolicy">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyList">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthEvents">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPolicy">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://exchangenetwork.net/schema/cdxPolicy.xsd" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthorizationPolicy">
+    <documentation>A set of services for Network Authorization.</documentation>
+    <wsdl:port name="NetworkPolicyPortType" binding="tns:NetworkPolicyBinding">
+      <soap:address location="https://cdxnodenaas.epa.gov/xml/policy.wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

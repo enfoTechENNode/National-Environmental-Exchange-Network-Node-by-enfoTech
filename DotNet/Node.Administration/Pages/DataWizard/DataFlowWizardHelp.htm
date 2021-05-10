@@ -1,0 +1,635 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+    <title>Data Flow Wizard Help Page</title>
+    <style type="text/css">
+        .unnamed1
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #333333;
+        }
+    </style>
+</head>
+<body style="margin: 10px; padding: 10px;">
+    <div style="margin: 5px; height: 30; width: auto; padding: 5px; background-color: #000000">
+        <img style="vertical-align: middle" src="../../App_Images/DataWizard/Info.png" alt="Data Flow Wizard Help" />
+        <span style="font-size: xx-large; vertical-align: middle; font-family: Georgia; font-style: italic;
+            font-weight: bold; color: #FFFFFF;">Data Flow Wizard Help</span>
+    </div>
+    <table style="padding: 5px; margin: 5px; font-face" width="651" align="left">
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="ExternalAPI"></a>
+                <img src="../../App_Images/DataWizard/Crystal_Clear_app_winprops.png" style="width: 60px;
+                    height: 60px" align="top" alt="External API Component" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">External API Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The External API component is used to invoke an external class. This class must
+                        be in DLL form and must inherit the eNode's DataFlow.Component.Interface.dll. This
+                        is helpful when you want to write complex logic in a dll that is too complex to
+                        be handled by other available components.<br>
+                        <br>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Dll Name: The name of the dll file (e.g. test123.dll) that will be invoked. This
+                            dll must be copied into the Node.WebServices/bin directory (or Node.Task/bin directory
+                            for Scheduled tasks) </li>
+                        <li>Class Name: The name of the class within the dll that will be invoked </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value. </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="XmlComposer"></a>
+                <img src="../../App_Images/DataWizard/Crystal_Clear_XML_Comp3.png" style="width: 60px;
+                    height: 60px" alt="XML Composer Component" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto">
+                    <p>
+                        <b><font size="2" color="#660000">XML Composer Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The XML Composer component is used to retrieve data from a data source and use this
+                        data source to construct an XML file.<br>
+                        <br>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="left; vertical-align: top;" width="86">
+                <a name="XmlPopulator"></a>
+                <img src="../../App_Images/DataWizard/Crystal_Clear_XML_Pop3.png" style="width: 60px;
+                    height: 60px" alt="XML Populator Component" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto">
+                    <p>
+                        <b><font size="2" color="#660000">XML Populator Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The XML Populator component is used to populate a data source from an XML file.
+                        This component will take an XML file as an input, and apply a populator file that
+                        will populate a data source.<br>
+                        <br>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value. </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="XmlValidator"></a>
+                <img src="../../App_Images/DataWizard/Crystal_Clear_XML_Val3.png" style="width: 60px;
+                    height: 60px" alt="XML Validator Component" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">XML Validator Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The XML Validator component is used to validate an XML file. This checks the XML
+                        file against a Validation Rule File, which uses the eNode 2008 Validation Engine.
+                        This validation engine is capable of performing a wide variety of validation checks,
+                        including database lookups, and can handle complex branching logic within validation
+                        checks (i.e. if tag A = X, then perform this validation). This component is most
+                        useful in checking XML files prior to saving into the database, or validating outbound
+                        XML files prior to submission.<br>
+                        <br>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="XmlTransformer"></a>
+                <img alt="XML Transformer Component" src="../../App_Images/DataWizard/Crystal_Clear_XML_Tran.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">XML Transformer Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The XML Transformer component is used to apply an XML stylesheet to an XML file.
+                        This can convert an XML file into a wide variety of formats, such as HTML, CSV,
+                        or even GML/KML for displaying data geospatially. This component is most useful
+                        in transforming XML into a more human readable format for data distribution.</p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="StoredProcedure"></a>
+                <img alt="DB Stored Procedure Component" src="../../App_Images/DataWizard/Crystal_Clear_app_StoredProcedure2.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">DB Stored Procedure Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The DB Stored Procedure component is used to call a database (Oracle or SQL Server)
+                        stored procedure. This is useful for handling XML composition or decomposition,
+                        or any other logic that you wish to control in a stored procedure.
+                    </p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="Email"></a>
+                <img alt="Email Component" src="../../App_Images/DataWizard/Crystal_Clear_app_xfmail.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Email Component</font></b><font size="2" color="#660000"><br>
+                        </font>
+                        <br>
+                        The Email component is used to send an email. This component can be configured to
+                        attach any object created from a previous component in the data flow wizard.</p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="Logger"></a>
+                <img alt="Probe Component" src="../../App_Images/DataWizard/Crystal_Clear_action_find.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Probe Component</font></b><font size="2" color="#660000"><br>
+                        </font>
+                        <br>
+                        The Probe component is used to write logging messages to a text log file. This is
+                        used for debugging purposes.</p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="Encryptor"></a>
+                <img alt="Encryptor Component" src="../../App_Images/DataWizard/Crystal_Clear_action_encrypted.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Encryptor Component</font></b><font size="2" color="#660000"><br>
+                        </font>
+                        <br>
+                        The Encryptor component is used to encrypt any file.</p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="Decryptor"></a>
+                <img alt="Decryptor Component" src="../../App_Images/DataWizard/Crystal_Clear_action_decrypted.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Decryptor Component</font></b><font size="2" color="#660000"><br>
+                        </font>
+                        <br>
+                        The Decryptor component is used to send an email. This component can be configured
+                        to attach any object created from a previous component in the data flow wizard.</p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="Compressor"></a>
+                <img alt="Compressor Component" src="../../App_Images/DataWizard/zip.png" style="width: 60px;
+                    height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Compressor Component</font></b><font size="2" color="#660000"><br>
+                        </font>
+                        <br>
+                        The Compressor component is used to compress (i.e. ZIP) any file. This is useful
+                        when sending out large files.</p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="Decompressor"></a>
+                <img alt="Decompressor Component" src="../../App_Images/DataWizard/unzip.png" style="width: 60px;
+                    height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Decompressor Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The Decompressor component is used to decompress a zip file. This is useful when
+                        the Node receives ZIP files, such as when a Submit service submits ZIP files.
+                    </p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="NodeWebServices"></a>
+                <img alt="Node Web Services Component" src="../../App_Images/DataWizard/Crystal_Clear_Node_Service.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto;">
+                    <p>
+                        <b><font size="2" color="#660000">Node Web Services Component</font></b><font size="2"
+                            color="#660000"><br>
+                        </font>
+                        <br>
+                        The Node Web Services component is a powerful component that can be used to invoke
+                        any Exchange Network Web service. With this component, you can link together disparate
+                        web services.
+                    </p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; vertical-align: top;" width="86">
+                <a name="SaveToNode"></a>
+                <img alt="Save Content To Node Component" src="../../App_Images/DataWizard/Crystal_Clear_action_db_update.png"
+                    style="width: 60px; height: 60px" />
+            </td>
+            <td width="553" class="unnamed1">
+                <div style="padding: 5px; margin: 5px; height: 100px; width: auto">
+                    <p>
+                        <b><font size="2" color="#660000">Save Content To Node Component</font></b><font
+                            size="2" color="#660000"><br>
+                        </font>
+                        <br>
+                        The Save Content To Node component is used to store information into the Node database.
+                        All files are stored in the Node File Cabin table. This is useful when you want
+                        to save a copy of a file prior to submission to a partner.
+                    </p>
+                    <p>
+                        <b>Settings:</b>
+                        <br>
+                    </p>
+                    <ul>
+                        <li>Alias Name: this will uniquely name the component; you can set this to any name
+                            as long as it is unique. </li>
+                        <li>Run In Thread: Indicates whether a Web Service requester will need to wait for this
+                            component to complete processing before receiving the Web Service return. If set
+                            to Threaded, the component will run in a separate thread from the main data flow
+                            component and the web service requester may receive the web service return prior
+                            to the completion of this component processing. </li>
+                        <li>Parameters: List in incoming parameters to this component. Available input parameters
+                            include: (1) the original input parameters for this data flow (2) outputs from from
+                            any previous non-threaded component in the data flow and (3) some global parameters
+                            (e.g. TransactionID) </li>
+                        <li>Log Message: If you wish to specify customized logging when this component completes
+                            or fails, enter here. If this is left blank, eNode2008 will supply a default loging
+                            message. </li>
+                    </ul>
+                    <b>Output:</b>
+                    <ul>
+                        <li>The output is an iActionParameter object type, which consists of: Parameter Name,
+                            Parameter Type, and Parameter Value.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

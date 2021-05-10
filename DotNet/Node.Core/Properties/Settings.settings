@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Node.Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Node_Core_NAASAuth_cdxSecurity" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://naas.epacdxnode.net/xml/auth.wsdl</Value>
+    </Setting>
+    <Setting Name="Node_Core_NAASPolicy_AuthorizationPolicy" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://cdxnodenaas.epa.gov/xml/policy.wsdl</Value>
+    </Setting>
+    <Setting Name="Node_Core_CDX_NetworkNodePortType_V10" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test.epacdxnode.net/cdx/services/NetworkNodePortType_V10.wsdl</Value>
+    </Setting>
+    <Setting Name="Node_Core_CDX_NetworkNode" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://cdxnode.epa.gov/cdx/services/NetworkNodePortType_V10</Value>
+    </Setting>
+    <Setting Name="Node_Core_NAASUserManager_usermgr" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://naas.epacdxnode.net/xml/usermgr.wsdl</Value>
+    </Setting>
+    <Setting Name="DataFlowPlugIn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dll=bin\DataFlow.Engine.dll;class=DataFlow.Engine.ActionProcess</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

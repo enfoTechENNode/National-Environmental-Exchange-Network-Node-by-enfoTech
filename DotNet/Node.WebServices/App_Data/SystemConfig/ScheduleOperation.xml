@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Operation>
+  <Process>
+    <ClassName>Node.VA.DataExchange.Tasks.QueryDataExchange</ClassName>
+    <DllName>Bin\Node.VA.DataExchange.dll</DllName>
+  </Process>
+  <Parameters>
+    <Parameter>
+      <Name>Node Address</Name>
+      <Value>http://localhost:3930/Node.WebServices/NodeServices.asmx</Value>
+    </Parameter>
+    <Parameter>
+      <Name>User Name</Name>
+      <Value>e2dmr</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Password</Name>
+      <Value>e2dmr</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Request</Name>
+      <Value>EDMRRegionCodes</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Composer Mapper File</Name>
+      <Value>RegionCodesCEDSToXMLMapper.xml</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Composer Template File</Name>
+      <Value>RegionCodesCEDSToXMLTemplate.xml</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Populator Mapper File</Name>
+      <Value>RegionCodesXMLToE2Mapper.xml</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Source Data Source</Name>
+      <Value>ceds</Value>
+    </Parameter>
+    <Parameter>
+      <Name>Destination Data Source</Name>
+      <Value>edmr</Value>
+    </Parameter>
+  </Parameters>
+</Operation>

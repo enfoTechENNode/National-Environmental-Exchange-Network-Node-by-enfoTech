@@ -1,0 +1,5 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AQSLeftPanel.ascx.cs" Inherits="PageControls_Share_AQSLeftPanel" %>
+
+<nodeWC:PanelList ID="AdminAQSLeftPanel" PanelTitle="AQS Data Flow" runat="server" width="150px">
+    <nodeWC:PanelItem ID="PanelItem_Prevalidation" Caption="Pre-validation" Link="~/Pages/PreValidation/PreValidationSelection.aspx" ImageSrc="~/App_Images/Node/PnlIco/pnlico_new.gif" runat="server"></nodeWC:PanelItem>
+</nodeWC:PanelList>

@@ -1,0 +1,2182 @@
+[6/24/2010 12:02:51 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at PageControls_WebParts_Configuration.btnSaveNode_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\PageControls\WebParts\Configuration.ascx.cs:line 98
+[6/24/2010 12:03:05 PM]
+System.Net.WebException: The remote server returned an error: (501) Not Implemented.
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.Web.Services2.SoapWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Node.Core.NAASUserManager.usermgr.GetUserList(String adminName, String adminPwd, String userEmail, StateId userState, String rowId, String maxRows) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Web References\NAASUserManager\Reference.cs:line 378
+   at Node.Core.Biz.NAAS.UserManager.GetUserList(String searchUser, Boolean all) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\NAAS\UserManager.cs:line 88
+   at Node.Core.Biz.Objects.User.GetUserInfoList(String loginName, Boolean allNAAS) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 614
+   at Node.Core.Biz.Objects.User.SearchUsers(String loginName, String userType, Int32 domainID, String firstName, String lastName, Boolean allNAASsers) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 505
+   at SearchUsers_aspx.btnSearch_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 70
+[6/24/2010 12:03:10 PM]
+System.Net.WebException: The remote server returned an error: (501) Not Implemented.
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.Web.Services2.SoapWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Node.Core.NAASUserManager.usermgr.GetUserList(String adminName, String adminPwd, String userEmail, StateId userState, String rowId, String maxRows) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Web References\NAASUserManager\Reference.cs:line 378
+   at Node.Core.Biz.NAAS.UserManager.GetUserList(String searchUser, Boolean all) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\NAAS\UserManager.cs:line 86
+   at Node.Core.Biz.Objects.User.GetUserInfoList(String loginName, Boolean allNAAS) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 608
+   at Node.Core.Biz.Objects.User.SearchUsers(String loginName, String userType, Int32 domainID, String firstName, String lastName, Boolean allNAASsers) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 505
+   at SearchUsers_aspx.btnSearch_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 70
+[6/24/2010 12:03:12 PM]
+System.Net.WebException: The remote server returned an error: (501) Not Implemented.
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.Web.Services2.SoapWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Node.Core.NAASUserManager.usermgr.GetUserList(String adminName, String adminPwd, String userEmail, StateId userState, String rowId, String maxRows) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Web References\NAASUserManager\Reference.cs:line 378
+   at Node.Core.Biz.NAAS.UserManager.GetUserList(String searchUser, Boolean all) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\NAAS\UserManager.cs:line 86
+   at Node.Core.Biz.Objects.User.GetUserInfoList(String loginName, Boolean allNAAS) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 608
+   at Node.Core.Biz.Objects.User.SearchUsers(String loginName, String userType, Int32 domainID, String firstName, String lastName, Boolean allNAASsers) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 505
+   at SearchUsers_aspx.btnSearch_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 70
+[6/24/2010 12:03:45 PM]
+System.Net.WebException: The remote server returned an error: (501) Not Implemented.
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.Web.Services2.SoapWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Node.Core.NAASUserManager.usermgr.GetUserList(String adminName, String adminPwd, String userEmail, StateId userState, String rowId, String maxRows) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Web References\NAASUserManager\Reference.cs:line 378
+   at Node.Core.Biz.NAAS.UserManager.GetUserList(String searchUser, Boolean all) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\NAAS\UserManager.cs:line 86
+   at Node.Core.Biz.Objects.User.GetUserInfoList(String loginName, Boolean allNAAS) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 608
+   at Node.Core.Biz.Objects.User.SearchUsers(String loginName, String userType, Int32 domainID, String firstName, String lastName, Boolean allNAASsers) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 505
+   at SearchUsers_aspx.btnSearch_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 70
+[6/24/2010 2:48:03 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at NewWSOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperation.aspx.cs:line 709
+[6/28/2010 6:44:28 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:45:13 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:45:31 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:45:43 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:46:55 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:47:48 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:47:56 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:48:04 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:48:12 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:48:21 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:48:29 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:53:54 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:53:57 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/28/2010 6:54:49 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/28/2010 6:54:51 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:00:41 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 10:02:17 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:02:26 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:52:32 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:52:38 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:53:55 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:54:13 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:54:31 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:54:47 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:55:03 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:55:49 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:55:52 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:56:01 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:56:04 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:56:46 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:56:49 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:57:34 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:57:36 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:58:13 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:58:18 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 10:58:59 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:59:03 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:59:10 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:59:18 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:59:21 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 10:59:25 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 11:11:07 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 11:11:10 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 11:12:28 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 12:10:18 PM]
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ViewOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperation.aspx.cs:line 1053
+[6/29/2010 12:10:30 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:10:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:17:02 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:17:40 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:17:53 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:18:09 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:18:21 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:19:11 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:19:15 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:20:07 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:20:10 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:20:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:20:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:22:04 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:22:07 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:23:47 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:23:52 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:25:08 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:25:12 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:25:42 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:25:53 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:27:59 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 12:28:02 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 12:32:01 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 1:29:05 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 2:55:46 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 2:55:49 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 2:58:44 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 3:25:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at NewWSOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperation.aspx.cs:line 709
+[6/29/2010 4:13:02 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:14:07 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:20:14 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:20:17 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:20:37 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:20:45 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:21:51 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:22:12 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:22:16 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:22:37 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:23:49 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:24:13 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:25:28 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:25:48 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:26:37 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 4:38:20 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 4:50:17 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:55:33 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:57:16 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:57:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:57:35 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:57:44 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:57:52 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 4:58:01 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:02:59 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 5:23:22 PM]
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ViewOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperation.aspx.cs:line 1053
+[6/29/2010 5:30:44 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:33:54 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 5:38:13 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:38:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 5:50:45 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:55:40 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:55:50 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:55:54 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:56:02 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:56:05 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:56:12 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:56:21 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 5:57:32 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 5:57:48 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 5:58:49 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:22:05 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:23:23 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 6:23:56 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 6:24:10 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 6:25:33 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 6:25:40 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 6:25:59 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 6:26:01 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 6:30:44 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:31:14 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:32:01 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:32:11 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:32:47 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:33:11 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:37:51 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:38:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:46:49 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:47:55 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:48:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:50:11 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:53:39 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 6:56:14 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:01:13 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:01:30 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:05:19 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:05:43 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 7:05:45 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 7:06:01 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:06:55 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at NewWSOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperation.aspx.cs:line 709
+[6/29/2010 7:10:10 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:10:19 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:11:51 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:12:37 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:20:09 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at NewTaskOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewTaskOperation.aspx.cs:line 649
+[6/29/2010 7:20:35 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:20:49 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:21:54 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:29:30 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:30:27 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:30:40 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:31:57 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:36:24 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:38:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:52:14 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/29/2010 7:56:04 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 8:03:23 PM]
+System.Web.Services.Protocols.SoapException: The parameter is incorrect.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Node.Core.NAASUserManager.usermgr.GetUserList(String adminName, String adminPwd, String userEmail, StateId userState, String rowId, String maxRows) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Web References\NAASUserManager\Reference.cs:line 378
+   at Node.Core.Biz.NAAS.UserManager.GetUserList(String searchUser, Boolean all) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\NAAS\UserManager.cs:line 86
+   at Node.Core.Biz.Objects.User.GetUserInfoList(String loginName, Boolean allNAAS) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 608
+   at Node.Core.Biz.Objects.User.SearchUsers(String loginName, String userType, Int32 domainID, String firstName, String lastName, Boolean allNAASsers) in D:\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\User.cs:line 505
+   at SearchUsers_aspx.btnSearch_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 70
+[6/29/2010 8:08:19 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 8:08:23 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 8:13:41 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/29/2010 8:15:51 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/29/2010 8:16:57 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[6/30/2010 10:35:15 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at NewWSOperation_aspx.SaveOperation() in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperation.aspx.cs:line 709
+[6/30/2010 11:14:22 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[6/30/2010 11:31:49 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[6/30/2010 11:31:51 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[7/1/2010 3:43:02 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[7/1/2010 3:44:06 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 307
+[7/26/2013 11:51:19 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[7/26/2013 11:51:26 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[7/26/2013 11:51:30 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[8/15/2013 12:07:43 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 12:08:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 3:13:20 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 3:17:46 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 3:25:02 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 3:36:56 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 3:50:36 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/15/2013 4:25:32 PM]
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ViewOperation_aspx.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperation.aspx.cs:line 1150
+[8/15/2013 4:41:46 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/20/2013 12:08:47 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/20/2013 12:25:16 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/20/2013 12:25:30 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/20/2013 12:25:41 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/20/2013 12:25:52 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/20/2013 12:26:15 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/28/2013 10:38:51 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/28/2013 11:21:41 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[8/28/2013 11:32:56 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[9/17/2013 10:24:31 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[9/17/2013 10:24:38 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[9/17/2013 10:29:37 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[9/17/2013 10:29:41 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[9/17/2013 10:37:45 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[9/17/2013 10:37:49 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[9/17/2013 10:51:59 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[9/17/2013 10:52:04 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[9/19/2013 4:27:27 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[9/19/2013 4:27:30 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 2:55:40 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 2:57:52 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 2:58:07 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 3:13:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 3:19:41 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 3:19:45 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 3:19:52 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 3:20:05 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 3:20:14 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/25/2013 4:06:08 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 11:26:29 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 11:31:54 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 11:34:19 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 11:34:41 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 11:41:37 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 11:42:14 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 12:13:56 PM]
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Pages_Operation_ViewOperationWizard.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 746
+[10/26/2013 12:14:10 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 12:14:34 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 12:17:21 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 12:17:44 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 12:19:47 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 12:22:07 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 12:26:04 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 12:26:53 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[10/26/2013 1:13:53 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[10/26/2013 1:13:57 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[10/26/2013 1:16:00 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[11/4/2013 1:35:45 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/5/2013 2:48:22 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 92
+[11/5/2013 3:46:31 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/5/2013 5:02:42 PM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at ForgotPassword_aspx.btnSubmit_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\ForgotPassword.aspx.cs:line 48
+[11/6/2013 10:08:04 AM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at ForgotPassword_aspx.btnSubmit_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\ForgotPassword.aspx.cs:line 48
+[11/7/2013 10:11:57 AM]
+Node.Lib.Data.DataExceptionHandler: SQL:select A.USER_ID, A.LAST_NAME, A.FIRST_NAME, A.MIDDLE_INITIAL, A.LOGIN_NAME, A.LOGIN_PASSWORD, A.USER_STATUS_CD, A.LAST_4_SSN, A.CHANGE_PWD_FLAG, A.PHONE_NUMBER, A.COMMENTS, A.CREATED_DTTM, A.CREATED_BY, A.UPDATED_DTTM, A.UPDATED_BY, C.ADDRESS_ID, C.ADDRESS, C.SUPPLEMENTAL_ADDRESS, C.LOCALITY_NAME, C.STATE_CD, C.ZIP_CODE, C.COUNTRY_CD, C.STATUS_CD, C.ADDRESS_DESC, E.EMAIL_ID, E.EMAIL_ADDRESS, G.ACCOUNT_TYPE, H.DOMAIN_ID, H.DOMAIN_NAME from SYS_USER_INFO A left join SYS_USER_ADDRESS B on A.USER_ID = B.USER_ID left join SYS_ADDRESS C on B.ADDRESS_ID = C.ADDRESS_ID left join SYS_USER_EMAIL D on A.USER_ID = D.USER_ID left join SYS_EMAIL E on D.EMAIL_ID = E.EMAIL_ID, NODE_ACCOUNT_TYPE_XREF F left join NODE_DOMAIN H on F.DOMAIN_ID = H.DOMAIN_ID, NODE_ACCOUNT_TYPE G where A.LOGIN_NAME = @LOGIN_NAME and A.USER_ID = F.USER_ID and F.ACCOUNT_TYPE_ID = G.ACCOUNT_TYPE_ID and G.ACCOUNT_TYPE = 'CONSOLE_USER'
+ ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Node.Lib.Data.DBAdapter.Open() in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 325
+   at Node.Lib.Data.DBAdapter.GetDataTable(String tableName, String command, ArrayList parameters, DataTable dataTable) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Lib\Data\DBAdapter.cs:line 851
+   --- End of inner exception stack trace ---
+   at Node.Core.Data.Common.Users.GetUser(String userName, Int32 type) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\Common\Users.cs:line 339
+   at Node.Core.Biz.Objects.ConsoleUser..ctor(String loginName) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\ConsoleUser.cs:line 55
+   at Login_aspx.btnLogin_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Main\Login.aspx.cs:line 52
+[11/7/2013 11:48:13 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/7/2013 2:34:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/7/2013 2:38:00 PM]
+System.Data.NoNullAllowedException: Column 'REST_IND' does not allow nulls.
+   at Node.Core.Data.SQLServer.Operations.SaveOperation(Operation op, String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Operations.cs:line 857
+   at Node.Core.Biz.Objects.Operation.Save(String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\Operation.cs:line 861
+   at NewTaskOperation_aspx.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewTaskOperation.aspx.cs:line 664
+[11/7/2013 2:38:06 PM]
+System.Data.NoNullAllowedException: Column 'REST_IND' does not allow nulls.
+   at Node.Core.Data.SQLServer.Operations.SaveOperation(Operation op, String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Operations.cs:line 857
+   at Node.Core.Biz.Objects.Operation.Save(String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\Operation.cs:line 861
+   at NewTaskOperation_aspx.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewTaskOperation.aspx.cs:line 664
+[11/7/2013 2:41:26 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at NewTaskOperation_aspx.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewTaskOperation.aspx.cs:line 674
+[11/7/2013 2:41:36 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/7/2013 4:04:12 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/7/2013 4:06:07 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/7/2013 4:08:35 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/7/2013 4:10:24 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/13/2013 10:56:02 AM]
+System.Data.NoNullAllowedException: Column 'REST_IND' does not allow nulls.
+   at Node.Core.Data.SQLServer.Operations.SaveOperation(Operation op, String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Operations.cs:line 857
+   at Node.Core.Biz.Objects.Operation.Save(String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\Operation.cs:line 861
+   at Pages_Operation_NewWSOperationForWizard.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperationForWizard.aspx.cs:line 591
+[11/13/2013 10:58:10 AM]
+System.Data.NoNullAllowedException: Column 'REST_IND' does not allow nulls.
+   at Node.Core.Data.SQLServer.Operations.SaveOperation(Operation op, String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Data\SQLServer\Operations.cs:line 857
+   at Node.Core.Biz.Objects.Operation.Save(String domainAdmin) in D:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Core\Biz\Objects\Operation.cs:line 861
+   at Pages_Operation_NewWSOperationForWizard.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperationForWizard.aspx.cs:line 591
+[11/13/2013 11:00:05 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_NewWSOperationForWizard.SaveOperation() in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\NewWSOperationForWizard.aspx.cs:line 720
+[11/13/2013 11:12:07 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[11/13/2013 11:12:29 AM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[11/13/2013 12:19:12 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[11/13/2013 12:19:16 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[11/13/2013 12:22:15 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at SearchUsers_aspx.egvUserGrid_RowEditing(Object sender, GridViewEditEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 117
+[11/13/2013 12:22:21 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at SearchUsers_aspx.egvUserGrid_RowEditing(Object sender, GridViewEditEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\User\SearchUsers.aspx.cs:line 117
+[11/13/2013 12:23:17 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 159
+[11/13/2013 12:23:20 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[11/13/2013 12:24:15 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Pages_Operation_ViewOperationWizard.btnGoToWizard_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\ViewOperationWizard.aspx.cs:line 354
+[11/13/2013 12:29:00 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at PageControls_WebParts_Documents.btnDownloadDetail_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\PageControls\WebParts\Documents.ascx.cs:line 351
+[11/13/2013 2:37:57 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at PageControls_WebParts_Documents.btnDownloadDetail_Click(Object sender, EventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\PageControls\WebParts\Documents.ascx.cs:line 351
+[11/18/2013 12:34:30 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/18/2013 12:35:09 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
+[11/18/2013 12:45:52 PM]
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at System.Web.HttpResponse.Redirect(String url)
+   at SearchOperations_aspx.egvOperationGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Dallas\Trenton\eNode2008DotNet\V1_0\src\Node.Administration\Pages\Operation\SearchOperations.aspx.cs:line 161
