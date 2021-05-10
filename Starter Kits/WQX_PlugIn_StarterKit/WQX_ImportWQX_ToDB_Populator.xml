@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MappingScript>
+  <DataSource providerName="System.Data.SqlClient">
+	  <Value>server=nbxptimmsd09;database=WQX;UID=wqxuser;PWD=wqxuser</Value>
+  </DataSource>
+  <!--<Variable>
+    <Key name="USER">EFT_SHC</Key>
+  </Variable>-->
+  <!--Insert new reference values in MONITORING_LOCATION_TYPE-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationIdentity</RootXPath>
+    <InstanceKeys>
+      <Key name="MonLocType">MonitoringLocationTypeName</Key>
+    </InstanceKeys>
+    <SQL keys="MLTYP_UID">
+      SELECT MLTYP_UID, MLTYP_NAME, MLTYP_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION_TYPE
+      WHERE MLTYP_NAME = '@MonLocType@'
+    </SQL>
+    <UpdateSQL>
+      SELECT MLTYP_UID, MLTYP_NAME, MLTYP_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION_TYPE
+      WHERE MLTYP_NAME = '@MonLocType@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT MLTYP_UID, MLTYP_NAME, MLTYP_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION_TYPE
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>MONITORING_LOCATION_TYPE</Table>
+      <Column>MLTYP_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>MonitoringLocationTypeName</Element>
+      <Value>MLTYP_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>MLTYP_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in MEASUREMENT_UNIT (MON_LOC HORIZ ACCURACY MEASURE)-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>
+      /OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial/HorizontalAccuracyMeasure
+    </RootXPath>
+    <InstanceKeys>
+      <Key name="UnitCode">MeasureUnitCode</Key>
+    </InstanceKeys>
+    <SQL keys="MSUNT_UID">
+      SELECT MSUNT_UID, MSUNT_CD, MSUNT_DESC, MSUNT_LAST_CHANGE_DATE
+      FROM MEASUREMENT_UNIT
+      WHERE MSUNT_CD = '@UnitCode@'
+    </SQL>
+    <UpdateSQL>
+      SELECT MSUNT_UID, MSUNT_CD, MSUNT_DESC, MSUNT_LAST_CHANGE_DATE
+      FROM MEASUREMENT_UNIT
+      WHERE MSUNT_CD = '@UnitCode@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT MSUNT_UID, MSUNT_CD, MSUNT_DESC, MSUNT_LAST_CHANGE_DATE
+      FROM MEASUREMENT_UNIT
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>MEASUREMENT_UNIT</Table>
+      <Column>MSUNT_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>MeasureUnitCode</Element>
+      <Value>MSUNT_CD</Value>
+    </Map>
+    <Map>
+      <Element>MeasureUnitCode</Element>
+      <Value>MSUNT_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>MSUNT_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in HORIZONTAL_COLLECTION_METHOD-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="HorzColMthd">HorizontalCollectionMethodName</Key>
+    </InstanceKeys>
+    <SQL keys="HCMTH_UID">
+      SELECT HCMTH_UID, HCMTH_NAME, HCMTH_DESC, HCMTH_LAST_CHANGE_DATE
+      FROM HORIZONTAL_COLLECTION_METHOD
+      WHERE HCMTH_NAME = '@HorzColMthd@'
+    </SQL>
+    <UpdateSQL>
+      SELECT HCMTH_UID, HCMTH_NAME, HCMTH_DESC, HCMTH_LAST_CHANGE_DATE
+      FROM HORIZONTAL_COLLECTION_METHOD
+      WHERE HCMTH_NAME = '@HorzColMthd@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT HCMTH_UID, HCMTH_NAME, HCMTH_DESC, HCMTH_LAST_CHANGE_DATE
+      FROM HORIZONTAL_COLLECTION_METHOD
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>HORIZONTAL_COLLECTION_METHOD</Table>
+      <Column>HCMTH_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>HorizontalCollectionMethodName</Element>
+      <Value>HCMTH_NAME</Value>
+    </Map>
+    <Map>
+      <Element>HorizontalCollectionMethodName</Element>
+      <Value>HCMTH_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>HCMTH_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in HORIZONTAL_REFERENCE_DATUM-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="HorzRefSysName">HorizontalCoordinateReferenceSystemDatumName</Key>
+    </InstanceKeys>
+    <SQL keys="HRDAT_UID">
+      SELECT HRDAT_UID, HRDAT_NAME, HRDAT_DESC, HRDAT_LAST_CHANGE_DATE
+      FROM HORIZONTAL_REFERENCE_DATUM
+      WHERE HRDAT_NAME = '@HorzRefSysName@'
+    </SQL>
+    <UpdateSQL>
+      SELECT HRDAT_UID, HRDAT_NAME, HRDAT_DESC, HRDAT_LAST_CHANGE_DATE
+      FROM HORIZONTAL_REFERENCE_DATUM
+      WHERE HRDAT_NAME = '@HorzRefSysName@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT HRDAT_UID, HRDAT_NAME, HRDAT_DESC, HRDAT_LAST_CHANGE_DATE
+      FROM HORIZONTAL_REFERENCE_DATUM
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>HORIZONTAL_REFERENCE_DATUM</Table>
+      <Column>HRDAT_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>HorizontalCoordinateReferenceSystemDatumName</Element>
+      <Value>HRDAT_NAME</Value>
+    </Map>
+    <Map>
+      <Element>HorizontalCoordinateReferenceSystemDatumName</Element>
+      <Value>HRDAT_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>HRDAT_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in VERTICAL_COLLECTION_METHOD-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="VerColMthd">VerticalCollectionMethodName</Key>
+    </InstanceKeys>
+    <SQL keys="VCMTH_UID">
+      SELECT VCMTH_UID, VCMTH_NAME, VCMTH_LAST_CHANGE_DATE
+      FROM VERTICAL_COLLECTION_METHOD
+      WHERE VCMTH_NAME = '@VerColMthd@'
+    </SQL>
+    <UpdateSQL>
+      SELECT VCMTH_UID, VCMTH_NAME, VCMTH_LAST_CHANGE_DATE
+      FROM VERTICAL_COLLECTION_METHOD
+      WHERE VCMTH_NAME = '@VerColMthd@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT VCMTH_UID, VCMTH_NAME, VCMTH_LAST_CHANGE_DATE
+      FROM VERTICAL_COLLECTION_METHOD
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>VERTICAL_COLLECTION_METHOD</Table>
+      <Column>VCMTH_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>VerticalCollectionMethodName</Element>
+      <Value>VCMTH_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>VCMTH_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in VERTICAL_REFERENCE_DATUM-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="VerRefSysName">VerticalCoordinateReferenceSystemDatumName</Key>
+    </InstanceKeys>
+    <SQL keys="VRDAT_UID">
+      SELECT VRDAT_UID, VRDAT_NAME, VRDAT_DESC, VRDAT_LAST_CHANGE_DATE
+      FROM VERTICAL_REFERENCE_DATUM
+      WHERE VRDAT_NAME = '@VerRefSysName@'
+    </SQL>
+    <UpdateSQL>
+      SELECT VRDAT_UID, VRDAT_NAME, VRDAT_DESC, VRDAT_LAST_CHANGE_DATE
+      FROM VERTICAL_REFERENCE_DATUM
+      WHERE VRDAT_NAME = '@VerRefSysName@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT VRDAT_UID, VRDAT_NAME, VRDAT_DESC, VRDAT_LAST_CHANGE_DATE
+      FROM VERTICAL_REFERENCE_DATUM
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>VERTICAL_REFERENCE_DATUM</Table>
+      <Column>VRDAT_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>VerticalCoordinateReferenceSystemDatumName</Element>
+      <Value>VRDAT_NAME</Value>
+    </Map>
+    <Map>
+      <Element>VerticalCoordinateReferenceSystemDatumName</Element>
+      <Value>VRDAT_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>VRDAT_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in COUNTRY-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="Country">CountryCode</Key>
+    </InstanceKeys>
+    <SQL keys="CNTRY_UID">
+      SELECT CNTRY_UID, CNTRY_CD, CNTRY_NAME, CNTRY_LAST_CHANGE_DATE
+      FROM COUNTRY
+      WHERE CNTRY_CD = '@Country@'
+    </SQL>
+    <UpdateSQL>
+      SELECT CNTRY_UID, CNTRY_CD, CNTRY_NAME, CNTRY_LAST_CHANGE_DATE
+      FROM COUNTRY
+      WHERE CNTRY_CD = '@Country@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT CNTRY_UID, CNTRY_CD, CNTRY_NAME, CNTRY_LAST_CHANGE_DATE
+      FROM COUNTRY
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>COUNTRY</Table>
+      <Column>CNTRY_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>CountryCode</Element>
+      <Value>CNTRY_CD</Value>
+    </Map>
+    <Map>
+      <Element>CountryCode</Element>
+      <Value>CNTRY_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>CNTRY_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in STATE-->
+  <Mapping type="QUERY">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="Country">CountryCode</Key>
+    </InstanceKeys>
+    <SQL keys="CNTRY_UID">SELECT CNTRY_UID FROM COUNTRY WHERE CNTRY_CD = '@Country@'</SQL>
+    <Mapping type="UPDATE|INSERT">
+      <RootXPath>.</RootXPath>
+      <InstanceKeys>
+        <Key name="State">StateCode</Key>
+      </InstanceKeys>
+      <SQL keys="ST_UID">
+        SELECT ST_UID, CNTRY_UID, ST_CD, ST_NAME, ST_FIPS_CD, ST_LAST_CHANGE_DATE
+        FROM STATE
+        WHERE ST_CD = '@ST_CD@'
+      </SQL>
+      <UpdateSQL>
+        SELECT ST_UID, CNTRY_UID, ST_CD, ST_NAME, ST_FIPS_CD, ST_LAST_CHANGE_DATE
+        FROM STATE
+        WHERE ST_CD = '@ST_CD@'
+      </UpdateSQL>
+      <InsertSQL>
+        SELECT ST_UID, CNTRY_UID, ST_CD, ST_NAME, ST_FIPS_CD, ST_LAST_CHANGE_DATE
+        FROM STATE
+        WHERE 1 = -1
+      </InsertSQL>
+      <PrimaryKey>
+        <Table>STATE</Table>
+        <Column>ST_UID</Column>
+      </PrimaryKey>
+      <Map>
+        <Element type="DBKey">CNTRY_UID</Element>
+        <Value>CNTRY_UID</Value>
+      </Map>
+      <Map>
+        <Element>StateCode</Element>
+        <Value>ST_CD</Value>
+      </Map>
+      <Map>
+        <Element>StateCode</Element>
+        <Value>ST_NAME</Value>
+      </Map>
+      <Map>
+        <Element type="Constant">null</Element>
+        <Value>ST_FIPS_CD</Value>
+      </Map>
+      <Map>
+        <Element type="Date"></Element>
+        <Value>ST_LAST_CHANGE_DATE</Value>
+      </Map>
+    </Mapping>
+  </Mapping>
+  <!--Insert new reference values in COUNTY-->
+  <Mapping type="QUERY">
+    <RootXPath>/OrganizationDataType/MonitoringLocation/MonitoringLocationGeospatial</RootXPath>
+    <InstanceKeys>
+      <Key name="State">StateCode</Key>
+    </InstanceKeys>
+    <SQL keys="ST_UID">SELECT ST_UID FROM STATE WHERE ST_CD = '@State@'</SQL>
+    <Mapping type="UPDATE|INSERT">
+      <RootXPath>.</RootXPath>
+      <InstanceKeys>
+        <Key name="County">CountyCode</Key>
+      </InstanceKeys>
+      <SQL keys="CNTY_UID">
+        SELECT CNTY_UID, ST_UID, CNTY_NAME, CNTY_FIPS_CD, CNTY_LAST_CHANGE_DATE
+        FROM COUNTY
+        WHERE CNTY_NAME = '@County@'
+      </SQL>
+      <UpdateSQL>
+        SELECT CNTY_UID, ST_UID, CNTY_NAME, CNTY_FIPS_CD, CNTY_LAST_CHANGE_DATE
+        FROM COUNTY
+        WHERE CNTY_NAME = '@County@'
+      </UpdateSQL>
+      <InsertSQL>
+        SELECT CNTY_UID, ST_UID, CNTY_NAME, CNTY_FIPS_CD, CNTY_LAST_CHANGE_DATE
+        FROM COUNTY
+        WHERE 1 = -1
+      </InsertSQL>
+      <PrimaryKey>
+        <Table>COUNTY</Table>
+        <Column>CNTY_UID</Column>
+      </PrimaryKey>
+      <Map>
+        <Element type="DBKey">ST_UID</Element>
+        <Value>ST_UID</Value>
+      </Map>
+      <Map>
+        <Element>CountyCode</Element>
+        <Value>CNTY_NAME</Value>
+      </Map>
+      <Map>
+        <Element type="Constant">null</Element>
+        <Value>CNTY_FIPS_CD</Value>
+      </Map>
+      <Map>
+        <Element type="Date"></Element>
+        <Value>CNTY_LAST_CHANGE_DATE</Value>
+      </Map>
+    </Mapping>
+  </Mapping>
+  <!--Insert new reference values in ACTIVITY_MEDIA-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/ActivityDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="ActMedia">ActivityMediaName</Key>
+    </InstanceKeys>
+    <SQL keys="ACMED_UID">
+      SELECT ACMED_UID, ACMED_NAME, ACMED_LAST_CHANGE_DATE
+      FROM ACTIVITY_MEDIA
+      WHERE ACMED_NAME = '@ActMedia@'
+    </SQL>
+    <UpdateSQL>
+      SELECT ACMED_UID, ACMED_NAME, ACMED_LAST_CHANGE_DATE
+      FROM ACTIVITY_MEDIA
+      WHERE ACMED_NAME = '@ActMedia@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT ACMED_UID, ACMED_NAME, ACMED_LAST_CHANGE_DATE
+      FROM ACTIVITY_MEDIA
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>ACTIVITY_MEDIA</Table>
+      <Column>ACMED_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>ActivityMediaName</Element>
+      <Value>ACMED_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>ACMED_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in ACTIVITY_MEDIA_SUBDIVISION-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/ActivityDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="ActMediaSub">ActivityMediaSubdivisionName</Key>
+    </InstanceKeys>
+    <SQL keys="AMSUB_UID">
+      SELECT AMSUB_UID, AMSUB_NAME, AMSUB_LAST_CHANGE_DATE
+      FROM ACTIVITY_MEDIA_SUBDIVISION
+      WHERE AMSUB_NAME = '@ActMediaSub@'
+    </SQL>
+    <UpdateSQL>
+      SELECT AMSUB_UID, AMSUB_NAME, AMSUB_LAST_CHANGE_DATE
+      FROM ACTIVITY_MEDIA_SUBDIVISION
+      WHERE AMSUB_NAME = '@ActMediaSub@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT AMSUB_UID, AMSUB_NAME, AMSUB_LAST_CHANGE_DATE
+      FROM ACTIVITY_MEDIA_SUBDIVISION
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>ACTIVITY_MEDIA_SUBDIVISION</Table>
+      <Column>AMSUB_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>ActivityMediaSubdivisionName</Element>
+      <Value>AMSUB_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>AMSUB_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in ANALYTICAL_METHOD_CONTEXT-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultAnalyticalMethod</RootXPath>
+    <InstanceKeys>
+      <Key name="AnalMethodCtx">MethodIdentifierContext</Key>
+    </InstanceKeys>
+    <SQL keys="AMCTX_UID">
+      SELECT AMCTX_UID, AMCTX_CD, AMCTX_NAME, AMCTX_LAST_CHANGE_DATE
+      FROM ANALYTICAL_METHOD_CONTEXT
+      WHERE AMCTX_CD = '@AnalMethodCtx@'
+    </SQL>
+    <UpdateSQL>
+      SELECT AMCTX_UID, AMCTX_CD, AMCTX_NAME, AMCTX_LAST_CHANGE_DATE
+      FROM ANALYTICAL_METHOD_CONTEXT
+      WHERE AMCTX_CD = '@AnalMethodCtx@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT AMCTX_UID, AMCTX_CD, AMCTX_NAME, AMCTX_LAST_CHANGE_DATE FROM ANALYTICAL_METHOD_CONTEXT WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>ANALYTICAL_METHOD_CONTEXT</Table>
+      <Column>AMCTX_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>MethodIdentifierContext</Element>
+      <Value>AMCTX_CD</Value>
+    </Map>
+    <Map>
+      <Element>MethodIdentifierContext</Element>
+      <Value>AMCTX_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"/>
+      <Value>AMCTX_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in ANALYTICAL_METHOD-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultAnalyticalMethod</RootXPath>
+    <InstanceKeys>
+      <Key name="AnalMethod">MethodIdentifier</Key>
+    </InstanceKeys>
+    <SQL keys="ANLMTH_UID">
+      SELECT ANLMTH_UID, AMCTX_UID, ANLMTH_ID, ANLMTH_NAME, ANLMTH_DESC, ANLMTH_QUAL_TYPE
+      , ANLMTH_LAST_CHANGE_DATE
+      FROM ANALYTICAL_METHOD
+      WHERE ANLMTH_ID = '@AnalMethod@'
+    </SQL>
+    <UpdateSQL>
+      SELECT ANLMTH_UID, AMCTX_UID, ANLMTH_ID, ANLMTH_NAME, ANLMTH_DESC, ANLMTH_QUAL_TYPE
+      , ANLMTH_LAST_CHANGE_DATE
+      FROM ANALYTICAL_METHOD
+      WHERE ANLMTH_ID = '@AnalMethod@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT ANLMTH_UID, AMCTX_UID, ANLMTH_ID, ANLMTH_NAME, ANLMTH_DESC, ANLMTH_QUAL_TYPE
+      , ANLMTH_LAST_CHANGE_DATE
+      FROM ANALYTICAL_METHOD
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>ANALYTICAL_METHOD</Table>
+      <Column>ANLMTH_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>MethodIdentifier</Element>
+      <Value>ANLMTH_ID</Value>
+    </Map>
+    <Map>
+      <Element>MethodName</Element>
+      <Value>ANLMTH_NAME</Value>
+    </Map>
+    <Map>
+      <Element>MethodName</Element>
+      <Value>ANLMTH_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Constant">NULL</Element>
+      <Value>ANLMTH_QUAL_TYPE</Value>
+    </Map>
+    <Map>
+      <Element type="Date"/>
+      <Value>ANLMTH_LAST_CHANGE_DATE</Value>
+    </Map>
+    <Mapping type="QUERY">
+      <RootXPath>.</RootXPath>
+      <InstanceKeys>
+        <Key name="AnalMethodCtx">MethodIdentifierContext</Key>
+      </InstanceKeys>
+      <SQL keys="AMCTX_UID">
+        SELECT AMCTX_UID
+        FROM ANALYTICAL_METHOD_CONTEXT
+        WHERE AMCTX_CD = '@AnalMethodCtx@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>..</RootXPath>
+        <UpdateSQL>
+          SELECT AMCTX_UID, ANLMTH_LAST_CHANGE_DATE FROM ANALYTICAL_METHOD WHERE ANLMTH_ID = '@AnalMethod@'
+        </UpdateSQL>
+        <Map>
+          <Element type="DBKey">AMCTX_UID</Element>
+          <Value>AMCTX_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+  </Mapping>
+  <!--Insert new reference values in ACTIVITY_TYPE-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/ActivityDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="ActType">ActivityTypeCode</Key>
+    </InstanceKeys>
+    <SQL keys="ACTYP_UID">
+      SELECT ACTYP_UID, ACTYP_CD, ACTYP_DESC, ACTYP_ANL_MTH_REQ_YN, ACTYP_MON_LOC_REQ_YN, ACTYP_LAST_CHANGE_DATE
+      FROM ACTIVITY_TYPE
+      WHERE ACTYP_CD = '@ActType@'
+    </SQL>
+    <UpdateSQL>
+      SELECT ACTYP_UID, ACTYP_CD, ACTYP_DESC, ACTYP_ANL_MTH_REQ_YN, ACTYP_MON_LOC_REQ_YN, ACTYP_LAST_CHANGE_DATE
+      FROM ACTIVITY_TYPE
+      WHERE ACTYP_CD = '@ActType@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT ACTYP_UID, ACTYP_CD, ACTYP_DESC, ACTYP_LAST_CHANGE_DATE
+      FROM ACTIVITY_TYPE
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>ACTIVITY_TYPE</Table>
+      <Column>ACTYP_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>ActivityTypeCode</Element>
+      <Value>ACTYP_CD</Value>
+    </Map>
+    <Map>
+      <Element>ActivityTypeCode</Element>
+      <Value>ACTYP_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"/>
+      <Value>ACTYP_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in RESULT_DETECTION_CONDITION-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="RsltDetectCondText">ResultDetectionConditionText</Key>
+    </InstanceKeys>
+    <SQL keys="RDCND_UID">
+      SELECT RDCND_UID, RDCND_NAME, RDCND_LAST_CHANGE_DATE
+      FROM RESULT_DETECTION_CONDITION
+      WHERE RDCND_NAME = '@RsltDetectCondText@'
+    </SQL>
+    <UpdateSQL>
+      SELECT RDCND_UID, RDCND_NAME, RDCND_LAST_CHANGE_DATE
+      FROM RESULT_DETECTION_CONDITION
+      WHERE RDCND_NAME = '@RsltDetectCondText@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT RDCND_UID, RDCND_NAME, RDCND_LAST_CHANGE_DATE
+      FROM RESULT_DETECTION_CONDITION
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>RESULT_DETECTION_CONDITION</Table>
+      <Column>RDCND_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>ResultDetectionConditionText</Element>
+      <Value>RDCND_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"/>
+      <Value>RDCND_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in CHARACTERISTIC-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="CharName">CharacteristicName</Key>
+    </InstanceKeys>
+    <SQL keys="CHR_UID">
+      SELECT CHR_UID, CHR_NAME, CHR_LAST_CHANGE_DATE
+      FROM CHARACTERISTIC
+      WHERE CHR_NAME = '@CharacteristicName@'
+    </SQL>
+    <UpdateSQL>
+      SELECT CHR_UID, CHR_NAME, CHR_LAST_CHANGE_DATE
+      FROM CHARACTERISTIC
+      WHERE CHR_NAME = '@CharacteristicName@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT CHR_UID, CHR_NAME, CHR_LAST_CHANGE_DATE
+      FROM CHARACTERISTIC
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>CHARACTERISTIC</Table>
+      <Column>CHR_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>CharacteristicName</Element>
+      <Value>CHR_NAME</Value>
+    </Map>
+    <Map>
+      <Element type="Date"/>
+      <Value>CHR_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in SAMPLE_FRACTION-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="RsltSampFraction">ResultSampleFractionText</Key>
+    </InstanceKeys>
+    <SQL>
+      SELECT SMFRC_UID, SMFRC_NAME, SMFRC_DESC, SMFRC_LAST_CHANGE_DATE
+      FROM SAMPLE_FRACTION
+      WHERE SMFRC_NAME = '@RsltSampFraction@'
+    </SQL>
+    <UpdateSQL>
+      SELECT SMFRC_UID, SMFRC_NAME, SMFRC_DESC, SMFRC_LAST_CHANGE_DATE
+      FROM SAMPLE_FRACTION
+      WHERE SMFRC_NAME = '@RsltSampFraction@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT SMFRC_UID, SMFRC_NAME, SMFRC_DESC, SMFRC_LAST_CHANGE_DATE
+      FROM SAMPLE_FRACTION
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>SAMPLE_FRACTION</Table>
+      <Value>SMFRC_UID</Value>
+    </PrimaryKey>
+    <Map>
+      <Element>ResultSampleFractionText</Element>
+      <Value>SMFRC_NAME</Value>
+    </Map>
+    <Map>
+      <Element>ResultSampleFractionText</Element>
+      <Value>SMFRC_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>SMFRC_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in RESULT_STATUS-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="RsltStatusID">ResultStatusIdentifier</Key>
+    </InstanceKeys>
+    <SQL>
+      SELECT RESSTA_UID, RESSTA_NAME, RESSTA_DESC, RESSTA_LAST_CHANGE_DATE
+      FROM RESULT_STATUS
+      WHERE RESSTA_NAME = '@RsltStatusID@'
+    </SQL>
+    <UpdateSQL>
+      SELECT RESSTA_UID, RESSTA_NAME, RESSTA_DESC, RESSTA_LAST_CHANGE_DATE
+      FROM RESULT_STATUS
+      WHERE RESSTA_NAME = '@RsltStatusID@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT RESSTA_UID, RESSTA_NAME, RESSTA_DESC, RESSTA_LAST_CHANGE_DATE
+      FROM RESULT_STATUS
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>RESULT_STATUS</Table>
+      <Value>RESSTA_UID</Value>
+    </PrimaryKey>
+    <Map>
+      <Element>ResultStatusIdentifier</Element>
+      <Value>RESSTA_NAME</Value>
+    </Map>
+    <Map>
+      <Element>ResultStatusIdentifier</Element>
+      <Value>RESSTA_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>RESSTA_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new reference values in RESULT_VALUE_TYPE-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/Result/ResultDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="RsltValueType">ResultValueTypeName</Key>
+    </InstanceKeys>
+    <SQL>
+      SELECT RVTYP_UID, RVTYP_NAME, RVTYP_DESC, RVTYP_LAST_CHANGE_DATE
+      FROM RESULT_VALUE_TYPE
+      WHERE RVTYP_NAME = '@RsltValueType@'
+    </SQL>
+    <UpdateSQL>
+      SELECT RVTYP_UID, RVTYP_NAME, RVTYP_DESC, RVTYP_LAST_CHANGE_DATE
+      FROM RESULT_VALUE_TYPE
+      WHERE RVTYP_NAME = '@RsltValueType@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT RVTYP_UID, RVTYP_NAME, RVTYP_DESC, RVTYP_LAST_CHANGE_DATE
+      FROM RESULT_VALUE_TYPE
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>RESULT_VALUE_TYPE</Table>
+      <Value>RVTYP_UID</Value>
+    </PrimaryKey>
+    <Map>
+      <Element>ResultValueTypeName</Element>
+      <Value>RVTYP_NAME</Value>
+    </Map>
+    <Map>
+      <Element>ResultValueTypeName</Element>
+      <Value>RVTYP_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>RVTYP_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new organization in ORGANIZATION-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType</RootXPath>
+    <InstanceKeys>
+      <Key name="OrgID">OrganizationDescription/OrganizationIdentifier</Key>
+    </InstanceKeys>
+    <SQL keys="ORG_UID">
+      SELECT ORG_UID, ORG_ID, ORG_NAME, ORG_DESC, ORG_LAST_CHANGE_DATE, ORG_LAST_CHANGE_USER
+      FROM ORGANIZATION
+      WHERE ORG_ID = '@OrgID@' AND ORG_LAST_CHANGE_USER = 'EFT_SHC'
+    </SQL>
+    <UpdateSQL>
+      SELECT ORG_UID, ORG_ID, ORG_NAME, ORG_DESC, ORG_LAST_CHANGE_DATE, ORG_LAST_CHANGE_USER
+      FROM ORGANIZATION
+      WHERE ORG_ID = '@OrgID@' AND ORG_LAST_CHANGE_USER = 'EFT_SHC'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT ORG_UID, ORG_ID, ORG_NAME, ORG_DESC, ORG_LAST_CHANGE_DATE, ORG_LAST_CHANGE_USER
+      FROM ORGANIZATION
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>ORGANIZATION</Table>
+      <Column>ORG_UID</Column>
+    </PrimaryKey>
+    <Map onlyInsert="true">
+      <Element>OrganizationDescription/OrganizationIdentifier</Element>
+      <Value>ORG_ID</Value>
+    </Map>
+    <Map>
+      <Element>OrganizationDescription/OrganizationFormalName</Element>
+      <Value>ORG_NAME</Value>
+    </Map>
+    <Conditional>
+      <if>
+        <Element>OrganizationDescription/OrganizationDescriptionText</Element>
+        <Map>
+          <Element>OrganizationDescription/OrganizationDescriptionText</Element>
+          <Value>ORG_DESC</Value>
+        </Map>
+      </if>
+    </Conditional>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>ORG_LAST_CHANGE_DATE</Value>
+    </Map>
+    <Map>
+      <Element type="Constant">EFT_SHC</Element>
+      <Value>ORG_LAST_CHANGE_USER</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new MONITORING_LOCATIONS that are reported in ACTIVITY if not included in XML yet-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/Activity/ActivityDescription</RootXPath>
+    <InstanceKeys>
+      <Key name="MonLoc">MonitoringLocationIdentifier</Key>
+    </InstanceKeys>
+    <SQL keys="MLOC_UID">
+      SELECT MLOC_UID, MLOC_ID, MLOC_NAME, MLOC_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION
+      WHERE MLOC_ID = '@MonLoc@'
+    </SQL>
+    <UpdateSQL>
+      SELECT MLOC_UID, MLOC_ID, MLOC_NAME, MLOC_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION
+      WHERE MLOC_ID = '@MonLoc@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT MLOC_UID, MLOC_ID, MLOC_NAME, MLOC_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>MONITORING_LOCATION</Table>
+      <Column>MLOC_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>MonitoringLocationIdentifier</Element>
+      <Value>MLOC_ID</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentifier</Element>
+      <Value>MLOC_NAME</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentifier</Element>
+      <Value>MLOC_DESC</Value>
+    </Map>
+    <Map>
+      <Element type="Constant">0</Element>
+      <Value>MLOC_LATITUDE</Value>
+    </Map>
+    <Map>
+      <Element type="Constant">0</Element>
+      <Value>MLOC_LONGITUDE</Value>
+    </Map>
+    <Map>
+      <Element type="Date"/>
+      <Value>MLOC_LAST_CHANGE_DATE</Value>
+    </Map>
+  </Mapping>
+  <!--Insert new monitoring locations in MONITORING_LOCATION (reported at ORGANIZATION level)-->
+  <Mapping type="UPDATE|INSERT">
+    <RootXPath>/OrganizationDataType/MonitoringLocation</RootXPath>
+    <InstanceKeys>
+      <Key name="MonLoc">MonitoringLocationIdentity/MonitoringLocationIdentifier</Key>
+    </InstanceKeys>
+    <SQL keys="MLOC_UID">
+      SELECT MLOC_UID, ORG_UID, MLOC_ID, MLOC_NAME, MLOC_DESC, MLOC_HUC_8, MLOC_HUC_12, MLOC_LATITUDE
+      , MLOC_LONGITUDE, MLOC_HORIZONTAL_ACCURACY, MLOC_SOURCE_MAP_SCALE, MLOC_TRIBAL_LAND_YN, MLOC_TRIBAL_LAND_NAME, MLOC_VERTICAL_MEASURE
+      , MLOC_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION
+      WHERE MLOC_ID = '@MonLocID@'
+    </SQL>
+    <UpdateSQL>
+      SELECT MLOC_UID, ORG_UID, MLOC_ID, MLOC_NAME, MLOC_DESC, MLOC_HUC_8, MLOC_HUC_12, MLOC_LATITUDE
+      , MLOC_LONGITUDE, MLOC_HORIZONTAL_ACCURACY, MLOC_SOURCE_MAP_SCALE, MLOC_TRIBAL_LAND_YN, MLOC_TRIBAL_LAND_NAME, MLOC_VERTICAL_MEASURE
+      , MLOC_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION
+      WHERE MLOC_ID = '@MonLocID@'
+    </UpdateSQL>
+    <InsertSQL>
+      SELECT MLOC_UID, ORG_UID, MLOC_ID, MLOC_NAME, MLOC_DESC, MLOC_HUC_8, MLOC_HUC_12, MLOC_LATITUDE
+      , MLOC_LONGITUDE, MLOC_HORIZONTAL_ACCURACY, MLOC_SOURCE_MAP_SCALE, MLOC_TRIBAL_LAND_YN, MLOC_TRIBAL_LAND_NAME, MLOC_VERTICAL_MEASURE
+      , MLOC_LAST_CHANGE_DATE
+      FROM MONITORING_LOCATION
+      WHERE 1 = -1
+    </InsertSQL>
+    <PrimaryKey>
+      <Table>MONITORING_LOCATION</Table>
+      <Column>MLOC_UID</Column>
+    </PrimaryKey>
+    <Map>
+      <Element>MonitoringLocationIdentity/MonitoringLocationIdentifier</Element>
+      <Value>MLOC_ID</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentity/MonitoringLocationName</Element>
+      <Value>MLOC_NAME</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentity/MonitoringLocationDescriptionText</Element>
+      <Value>MLOC_DESC</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentity/HUCEightDigitCode</Element>
+      <Value>MLOC_HUC_8</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentity/HUCTwelveDigitCode</Element>
+      <Value>MLOC_HUC_12</Value>
+    </Map>
+    <Map maxLength="12">
+      <Element>MonitoringLocationGeospatial/LatitudeMeasure</Element>
+      <Value>MLOC_LATITUDE</Value>
+    </Map>
+    <Map maxLength="14">
+      <Element>MonitoringLocationGeospatial/LongitudeMeasure</Element>
+      <Value>MLOC_LONGITUDE</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationGeospatial/HorizontalAccuracyMeasure/MeasureValue</Element>
+      <Value>MLOC_HORIZONTAL_ACCURACY</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationGeospatial/SourceMapScaleNumeric</Element>
+      <Value>MLOC_SOURCE_MAP_SCALE</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentity/TribalLandIndicator</Element>
+      <Value>MLOC_TRIBAL_LAND_YN</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationIdentity/TribalLandName</Element>
+      <Value>MLOC_TRIBAL_LAND_NAME</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationGeospatial/VerticalMeasure/MeasureValue</Element>
+      <Value>MLOC_VERTICAL_MEASURE</Value>
+    </Map>
+    <Map>
+      <Element>MonitoringLocationGeospatial/VerticalAccuracyMeasure/MeasureValue</Element>
+      <Value>MLOC_VERTICAL_ACCURACY</Value>
+    </Map>
+    <Map>
+      <Element type="Constant">EFT_SHC</Element>
+      <Value>MLOC_LAST_CHANGE_USER</Value>
+    </Map>
+    <Map>
+      <Element type="Date"></Element>
+      <Value>MLOC_LAST_CHANGE_DATE</Value>
+    </Map>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationIdentity</RootXPath>
+      <InstanceKeys>
+        <Key name="MonLocType">MonitoringLocationTypeName</Key>
+      </InstanceKeys>
+      <SQL keys="MLTYP_UID">
+        SELECT MLTYP_UID FROM MONITORING_LOCATION_TYPE WHERE MLTYP_NAME = '@MonLocType@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>SELECT MLOC_ID, MLTYP_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'</SQL>
+        <Map>
+          <Element type="DBKey">MLTYP_UID</Element>
+          <Value>MLTYP_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial/HorizontalAccuracyMeasure</RootXPath>
+      <InstanceKeys>
+        <Key name="UnitCode">MeasureUnitCode</Key>
+      </InstanceKeys>
+      <SQL keys="MSUNT_UID">
+        SELECT MSUNT_UID FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@UnitCode@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>SELECT MLOC_ID, MSUNT_UID_HORIZONTAL_ACCURACY FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'</SQL>
+        <Map>
+          <Element type="DBKey">MSUNT_UID</Element>
+          <Value>MSUNT_UID_HORIZONTAL_ACCURACY</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial/VerticalMeasure</RootXPath>
+      <InstanceKeys>
+        <Key name="UnitCode">MeasureUnitCode</Key>
+      </InstanceKeys>
+      <SQL keys="MSUNT_UID">
+        SELECT MSUNT_UID FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@UnitCode@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, MSUNT_UID_VERTICAL_MEASURE FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">MSUNT_UID</Element>
+          <Value>MSUNT_UID_VERTICAL_MEASURE</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial/VerticalAccuracyMeasure</RootXPath>
+      <InstanceKeys>
+        <Key name="UnitCode">MeasureUnitCode</Key>
+      </InstanceKeys>
+      <SQL keys="MSUNT_UID">
+        SELECT MSUNT_UID FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@UnitCode@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, MSUNT_UID_VERTICAL_ACCURACY FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">MSUNT_UID</Element>
+          <Value>MSUNT_UID_VERTICAL_ACCURACY</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="HorzColMthd">HorizontalCollectionMethodName</Key>
+      </InstanceKeys>
+      <SQL keys="HCMTH_UID">
+        SELECT HCMTH_UID FROM HORIZONTAL_COLLECTION_METHOD WHERE HCMTH_NAME = '@HorzColMthd@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, HCMTH_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">HCMTH_UID</Element>
+          <Value>HCMTH_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="VerColMthd">VerticalCollectionMethodName</Key>
+      </InstanceKeys>
+      <SQL keys="VCMTH_UID">
+        SELECT VCMTH_UID FROM VERTICAL_COLLECTION_METHOD WHERE VCMTH_NAME = '@VerColMthd@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, VCMTH_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">VCMTH_UID</Element>
+          <Value>VCMTH_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="VerRefSysName">VerticalCoordinateReferenceSystemDatumName</Key>
+      </InstanceKeys>
+      <SQL keys="VRDAT_UID">
+        SELECT VRDAT_UID FROM VERTICAL_REFERENCE_DATUM WHERE VRDAT_NAME = '@VerRefSysName@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, VRDAT_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">VRDAT_UID</Element>
+          <Value>VRDAT_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="HorzRefSysName">HorizontalCoordinateReferenceSystemDatumName</Key>
+      </InstanceKeys>
+      <SQL keys="HRDAT_UID">
+        SELECT HRDAT_UID FROM HORIZONTAL_REFERENCE_DATUM WHERE HRDAT_NAME = '@HorzRefSysName@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, HRDAT_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">HRDAT_UID</Element>
+          <Value>HRDAT_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="Country">CountryCode</Key>
+      </InstanceKeys>
+      <SQL keys="CNTRY_UID">
+        SELECT CNTRY_UID FROM COUNTRY WHERE CNTRY_CD = '@Country@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, CNTRY_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">CNTRY_UID</Element>
+          <Value>CNTRY_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="State">StateCode</Key>
+      </InstanceKeys>
+      <SQL keys="ST_UID">
+        SELECT ST_UID FROM STATE WHERE ST_CD = '@State@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, ST_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">ST_UID</Element>
+          <Value>ST_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>MonitoringLocationGeospatial</RootXPath>
+      <InstanceKeys>
+        <Key name="County">CountyCode</Key>
+      </InstanceKeys>
+      <SQL keys="CNTY_UID">
+        SELECT CNTY_UID FROM COUNTY WHERE CNTY_NAME = '@County@'
+      </SQL>
+      <Mapping type="UPDATE">
+        <RootXPath>.</RootXPath>
+        <SQL>
+          SELECT MLOC_ID, CNTY_UID FROM MONITORING_LOCATION WHERE MLOC_ID = '@MLOC_UID@'
+        </SQL>
+        <Map>
+          <Element type="DBKey">CNTY_UID</Element>
+          <Value>CNTY_UID</Value>
+        </Map>
+      </Mapping>
+    </Mapping>
+  </Mapping>
+  <!--Insert organization data-->
+  <Mapping type="QUERY">
+    <RootXPath>/OrganizationDataType</RootXPath>
+    <InstanceKeys>
+      <Key name="OrgID">OrganizationDescription/OrganizationIdentifier</Key>
+    </InstanceKeys>
+    <SQL keys="ORG_UID">
+      SELECT ORG_UID FROM ORGANIZATION WHERE RTRIM(ORG_ID) = '@OrgID@' AND ORG_LAST_CHANGE_USER = 'EFT_SHC'
+    </SQL>
+    <Mapping type="UPDATE|INSERT">
+      <RootXPath>Project</RootXPath>
+      <InstanceKeys>
+        <Key name="PrjID">ProjectIdentifier</Key>
+      </InstanceKeys>
+      <SQL keys="PRJ_UID">
+        SELECT PRJ_UID, ORG_UID, PRJ_ID, PRJ_NAME, PRJ_DESC, PRJ_QAPP_APPROVED_YN
+        , PRJ_QAPP_APPROVAL_AGENCY_NAME, PRJ_LAST_CHANGE_DATE, PRJ_LAST_CHANGE_USER
+        FROM PROJECT
+        WHERE PRJ_ID = '@PrjID@' AND PRJ_LAST_CHANGE_USER = 'EFT_SHC'
+      </SQL>
+      <UpdateSQL>
+        SELECT PRJ_UID, ORG_UID, PRJ_ID, PRJ_NAME, PRJ_DESC, PRJ_QAPP_APPROVED_YN
+        , PRJ_QAPP_APPROVAL_AGENCY_NAME, PRJ_LAST_CHANGE_DATE, PRJ_LAST_CHANGE_USER
+        FROM PROJECT
+        WHERE PRJ_ID = '@PrjID@' AND PRJ_LAST_CHANGE_USER = 'EFT_SHC'
+      </UpdateSQL>
+      <InsertSQL>
+        SELECT PRJ_UID, ORG_UID, PRJ_ID, PRJ_NAME, PRJ_DESC, PRJ_QAPP_APPROVED_YN
+        , PRJ_QAPP_APPROVAL_AGENCY_NAME, PRJ_LAST_CHANGE_DATE, PRJ_LAST_CHANGE_USER
+        FROM PROJECT
+        WHERE 1 = -1
+      </InsertSQL>
+      <PrimaryKey>
+        <Table>PROJECT</Table>
+        <Column>PRJ_UID</Column>
+      </PrimaryKey>
+      <Map>
+        <Element>ProjectIdentifier</Element>
+        <Value>PRJ_ID</Value>
+      </Map>
+      <Map>
+        <Element type="DBKey">ORG_UID</Element>
+        <Value>ORG_UID</Value>
+      </Map>
+      <Map>
+        <Element>ProjectIdentifier</Element>
+        <Value>PRJ_NAME</Value>
+      </Map>
+      <Map>
+        <Element>ProjectIdentifier</Element>
+        <Value>PRJ_DESC</Value>
+      </Map>
+      <Map>
+        <Element>QAPPApprovedIndicator</Element>
+        <Value>PRJ_QAPP_APPROVED_YN</Value>
+      </Map>
+      <Map>
+        <Element>QAPPApprovalAgencyName</Element>
+        <Value>PRJ_QAPP_APPROVAL_AGENCY_NAME</Value>
+      </Map>
+      <Map>
+        <Element type="Date"/>
+        <Value>PRJ_LAST_CHANGE_DATE</Value>
+      </Map>
+      <Map>
+        <Element type="Constant">EFT_SHC</Element>
+        <Value>PRJ_LAST_CHANGE_USER</Value>
+      </Map>
+    </Mapping>
+    <Mapping type="QUERY">
+      <RootXPath>Activity</RootXPath>
+      <InstanceKeys>
+        <Key name="ActMonLocID">ActivityDescription/MonitoringLocationIdentifier</Key>
+        <Key name="ActID">ActivityDescription/ActivityIdentifier</Key>
+        <Key name="ActMedia">ActivityDescription/ActivityMediaName</Key>
+      </InstanceKeys>
+      <SQL keys="ACMED_UID">SELECT ACMED_UID FROM ACTIVITY_MEDIA WHERE ACMED_NAME = '@ActMedia@'</SQL>
+      <Mapping type="QUERY">
+        <RootXPath>.</RootXPath>
+        <InstanceKeys>
+          <Key name="ActTyp">ActivityDescription/ActivityTypeCode</Key>
+        </InstanceKeys>
+        <SQL keys="ACTYP_UID">SELECT ACTYP_UID FROM ACTIVITY_TYPE WHERE ACTYP_CD = '@ActTyp@'</SQL>
+        <Mapping type="QUERY">
+          <RootXPath>.</RootXPath>
+          <SQL keys="MLOC_UID">
+            SELECT MLOC_UID 
+            FROM MONITORING_LOCATION 
+            WHERE MLOC_ID = '@ActMonLocID@' AND MLOC_LAST_CHANGE_USER = 'EFT_SHC'
+          </SQL>
+          <Mapping type="UPDATE|INSERT">
+            <RootXPath>.</RootXPath>
+            <SQL>
+              SELECT ACT_UID, ACMED_UID, ACTYP_UID, MLOC_UID, ORG_UID, ACT_ID, ACT_COMMENTS, ACT_DEPTH_HEIGHT
+              , ACT_START_DATE, ACT_START_TIME, ACT_SAM_COLLECT_METH_ID, ACT_SAM_COLLECT_METH_CONTEXT
+              , ACT_SAM_COLLECT_METH_NAME, ACT_SAM_COLLECT_EQUIP_COMMENTS, ACT_LAST_CHANGE_DATE
+              , ACT_LAST_CHANGE_USER
+              FROM ACTIVITY
+              WHERE ACT_ID = '@ActID@' AND ACT_LAST_CHANGE_USER = 'EFT_SHC'
+            </SQL>
+            <UpdateSQL>
+              SELECT ACT_UID, ACMED_UID, ACTYP_UID, MLOC_UID, ORG_UID, ACT_ID, ACT_COMMENTS, ACT_DEPTH_HEIGHT
+              , ACT_START_DATE, ACT_START_TIME, ACT_SAM_COLLECT_METH_ID, ACT_SAM_COLLECT_METH_CONTEXT
+              , ACT_SAM_COLLECT_METH_NAME, ACT_SAM_COLLECT_EQUIP_COMMENTS, ACT_LAST_CHANGE_DATE
+              , ACT_LAST_CHANGE_USER
+              FROM ACTIVITY
+              WHERE ACT_ID = '@ActID@' AND ACT_LAST_CHANGE_USER = 'EFT_SHC'
+            </UpdateSQL>
+            <InsertSQL>
+              SELECT ACT_UID, ACMED_UID, ACTYP_UID, MLOC_UID, ORG_UID, ACT_ID, ACT_COMMENTS, ACT_DEPTH_HEIGHT
+              , ACT_START_DATE, ACT_START_TIME, ACT_SAM_COLLECT_METH_ID, ACT_SAM_COLLECT_METH_CONTEXT
+              , ACT_SAM_COLLECT_METH_NAME, ACT_SAM_COLLECT_EQUIP_COMMENTS, ACT_LAST_CHANGE_DATE
+              , ACT_LAST_CHANGE_USER
+              FROM ACTIVITY
+              WHERE 1 = -1
+            </InsertSQL>
+            <Map>
+              <Element type="DBKey">ACMED_UID</Element>
+              <Value>ACMED_UID</Value>
+            </Map>
+            <Map>
+              <Element type="DBKey">ORG_UID</Element>
+              <Value>ORG_UID</Value>
+            </Map>
+            <Map>
+              <Element type="DBKey">ACTYP_UID</Element>
+              <Value>ACTYP_UID</Value>
+            </Map>
+            <Map>
+              <Element type="DBKey">MLOC_UID</Element>
+              <Value>MLOC_UID</Value>
+            </Map>
+            <Map>
+              <Element>ActivityDescription/ActivityIdentifier</Element>
+              <Value>ACT_ID</Value>
+            </Map>
+            <Conditional>
+              <if>
+                <Element>ActivityDescription/ActivityCommentText</Element>
+                <Map>
+                  <Element>ActivityDescription/ActivityCommentText</Element>
+                  <Value>ACT_COMMENTS</Value>
+                </Map>
+              </if>
+              <else>
+                <Map>
+                  <Element type="Constant">null</Element>
+                  <Value>ACT_COMMENTS</Value>
+                </Map>
+              </else>
+            </Conditional>
+            <Map>
+              <Element>ActivityDescription/ActivityStartDate</Element>
+              <Value>ACT_START_DATE</Value>
+            </Map>
+            <Conditional>
+              <if>
+                <Element>ActivityDescription/ActivityStartTime/Time</Element>
+                <Map>
+                  <Element>ActivityDescription/ActivityStartTime/Time</Element>
+                  <Value>ACT_START_TIME</Value>
+                </Map>
+              </if>
+            </Conditional>
+            <Map>
+              <Element>SampleDescription/SampleCollectionMethod/MethodIdentifier</Element>
+              <Value>ACT_SAM_COLLECT_METH_ID</Value>
+            </Map>
+            <Map>
+              <Element>SampleDescription/SampleCollectionMethod/MethodIdentifierContext</Element>
+              <Value>ACT_SAM_COLLECT_METH_CONTEXT</Value>
+            </Map>
+            <Map>
+              <Element>SampleDescription/SampleCollectionMethod/MethodName</Element>
+              <Value>ACT_SAM_COLLECT_METH_NAME</Value>
+            </Map>
+            <Map>
+              <Element>SampleDescription/SampleCollectionEquipmentName</Element>
+              <Value>ACT_SAM_COLLECT_EQUIP_COMMENTS</Value>
+            </Map>
+            <Map>
+              <Element>ActivityDescription/ActivityDepthHeightMeasure/MeasureValue</Element>
+              <Value>ACT_DEPTH_HEIGHT</Value>
+            </Map>
+            <Map>
+              <Element type="Date"/>
+              <Value>ACT_LAST_CHANGE_DATE</Value>
+            </Map>
+            <Map>
+              <Element type="Constant">EFT_SHC</Element>
+              <Value>ACT_LAST_CHANGE_USER</Value>
+            </Map>
+          </Mapping>
+        </Mapping>
+      </Mapping>
+      <Mapping type="QUERY">
+        <RootXPath>.</RootXPath>
+        <InstanceKeys>
+          <Key name="ActMediaSub">ActivityDescription/ActivityMediaSubdivisionName</Key>
+        </InstanceKeys>
+        <SQL keys="AMSUB_UID">SELECT AMSUB_UID FROM ACTIVITY_MEDIA_SUBDIVISION</SQL>
+        <Mapping type="UPDATE">
+          <RootXPath>.</RootXPath>
+          <SQL>
+            SELECT ACT_UID, AMSUB_UID 
+            FROM ACTIVITY 
+            WHERE ACT_ID = '@ActID@' AND ACT_LAST_CHANGE_USER = 'EFT_SHC'
+          </SQL>
+          <Map>
+            <Element type="DBKey">AMSUB_UID</Element>
+            <Value>AMSUB_UID</Value>
+          </Map>
+        </Mapping>
+      </Mapping>
+      <Mapping type="UPDATE|INSERT">
+        <RootXPath>ActivityDescription</RootXPath>
+        <InstanceKeys>
+          <Key name="ProjID">ProjectIdentifier</Key>
+        </InstanceKeys>
+        <SQL keys="PRJ_UID">
+          SELECT PRJ_UID, PRJ_ID, PRJ_NAME, PRJ_DESC, PRJ_LAST_CHANGE_DATE, PRJ_LAST_CHANGE_USER
+          FROM PROJECT
+          WHERE PRJ_ID = '@ProjID@' AND PRJ_LAST_CHANGE_USER = 'EFT_SHC'
+        </SQL>
+        <UpdateSQL>
+          SELECT PRJ_UID, PRJ_ID, PRJ_NAME, PRJ_DESC, PRJ_LAST_CHANGE_DATE, PRJ_LAST_CHANGE_USER
+          FROM PROJECT
+          WHERE PRJ_ID = '@ProjID@' AND PRJ_LAST_CHANGE_USER = 'EFT_SHC'
+        </UpdateSQL>
+        <InsertSQL>
+          SELECT PRJ_UID, PRJ_ID, PRJ_NAME, PRJ_DESC, PRJ_LAST_CHANGE_DATE, PRJ_LAST_CHANGE_USER
+          FROM PROJECT 
+          WHERE 1 = -1
+        </InsertSQL>
+        <Map>
+          <Element>ProjectIdentifier</Element>
+          <Value>PRJ_ID</Value>
+        </Map>
+        <Map>
+          <Element>ProjectIdentifier</Element>
+          <Value>PRJ_NAME</Value>
+        </Map>
+        <Map>
+          <Element>ProjectIdentifier</Element>
+          <Value>PRJ_DESC</Value>
+        </Map>
+        <Map>
+          <Element type="Date"/>
+          <Value>PRJ_LAST_CHANGE_DATE</Value>
+        </Map>
+        <Map>
+          <Element type="Constant">EFT_SHC</Element>
+          <Value>PRJ_LAST_CHANGE_USER</Value>
+        </Map>
+      </Mapping>
+      <Mapping type="QUERY">
+        <RootXPath>.</RootXPath>
+        <SQL keys="ACT_UID">
+          SELECT ACT_UID FROM ACTIVITY WHERE ACT_ID = '@ActID@' AND ACT_LAST_CHANGE_USER = 'EFT_SHC'
+        </SQL>
+        <Mapping type="UPDATE|INSERT">
+            <RootXPath>ActivityDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="ActCondOrgText">ActivityConductingOrganizationText</Key>
+            </InstanceKeys>
+            <SQL keys="ACORG_NAME">
+              SELECT ACT_UID, ACORG_NAME, ORG_UID, ACORG_LAST_CHANGE_DATE
+              FROM ACTIVITY_CONDUCTING_ORG
+              WHERE ACORG_NAME = '@ActCondOrgText@'
+            </SQL>
+            <UpdateSQL>
+              SELECT ACT_UID, ACORG_NAME, ORG_UID, ACORG_LAST_CHANGE_DATE
+              FROM ACTIVITY_CONDUCTING_ORG
+              WHERE ACORG_NAME = '@ActCondOrgText@'
+            </UpdateSQL>
+            <InsertSQL>
+              SELECT ACT_UID, ACORG_NAME, ORG_UID, ACORG_LAST_CHANGE_DATE
+              FROM ACTIVITY_CONDUCTING_ORG
+              WHERE 1 = -1
+            </InsertSQL>
+            <Map>
+              <Element type="DBKey">ACT_UID</Element>
+              <Value>ACT_UID</Value>
+            </Map>
+            <Map>
+              <Element>ActivityConductingOrganizationText</Element>
+              <Value>ACORG_NAME</Value>
+            </Map>
+            <Map>
+              <Element type="DBKey"></Element>
+              <Value>ORG_UID</Value>
+            </Map>
+            <Map>
+              <Element type="Date"/>
+              <Value>ACORG_LAST_CHANGE_DATE</Value>
+            </Map>
+          </Mapping>
+      </Mapping>
+      <Mapping type="QUERY">
+        <RootXPath>ActivityDescription</RootXPath>
+        <SQL keys="ACT_UID">SELECT ACT_UID FROM ACTIVITY WHERE ACT_ID = '@ActID@'</SQL>
+        <Mapping type="QUERY">
+          <RootXPath>.</RootXPath>
+          <InstanceKeys>
+            <Key name="ProjID">ProjectIdentifier</Key>
+          </InstanceKeys>
+          <SQL keys="PRJ_UID">SELECT PRJ_UID FROM PROJECT WHERE PRJ_ID = '@ProjID@'</SQL>
+          <Mapping type="UPDATE|INSERT">
+            <RootXPath>.</RootXPath>
+            <SQL>
+              SELECT ACT_UID, PRJ_UID, ORG_UID, ACTPRJ_LAST_CHANGE_DATE
+              FROM ACTIVITY_PROJECT
+              WHERE ACT_UID = @ACT_UID@ AND PRJ_UID = @PRJ_UID@
+            </SQL>
+            <UpdateSQL>
+              SELECT ACT_UID, PRJ_UID, ORG_UID, ACTPRJ_LAST_CHANGE_DATE
+              FROM ACTIVITY_PROJECT
+              WHERE ACT_UID = @ACT_UID@ AND PRJ_UID = @PRJ_UID@
+            </UpdateSQL>
+            <InsertSQL>
+              SELECT ACT_UID, PRJ_UID, ORG_UID, ACTPRJ_LAST_CHANGE_DATE
+              FROM ACTIVITY_PROJECT
+              WHERE 1 = -1
+            </InsertSQL>
+            <Map>
+              <Element type="DBKey">ACT_UID</Element>
+              <Value>ACT_UID</Value>
+            </Map>
+            <Map>
+              <Element type="DBKey">PRJ_UID</Element>
+              <Value>PRJ_UID</Value>
+            </Map>
+            <Map>
+              <Element type="DBKey">ORG_UID</Element>
+              <Value>ORG_UID</Value>
+            </Map>
+            <Map>
+              <Element type="Date"/>
+              <Value>ACTPRJ_LAST_CHANGE_DATE</Value>
+            </Map>
+          </Mapping>
+        </Mapping>
+      </Mapping>
+      <Mapping type="QUERY">
+        <RootXPath>BiologicalActivityDescription</RootXPath>
+        <InstanceKeys>
+          <Key name="AssblgeName">AssemblageSampledName</Key>
+        </InstanceKeys>
+        <SQL keys="ASMBLG_UID">SELECT ASMBLG_UID FROM ASSEMBLAGE WHERE ASMBLG_NAME = '@AssblgeName@'</SQL>
+        <Mapping type="UPDATE">
+          <RootXPath>.</RootXPath>
+          <SQL>SELECT ACT_UID, ASMBLG_UID, ACT_LAST_CHANGE_DATE FROM ACTIVITY WHERE ACT_ID = '@ActID@'</SQL>
+          <Map>
+            <Element type="DBKey">ASMBLG_UID</Element>
+            <Value>ASMBLG_UID</Value>
+          </Map>
+          <Map>
+            <Element type="Date"/>
+            <Value>ACT_LAST_CHANGE_DATE</Value>
+          </Map>
+        </Mapping>
+      </Mapping>
+      <Mapping type="QUERY">
+        <RootXPath>ActivityDescription</RootXPath>
+        <InstanceKeys>
+          <Key name="MeasureUnit">ActivityDepthHeightMeasure/MeasureUnitCode</Key>
+        </InstanceKeys>
+        <SQL keys="MSUNT_UID">SELECT MSUNT_UID FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@MeasureUnit@'</SQL>
+        <Mapping type="UPDATE">
+          <RootXPath>.</RootXPath>
+          <SQL>
+            SELECT ACT_UID, MSUNT_UID_DEPTH_HEIGHT, ACT_LAST_CHANGE_DATE FROM ACTIVITY WHERE ACT_ID = '@ActID@'
+          </SQL>
+          <Map>
+            <Element type="DBKey">MSUNT_UID</Element>
+            <Value>MSUNT_UID_DEPTH_HEIGHT</Value>
+          </Map>
+          <Map>
+            <Element type="Date"/>
+            <Value>ACT_LAST_CHANGE_DATE</Value>
+          </Map>
+        </Mapping>
+      </Mapping>
+      <Mapping type="QUERY">
+        <RootXPath>Result</RootXPath>
+        <SQL keys="ACT_UID">SELECT ACT_UID FROM ACTIVITY WHERE ACT_ID = '@ActID@'</SQL>
+        <Mapping type="UPDATE|INSERT">
+          <RootXPath>.</RootXPath>
+          <InstanceKeys>
+            <Key name="RsltMeasureValue">ResultDescription/ResultMeasure/ResultMeasureValue</Key>
+          </InstanceKeys>
+          <SQL keys="RES_UID">
+            SELECT RES_UID, ACT_UID, RES_MEASURE, ORG_UID, RES_COMMENT, RES_DEPTH_HEIGHT
+            , RES_LAB_ANALYSIS_START_DATE, RES_LAST_CHANGE_DATE
+            FROM RESULT
+            WHERE ACT_UID = @ACT_UID@ AND RES_MEASURE = '@RsltMeasureValue@'
+          </SQL>
+          <UpdateSQL>
+            SELECT RES_UID, ACT_UID, RES_MEASURE, ORG_UID, RES_COMMENT, RES_DEPTH_HEIGHT
+            , RES_LAB_ANALYSIS_START_DATE, RES_LAST_CHANGE_DATE
+            FROM RESULT
+            WHERE ACT_UID = @ACT_UID@ AND RES_MEASURE = '@RsltMeasureValue@'
+          </UpdateSQL>
+          <InsertSQL>
+            SELECT RES_UID, ACT_UID, RES_MEASURE, ORG_UID, RES_COMMENT, RES_DEPTH_HEIGHT
+            , RES_LAB_ANALYSIS_START_DATE, RES_LAST_CHANGE_DATE
+            FROM RESULT
+            WHERE 1 = -1
+          </InsertSQL>
+          <Map>
+            <Element type="DBKey">ACT_UID</Element>
+            <Value>ACT_UID</Value>
+          </Map>
+          <Map>
+            <Element>ResultDescription/ResultMeasure/ResultMeasureValue</Element>
+            <Value>RES_MEASURE</Value>
+          </Map>
+          <Map>
+            <Element type="DBKey">ORG_UID</Element>
+            <Value>ORG_UID</Value>
+          </Map>
+          <Conditional>
+            <if>
+              <Element>ResultDescription/ResultCommentText</Element>
+              <Map>
+                <Element>ResultDescription/ResultCommentText</Element>
+                <Value>RES_COMMENT</Value>
+              </Map>
+            </if>
+            <else>
+              <Map>
+                <Element type="Constant">null</Element>
+                <Value>RES_COMMENT</Value>
+              </Map>
+            </else>
+          </Conditional>
+          <Map>
+            <Element type="Constant">null</Element>
+            <Value>RES_DEPTH_HEIGHT</Value>
+          </Map>
+          <Conditional>
+            <if>
+              <Element>ResultLabInformation/AnalysisStartDate</Element>
+              <Map>
+                <Element>ResultLabInformation/AnalysisStartDate</Element>
+                <Value>RES_LAB_ANALYSIS_START_DATE</Value>
+              </Map>
+            </if>
+            <else>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAB_ANALYSIS_START_DATE</Value>
+              </Map>
+            </else>
+          </Conditional>
+          <Map>
+            <Element type="Date"/>
+            <Value>RES_LAST_CHANGE_DATE</Value>
+          </Map>
+          <Mapping type="QUERY">
+            <RootXPath>ResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="RsltDetectCondText">ResultDetectionConditionText</Key>
+            </InstanceKeys>
+            <SQL keys="RDCND_UID">
+              SELECT RDCND_UID FROM RESULT_DETECTION_CONDITION WHERE RDCND_NAME = '@RsltDetectCondText@'
+            </SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>
+                SELECT RES_UID, RDCND_UID
+                FROM RESULT
+                WHERE ACT_UID = @ACT_UID@ AND RES_MEASURE = '@RsltMeasureValue@'
+              </SQL>
+              <Map>
+                <Element type="DBKey">RDCND_UID</Element>
+                <Value>RDCND_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>ResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="CharName">CharacteristicName</Key>
+            </InstanceKeys>
+            <SQL keys="CHR_UID">SELECT CHR_UID FROM CHARACTERISTIC WHERE CHR_NAME = '@CharName@'</SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>
+                SELECT RES_UID, CHR_UID, RES_LAST_CHANGE_DATE
+                FROM RESULT
+                WHERE ACT_UID = @ACT_UID@ AND RES_MEASURE = '@RsltMeasureValue@'
+              </SQL>
+              <Map>
+                <Element type="DBKey">CHR_UID</Element>
+                <Value>CHR_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>ResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="MsrUnit">ResultMeasure/MeasureUnitCode</Key>
+            </InstanceKeys>
+            <SQL keys="MSUNT_UID">SELECT MSUNT_UID FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@MsrUnit@'</SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>
+                SELECT RES_UID, MSUNT_UID_MEASURE, RES_LAST_CHANGE_DATE
+                FROM RESULT
+                WHERE ACT_UID = @ACT_UID@ AND RES_MEASURE = '@RsltMeasureValue@'
+              </SQL>
+              <Map>
+                <Element type="DBKey">MSUNT_UID</Element>
+                <Value>MSUNT_UID_MEASURE</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>ResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="RsltStatusID">ResultStatusIdentifier</Key>
+            </InstanceKeys>
+            <SQL keys="RESSTA_UID">
+              SELECT RESSTA_UID FROM RESULT_STATUS WHERE RESSTA_NAME = '@RsltStatusID@'
+            </SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>
+                SELECT RES_UID, RESSTA_UID, RES_LAST_CHANGE_DATE
+                FROM RESULT
+                WHERE ACT_UID = @ACT_UID@
+              </SQL>
+              <Map>
+                <Element type="DBKey">RESSTA_UID</Element>
+                <Value>RESSTA_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>ResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="RsltValTypeName">ResultValueTypeName</Key>
+            </InstanceKeys>
+            <SQL keys="RVTYP_UID">
+              SELECT RVTYP_UID FROM RESULT_VALUE_TYPE WHERE RVTYP_NAME = '@RsltValTypeName@'
+            </SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>
+                SELECT RES_UID, RVTYP_UID, RES_LAST_CHANGE_DATE
+                FROM RESULT
+                WHERE ACT_UID = @ACT_UID@
+              </SQL>
+              <Map>
+                <Element type="DBKey">RVTYP_UID</Element>
+                <Value>RVTYP_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>ResultAnalyticalMethod</RootXPath>
+            <InstanceKeys>
+              <Key name="RsltMthdIDCntxt">MethodIdentifierContext</Key>
+            </InstanceKeys>
+            <SQL keys="AMCTX_UID">
+              SELECT AMCTX_UID FROM ANALYTICAL_METHOD_CONTEXT WHERE AMCTX_NAME = '@RsltMthdIDCntxt'
+            </SQL>
+            <Mapping type="QUERY">
+              <RootXPath>.</RootXPath>
+              <InstanceKeys>
+                <Key name="RsltMthdID">MethodIdentifier</Key>
+                <Key name="RsltMthdName">MethodName</Key>
+              </InstanceKeys>
+              <SQL keys="ANLMTH_UID">
+                SELECT ANLMTH_UID
+                FROM ANALYTICAL_METHOD
+                WHERE AMCTX_UID = '@AMCTX_UID@' AND ANLMTH_ID = '@RsltMthdID@' AND ANLMTH_NAME = '@MethodName@'
+              </SQL>
+              <Mapping type="UPDATE">
+                <RootXPath>.</RootXPath>
+                <SQL>
+                  SELECT ANLMTH_UID, RES_LAST_CHANGE_DATE
+                  FROM RESULT
+                  WHERE ACT_UID = '@ACT_UID@'
+                </SQL>
+                <Map>
+                  <Element type="DBKey">ANLMTH_UID</Element>
+                  <Value>ANLMTH_UID</Value>
+                </Map>
+                <Map>
+                  <Element type="Date"/>
+                  <Value>RES_LAST_CHANGE_DATE</Value>
+                </Map>
+              </Mapping>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>BiologicalResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="BioIntName">BiologicalIntentName</Key>
+            </InstanceKeys>
+            <SQL keys="BIOINT_UID">
+              SELECT BIOINT_UID FROM BIOLOGICAL_INTENT WHERE BIOINT_NAME = '@BioIntName@'
+            </SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>SELECT RES_UID, BIOINT_UID, RES_LAST_CHANGE_DATE FROM RESULT WHERE ACT_UID = @ACT_UID@</SQL>
+              <Map>
+                <Element type="DBKey">BIOINT_UID</Element>
+                <Value>BIOINT_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>BiologicalResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="SubTaxName">SubjectTaxonomicName</Key>
+            </InstanceKeys>
+            <SQL keys="TAX_UID">SELECT TAX_UID FROM TAXON WHERE TAX_NAME = '@SubTaxName@'</SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>SELECT RES_UID, TAX_UID, RES_LAST_CHANGE_DATE FROM RESULT WHERE ACT_UID = '@ACT_UID@'</SQL>
+              <Map>
+                <Element type="DBKey">TAX_UID</Element>
+                <Value>TAX_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RES_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+          <Mapping type="QUERY">
+            <RootXPath>ResultDescription</RootXPath>
+            <InstanceKeys>
+              <Key name="RsltSampFracText">ResultSampleFractionText</Key>
+            </InstanceKeys>
+            <SQL keys="SMFRC_UID">
+              SELECT SMFRC_UID FROM SAMPLE_FRACTION WHERE SMFRC_NAME = '@RsltSampFracText@'
+            </SQL>
+            <Mapping type="UPDATE">
+              <RootXPath>.</RootXPath>
+              <SQL>SELECT RES_UID, SMFRC_UID FROM RESULT WHERE ACT_UID = '@ACT_UID@'</SQL>
+              <Map>
+                <Element type="DBKey">SMFRC_UID</Element>
+                <Value>SMFRC_UID</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+        </Mapping>
+        <Mapping type="QUERY">
+          <RootXPath>.</RootXPath>
+          <InstanceKeys>
+            <Key name="RsltMeasureValue">ResultDescription/ResultMeasure/ResultMeasureValue</Key>
+          </InstanceKeys>
+          <SQL keys="RES_UID">
+            SELECT RES_UID
+            FROM RESULT
+            WHERE ACT_UID = @ACT_UID@ AND RES_MEASURE = '@RsltMeasureValue@'
+          </SQL>
+          <Mapping type="QUERY">
+            <RootXPath>ResultLabInformation</RootXPath>
+            <InstanceKeys>
+              <Key name="DetQuantLimitType">
+                ResultDetectionQuantitationLimit/DetectionQuantitationLimitTypeName
+              </Key>
+            </InstanceKeys>
+            <SQL keys="DQLTYP_UID">
+              SELECT DQLTYP_UID FROM DETECTION_QUANT_LIMIT_TYPE WHERE DQLTYP_NAME = '@DetQuantLimitType@'
+            </SQL>
+            <Mapping type="UPDATE|INSERT">
+              <RootXPath>.</RootXPath>
+              <SQL keys="RDQLMT_UID">
+                SELECT RDQLMT_UID, DQLTYP_UID, ORG_UID, RES_UID, RDQLMT_LAST_CHANGE_DATE
+                FROM RESULT_DETECT_QUANT_LIMIT
+                WHERE DQLTYP_UID = @DQLTYP_UID@ AND RES_UID = @RES_UID@
+              </SQL>
+              <UpdateSQL>
+                SELECT RDQLMT_UID, DQLTYP_UID, ORG_UID, RES_UID, RDQLMT_LAST_CHANGE_DATE
+                FROM RESULT_DETECT_QUANT_LIMIT
+                WHERE DQLTYP_UID = @DQLTYP_UID@ AND RES_UID = @RES_UID@
+              </UpdateSQL>
+              <InsertSQL>
+                SELECT RDQLMT_UID, DQLTYP_UID, ORG_UID, RES_UID, RDQLMT_LAST_CHANGE_DATE
+                FROM RESULT_DETECT_QUANT_LIMIT
+                WHERE 1 = -1
+              </InsertSQL>
+              <PrimaryKey>
+                <Table>RESULT_DETECT_QUANT_LIMIT</Table>
+                <Column>RDQLMT_UID</Column>
+              </PrimaryKey>
+              <Map>
+                <Element type="DBKey">DQLTYP_UID</Element>
+                <Value>DQLTYP_UID</Value>
+              </Map>
+              <Map>
+                <Element type="DBKey">ORG_UID</Element>
+                <Value>ORG_UID</Value>
+              </Map>
+              <Map>
+                <Element type="DBKey">RES_UID</Element>
+                <Value>RES_UID</Value>
+              </Map>
+              <Map>
+                <Element type="Date"/>
+                <Value>RDQLMT_LAST_CHANGE_DATE</Value>
+              </Map>
+            </Mapping>
+          </Mapping>
+        </Mapping>
+      </Mapping>
+    </Mapping>
+  </Mapping>
+</MappingScript>

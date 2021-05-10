@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+	<extension>
+		<operation name="GetFacilityByChangeDate" id="177" domain="FRSV3" webservice="SOLICIT" type="WEB_SERVICE" version="VER_20">
+			<documentation></documentation>
+		</operation>
+	</extension>
+	<partnerLinks>
+		<partnerLink name="StoredProcedure" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.StoredProcedure" />
+			</extension>
+		</partnerLink>
+		<partnerLink name="Compressor" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Compressor" />
+			</extension>
+		</partnerLink>
+		<partnerLink name="SaveToNode" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.SaveToNode" />
+			</extension>
+		</partnerLink>
+	</partnerLinks>
+	<variables>
+		<variable name="webMethodName">SOLICIT</variable>
+		<variable name="operationName">GetFACID3ByChangeDate</variable>
+		<variable name="transactionId" />
+		<variable name="securityToken" />
+		<variable name="dataflow" />
+		<variable name="recipient" />
+		<variable name="notificationURI" />
+		<variable name="request" />
+		<variable name="Change Date" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="Originating Partner Name " type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="Information System Acronym Name" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+	</variables>
+	<sequence>
+		<invoke partnerLink="StoredProcedure">
+			<extension namespace="">
+				<component aliasName="GenXML" runAsThread="True" />
+				<inputParameters>
+					<parameter name="spName" value="usp_get_facility_profile_xml" type="System.String" />
+					<parameter name="dataSource" value="MSSQL:server=xxxxx;database=MFL_STG;uid=MFL_STG;pwd=MFL_STG" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+					<parameter name="commandtimeout" value="" type="System.String" />
+					<parameter name="@start_date" value="{Global::Change Date}" type="System.String" />
+					<parameter name="@output" value="{output:-1}" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="Compressor">
+			<extension namespace="">
+				<component aliasName="Compress" runAsThread="True" />
+				<inputParameters>
+					<parameter name="source" value="{GenXML::Output}" type="System.String" />
+					<parameter name="filename" value="{Global::operationName}{Global::transactionId}.zip" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="SaveToNode">
+			<extension namespace="">
+				<component aliasName="SavetoNode" runAsThread="True" />
+				<inputParameters>
+					<parameter name="source" value="{Compress::Output}" type="System.object" />
+					<parameter name="filename" value="{Global::operationName}{Global::transactionId}.zip" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+	</sequence>
+</process>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+	<extension>
+		<operation name="GetTransactionList" id="171" domain="ENDS" webservice="QUERY" type="WEB_SERVICE" version="VER_20">
+			<documentation></documentation>
+		</operation>
+	</extension>
+	<partnerLinks>
+		<partnerLink name="StoredProcedure" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.StoredProcedure" />
+			</extension>
+		</partnerLink>
+	</partnerLinks>
+	<variables>
+		<variable name="webMethodName">QUERY</variable>
+		<variable name="operationName">GetTransactionList</variable>
+		<variable name="transactionId" />
+		<variable name="securityToken" />
+		<variable name="dataflow" />
+		<variable name="request" />
+		<variable name="rowId" />
+		<variable name="maxRows" />
+		<variable name="transID " type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="DataFlow1" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="Status" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="Type" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="UserId" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="Recipients" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="Organization" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="toDate" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+		<variable name="fromDate" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+	</variables>
+	<sequence>
+		<invoke partnerLink="StoredProcedure">
+			<extension namespace="">
+				<component aliasName="GenXML" runAsThread="False" />
+				<inputParameters>
+					<parameter name="spName" value="USP_GENERATE_TRANSACT_SVC_XML" type="System.String" />
+					<parameter name="dataSource" value="MSSQL:Server=xxxxx;Database=xxxxx;UID=xxxxx;PWD=xxxxx" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+					<parameter name="commandtimeout" value="" type="System.String" />
+					<parameter name="@p_TRANS_ID" value="{Global::transID }" type="System.String" />
+					<parameter name="@p_DATAFLOW" value="{Global::DataFlow1}" type="System.String" />
+					<parameter name="@p_STATUS" value="{Global::Status}" type="System.String" />
+					<parameter name="@p_TYPE" value="{Global::Type}" type="System.String" />
+					<parameter name="@p_USERID" value="{Global::UserId}" type="System.String" />
+					<parameter name="@p_RECIPIENTS" value="{Global::Recipients}" type="System.String" />
+					<parameter name="@p_ORGANIZATION" value="{Global::Organization}" type="System.String" />
+					<parameter name="@p_TO_DATE" value="{Global::toDate}" type="System.String" />
+					<parameter name="@p_FROM_DATE" value="{Global::fromDate}" type="System.String" />
+					<parameter name="@p_RESULT" value="{output:-1}" type="System.String" />
+				</inputParameters>
+				<outputParameters>
+					<parameter name="" value="" type="System.Object" />
+				</outputParameters>
+			</extension>
+		</invoke>
+	</sequence>
+</process>

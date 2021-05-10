@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+  <extension>
+    <operation name="GetAQSXmlData" id="40" domain="airvision" webservice="QUERY" type="WEB_SERVICE" version="VER_20">
+      <documentation></documentation>
+    </operation>
+  </extension>
+  <partnerLinks>
+    <partnerLink name="ExternalAPI" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.ExternalAPI" />
+      </extension>
+    </partnerLink>
+  </partnerLinks>
+  <variables>
+    <variable name="webMethodName">QUERY</variable>
+    <variable name="operationName">GetAQSXmlData</variable>
+    <variable name="transactionId" />
+    <variable name="securityToken" />
+    <variable name="dataflow" />
+    <variable name="request" />
+    <variable name="rowId" />
+    <variable name="maxRows" />
+    <variable name="AirVisionURL" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSXMLSchemaVersion" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="DurationCode" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="StartTime" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="EndTime" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="SendOnlyQAData" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="SendRATransactions" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="SendRBTransactions" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="SendRDTransactions" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="SendRPTransactions" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AgencyCode" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="SiteCode" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="ParameterCode" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSUserID" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSScreeningGroup" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSFinalProcessingStep" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSPayloadTypeProperty" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSSchemaVersion" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AQSLoadOptions" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="PayloadOperation" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="AuthorName" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="OrganizationName" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+    <variable name="DocumentTitle" type="" encoding="" occurrencenumber="" requiredindicator="" typeDescriptor="" />
+  </variables>
+  <sequence>
+    <invoke partnerLink="ExternalAPI">
+      <extension namespace="">
+        <component aliasName="GenXML" runAsThread="False" />
+        <inputParameters>
+          <parameter name="dllFullName" value="D:\ts_dallas\eNode2008DotNet\V1_0\src\Node.PlugIn\Node.AirVision\bin\Debug\Node.AirVision.dll" type="System.String" />
+          <parameter name="classFullName" value="Node.AirVision.GetAirVisionData" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+          <parameter name="AirVisionURL" value="{Global::AirVisionURL}" type="System.String" />
+          <parameter name="AQSXMLSchemaVersion" value="{Global::AQSXMLSchemaVersion}" type="System.String" />
+          <parameter name="DurationCode" value="{Global::DurationCode}" type="System.String" />
+          <parameter name="StartTime" value="{Global::StartTime}" type="System.String" />
+          <parameter name="EndTime" value="{Global::EndTime}" type="System.String" />
+          <parameter name="SendOnlyQAData" value="{Global::SendOnlyQAData}" type="System.String" />
+          <parameter name="SendRATransactions" value="{Global::SendRATransactions}" type="System.String" />
+          <parameter name="SendRBTransactions" value="{Global::SendRBTransactions}" type="System.String" />
+          <parameter name="SendRDTransactions" value="{Global::SendRDTransactions}" type="System.String" />
+          <parameter name="SendRPTransactions" value="{Global::SendRPTransactions}" type="System.String" />
+          <parameter name="AgencyCode" value="{Global::AgencyCode}" type="System.String" />
+          <parameter name="SiteCode" value="{Global::SiteCode}" type="System.String" />
+          <parameter name="ParameterCode" value="{Global::ParameterCode}" type="System.String" />
+          <parameter name="AQSUserID" value="{Global::AQSUserID}" type="System.String" />
+          <parameter name="AQSScreeningGroup" value="{Global::AQSScreeningGroup}" type="System.String" />
+          <parameter name="AQSFinalProcessingStep" value="{Global::AQSFinalProcessingStep}" type="System.String" />
+          <parameter name="AQSPayloadTypeProperty" value="{Global::AQSPayloadTypeProperty}" type="System.String" />
+          <parameter name="AQSSchemaVersion" value="{Global::AQSSchemaVersion}" type="System.String" />
+          <parameter name="AQSLoadOptions" value="{Global::AQSLoadOptions}" type="System.String" />
+          <parameter name="PayloadOperation" value="{Global::PayloadOperation}" type="System.String" />
+          <parameter name="AuthorName" value="{Global::AuthorName}" type="System.String" />
+          <parameter name="OrganizationName" value="{Global::OrganizationName}" type="System.String" />
+          <parameter name="DocumentTitle" value="{Global::DocumentTitle}" type="System.String" />
+        </inputParameters>
+      </extension>
+    </invoke>
+  </sequence>
+</process>

@@ -1,0 +1,124 @@
+<process>
+	<extension>
+		<operation domain="NODE" id="20" name="GenerateAndSubmitDEDL" type="WEB_SERVICE" version="VER_20" webservice="SOLICIT">
+			<documentation/>
+		</operation>
+	</extension>
+	<partnerLinks>
+		<partnerLink name="StoredProcedure" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.StoredProcedure" library="bin/DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="ExternalAPI" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.ExternalAPI" library="bin/DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="Compressor" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.Compressor" library="bin/DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="SaveToNode" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.SaveToNode" library="bin/DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="NodeWebServices" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.NodeWebServices" library="bin/DataFlow.PlugIn.Common.dll" />
+			</extension>
+		</partnerLink>
+	</partnerLinks>
+	<variables>
+		<variable name="webMethodName">SOLICIT</variable>
+		<variable name="operationName">GenerateAndSubmitDEDL</variable>
+		<variable name="transactionId"/>
+		<variable name="securityToken"/>
+		<variable name="dataflow"/>
+		<variable name="request"/>
+		<variable name="rowId"/>
+		<variable name="maxRows"/>
+		<variable name="documents"/>
+	</variables>
+	<sequence>
+		<invoke partnerLink="StoredProcedure">
+			<extension namespace="">
+				<component aliasName="MyStoreProcedure" runAsThread="False"/>
+				<inputParameters>
+					<parameter name="spName" type="System.String" value="SP_GET_DEDL_XML"/>
+					<parameter name="dataSource" type="System.String" value="node"/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+					<parameter name="commandtimeout" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="ExternalAPI">
+			<extension namespace="">
+				<component aliasName="MyAPI" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="dllFullName" type="System.String" value=""/>
+					<parameter name="classFullName" type="System.String" value="DataFlow.PlugIn.Specific.GetDataFromDatabase"/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="dataSourceName" type="System.String" value="node"/>
+					<parameter name="headerTableName" type="System.String" value=""/>
+					<parameter name="contentTableName" type="System.String" value="SYS_CONFIG"/>
+					<parameter name="contentColumn1" type="System.String" value="CONFIG_CLOB"/>
+					<parameter name="contentColumn2" type="System.String" value="CONFIG_NAME"/>
+					<parameter name="contentColumn2Val" type="System.String" value="dedl_pub.config"/>
+					<parameter name="fileName" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="Compressor">
+			<extension namespace="">
+				<component aliasName="Zip" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="source" type="System.String" value="{MyAPI::Output}"/>
+					<parameter name="filename" type="System.String" value="DEDL.zip"/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="SaveToNode">
+			<extension namespace="">
+				<component aliasName="mySaveToDatabase" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="source" type="System.object" value="{Zip::Output}"/>
+					<parameter name="filename" type="System.String" value=""/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="NodeWebServices">
+			<extension namespace="">
+				<component aliasName="mySubmit" runAsThread="True" />
+				<inputParameters>
+					<parameter name="source" value="{mySaveToDatabase::Output}" type="System.String" />
+					<parameter name="nodeURI" value="https://ends2.epacdxnode.net/Node2WS.svc" type="System.String" />
+					<parameter name="nodeVersion" value="VER_20" type="System.String" />
+					<parameter name="webMethod" value="Submit" type="System.String" />
+					<parameter name="authUser" value="REPLACE@enfotech.com" type="System.String" />
+					<parameter name="authPassword" value="REPLACE" type="System.String" />
+					<parameter name="authMethod" value="Password" type="System.String" />
+					<parameter name="authDomain" value="default" type="System.String" />
+					<parameter name="dataflow" value="DEDL_v1_0" type="System.String" />
+					<parameter name="request" value="" type="System.String" />
+					<parameter name="rowID" value="" type="System.String" />
+					<parameter name="maxRows" value="" type="System.String" />
+					<parameter name="flowOperation" value="Refresh" type="System.String" />
+					<parameter name="filename" value="" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+				</inputParameters>
+				<outputParameters>
+					<parameter name="" value="" type="System.Object" />
+				</outputParameters>
+			</extension>
+		</invoke>
+	</sequence>
+</process>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+  <extension>
+    <operation name="SubmitICISDMR" id="142" domain="ICIS" webservice="SOLICIT" type="WEB_SERVICE" version="VER_20">
+      <documentation></documentation>
+    </operation>
+  </extension>
+  <partnerLinks>
+    <partnerLink name="StoredProcedure" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.StoredProcedure" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Compressor" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Compressor" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="SaveToNode" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.SaveToNode" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="Email" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Email" />
+      </extension>
+    </partnerLink>
+  </partnerLinks>
+  <variables>
+    <variable name="webMethodName">SOLICIT</variable>
+    <variable name="operationName">SubmitICISDMR</variable>
+    <variable name="transactionId" />
+    <variable name="securityToken" />
+    <variable name="dataflow" />
+    <variable name="recipient" />
+    <variable name="notificationURI" />
+    <variable name="request" />
+    <variable name="ID" />
+    <variable name="Author" />
+    <variable name="Organization" />
+    <variable name="Title" />
+    <variable name="DataService" />
+    <variable name="ContactInfo" />
+    <variable name="email" />
+  </variables>
+  <sequence>
+    <invoke partnerLink="StoredProcedure">
+      <extension namespace="">
+        <component aliasName="GenXML" runAsThread="False" />
+        <inputParameters>
+          <parameter name="spName" value="icis_dmr_replace2" type="System.String" />
+          <parameter name="dataSource" value="MSSQL:Server=xxxxx;Database=icis_stg;UID=xxxxx;PWD=xxxxx" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+          <parameter name="commandtimeout" value="" type="System.String" />
+          <parameter name="@transaction_id" value="{Global::transactionId}" type="System.String" />
+          <parameter name="@id" value="{Global::ID}" type="System.String" />
+          <parameter name="@Author" value="{Global::Author}" type="System.String" />
+          <parameter name="@Organization" value="{Global::Organization}" type="System.String" />
+          <parameter name="@Title" value="{Global::Title}" type="System.String" />
+          <parameter name="@DataService" value="{Global::DataService}" type="System.String" />
+          <parameter name="@ContactInfo" value="{Global::ContactInfo}" type="System.String" />
+          <parameter name="@email" value="{Global::email}" type="System.String" />
+          <parameter name="@output" value="{output:-1}" type="System.String" />
+        </inputParameters>
+        <outputParameters>
+          <parameter name="" value="" type="System.Object" />
+        </outputParameters>
+      </extension>
+    </invoke>
+    <invoke partnerLink="Compressor">
+      <extension namespace="">
+        <component aliasName="ZippedFile" runAsThread="False" />
+        <inputParameters>
+          <parameter name="source" value="{GenXML::Output}" type="System.String" />
+          <parameter name="filename" value="ICISDMR.zip" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+        </inputParameters>
+        <outputParameters>
+          <parameter name="" value="" type="System.Object" />
+        </outputParameters>
+      </extension>
+    </invoke>
+    <invoke partnerLink="SaveToNode">
+      <extension namespace="">
+        <component aliasName="SaveZippedFile" runAsThread="False" />
+        <inputParameters>
+          <parameter name="source" value="{ZippedFile::Output}" type="System.object" />
+          <parameter name="filename" value="ICISDMR.zip" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+        </inputParameters>
+        <outputParameters>
+          <parameter name="" value="" type="System.Object" />
+        </outputParameters>
+      </extension>
+    </invoke>
+    <invoke partnerLink="Email">
+      <extension namespace="">
+        <component aliasName="SendEmail" runAsThread="False" />
+        <inputParameters>
+          <parameter name="toList" value="" type="System.String" />
+          <parameter name="subject" value="Generate ICIS DMR " type="System.String" />
+          <parameter name="content" value="Generate ICIS DMR " type="System.String" />
+          <parameter name="attachment" value="{ZippedFile::Output}" type="System.Object" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+        </inputParameters>
+        <outputParameters>
+          <parameter name="" value="" type="System.Object" />
+        </outputParameters>
+      </extension>
+    </invoke>
+  </sequence>
+</process>

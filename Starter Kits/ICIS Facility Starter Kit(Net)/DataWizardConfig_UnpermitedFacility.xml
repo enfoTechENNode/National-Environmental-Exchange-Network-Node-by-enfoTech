@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+	<extension>
+		<operation name="ICISUnpermitedFac" id="37" domain="ICIS" webservice="NONE" type="SCHEDULED_TASK" version="VER_20">
+			<documentation></documentation>
+		</operation>
+	</extension>
+	<partnerLinks>
+		<partnerLink name="StoredProcedure" partnerLinkType="">
+			<extension namespace="">
+				<component library="DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.StoredProcedure" />
+			</extension>
+		</partnerLink>
+		<partnerLink name="Compressor" partnerLinkType="">
+			<extension namespace="">
+				<component library="DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Compressor" />
+			</extension>
+		</partnerLink>
+		<partnerLink name="SaveToNode" partnerLinkType="">
+			<extension namespace="">
+				<component library="DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.SaveToNode" />
+			</extension>
+		</partnerLink>
+		<partnerLink name="NodeWebServices" partnerLinkType="">
+			<extension namespace="">
+				<component library="DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.NodeWebServices" />
+			</extension>
+		</partnerLink>
+	</partnerLinks>
+	<variables>
+		<variable name="webMethodName">NONE</variable>
+		<variable name="operationName">ICIS_Unpermited_Facility</variable>
+		<variable name="transactionId" />
+	</variables>
+	<sequence>
+		<invoke partnerLink="StoredProcedure">
+			<extension namespace="">
+				<component aliasName="GenXML" runAsThread="False" />
+				<inputParameters>
+					<parameter name="spName" value="icis_Replace_UnpermittedFacility" type="System.String" />
+					<parameter name="dataSource" value="MSSQL:Server=rome;Database=icis_stg_s;UID=e2_app;PWD=e2_exe" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+					<parameter name="commandtimeout" value="" type="System.String" />
+					<parameter name="@output" value="{output:-1}" type="System.String" />
+					<parameter name="@start_date" value="" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="Compressor">
+			<extension namespace="">
+				<component aliasName="Compress" runAsThread="False" />
+				<inputParameters>
+					<parameter name="source" value="{GenXML::Output}" type="System.String" />
+					<parameter name="filename" value="ICISFacility.zip" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="SaveToNode">
+			<extension namespace="">
+				<component aliasName="SaveToNode" runAsThread="False" />
+				<inputParameters>
+					<parameter name="source" value="{Compress::Output}" type="System.object" />
+					<parameter name="filename" value="ICIS_Facility.zip" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="NodeWebServices">
+			<extension namespace="">
+				<component aliasName="SendToEPA" runAsThread="False" />
+				<inputParameters>
+					<parameter name="source" value="{Compress::Output}" type="System.String" />
+					<parameter name="nodeURI" value="https://testngn.epacdxnode.net/ngn-enws20/services/NetworkNode2ServiceConditionalMTOM" type="System.String" />
+					<parameter name="nodeVersion" value="VER_20" type="System.String" />
+					<parameter name="webMethod" value="Submit" type="System.String" />
+					<parameter name="authUser" value="node_support@enfotech.com" type="System.String" />
+					<parameter name="authPassword" value="enf0Tech" type="System.String" />
+					<parameter name="authMethod" value="password" type="System.String" />
+					<parameter name="authDomain" value="default" type="System.String" />
+					<parameter name="dataflow" value="ICIS-NPDES" type="System.String" />
+					<parameter name="request" value="" type="System.String" />
+					<parameter name="rowID" value="" type="System.String" />
+					<parameter name="maxRows" value="" type="System.String" />
+					<parameter name="flowOperation" value="" type="System.String" />
+					<parameter name="filename" value="" type="System.String" />
+					<parameter name="logMessage" value="" type="System.String" />
+					<parameter name="faultMessage" value="" type="System.String" />
+				</inputParameters>
+			</extension>
+		</invoke>
+	</sequence>
+</process>

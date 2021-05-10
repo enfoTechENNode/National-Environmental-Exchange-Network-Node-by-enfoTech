@@ -1,0 +1,146 @@
+<process>
+	<extension>
+		<operation domain="AQS" id="109" name="AQS_AirVision_v2" type="SCHEDULED_TASK" version="VER_20" webservice="NONE">
+			<documentation/>
+		</operation>
+	</extension>
+	<partnerLinks>
+		<partnerLink name="ExternalAPI" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.ExternalAPI" library="DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="Compressor" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.Compressor" library="DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="SaveToNode" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.SaveToNode" library="DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="NodeWebServices" partnerLinkType="">
+			<extension namespace="">
+				<component class="DataFlow.PlugIn.Common.NodeWebServices" library="DataFlow.PlugIn.Common.dll"/>
+			</extension>
+		</partnerLink>
+	</partnerLinks>
+	<variables>
+		<variable name="webMethodName">Execute</variable>
+		<variable name="operationName">AQS_AirVision_v2</variable>
+		<variable name="transactionId"/>
+		<variable name="securityToken"/>
+		<variable name="dataflow"/>
+		<variable name="request"/>
+		<variable encoding="" name="EPAURL" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="NAASUserID" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="NAASUserPassword" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AirVisionURL" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="FileName" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AQSXMLSchemaVersion" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="CompressPayload" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="DurationCode" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="StartTime" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="EndTime" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="SendOnlyQAData" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="SendRATransactions" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="SendRBTransactions" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="SendRDTransactions" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="SendRPTransactions" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AuthorName" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="OrganizationName" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="DocumentTitle" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AQSUserID" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AQSScreeningGroup" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AQSPayloadTypeProperty" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AQSSchemaVersion" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AQSLoadOptions" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="PayloadOperation" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="AgencyCode" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="SiteCode" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+		<variable encoding="" name="ParameterCode" occurenceNumber="" requiredIndicator="" type="" typeDescription=""/>
+	</variables>
+	<sequence>
+		<invoke partnerLink="ExternalAPI">
+			<extension namespace="">
+				<component aliasName="GenerateAQS_XML_API" runAsThread="False"/>
+				<inputParameters>
+					<parameter name="dllFullName" type="System.String" value=""/>
+					<parameter name="classFullName" type="System.String" value="com.enfotech.aqs.epa.EPAGenerateAQSXML"/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+					<parameter name="AirVisionURL" type="System.String" value="{Global::AirVisionURL}"/>
+					<parameter name="FileName" type="System.String" value="{Global::FileName}{Global::transactionId}.xml"/>
+					<parameter name="AQSXMLSchemaVersion" type="System.String" value="{Global::AQSXMLSchemaVersion}"/>
+					<parameter name="CompressPayload" type="System.String" value="{Global::CompressPayload}"/>
+					<parameter name="DurationCode" type="System.String" value="{Global::DurationCode}"/>
+					<parameter name="StartTime" type="System.String" value="{Global::StartTime}"/>
+					<parameter name="EndTime" type="System.String" value="{Global::EndTime}"/>
+					<parameter name="SendOnlyQAData" type="System.String" value="{Global::SendOnlyQAData}"/>
+					<parameter name="SendRATransactions" type="System.String" value="{Global::SendRATransactions}"/>
+					<parameter name="SendRBTransactions" type="System.String" value="{Global::SendRBTransactions}"/>
+					<parameter name="SendRDTransactions" type="System.String" value="{Global::SendRDTransactions}"/>
+					<parameter name="SendRPTransactions" type="System.String" value="{Global::SendRPTransactions}"/>
+					<parameter name="AuthorName" type="System.String" value="{Global::AuthorName}"/>
+					<parameter name="OrganizationName" type="System.String" value="{Global::OrganizationName}"/>
+					<parameter name="DocumentTitle" type="System.String" value="{Global::DocumentTitle}"/>
+					<parameter name="AQSUserID" type="System.String" value="{Global::AQSUserID}"/>
+					<parameter name="AQSScreeningGroup" type="System.String" value="{Global::AQSScreeningGroup}"/>
+					<parameter name="AQSPayloadTypeProperty" type="System.String" value="{Global::AQSPayloadTypeProperty}"/>
+					<parameter name="AQSSchemaVersion" type="System.String" value="{Global::AQSSchemaVersion}"/>
+					<parameter name="AQSLoadOptions" type="System.String" value="{Global::AQSLoadOptions}"/>
+					<parameter name="PayloadOperation" type="System.String" value="{Global::PayloadOperation}"/>
+					<parameter name="AgencyCode" type="System.String" value="{Global::AgencyCode}"/>
+					<parameter name="SiteCode" type="System.String" value="{Global::SiteCode}"/>
+					<parameter name="ParameterCode" type="System.String" value="{Global::ParameterCode}"/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="Compressor">
+			<extension namespace="">
+				<component aliasName="ZIP" runAsThread="False"/>
+				<inputParameters>
+					<parameter name="source" type="System.String" value="{GenerateAQS_XML_API::Output}"/>
+					<parameter name="filename" type="System.String" value=""/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="SaveToNode">
+			<extension namespace="">
+				<component aliasName="SaveDatabase" runAsThread="False"/>
+				<inputParameters>
+					<parameter name="source" type="System.object" value="{ZIP::Output}"/>
+					<parameter name="filename" type="System.String" value="{Global::FileName}{Global::transactionId}.ZIP"/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="NodeWebServices">
+			<extension namespace="">
+				<component aliasName="SubmitAQSXMLFile" runAsThread="False"/>
+				<inputParameters>
+					<parameter name="source" type="System.String" value="{ZIP::Output}"/>
+					<parameter name="nodeURI" type="System.String" value="{Global::EPAURL}"/>
+					<parameter name="nodeVersion" type="System.String" value="VER_20"/>
+					<parameter name="webMethod" type="System.String" value="Submit"/>
+					<parameter name="authUser" type="System.String" value="{Global::NAASUserID}"/>
+					<parameter name="authPassword" type="System.String" value="{Global::NAASUserPassword}"/>
+					<parameter name="authMethod" type="System.String" value="PASSWORD"/>
+					<parameter name="authDomain" type="System.String" value="default"/>
+					<parameter name="dataflow" type="System.String" value="AQS"/>
+					<parameter name="request" type="System.String" value=""/>
+					<parameter name="rowID" type="System.String" value=""/>
+					<parameter name="maxRows" type="System.String" value=""/>
+					<parameter name="flowOperation" type="System.String" value=""/>
+					<parameter name="filename" type="System.String" value="{Global::FileName}{Global::transactionId}.ZIP"/>
+					<parameter name="logMessage" type="System.String" value=""/>
+					<parameter name="faultMessage" type="System.String" value=""/>
+				</inputParameters>
+			</extension>
+		</invoke>
+	</sequence>
+</process>

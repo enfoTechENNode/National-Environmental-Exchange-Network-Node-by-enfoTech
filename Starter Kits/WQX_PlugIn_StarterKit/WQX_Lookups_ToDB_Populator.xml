@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MappingScript>
+	<DataSource providerName="System.Data.SqlClient">
+		<Value>server=nbxptimmsd09;database=WQX;UID=wqxuser;PWD=wqxuser</Value>
+	</DataSource>
+	<Mapping type="QUERY">
+		<RootXPath>/WQXDomainValueList/WQXElement</RootXPath>
+		<InstanceKeys>
+			<Key name="TABLE">WQXElementName</Key>
+		</InstanceKeys>
+		<SQL>SELECT 1</SQL>
+		<Conditional>
+			<if>
+				<Element value="Country">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="CNTRY_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM COUNTRY WHERE CNTRY_CD = '@CNTRY_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM COUNTRY WHERE CNTRY_CD = '@CNTRY_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM COUNTRY WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>COUNTRY</Table>
+						<Column>CNTRY_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>CNTRY_CD</Value>
+					</Map>
+					<Map maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>CNTRY_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>CNTRY_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</if>
+		</Conditional>
+	</Mapping>		
+	<Mapping type="QUERY">
+		<RootXPath>/WQXDomainValueList/WQXElement</RootXPath>
+		<InstanceKeys>
+			<Key name="TABLE">WQXElementName</Key>
+		</InstanceKeys>
+		<SQL>SELECT 1</SQL>
+		<Conditional>
+			<if>
+				<Element value="ActivityGroupType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="AGTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ACTIVITY_GROUP_TYPE WHERE AGTYP_NAME = '@AGTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM ACTIVITY_GROUP_TYPE WHERE AGTYP_NAME = '@AGTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ACTIVITY_GROUP_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ACTIVITY_GROUP_TYPE</Table>
+						<Column>AGTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>AGTYP_NAME</Value>
+					</Map>
+					<Map maxLength="100">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>AGTYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>AGTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</if>
+			<elseif id="1">
+				<Element value="ActivityMedia">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="ACMED_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ACTIVITY_MEDIA WHERE ACMED_NAME = '@ACMED_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM ACTIVITY_MEDIA WHERE ACMED_NAME = '@ACMED_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ACTIVITY_MEDIA WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ACTIVITY_MEDIA</Table>
+						<Column>ACMED_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="20">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>ACMED_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>ACMED_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="2">
+				<Element value="ActivityMediaSubdivision">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="AMSUB_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ACTIVITY_MEDIA_SUBDIVISION WHERE AMSUB_NAME = '@AMSUB_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM ACTIVITY_MEDIA_SUBDIVISION WHERE AMSUB_NAME = '@AMSUB_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ACTIVITY_MEDIA_SUBDIVISION WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ACTIVITY_MEDIA_SUBDIVISION</Table>
+						<Column>AMSUB_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>AMSUB_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>AMSUB_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="3">
+				<Element value="RelativeDepth">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RELDPTH_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RELATIVE_DEPTH WHERE RELDPTH_NAME = '@RELDPTH_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RELATIVE_DEPTH WHERE RELDPTH_NAME = '@RELDPTH_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RELATIVE_DEPTH WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RELATIVE_DEPTH</Table>
+						<Column>RELDPTH_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="125">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RELDPTH_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RELDPTH_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="4">
+				<Element value="ActivityType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="ACTYP_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ACTIVITY_TYPE WHERE ACTYP_CD = '@ACTYP_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM ACTIVITY_TYPE WHERE ACTYP_CD = '@ACTYP_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ACTIVITY_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ACTIVITY_TYPE</Table>
+						<Column>ACTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="70">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>ACTYP_CD</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>ACTYP_DESC</Value>
+					</Map>
+					<Map maxLength="1">
+						<Element>WQXElementRowColumn[@colname = 'MonitoringLocationRequired']/@value</Element>
+						<Value>ACTYP_MON_LOC_REQ_YN</Value>
+					</Map>
+					<Map maxLength="1">
+						<Element>WQXElementRowColumn[@colname = 'AnalyticalMethodRequired']/@value</Element>
+						<Value>ACTYP_ANL_MTH_REQ_YN</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>ACTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="5">
+				<Element value="AddressType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="ADDTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ADDRESS_TYPE WHERE ADDTYP_NAME = '@ADDTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM ADDRESS_TYPE WHERE ADDTYP_NAME = '@ADDTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ADDRESS_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ADDRESS_TYPE</Table>
+						<Column>ADDTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>ADDTYP_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>ADDTYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>ADDTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="6">
+				<Element value="AnalyticalMethod">WQXElementName</Element>
+				<Mapping type="QUERY">
+					<RootXPath>/WQXDomainValueList/WQXElement</RootXPath>
+					<SQL>SELECT 1</SQL>
+					<Conditional>
+						<if>
+							<Element value="AnalyticalMethodContext">WQXElementName</Element>
+							<Mapping type="UPDATE|INSERT">
+								<RootXPath>WQXElementRow</RootXPath>
+								<InstanceKeys>
+									<Key name="AMCTX_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+									<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+								</InstanceKeys>
+								<SQL>SELECT * FROM ANALYTICAL_METHOD_CONTEXT WHERE AMCTX_CD = '@AMCTX_CD@'</SQL>
+								<UpdateSQL>SELECT * FROM ANALYTICAL_METHOD_CONTEXT WHERE AMCTX_CD = '@AMCTX_CD@'</UpdateSQL>
+								<InsertSQL>SELECT * FROM ANALYTICAL_METHOD_CONTEXT WHERE 1=-1</InsertSQL>
+								<PrimaryKey>
+									<Table>ANALYTICAL_METHOD_CONTEXT</Table>
+									<Column>AMCTX_UID</Column>
+								</PrimaryKey>
+								<Map onlyInsert="true" maxLength="15">
+									<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+									<Value>AMCTX_CD</Value>
+								</Map>
+								<Map maxLength="50">
+									<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+									<Value>AMCTX_NAME</Value>
+								</Map>
+								<Map>
+									<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+									<Value>AMCTX_LAST_CHANGE_DATE</Value>
+								</Map>
+							</Mapping>
+						</if>
+					</Conditional>
+				</Mapping>
+			</elseif>
+			<elseif id="7">
+				<Element value="AnalyticalMethodContext">WQXElementName</Element>
+				<Mapping type="QUERY">
+					<RootXPath>/WQXDomainValueList/WQXElement</RootXPath>
+					<SQL>SELECT 1</SQL>
+					<Conditional>
+						<if>
+							<Element value="AnalyticalMethod">WQXElementName</Element>
+							<Mapping type="UPDATE|INSERT">
+								<RootXPath>WQXElementRow</RootXPath>
+								<InstanceKeys>
+									<Key name="ANLMTH_ID">WQXElementRowColumn[@colname = 'Identifier']/@value</Key>
+									<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+									<Key name="AmCtxCd">WQXElementRowColumn[@colname = 'Context']/@value</Key>
+								</InstanceKeys>
+								<SQL>SELECT * FROM ANALYTICAL_METHOD WHERE ANLMTH_ID = '@ANLMTH_ID@'</SQL>
+								<UpdateSQL>SELECT * FROM ANALYTICAL_METHOD WHERE ANLMTH_ID = '@ANLMTH_ID@'</UpdateSQL>
+								<InsertSQL>SELECT * FROM ANALYTICAL_METHOD WHERE 1=-1</InsertSQL>
+								<PrimaryKey>
+									<Table>ANALYTICAL_METHOD</Table>
+									<Column>ANLMTH_UID</Column>
+								</PrimaryKey>
+								<Map onlyInsert="true" maxLength="15">
+									<Element>WQXElementRowColumn[@colname = 'Identifier']/@value</Element>
+									<Value>ANLMTH_ID</Value>
+								</Map>
+								<Map maxLength="50">
+									<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+									<Value>ANLMTH_NAME</Value>
+								</Map>
+								<Map maxLength="100">
+									<Element>WQXElementRowColumn[@colname = 'QualifierType']/@value</Element>
+									<Value>ANLMTH_QUAL_TYPE</Value>
+								</Map>
+								<Map maxLength="255">
+									<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+									<Value>ANLMTH_DESC</Value>
+								</Map>
+								<Map>
+									<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+									<Value>ANLMTH_LAST_CHANGE_DATE</Value>
+								</Map>
+								<Mapping type="QUERY">
+									<RootXPath>..</RootXPath>
+									<SQL keys="AMCTX_UID">select AMCTX_UID from ANALYTICAL_METHOD_CONTEXT where AMCTX_CD = '@AmCtxCd@'</SQL>
+									<Mapping type="UPDATE">
+										<RootXPath>..</RootXPath>
+										<SQL>select ANLMTH_UID, AMCTX_UID from ANALYTICAL_METHOD where ANLMTH_ID = '@ANLMTH_ID@'</SQL>
+										<Map>
+											<Element type="DBKey">AMCTX_UID</Element>
+											<Value>AMCTX_UID</Value>
+										</Map>
+									</Mapping>
+								</Mapping>
+							</Mapping>
+						</if>
+					</Conditional>
+				</Mapping>
+			</elseif>
+			<elseif id="8">
+				<Element value="Assemblage">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="ASMBLG_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ASSEMBLAGE WHERE ASMBLG_NAME = '@ASMBLG_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM ASSEMBLAGE WHERE ASMBLG_NAME = '@ASMBLG_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ASSEMBLAGE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ASSEMBLAGE</Table>
+						<Column>ASMBLG_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>ASMBLG_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>ASMBLG_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>ASMBLG_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="9">
+				<Element value="BiologicalIntent">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="BIOINT_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM BIOLOGICAL_INTENT WHERE BIOINT_NAME = '@BIOINT_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM BIOLOGICAL_INTENT WHERE BIOINT_NAME = '@BIOINT_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM BIOLOGICAL_INTENT WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>BIOLOGICAL_INTENT</Table>
+						<Column>BIOINT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>BIOINT_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>BIOINT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="10">
+				<Element value="CellForm">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="CELFRM_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM CELL_FORM WHERE CELFRM_NAME = '@CELFRM_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM CELL_FORM WHERE CELFRM_NAME = '@CELFRM_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM CELL_FORM WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>CELL_FORM</Table>
+						<Column>CELFRM_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>CELFRM_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>CELFRM_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>CELFRM_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="11">
+				<Element value="CellShape">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="CELSHP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM CELL_SHAPE WHERE CELSHP_NAME = '@CELSHP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM CELL_SHAPE WHERE CELSHP_NAME = '@CELSHP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM CELL_SHAPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>CELL_SHAPE</Table>
+						<Column>CELSHP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>CELSHP_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>CELSHP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>CELSHP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="12">
+				<Element value="Characteristic">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="CHR_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM CHARACTERISTIC WHERE CHR_NAME = '@CHR_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM CHARACTERISTIC WHERE CHR_NAME = '@CHR_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM CHARACTERISTIC WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>CHARACTERISTIC</Table>
+						<Column>CHR_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="120">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>CHR_NAME</Value>
+					</Map>
+					<Map maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'SRSIdentifier']/@value</Element>
+						<Value>CHR_SRS_ID</Value>
+					</Map>
+					<Map maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'StoretIdentifier']/@value</Element>
+						<Value>CHR_STORET_ID</Value>
+					</Map>
+					<Map maxLength="1">
+						<Element>WQXElementRowColumn[@colname = 'PickList']/@value</Element>
+						<Value>CHR_PICK_LIST_YN</Value>
+					</Map>
+					<Map maxLength="1">
+						<Element>WQXElementRowColumn[@colname = 'SampleFractionRequired']/@value</Element>
+						<Value>CHR_SAMPLE_FRACTION_REQ_YN</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>CHR_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="14">
+				<Element value="County">WQXElementName</Element>
+				<Mapping type="QUERY">
+					<RootXPath>/WQXDomainValueList/WQXElement</RootXPath>
+					<SQL>SELECT 1</SQL>
+					<Conditional>
+						<if>
+							<Element value="State">WQXElementName</Element>
+							<Mapping type="UPDATE|INSERT">
+								<RootXPath>WQXElementRow</RootXPath>
+								<InstanceKeys>
+									<Key name="ST_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+									<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+								</InstanceKeys>
+								<SQL>SELECT * FROM STATE WHERE ST_CD = '@ST_CD@'</SQL>
+								<UpdateSQL>SELECT * FROM STATE WHERE ST_CD = '@ST_CD@'</UpdateSQL>
+								<InsertSQL>SELECT * FROM STATE WHERE 1=-1</InsertSQL>
+								<PrimaryKey>
+									<Table>STATE</Table>
+									<Column>ST_UID</Column>
+								</PrimaryKey>
+								<Map onlyInsert="true">
+									<Element type="Constant">1</Element>
+									<Value>CNTRY_UID</Value>
+								</Map>
+								<Map onlyInsert="true" maxLength="10">
+									<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+									<Value>ST_CD</Value>
+								</Map>
+								<Map onlyInsert="true" maxLength="25">
+									<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+									<Value>ST_NAME</Value>
+								</Map>
+								<Map onlyInsert="true" maxLength="10">
+									<Element>WQXElementRowColumn[@colname = 'StateFipsCode']/@value</Element>
+									<Value>ST_FIPS_CD</Value>
+								</Map>
+								<Map>
+									<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+									<Value>ST_LAST_CHANGE_DATE</Value>
+								</Map>
+							</Mapping>
+						</if>
+					</Conditional>
+				</Mapping>
+			</elseif>
+			<elseif id="15">
+				<Element value="DetectionQuantitationLimitType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="DQLTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM DETECTION_QUANT_LIMIT_TYPE WHERE DQLTYP_NAME = '@DQLTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM DETECTION_QUANT_LIMIT_TYPE WHERE DQLTYP_NAME = '@DQLTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM DETECTION_QUANT_LIMIT_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>DETECTION_QUANT_LIMIT_TYPE</Table>
+						<Column>DQLTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>DQLTYP_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>DQLTYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>DQLTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="16">
+				<Element value="ElectronicAddressType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="EATYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM ELECTRONIC_ADDRESS_TYPE WHERE EATYP_NAME = '@EATYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM ELECTRONIC_ADDRESS_TYPE WHERE EATYP_NAME = '@EATYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM ELECTRONIC_ADDRESS_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>ELECTRONIC_ADDRESS_TYPE</Table>
+						<Column>EATYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>EATYP_NAME</Value>
+					</Map>
+					<Map maxLength="250">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>EATYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>EATYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="17">
+				<Element value="FrequencyClassDescriptor">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="FCDSC_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM FREQUENCY_CLASS_DESCRIPTOR WHERE FCDSC_NAME = '@FCDSC_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM FREQUENCY_CLASS_DESCRIPTOR WHERE FCDSC_NAME = '@FCDSC_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM FREQUENCY_CLASS_DESCRIPTOR WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>FREQUENCY_CLASS_DESCRIPTOR</Table>
+						<Column>FCDSC_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>FCDSC_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>FCDSC_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>FCDSC_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="18">
+				<Element value="Habit">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="HABIT_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM HABIT WHERE HABIT_NAME = '@HABIT_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM HABIT WHERE HABIT_NAME = '@HABIT_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM HABIT WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>HABIT</Table>
+						<Column>HABIT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>HABIT_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>HABIT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="19">
+				<Element value="HorizontalCollectionMethod">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="HCMTH_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM HORIZONTAL_COLLECTION_METHOD WHERE HCMTH_NAME = '@HCMTH_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM HORIZONTAL_COLLECTION_METHOD WHERE HCMTH_NAME = '@HCMTH_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM HORIZONTAL_COLLECTION_METHOD WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>HORIZONTAL_COLLECTION_METHOD</Table>
+						<Column>HCMTH_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="150">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>HCMTH_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>HCMTH_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>HCMTH_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="20">
+				<Element value="HorizontalCoordinateReferenceSystemDatum">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="HRDAT_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM HORIZONTAL_REFERENCE_DATUM WHERE HRDAT_NAME = '@HRDAT_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM HORIZONTAL_REFERENCE_DATUM WHERE HRDAT_NAME = '@HRDAT_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM HORIZONTAL_REFERENCE_DATUM WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>HORIZONTAL_REFERENCE_DATUM</Table>
+						<Column>HRDAT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>HRDAT_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>HRDAT_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>HRDAT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="21">
+				<Element value="MeasureUnit">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="MSUNT_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@MSUNT_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM MEASUREMENT_UNIT WHERE MSUNT_CD = '@MSUNT_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM MEASUREMENT_UNIT WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>MEASUREMENT_UNIT</Table>
+						<Column>MSUNT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="20">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>MSUNT_CD</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>MSUNT_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>MSUNT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="22">
+				<Element value="MethodSpeciation">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="MTHSPC_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM METHOD_SPECIATION WHERE MTHSPC_NAME = '@MTHSPC_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM METHOD_SPECIATION WHERE MTHSPC_NAME = '@MTHSPC_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM METHOD_SPECIATION WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>METHOD_SPECIATION</Table>
+						<Column>MTHSPC_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>MTHSPC_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>MTHSPC_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="22a">
+				<Element value="MetricTypeContext">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="MTCTX_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM METRIC_TYPE_CONTEXT WHERE MTCTX_CD = '@MTCTX_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM METRIC_TYPE_CONTEXT WHERE MTCTX_CD = '@MTCTX_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM METRIC_TYPE_CONTEXT WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>METRIC_TYPE_CONTEXT</Table>
+						<Column>MTCTX_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>MTCTX_CD</Value>
+					</Map>
+					<Map maxLength="100">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>MTCTX_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>MTCTX_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="23">
+				<Element value="MetricType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="METTYP_ID">WQXElementRowColumn[@colname = 'Identifier']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM METRIC_TYPE WHERE METTYP_ID = '@METTYP_ID@'</SQL>
+					<UpdateSQL>SELECT * FROM METRIC_TYPE WHERE METTYP_ID = '@METTYP_ID@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM METRIC_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>METRIC_TYPE</Table>
+						<Column>METTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="35">
+						<Element>WQXElementRowColumn[@colname = 'Identifier']/@value</Element>
+						<Value>METTYP_ID</Value>
+					</Map>
+					<Map maxLength="100">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>METTYP_NAME</Value>
+					</Map>
+					<Map maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Scale']/@value</Element>
+						<Value>METTYP_SCALE</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'FormulaDescription']/@value</Element>
+						<Value>METTYP_FORMULA_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>METTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="24">
+				<Element value="MonitoringLocationType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="MLTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM MONITORING_LOCATION_TYPE WHERE MLTYP_NAME = '@MLTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM MONITORING_LOCATION_TYPE WHERE MLTYP_NAME = '@MLTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM MONITORING_LOCATION_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>MONITORING_LOCATION_TYPE</Table>
+						<Column>MLTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>MLTYP_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>MLTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="25">
+				<Element value="NetType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="NETTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM NET_TYPE WHERE NETTYP_NAME = '@NETTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM NET_TYPE WHERE NETTYP_NAME = '@NETTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM NET_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>NET_TYPE</Table>
+						<Column>NETTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>NETTYP_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>NETTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="26">
+				<Element value="ReferenceLocationType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RLTYP_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM REFERENCE_LOCATION_TYPE WHERE RLTYP_CD = '@RLTYP_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM REFERENCE_LOCATION_TYPE WHERE RLTYP_CD = '@RLTYP_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM REFERENCE_LOCATION_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>REFERENCE_LOCATION_TYPE</Table>
+						<Column>RLTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>RLTYP_CD</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RLTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="27">
+				<Element value="ResultDetectionCondition">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RDCND_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_DETECTION_CONDITION WHERE RDCND_NAME = '@RDCND_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_DETECTION_CONDITION WHERE RDCND_NAME = '@RDCND_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_DETECTION_CONDITION WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_DETECTION_CONDITION</Table>
+						<Column>RDCND_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RDCND_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RDCND_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="28">
+				<Element value="ResultLaboratoryComment">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RLCOM_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_LAB_COMMENT WHERE RLCOM_CD = '@RLCOM_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_LAB_COMMENT WHERE RLCOM_CD = '@RLCOM_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_LAB_COMMENT WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_LAB_COMMENT</Table>
+						<Column>RLCOM_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>RLCOM_CD</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RLCOM_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RLCOM_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="29">
+				<Element value="ResultMeasureQualifier">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RMQLF_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_MEASURE_QUALIFIER WHERE RMQLF_CD = '@RMQLF_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_MEASURE_QUALIFIER WHERE RMQLF_CD = '@RMQLF_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_MEASURE_QUALIFIER WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_MEASURE_QUALIFIER</Table>
+						<Column>RMQLF_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>RMQLF_CD</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RMQLF_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RMQLF_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="30">
+				<Element value="ResultSampleFraction">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="SMFRC_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM SAMPLE_FRACTION WHERE SMFRC_NAME = '@SMFRC_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM SAMPLE_FRACTION WHERE SMFRC_NAME = '@SMFRC_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM SAMPLE_FRACTION WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>SAMPLE_FRACTION</Table>
+						<Column>SMFRC_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>SMFRC_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>SMFRC_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>SMFRC_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="31">
+				<Element value="ResultStatus">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RESSTA_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_STATUS WHERE RESSTA_NAME = '@RESSTA_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_STATUS WHERE RESSTA_NAME = '@RESSTA_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_STATUS WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_STATUS</Table>
+						<Column>RESSTA_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="85">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RESSTA_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RESSTA_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RESSTA_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="32">
+				<Element value="ResultTemperatureBasis">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RTMPB_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_TEMPERATURE_BASIS WHERE RTMPB_NAME = '@RTMPB_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_TEMPERATURE_BASIS WHERE RTMPB_NAME = '@RTMPB_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_TEMPERATURE_BASIS WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_TEMPERATURE_BASIS</Table>
+						<Column>RTMPB_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RTMPB_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RTMPB_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RTMPB_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="33">
+				<Element value="ResultTimeBasis">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RTIMB_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_TIME_BASIS WHERE RTIMB_NAME = '@RTIMB_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_TIME_BASIS WHERE RTIMB_NAME = '@RTIMB_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_TIME_BASIS WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_TIME_BASIS</Table>
+						<Column>RTIMB_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RTIMB_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RTIMB_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RTIMB_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="34">
+				<Element value="ResultValueType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RVTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_VALUE_TYPE WHERE RVTYP_NAME = '@RVTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_VALUE_TYPE WHERE RVTYP_NAME = '@RVTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_VALUE_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_VALUE_TYPE</Table>
+						<Column>RVTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RVTYP_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RVTYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RVTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="35">
+				<Element value="ResultWeightBasis">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RWBAS_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_WEIGHT_BASIS WHERE RWBAS_NAME = '@RWBAS_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_WEIGHT_BASIS WHERE RWBAS_NAME = '@RWBAS_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_WEIGHT_BASIS WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_WEIGHT_BASIS</Table>
+						<Column>RWBAS_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>RWBAS_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RWBAS_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RWBAS_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="36">
+				<Element value="SampleCollectionEquipment">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="SCEQP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM SAMPLE_COLLECTION_EQUIP WHERE SCEQP_NAME = '@SCEQP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM SAMPLE_COLLECTION_EQUIP WHERE SCEQP_NAME = '@SCEQP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM SAMPLE_COLLECTION_EQUIP WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>SAMPLE_COLLECTION_EQUIP</Table>
+						<Column>SCEQP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="150">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>SCEQP_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>SCEQP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="37">
+				<Element value="SampleContainerType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="CONTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM CONTAINER_TYPE WHERE CONTYP_NAME = '@CONTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM CONTAINER_TYPE WHERE CONTYP_NAME = '@CONTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM CONTAINER_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>CONTAINER_TYPE</Table>
+						<Column>CONTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="150">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>CONTYP_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>CONTYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>CONTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="38">
+				<Element value="SampleTissueAnatomy">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="STANT_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM SAMPLE_TISSUE_ANATOMY WHERE STANT_NAME = '@STANT_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM SAMPLE_TISSUE_ANATOMY WHERE STANT_NAME = '@STANT_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM SAMPLE_TISSUE_ANATOMY WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>SAMPLE_TISSUE_ANATOMY</Table>
+						<Column>STANT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="150">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>STANT_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>STANT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="39">
+				<Element value="SamplingDesignType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="SDTYP_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM SAMPLING_DESIGN_TYPE WHERE SDTYP_CD = '@SDTYP_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM SAMPLING_DESIGN_TYPE WHERE SDTYP_CD = '@SDTYP_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM SAMPLING_DESIGN_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>SAMPLING_DESIGN_TYPE</Table>
+						<Column>SDTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>SDTYP_CD</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>SDTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="40">
+				<Element value="State">WQXElementName</Element>
+				<Mapping type="QUERY">
+					<RootXPath>/WQXDomainValueList/WQXElement</RootXPath>
+					<SQL>SELECT 1</SQL>
+					<Conditional>
+						<if>
+							<Element value="County">WQXElementName</Element>
+							<Mapping type="QUERY">
+								<RootXPath>WQXElementRow</RootXPath>
+								<InstanceKeys>
+									<Key name="STATE_CODE">WQXElementRowColumn[@colname = 'StateCode']/@value</Key>
+								</InstanceKeys>
+								<SQL keys="ST_UID">SELECT ST_UID FROM STATE WHERE ST_CD = '@STATE_CODE@'</SQL>
+								<Mapping type="UPDATE|INSERT">
+									<RootXPath>.</RootXPath>
+									<InstanceKeys>
+										<Key name="CNTY_NAME">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+										<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+									</InstanceKeys>
+									<SQL>SELECT * FROM COUNTY WHERE CNTY_NAME = '@CNTY_NAME@'</SQL>
+									<UpdateSQL>SELECT * FROM COUNTY WHERE CNTY_NAME = '@CNTY_NAME@'</UpdateSQL>
+									<InsertSQL>SELECT * FROM COUNTY WHERE 1=-1</InsertSQL>
+									<PrimaryKey>
+										<Table>COUNTY</Table>
+										<Column>CNTY_UID</Column>
+									</PrimaryKey>
+									<Map maxLength="120">
+										<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+										<Value>CNTY_FIPS_CD</Value>
+									</Map>
+									<Map onlyInsert="true" maxLength="50">
+										<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+										<Value>CNTY_NAME</Value>
+									</Map>
+									<Map>
+										<Element type="DBKey">ST_UID</Element>
+										<Value>ST_UID</Value>
+									</Map>
+									<Map>
+										<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+										<Value>CNTY_LAST_CHANGE_DATE</Value>
+									</Map>
+								</Mapping>
+							</Mapping>
+						</if>
+					</Conditional>
+				</Mapping>
+			</elseif>
+			<elseif id="41">
+				<Element value="StatisticalBase">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="RSBAS_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM RESULT_STATISTICAL_BASE WHERE RSBAS_CD = '@RSBAS_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM RESULT_STATISTICAL_BASE WHERE RSBAS_CD = '@RSBAS_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM RESULT_STATISTICAL_BASE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>RESULT_STATISTICAL_BASE</Table>
+						<Column>RSBAS_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>RSBAS_CD</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>RSBAS_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>RSBAS_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="42">
+				<Element value="Taxon">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="TAX_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM TAXON WHERE TAX_NAME = '@TAX_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM TAXON WHERE TAX_NAME = '@TAX_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM TAXON WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>TAXON</Table>
+						<Column>TAX_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>TAX_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>TAX_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="43">
+				<Element value="TelephoneNumberType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="PHTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM PHONE_TYPE WHERE PHTYP_NAME = '@PHTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM PHONE_TYPE WHERE PHTYP_NAME = '@PHTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM PHONE_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>PHONE_TYPE</Table>
+						<Column>PHTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>PHTYP_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>PHTYP_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>PHTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="44">
+				<Element value="ThermalPreservativeUsed">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="THPRSV_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM THERMAL_PRESERVATIVE WHERE THPRSV_NAME = '@THPRSV_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM THERMAL_PRESERVATIVE WHERE THPRSV_NAME = '@THPRSV_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM THERMAL_PRESERVATIVE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>THERMAL_PRESERVATIVE</Table>
+						<Column>THPRSV_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>THPRSV_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>THPRSV_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>THPRSV_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="45">
+				<Element value="TimeZone">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="TMZONE_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM TIME_ZONE WHERE TMZONE_CD = '@TMZONE_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM TIME_ZONE WHERE TMZONE_CD = '@TMZONE_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM TIME_ZONE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>TIME_ZONE</Table>
+						<Column>TMZONE_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>TMZONE_CD</Value>
+					</Map>
+					<Map maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>TMZONE_NAME</Value>
+					</Map>
+					<Map maxLength="10">
+						<Element>WQXElementRowColumn[@colname = 'Offset']/@value</Element>
+						<Value>TMZONE_OFFSET</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>TMZONE_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="46">
+				<Element value="ToxicityTestType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="TTTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM TOXICITY_TEST_TYPE WHERE TTTYP_NAME = '@TTTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM TOXICITY_TEST_TYPE WHERE TTTYP_NAME = '@TTTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM TOXICITY_TEST_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>TOXICITY_TEST_TYPE</Table>
+						<Column>TTTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>TTTYP_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>TTTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="47">
+				<Element value="Tribe">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="TRB_CD">WQXElementRowColumn[@colname = 'Code']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM TRIBE WHERE TRB_CD = '@TRB_CD@'</SQL>
+					<UpdateSQL>SELECT * FROM TRIBE WHERE TRB_CD = '@TRB_CD@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM TRIBE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>TRIBE</Table>
+						<Column>TRB_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="4">
+						<Element>WQXElementRowColumn[@colname = 'Code']/@value</Element>
+						<Value>TRB_CD</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>TRB_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>TRB_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="48">
+				<Element value="VerticalCollectionMethod">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="VCMTH_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM VERTICAL_COLLECTION_METHOD WHERE VCMTH_NAME = '@VCMTH_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM VERTICAL_COLLECTION_METHOD WHERE VCMTH_NAME = '@VCMTH_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM VERTICAL_COLLECTION_METHOD WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>VERTICAL_COLLECTION_METHOD</Table>
+						<Column>VCMTH_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>VCMTH_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>VCMTH_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="49">
+				<Element value="VerticalCoordinateReferenceSystemDatum">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="VRDAT_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM VERTICAL_REFERENCE_DATUM WHERE VRDAT_NAME = '@VRDAT_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM VERTICAL_REFERENCE_DATUM WHERE VRDAT_NAME = '@VRDAT_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM VERTICAL_REFERENCE_DATUM WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>VERTICAL_REFERENCE_DATUM</Table>
+						<Column>VRDAT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>VRDAT_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>VRDAT_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>VRDAT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="50">
+				<Element value="Voltinism">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="VOLT_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM VOLTINISM WHERE VOLT_NAME = '@VOLT_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM VOLTINISM WHERE VOLT_NAME = '@VOLT_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM VOLTINISM WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>VOLTINISM</Table>
+						<Column>VOLT_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="75">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>VOLT_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>VOLT_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>VOLT_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="51">
+				<Element value="WellFormationType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="WFTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM WELL_FORMATION_TYPE WHERE WFTYP_NAME = '@WFTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM WELL_FORMATION_TYPE WHERE WFTYP_NAME = '@WFTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM WELL_FORMATION_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>WELL_FORMATION_TYPE</Table>
+						<Column>WFTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="35">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>WFTYP_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>WFTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="52">
+				<Element value="WellType">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="WELTYP_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM WELL_TYPE WHERE WELTYP_NAME = '@WELTYP_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM WELL_TYPE WHERE WELTYP_NAME = '@WELTYP_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM WELL_TYPE WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>WELL_TYPE</Table>
+						<Column>WELTYP_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="35">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>WELTYP_NAME</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>WELTYP_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+			<elseif id="53">
+				<Element value="SampleContainerColor">WQXElementName</Element>
+				<Mapping type="UPDATE|INSERT">
+					<RootXPath>WQXElementRow</RootXPath>
+					<InstanceKeys>
+						<Key name="CONCOL_NAME">WQXElementRowColumn[@colname = 'Name']/@value</Key>
+						<Key name="CHANGE_DATE">WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Key>
+					</InstanceKeys>
+					<SQL>SELECT * FROM CONTAINER_COLOR WHERE CONCOL_NAME = '@CONCOL_NAME@'</SQL>
+					<UpdateSQL>SELECT * FROM CONTAINER_COLOR WHERE CONCOL_NAME = '@CONCOL_NAME@'</UpdateSQL>
+					<InsertSQL>SELECT * FROM CONTAINER_COLOR WHERE 1=-1</InsertSQL>
+					<PrimaryKey>
+						<Table>CONTAINER_COLOR</Table>
+						<Column>CONCOL_UID</Column>
+					</PrimaryKey>
+					<Map onlyInsert="true" maxLength="50">
+						<Element>WQXElementRowColumn[@colname = 'Name']/@value</Element>
+						<Value>CONCOL_NAME</Value>
+					</Map>
+					<Map maxLength="255">
+						<Element>WQXElementRowColumn[@colname = 'Description']/@value</Element>
+						<Value>CONCOL_DESC</Value>
+					</Map>
+					<Map>
+						<Element>WQXElementRowColumn[@colname = 'LastChangeDate']/@value</Element>
+						<Value>CONCOL_LAST_CHANGE_DATE</Value>
+					</Map>
+				</Mapping>
+			</elseif>
+		</Conditional>
+	</Mapping>
+</MappingScript>

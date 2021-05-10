@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+  <extension>
+    <operation name="UploadAndSubmitWQX" id="65" domain="WQX" webservice="SUBMIT" type="WEB_SERVICE" version="VER_20">
+      <documentation></documentation>
+    </operation>
+  </extension>
+  <partnerLinks>
+    <partnerLink name="Decompressor" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Decompressor" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="SaveToNode" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.SaveToNode" />
+      </extension>
+    </partnerLink>
+    <partnerLink name="XmlPopulator" partnerLinkType="">
+      <extension namespace="">
+        <component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.XmlPopulator" />
+      </extension>
+    </partnerLink>
+  </partnerLinks>
+  <variables>
+    <variable name="webMethodName">SUBMIT</variable>
+    <variable name="operationName">UploadAndSubmitWQX</variable>
+    <variable name="securityToken" />
+    <variable name="transactionId" />
+    <variable name="dataflow" />
+    <variable name="flowOperation" />
+    <variable name="recipient" />
+    <variable name="notificationURI" />
+    <variable name="documents" />
+  </variables>
+  <sequence>
+    <invoke partnerLink="Decompressor">
+      <extension namespace="">
+        <component aliasName="UnZip" runAsThread="False" />
+        <inputParameters>
+          <parameter name="source" value="{Global::documents}" type="System.String" />
+          <parameter name="filename" value="Results_TST.xml" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+        </inputParameters>
+      </extension>
+    </invoke>
+    <invoke partnerLink="SaveToNode">
+      <extension namespace="">
+        <component aliasName="SaveToNodeDB" runAsThread="True" />
+        <inputParameters>
+          <parameter name="source" value="{UnZip::Output}" type="System.object" />
+          <parameter name="filename" value="Results_TST.xml" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+        </inputParameters>
+      </extension>
+    </invoke>
+    <invoke partnerLink="XmlPopulator">
+      <extension namespace="">
+        <component aliasName="WQXPopulator" runAsThread="True" />
+        <inputParameters>
+          <parameter name="source" value="{UnZip::Output}" type="System.String" />
+          <parameter name="dataSource" value="MSSQL:server=xxxxx; database=WQX;UID=xxxxx; password=xxxxx;" type="System.String" />
+          <parameter name="mapperFullName" value="WQX_ImportWQX_ToDB_Populator.xml" type="System.String" />
+          <parameter name="logMessage" value="" type="System.String" />
+          <parameter name="faultMessage" value="" type="System.String" />
+        </inputParameters>
+      </extension>
+    </invoke>
+  </sequence>
+</process>

@@ -1,0 +1,26 @@
+USE [master]
+GO
+IF  NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'TRI')
+BEGIN
+	RESTORE DATABASE [TRI] FROM  DISK = N'F:\TRI.bak' WITH  FILE = 1,  MOVE N'TRI' TO N'F:\MS SQL\DATA\TRI.MDF',  MOVE N'TRI_Log' TO N'F:\MS SQL\DATA\TRI_LOG.LDF',  NOUNLOAD,  STATS = 10
+End	
+GO
+USE [TRI]
+IF  EXISTS (SELECT * FROM sys.database_principals WHERE name = N'TRIUser')
+Begin
+	DROP USER [TRIUser] 
+end
+GO
+USE [MASTER]
+IF  NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = N'TRIUser')
+begin
+	CREATE LOGIN [TRIUser] WITH PASSWORD=N'TRIUser', DEFAULT_DATABASE=[TRI], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+end
+GO
+USE [TRI]
+IF  NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'TRIUser')
+begin
+	CREATE USER [TRIUser] FOR LOGIN [TRIUser] WITH DEFAULT_SCHEMA=[dbo]
+	EXEC sp_addrolemember N'db_owner', N'TRIUser'
+end
+GO

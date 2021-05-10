@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process>
+	<extension>
+		<operation name="GetAQSDataByDate" id="18" domain="AQS" webservice="SOLICIT" type="WEB_SERVICE" version="VER_20">
+			<documentation/>
+		</operation>
+	</extension>
+	<partnerLinks>
+		<partnerLink name="StoredProcedure" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.StoredProcedure"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="Compressor" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Compressor"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="SaveToNode" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.SaveToNode"/>
+			</extension>
+		</partnerLink>
+		<partnerLink name="Email" partnerLinkType="">
+			<extension namespace="">
+				<component library="bin/DataFlow.PlugIn.Common.dll" class="DataFlow.PlugIn.Common.Email"/>
+			</extension>
+		</partnerLink>
+	</partnerLinks>
+	<variables>
+		<variable name="webMethodName">SOLICIT</variable>
+		<variable name="operationName">GetAQSDataByDate</variable>
+		<variable name="transactionId"/>
+		<variable name="securityToken"/>
+		<variable name="dataflow"/>
+		<variable name="recipient"/>
+		<variable name="notificationURI"/>
+		<variable name="request"/>
+		<variable name="StartDate"/>
+		<variable name="EndDate"/>
+	</variables>
+	<sequence>
+		<invoke partnerLink="StoredProcedure">
+			<extension namespace="">
+				<component aliasName="CrtAQSXML" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="spName" value="SP_AQS_XML_GEN" type="System.String"/>
+					<parameter name="dataSource" value="MSSQL:Server=WDC635;Database=EN_AQS;UID=nodeadmin;PWD=NodeAdmin" type="System.String"/>
+					<parameter name="logMessage" value="" type="System.String"/>
+					<parameter name="faultMessage" value="" type="System.String"/>
+					<parameter name="commandtimeout" value="" type="System.String"/>
+					<parameter name="@v_START_DATE" value="{Global::StartDate}" type="System.String"/>
+					<parameter name="@v_END_DATE" value="{Global::EndDate}" type="System.String"/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="Compressor">
+			<extension namespace="">
+				<component aliasName="CompressXML" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="source" value="{CrtAQSXML::Output}" type="System.String"/>
+					<parameter name="filename" value="AQSData.zip" type="System.String"/>
+					<parameter name="logMessage" value="" type="System.String"/>
+					<parameter name="faultMessage" value="" type="System.String"/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="SaveToNode">
+			<extension namespace="">
+				<component aliasName="SaveComplressFile" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="source" value="{CompressXML::Output}" type="System.object"/>
+					<parameter name="filename" value="AQSData.zip" type="System.String"/>
+					<parameter name="logMessage" value="" type="System.String"/>
+					<parameter name="faultMessage" value="" type="System.String"/>
+				</inputParameters>
+			</extension>
+		</invoke>
+		<invoke partnerLink="Email">
+			<extension namespace="">
+				<component aliasName="SendEmail" runAsThread="True"/>
+				<inputParameters>
+					<parameter name="toList" value="node_support@enfotech.com" type="System.String"/>
+					<parameter name="subject" value="Request of AQS XML " type="System.String"/>
+					<parameter name="content" value="Transation ID: {Global::transactionId}" type="System.String"/>
+					<parameter name="attachment" value="{CompressXML::Output}" type="System.Object"/>
+					<parameter name="logMessage" value="" type="System.String"/>
+					<parameter name="faultMessage" value="" type="System.String"/>
+				</inputParameters>
+			</extension>
+		</invoke>
+	</sequence>
+</process>
