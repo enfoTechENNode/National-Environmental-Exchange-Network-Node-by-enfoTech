@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+  <parameter name="adminPassword" value="admin"/>
+  <parameter name="attachments.Directory" value="C:\NodeLog\Temp"/>
+  <parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <parameter name="sendXsiTypes" value="true"/>
+  <parameter name="sendMultiRefs" value="true"/>
+  <parameter name="sendXMLDeclaration" value="true"/>
+  <parameter name="axis.sendMinimizedElements" value="true"/>
+  <requestFlow>
+   <handler type="java:org.apache.axis.handlers.JWSHandler">
+    <parameter name="scope" value="session"/>
+   </handler>
+   <handler type="java:org.apache.axis.handlers.JWSHandler">
+    <parameter name="scope" value="request"/>
+    <parameter name="extension" value=".jwr"/>
+   </handler>
+  </requestFlow>
+ </globalConfiguration>
+ <handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <requestFlow name="checks">
+  <handler type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+  <handler type="java:org.apache.axis.handlers.SimpleAuthorizationHandler"/>
+ </requestFlow>
+ <handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+  <service name="AdminService" provider="java:MSG">
+  <parameter name="allowedMethods" value="AdminService"/>
+  <parameter name="enableRemoteAdmin" value="false"/>
+  <parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+ </service>
+ <service name="Version" provider="java:RPC">
+  <parameter name="allowedMethods" value="getVersion"/>
+  <parameter name="className" value="org.apache.axis.Version"/>
+ </service>
+ <service name="NetworkNodeSoap_V11" provider="java:RPC">
+  <operation name="authenticate" qname="ns1:Authenticate" returnQName="return" returnType="xsd:string" xmlns:ns1="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="userId" type="xsd:string"/>
+   <parameter name="credential" type="xsd:string"/>
+   <parameter name="authenticationMethod" type="xsd:string"/>
+  </operation>
+  <operation name="submit" qname="ns2:Submit" returnQName="return" returnType="xsd:string" xmlns:ns2="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="securityToken" type="xsd:string"/>
+   <parameter name="transactionId" type="xsd:string"/>
+   <parameter name="dataflow" type="xsd:string"/>
+   <parameter name="documents" type="ns2:ArrayofDoc"/>
+  </operation>
+  <operation name="getStatus" qname="ns3:GetStatus" returnQName="return" returnType="xsd:string" xmlns:ns3="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="securityToken" type="xsd:string"/>
+   <parameter name="transactionId" type="xsd:string"/>
+  </operation>
+  <operation name="download" qname="ns4:Download" xmlns:ns4="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd">
+   <parameter name="securityToken" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <parameter name="transactionId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <parameter name="dataflow" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <parameter mode="inout" name="documents" type="ns4:ArrayofDoc"/>
+  </operation>
+  <operation name="notify" qname="ns5:Notify" returnQName="return" returnType="xsd:string" xmlns:ns5="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="securityToken" type="xsd:string"/>
+   <parameter name="nodeAddress" type="xsd:string"/>
+   <parameter name="dataflow" type="xsd:string"/>
+   <parameter name="documents" type="ns5:ArrayofDoc"/>
+  </operation>
+  <operation name="query" qname="ns6:Query" returnQName="return" returnType="xsd:string" xmlns:ns6="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="securityToken" type="xsd:string"/>
+   <parameter name="request" type="xsd:string"/>
+   <parameter name="rowId" type="xsd:integer"/>
+   <parameter name="maxRows" type="xsd:integer"/>
+   <parameter name="parameters" type="ns6:ArrayOfstring"/>
+  </operation>
+  <operation name="solicit" qname="ns7:Solicit" returnQName="return" returnType="xsd:string" xmlns:ns7="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="securityToken" type="xsd:string"/>
+   <parameter name="returnURL" type="xsd:string"/>
+   <parameter name="request" type="xsd:string"/>
+   <parameter name="parameters" type="ns7:ArrayOfstring"/>
+  </operation>
+  <operation name="execute" qname="ns8:Execute" returnQName="return" returnType="xsd:string" xmlns:ns8="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="securityToken" type="xsd:string"/>
+   <parameter name="request" type="xsd:string"/>
+   <parameter name="parameters" type="ns8:ArrayOfstring"/>
+  </operation>
+  <operation name="nodePing" qname="ns9:NodePing" returnQName="return" returnType="xsd:string" xmlns:ns9="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <parameter name="Hello" type="xsd:string"/>
+  </operation>
+  <operation name="getServices" qname="ns10:GetServices" returnQName="return" returnType="ns10:ArrayOfstring" xmlns:ns10="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd">
+   <parameter name="securityToken" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <parameter name="serviceType" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </operation>
+  <parameter name="allowedMethods" value="download getServices authenticate nodePing submit query execute solicit notify getStatus"/>
+  <parameter name="wsdlPortType" value="NetworkNodePortType"/>
+  <parameter name="className" value="Node.WebServices.NetworkNodeBindingImpl"/>
+  <parameter name="wsdlServicePort" value="NetworkNodePortType"/>
+  <parameter name="wsdlTargetNamespace" value="http://www.ExchangeNetwork.net/schema/v1.0/node.wsdl"/>
+  <parameter name="wsdlServiceElement" value="NetworkNode"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" qname="ns11:ArrayOfstring" serializer="org.apache.axis.encoding.ser.ArraySerializerFactory" type="java:java.lang.String[]" xmlns:ns11="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" qname="ns12:ArrayofDoc" serializer="org.apache.axis.encoding.ser.ArraySerializerFactory" type="java:Node.WebServices.Document.NodeDocument[]" xmlns:ns12="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" qname="ns13:NodeDocument" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:Node.WebServices.Document.NodeDocument" xmlns:ns13="http://www.ExchangeNetwork.net/schema/v1.0/node.xsd"/>
+ </service>
+ <transport name="http">
+  <requestFlow>
+   <handler type="URLMapper"/>
+   <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </requestFlow>
+ </transport>
+ <transport name="local">
+  <responseFlow>
+   <handler type="LocalResponder"/>
+  </responseFlow>
+ </transport>
+</deployment>

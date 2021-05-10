@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeWebService" table="NODE_WEB_SERVICE">
+        <id name="webServiceId" type="long">
+            <column name="WEB_SERVICE_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="webServiceName" type="string">
+            <column name="WEB_SERVICE_NAME" length="50" />
+        </property>
+        <property name="webServiceDesc" type="string">
+            <column name="WEB_SERVICE_DESC" length="50" />
+        </property>
+        <set name="nodeOperations" table="NODE_OPERATION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="WEB_SERVICE_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.NodeOperation" />
+        </set>
+        <set name="nodeDomains" table="NODE_DOMAIN_WEB_SERVICE_XREF" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="WEB_SERVICE_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.enfotech.rest.domain.node.NodeDomain">
+                <column name="DOMAIN_ID" precision="10" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

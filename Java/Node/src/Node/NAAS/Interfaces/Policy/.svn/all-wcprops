@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Interfaces/Policy
+END
+AuthorizationPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Interfaces/Policy/AuthorizationPolicy.java
+END
+NetworkPolicyPortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Interfaces/Policy/NetworkPolicyPortType.java
+END

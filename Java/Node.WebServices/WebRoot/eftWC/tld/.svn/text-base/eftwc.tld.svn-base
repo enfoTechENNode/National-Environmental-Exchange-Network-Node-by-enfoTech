@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by hahabreak (duh) -->
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+	"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_2.dtd">
+<!--
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+	"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+-->
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>eftwc</short-name>
+	<description>enfoTech WebControl Tag Library</description>
+	<!--LinkSrc-->
+	<tag>
+		<name>LinkSrc</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.LinkSrc</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>link source file for all web control</description>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+	</tag>
+	<!-- AquaButton -->
+	<tag>
+		<name>AquaButton</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.AquaButton</tag-class>
+		<tei-class>com.enfotech.component.UI.webControl.tags.AquaButtonInfo</tei-class>
+		<body-content>EMPTY</body-content>
+		<description>Aqua style button</description>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>buttonText</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Text of button.</description>
+		</attribute>
+		<attribute>
+			<name>buttonImage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Image of button.</description>
+		</attribute>
+		<attribute>
+			<name>textCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Text style CSS.</description>
+		</attribute>
+		<attribute>
+			<name>buttonStyle</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>[aquaBlue, aquaRed, aquaYellow, aquaGreen, aquaSilver and off].  Default is [aquaBlue].
+	    </description>
+		</attribute>
+		<attribute>
+			<name>onClickScript</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Javascript function when you click the button.</description>
+		</attribute>
+		<attribute>
+			<name>fadeSpeed</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Set the speed of button fading effect.</description>
+		</attribute>
+		<attribute>
+			<name>fadeLevel</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Set the speed of button fading level.</description>
+		</attribute>
+		<attribute>
+			<name>fadeEffect</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Turn on/off fade effect. Default is off [false].</description>
+		</attribute>
+	</tag>
+	<!-- FlushTag -->
+	<tag>
+		<name>FlushTag</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.FlushTag</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>Flush the jsp page</description>
+	</tag>
+	<!-- MessageLabel -->
+	<tag>
+		<name>MessageLabel</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.MessageLabel</tag-class>
+		<tei-class>com.enfotech.component.UI.webControl.tags.MessageLabelInfo</tei-class>
+		<body-content>EMPTY</body-content>
+		<description>Show message and icon label</description>
+		<attribute>
+			<name>object</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>MessageLabelBean object</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>ID of tag</description>
+		</attribute>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>msgText</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Message you want to show in the page.</description>
+		</attribute>
+		<attribute>
+			<name>msgIcon</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Message icon image:[OK, ERROR, WARNING, UNKNOWN and INFO]. Default is no icon.</description>
+		</attribute>
+		<attribute>
+			<name>msgCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Cascade style sheet class of the message font.</description>
+		</attribute>
+		<attribute>
+			<name>msgCustomImage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Customer images for message icon, full path needed.</description>
+		</attribute>
+		<attribute>
+			<name>msgBreak</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Apply line break(br) before and/or after the message.</description>
+		</attribute>
+	</tag>
+	<!-- HighlightTextBox -->
+	<tag>
+		<name>HighlightTextBox</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.HighlightTextBox</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>Textbox/textarea with onfocus change</description>
+		<attribute>
+			<name>object</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>HighlightTextBoxBean object</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Field id and name of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>It can be [text or password], default is text.</description>
+		</attribute>
+		<attribute>
+			<name>maxLength</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Maxmium length of textbox. It will not be applied when it's a multi-line textarea</description>
+		</attribute>
+		<attribute>
+			<name>size</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Size (width) of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>rows</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Rows of multi-line textarea</description>
+		</attribute>
+		<attribute>
+			<name>text</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Value of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>script</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Javascript of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>disabled</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Disable the textbox, [true of false]</description>
+		</attribute>
+		<attribute>
+			<name>readonly</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Make the textbox read only, [true of false]</description>
+		</attribute>
+		<attribute>
+			<name>errorMsg</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Show error message on top of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>errorMsgCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>font style class of error message</description>
+		</attribute>
+		<attribute>
+			<name>errorMsgStyle</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>error message show-up style, [inline or pop]</description>
+		</attribute>
+		<attribute>
+			<name>popMsgWidth</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>width of pop up error message, default is 180</description>
+		</attribute>
+		<attribute>
+			<name>popMsgOffsetX</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>offsetX of pop up error message, default is 15</description>
+		</attribute>
+		<attribute>
+			<name>popMsgOffsetY</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>offsetX of pop up error message, default is 0</description>
+		</attribute>
+	</tag>
+	<!--DatePicker-->
+	<tag>
+		<name>DatePicker</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.DatePicker</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>Date picker, extends from HighlightTextBox</description>
+		<attribute>
+			<name>object</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>DatePicker object</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Field id and name of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>It can be [text or password], default is text.</description>
+		</attribute>
+		<attribute>
+			<name>maxLength</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Maxmium length of textbox. It will not be applied when it's a multi-line textarea</description>
+		</attribute>
+		<attribute>
+			<name>size</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Size (width) of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>rows</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Rows of multi-line textarea</description>
+		</attribute>
+		<attribute>
+			<name>text</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Value of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>script</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Javascript of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>disabled</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Disable the textbox, [true of false]</description>
+		</attribute>
+		<attribute>
+			<name>readonly</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Make the textbox read only, [true of false]</description>
+		</attribute>
+		<attribute>
+			<name>errorMsg</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Show error message on top of the textbox</description>
+		</attribute>
+		<attribute>
+			<name>errorMsgCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>font style class of error message</description>
+		</attribute>
+		<attribute>
+			<name>errorMsgStyle</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>error message show-up style, [inline or pop]</description>
+		</attribute>
+		<attribute>
+			<name>popMsgWidth</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>width of pop up error message, default is 180</description>
+		</attribute>
+		<attribute>
+			<name>popMsgOffsetX</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>offsetX of pop up error message, default is 15</description>
+		</attribute>
+		<attribute>
+			<name>popMsgOffsetY</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>offsetX of pop up error message, default is 0</description>
+		</attribute>
+		<attribute>
+			<name>form</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>form name of the page, default is the first form of the page.</description>
+		</attribute>
+		<attribute>
+			<name>calIcon</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>icon for calendar, full URL path required.</description>
+		</attribute>
+		<attribute>
+			<name>calType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>calendar type:[All, Past, Future], default is All.</description>
+		</attribute>
+		<attribute>
+			<name>offsetX</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>offset x to mouse click</description>
+		</attribute>
+		<attribute>
+			<name>offsetY</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>offset y to mouse click</description>
+		</attribute>
+		<attribute>
+			<name>resetCal</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>reset calendar to today's month, default is true.</description>
+		</attribute>
+	</tag>
+	<!-- PagingTag -->
+	<tag>
+		<name>PagingTag</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.PagingTag</tag-class>
+		<tei-class>com.enfotech.component.UI.webControl.tags.PagingTagInfo</tei-class>
+		<body-content>JSP</body-content>
+		<description>Paging function for a collection</description>
+		<attribute>
+			<name>object</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>MessageLabelBean object</description>
+		</attribute>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>ID of tag</description>
+		</attribute>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>formName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>document form name</description>
+		</attribute>
+		<attribute>
+			<name>fontCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>font style</description>
+		</attribute>
+		<attribute>
+			<name>highlightCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>font highlight style</description>
+		</attribute>
+		<attribute>
+			<name>pageListStyle</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Style of the page block: [PageList or DropDown]</description>
+		</attribute>
+		<attribute>
+			<name>itemPerPage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>default 10</description>
+		</attribute>
+		<attribute>
+			<name>pagePerSection</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>default 10</description>
+		</attribute>
+		<attribute>
+			<name>collection</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>collection object</description>
+		</attribute>
+	</tag>
+	<!--DivCalendar-->
+	<tag>
+		<name>DivCalendar</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.DivCalendar</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>Generate a DIV calendar, one per page please.</description>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>dateSpliter</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Default: "-"</description>
+		</attribute>
+		<attribute>
+			<name>dateFormat</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Date format [YMD,MDY,DMY], defualt (YMD).</description>
+		</attribute>
+		<attribute>
+			<name>hideFields</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Hide select box fields, use "'fld1','fld2','fld3',....."	    </description>
+		</attribute>
+		<attribute>
+			<name>form</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Form name of the page. Default is the first form of the page.</description>
+		</attribute>
+		<attribute>
+			<name>startYear</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Calendar start year, default: 1800.</description>
+		</attribute>
+		<attribute>
+			<name>endYear</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Calendar start year, default: 2200.</description>
+		</attribute>
+		<attribute>
+			<name>yearNavigate</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Show year navigate button, default: false.</description>
+		</attribute>
+		<attribute>
+			<name>fixedSize</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Show calendar as fixed 6 rows size, default is false.</description>
+		</attribute>
+		<attribute>
+			<name>twoDigitDate</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Show 2 digit of Day and Month, default is true.</description>
+		</attribute>
+	</tag>
+	<!--TabControl-->
+	<tag>
+		<name>TabControl</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.TabControl</tag-class>
+		<body-content>JSP</body-content>
+		<description>Tab control</description>
+		<attribute>
+			<name>object</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>TabControl object</description>
+		</attribute>
+		<attribute>
+			<name>linkBase</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Relative or absolute web control base.</description>
+		</attribute>
+		<attribute>
+			<name>defaultCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>default font css of tab</description>
+		</attribute>
+		<attribute>
+			<name>selectedCSS</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description> selected font css of tab</description>
+		</attribute>
+		<attribute>
+			<name>align</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>[left, center, right], default is left</description>
+		</attribute>
+		<attribute>
+			<name>tabType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>type of tab, use TabControlBean to get type.</description>
+		</attribute>
+		<attribute>
+			<name>selectedIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Set selected index, default is -1</description>
+		</attribute>
+		<attribute>
+			<name>selectedTabLink</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>true if want to show link of on tab.</description>
+		</attribute>
+	</tag>
+	<!--TabItem-->
+	<tag>
+		<name>TabItem</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.TabItem</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>Tab control item</description>
+		<attribute>
+			<name>link</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>URL link of the tab</description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>tab name</description>
+		</attribute>
+		<attribute>
+			<name>icon</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>extra icon url of the tab</description>
+		</attribute>
+		<attribute>
+			<name>target</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Url link target</description>
+		</attribute>
+		<attribute>
+			<name>description</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>mouse over tip of the tab</description>
+		</attribute>
+		<attribute>
+			<name>visible</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>set false if you want to hide tab, default is true.</description>
+		</attribute>
+	</tag>
+	<!-- Save Position -->
+	<tag>
+		<name>SavePosition</name>
+		<tag-class>com.enfotech.component.UI.webControl.tags.SavePosition</tag-class>
+		<body-content>EMPTY</body-content>
+		<description>Remember page position when post back</description>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>ID of tag</description>
+		</attribute>
+		<attribute>
+			<name>formName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>document form name</description>
+		</attribute>
+	</tag>
+</taglib>

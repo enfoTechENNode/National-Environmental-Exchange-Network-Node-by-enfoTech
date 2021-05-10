@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Node.Administration/WebRoot/ext&apos; to &apos;ext2.3&apos;" description="Rename resource &apos;ext&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebRoot/ext" name="ext2.3" stamp="1384190605295" updateReferences="true"/>
+</session>

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces
+END
+INodeOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/DB/Interfaces/INodeOperation.java
+END
+INodeOperationParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeOperationParameter.java
+END
+INodeOperationLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/DB/Interfaces/INodeOperationLog.java
+END
+INodeAccountTypeXREF.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeAccountTypeXREF.java
+END
+INodeDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Interfaces/INodeDB.java
+END
+INodeOperationLogStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeOperationLogStatus.java
+END
+INodeDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeDomain.java
+END
+INodeFileCabin.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/DB/Interfaces/INodeFileCabin.java
+END
+INodeUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Interfaces/INodeUser.java
+END
+INodeAccountType.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeAccountType.java
+END
+INodeWebService.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeWebService.java
+END
+INodeUserOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/INodeUserOperation.java
+END
+ISequenceNo.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/ISequenceNo.java
+END

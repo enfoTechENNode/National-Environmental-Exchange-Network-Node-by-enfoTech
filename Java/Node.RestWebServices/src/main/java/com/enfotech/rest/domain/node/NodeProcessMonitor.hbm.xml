@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeProcessMonitor" table="NODE_PROCESS_MONITOR">
+        <id name="pid" type="long">
+            <column name="PID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="transactionId" type="string">
+            <column name="TRANSACTION_ID" length="100" />
+        </property>
+        <property name="operationId" type="java.lang.Long">
+            <column name="OPERATION_ID" precision="10" scale="0" />
+        </property>
+        <property name="processName" type="string">
+            <column name="PROCESS_NAME" length="300" />
+        </property>
+        <property name="processStatus" type="string">
+            <column name="PROCESS_STATUS" length="100" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="100" />
+        </property>
+        <property name="nodeAddress" type="string">
+            <column name="NODE_ADDRESS" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>

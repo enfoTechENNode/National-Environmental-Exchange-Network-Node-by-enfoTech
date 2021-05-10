@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Biz/Interfaces/Solicit
+END
+IProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Interfaces/Solicit/IProcess.java
+END
+IPostProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Interfaces/Solicit/IPostProcess.java
+END
+IPreProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Interfaces/Solicit/IPreProcess.java
+END

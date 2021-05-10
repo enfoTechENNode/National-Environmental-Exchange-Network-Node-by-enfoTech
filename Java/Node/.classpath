@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/axis-1_4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/axis2-1.4.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/dataflow"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate3.3"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSON"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jug"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mail"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/nitobi"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/node"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/NodeXMLBean"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/oracle"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/servlet"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SFTP"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/spring2.5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts1.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/enfotech"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/xmlbeans-2.5.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mssql"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ftp"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

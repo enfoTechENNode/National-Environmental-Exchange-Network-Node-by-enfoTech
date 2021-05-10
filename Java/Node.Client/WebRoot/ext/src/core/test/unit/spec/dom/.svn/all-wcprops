@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom
+END
+Element.style.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/Element.style.js
+END
+Element.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/Element.js
+END
+CompositeElementLite.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/CompositeElementLite.js
+END
+Element.traversal.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/Element.traversal.js
+END
+DomHelper.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/DomHelper.js
+END
+Element.static.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/Element.static.js
+END
+Element.insertion.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/core/test/unit/spec/dom/Element.insertion.js
+END

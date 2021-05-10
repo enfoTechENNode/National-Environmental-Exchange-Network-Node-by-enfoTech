@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Domains
+END
+OperationsEditBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Domains/OperationsEditBean.java
+END
+DomainsBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Domains/DomainsBean.java
+END
+DomainsEditBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Web/Administration/Bean/Domains/DomainsEditBean.java
+END
+OperationsBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Domains/OperationsBean.java
+END
+OperationsWizardBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Web/Administration/Bean/Domains/OperationsWizardBean.java
+END

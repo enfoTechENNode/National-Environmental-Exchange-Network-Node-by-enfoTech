@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods
+END
+ExecuteAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/ExecuteAction.java
+END
+SubmitAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/SubmitAction.java
+END
+GetStatusAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/GetStatusAction.java
+END
+GetServicesAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/GetServicesAction.java
+END
+NodePingAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/NodePingAction.java
+END
+QueryAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/QueryAction.java
+END
+SolicitAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/SolicitAction.java
+END
+DownloadAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/DownloadAction.java
+END
+NotifyAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/NotifyAction.java
+END
+AuthenticateAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Action/WebMethods/AuthenticateAction.java
+END

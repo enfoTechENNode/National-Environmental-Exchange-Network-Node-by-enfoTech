@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Domains.OperationLog" table="NODE_OPERATION_LOG">
+        <id name="operationLogId" column="OPERATION_LOG_ID"  type="long" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+	    <property name="transId" type="string" >
+	        <column name="TRANS_ID" length="50" not-null="false"/>
+	    </property>
+	    <property name="userName" type="string" >
+	        <column name="USER_NAME" length="50" not-null="false"/>
+	    </property>
+	    <property name="requestorIP" type="string" >
+	        <column name="REQUESTOR_IP" length="30" not-null="false"/>
+	    </property>
+	    <property name="suppliedTransId" type="string" >
+	        <column name="SUPPLIED_TRANS_ID" length="50" not-null="false"/>
+	    </property>
+	    <property name="token" type="string" >
+	        <column name="TOKEN" length="200" not-null="false"/>
+	    </property>
+	    <property name="nodeAddress" type="string" >
+	        <column name="NODE_ADDRESS" length="100" not-null="false"/>
+	    </property>
+	    <property name="returnURL" type="string" >
+	        <column name="RETURN_URL" length="100" not-null="false"/>
+	    </property>
+	    <property name="serviceType" type="string" >
+	        <column name="SERVICE_TYPE" length="50" not-null="false"/>
+	    </property>
+	    <property name="startDate" type="timestamp" >
+	        <column name="START_DTTM" not-null="false"/>
+	    </property>
+	    <property name="endDate" type="timestamp" >
+	        <column name="END_DTTM" not-null="false"/>
+	    </property>
+	    <property name="hostName" type="string" >
+	        <column name="HOST_NAME" length="40" not-null="false"/>
+	    </property>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="false"/>
+	    </property>
+	    <property name="createdDate" type="date" >
+	        <column name="CREATED_DTTM" not-null="false"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="50" not-null="false"/>
+	    </property>
+	    <property name="updatedDate" type="date" >
+	        <column name="UPDATED_DTTM" not-null="false"/>
+	    </property>
+	    
+	    <many-to-one
+        name="operation"
+        column="OPERATION_ID"
+        class="Node2.model.Domains.Operation"
+        cascade="save-update"
+        not-null="true" />
+
+	    <set 
+	        name="operationLogStatus"
+	        cascade="all-delete-orphan" 
+	        inverse="true">
+	        
+	        <key column="OPERATION_LOG_ID" />
+	        <one-to-many class="Node2.model.Domains.OperationLogStatus" />
+     	</set>   
+	    
+    </class>
+</hibernate-mapping>

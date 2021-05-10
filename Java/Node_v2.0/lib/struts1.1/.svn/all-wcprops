@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1
+END
+struts.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/struts.jar
+END
+commons-lang-2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/commons-lang-2.0.jar
+END
+jakarta-oro.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/jakarta-oro.jar
+END
+commons-validator.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/commons-validator.jar
+END
+commons-dbcp-1.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/commons-dbcp-1.2.1.jar
+END
+commons-digester.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/commons-digester.jar
+END
+commons-beanutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/commons-beanutils.jar
+END
+commons-pool-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/struts1.1/commons-pool-1.2.jar
+END

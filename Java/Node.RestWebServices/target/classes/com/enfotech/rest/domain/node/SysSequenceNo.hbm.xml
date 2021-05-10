@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.SysSequenceNo" table="SYS_SEQUENCE_NO">
+        <id name="sequenceId" type="long">
+            <column name="SEQUENCE_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tableName" type="string">
+            <column name="TABLE_NAME" length="30" />
+        </property>
+        <property name="columnName" type="string">
+            <column name="COLUMN_NAME" length="30" />
+        </property>
+        <property name="minNumber" type="java.lang.Integer">
+            <column name="MIN_NUMBER" precision="5" scale="0" />
+        </property>
+        <property name="maxNumber" type="java.lang.Long">
+            <column name="MAX_NUMBER" precision="10" scale="0" />
+        </property>
+        <property name="lastUsedNumber" type="java.lang.Long">
+            <column name="LAST_USED_NUMBER" precision="10" scale="0" />
+        </property>
+        <property name="statusCd" type="java.lang.Character">
+            <column name="STATUS_CD" length="1" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

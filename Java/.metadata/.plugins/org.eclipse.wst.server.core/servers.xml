@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v5.0 Server at localhost-config" deployDir="C:\Program Files\Apache Software Foundation\Tomcat 5.0\enNode2" hostname="localhost" id="Tomcat v5.0 Server at localhost" instanceDir="C:\Program Files\Apache Software Foundation\Tomcat 5.0\enNode2" name="Tomcat v5.0 Server at localhost" runtime-id="Apache Tomcat v5.0" server-type="org.eclipse.jst.server.tomcat.50" server-type-id="org.eclipse.jst.server.tomcat.50" start-timeout="450" stop-timeout="150" testEnvironment="true" timestamp="10">
+    <list key="modules" value0="Node.Administration::org.eclipse.jst.j2ee.server:Node.Administration::jst.web::2.4" value1="Node.WebServices::org.eclipse.jst.j2ee.server:Node.WebServices::jst.web::2.4" value2="Node.Client::org.eclipse.jst.j2ee.server:Node.Client::jst.web::2.4" value3="Node.Task::org.eclipse.jst.j2ee.server:Node.Task::jst.web::2.4"/>
+  </server>
+</servers>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2
+END
+NetworkNode2Stub.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2/NetworkNode2Stub.java
+END
+NetworkNode2Skeleton.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/57/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2/NetworkNode2Skeleton.java
+END
+NodeFaultMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2/NodeFaultMessage.java
+END
+NetworkNode2SkeletonInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2/NetworkNode2SkeletonInterface.java
+END
+NetworkNode2MessageReceiverInOut.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2/NetworkNode2MessageReceiverInOut.java
+END
+NetworkNode2CallbackHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/wsdl/node/_2/NetworkNode2CallbackHandler.java
+END

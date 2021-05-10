@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/mail
+END
+imap.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/mail/imap.jar
+END
+mailapi.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/mail/mailapi.jar
+END
+pop3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/mail/pop3.jar
+END
+mail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/mail/mail.jar
+END
+smtp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/mail/smtp.jar
+END

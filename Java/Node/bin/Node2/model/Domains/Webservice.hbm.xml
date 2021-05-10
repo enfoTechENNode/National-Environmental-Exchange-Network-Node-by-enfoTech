@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Domains.Webservice" table="NODE_WEB_SERVICE">
+        <id name="webServiceId" column="WEB_SERVICE_ID"  type="long" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+	    <property name="webServiceName" type="string" >
+	        <column name="WEB_SERVICE_NAME" length="50" not-null="false"/>
+	    </property>
+	    <property name="webServiceDesc" type="string" >
+	        <column name="WEB_SERVICE_DESC" length="50" not-null="false"/>
+	    </property>
+
+	    <set name="operations"
+	         cascade="all-delete-orphan" 
+	         inverse="true">
+	        
+	        <key column="WEB_SERVICE_ID" />
+	        <one-to-many class="Node2.model.Domains.Operation" />
+     	</set>   
+
+	    <set name="domains"
+	         table="NODE_DOMAIN_WEB_SERVICE_XREF"
+	         cascade="save-update"
+	         lazy="true" >
+	        
+	        <key column="WEB_SERVICE_ID" />
+	        <many-to-many class="Node2.model.Domains.Domain" column="DOMAIN_ID"/>
+     	</set>   
+	    
+    </class>
+</hibernate-mapping>

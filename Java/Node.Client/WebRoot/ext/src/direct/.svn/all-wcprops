@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct
+END
+JsonProvider.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/JsonProvider.js
+END
+RemotingMethod.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/RemotingMethod.js
+END
+Transaction.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/Transaction.js
+END
+RemotingEvent.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/RemotingEvent.js
+END
+Manager.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/Manager.js
+END
+Provider.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/Provider.js
+END
+PollingProvider.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/PollingProvider.js
+END
+RemotingProvider.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/RemotingProvider.js
+END
+ExceptionEvent.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/ExceptionEvent.js
+END
+Event.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/direct/Event.js
+END

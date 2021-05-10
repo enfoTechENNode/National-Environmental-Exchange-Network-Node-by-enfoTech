@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is building Open Source applications. -->
+<project basedir="./../../" default="Deploy" name="BuildNode">
+  <property environment="env" />
+  <property name="ECLIPSE_HOME" value="C:/Program Files/Genuitec/Common" />
+  <property name="debuglevel" value="source,lines,vars" />
+  <property name="target" value="1.5"/>
+  <property name="source" value="1.5"/>
+  <property name="Node_v2.0.home" value="./" />
+  <property name="Node.location" value="../Node"/>
+  <property name="Node.Administration.location" value="../Node.Administration/WebRoot"/>
+  <property name="Node.Client.location" value="../Node.Client/WebRoot"/>
+  <property name="Node.Task.location" value="../Node.Task/WebRoot"/>
+  <property name="Node.WebServices.location" value="../Node.WebServices/WebRoot"/>
+  <property name="tomcat.dir" value="C:/Program Files/Apache Software Foundation/Tomcat 5.0" />
+
+  <target name="generateDate">
+    <java classname="Node.API.PropertyFiles" classpath="${Node.location}/bin"></java>
+  </target>
+  <target depends="generateDate" name="cleanall">
+    <delete file="${Node_v2.0.home}/lib/node/Node.jar" />
+    <delete file="${Node_v2.0.home}/Node.Administration.war" />
+    <delete file="${Node_v2.0.home}/Node.Client.war" />
+    <delete file="${Node_v2.0.home}/Node.Task.war" />
+    <delete file="${Node_v2.0.home}/Node.WebServices.war" />
+  </target>
+  <target name="jarNode" depends="cleanall">
+    <jar destfile="${Node_v2.0.home}/lib/node/Node.jar"
+         basedir="${Node.location}/bin"
+         includes="**/*.*"
+       excludes="ApplicationResources.properties"/>
+    <copy todir="../Node.Administration/WebRoot/WEB-INF">
+      <fileset dir="${Node.location}/bin" includes="ApplicationResources.properties"/>
+    </copy>
+  </target>
+  <target depends="jarNode" name="build-project">
+    <echo message="${ant.project.name}: ${ant.file}" />
+    <war compress="true" destfile="${Node_v2.0.home}/Node.Administration.war" webxml="${Node.Administration.location}/WEB-INF/web.xml">
+      <zipfileset dir="${Node.Administration.location}/common" prefix="common" />
+      <zipfileset dir="${Node.Administration.location}/config" prefix="config" />
+      <zipfileset dir="${Node.Administration.location}/css" prefix="css" />
+      <zipfileset dir="${Node.Administration.location}/eftWC"  prefix="eftWC" />
+      <zipfileset dir="${Node.Administration.location}/ext"  prefix="ext" />
+      <zipfileset dir="${Node.Administration.location}/images" prefix="images" />
+      <zipfileset dir="${Node.Administration.location}/META-INF"  prefix="META-INF" />
+      <zipfileset dir="${Node.Administration.location}/Page" prefix="Page" />
+      <zipfileset dir="${Node.Administration.location}/script" prefix="script" />
+      <zipfileset dir="${Node.Administration.location}/skin" prefix="skin" />
+      <zipfileset dir="${Node.Administration.location}/WEB-INF" prefix="WEB-INF" />
+      <zipfileset dir="lib/axis-1_4"  prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/axis2-1.4.1" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/dataflow" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/enfotech" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/ftp" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/hibernate3.3" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/JSON" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/jug" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/mail" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/misc" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/mssql" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/nitobi" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/node" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/NodeXMLBean" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/oracle" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/SFTP" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/spring2.5" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/struts1.1" prefix="WEB-INF/lib" />
+      <zipfileset dir="lib/xmlbeans-2.5.0" prefix="WEB-INF/lib" />
+    </war>
+    <war compress="true" destfile="${Node_v2.0.home}/Node.Client.war" webxml="${Node.Client.location}/WEB-INF/web.xml">
+      <zipfileset dir="${Node.Client.location}/css" prefix="css" />
+      <zipfileset dir="${Node.Client.location}/eftWC"  prefix="eftWC" />
+      <zipfileset dir="${Node.Client.location}/ext"  prefix="ext" />
+      <zipfileset dir="${Node.Client.location}/images" prefix="images" />
+      <zipfileset dir="${Node.Client.location}/META-INF"  prefix="META-INF" />
+      <zipfileset dir="${Node.Client.location}/Page" prefix="Page" />
+      <zipfileset dir="${Node.Client.location}/script" prefix="script" />
+      <zipfileset dir="${Node.Client.location}/skin" prefix="skin" />
+      <zipfileset dir="${Node.Client.location}/WEB-INF" prefix="WEB-INF" />
+	    <zipfileset dir="lib/axis-1_4"  prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/axis2-1.4.1" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/dataflow" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/enfotech" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/ftp" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/hibernate3.3" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/JSON" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/jug" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/mail" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/misc" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/mssql" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/nitobi" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/node" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/NodeXMLBean" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/oracle" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/SFTP" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/spring2.5" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/struts1.1" prefix="WEB-INF/lib" />
+	    <zipfileset dir="lib/xmlbeans-2.5.0" prefix="WEB-INF/lib" />
+    </war>
+    <war compress="true" destfile="${Node_v2.0.home}/Node.Task.war" webxml="${Node.Task.location}/WEB-INF/web.xml">
+      <zipfileset dir="${Node.Task.location}/META-INF"  prefix="META-INF" />
+      <zipfileset dir="${Node.Task.location}/WEB-INF/config" prefix="WEB-INF/config" />
+        <zipfileset dir="lib/axis-1_4"  prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/axis2-1.4.1" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/dataflow" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/enfotech" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/ftp" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/hibernate3.3" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/JSON" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/jug" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/mail" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/misc" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/mssql" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/nitobi" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/node" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/NodeXMLBean" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/oracle" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/SFTP" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/spring2.5" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/struts1.1" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/xmlbeans-2.5.0" prefix="WEB-INF/lib" />
+    </war>
+    <war compress="true" destfile="${Node_v2.0.home}/Node.WebServices.war" webxml="${Node.WebServices.location}/WEB-INF/web.xml">
+      <zipfileset dir="${Node.WebServices.location}/config" prefix="config" />
+      <zipfileset dir="${Node.WebServices.location}/css" prefix="css" />
+      <zipfileset dir="${Node.WebServices.location}/eftWC" prefix="eftWC" />
+      <zipfileset dir="${Node.WebServices.location}/images" prefix="images" />
+      <zipfileset dir="${Node.WebServices.location}/META-INF" prefix="META-INF" />
+      <zipfileset dir="${Node.WebServices.location}/Page" prefix="Page" />
+      <zipfileset dir="${Node.WebServices.location}/skin" prefix="skin" />
+      <zipfileset dir="${Node.WebServices.location}/WEB-INF" prefix="WEB-INF" />
+        <zipfileset dir="lib/axis-1_4"  prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/axis2-1.4.1" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/dataflow" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/enfotech" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/ftp" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/hibernate3.3" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/JSON" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/jug" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/mail" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/misc" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/mssql" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/nitobi" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/node" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/NodeXMLBean" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/oracle" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/SFTP" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/spring2.5" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/struts1.1" prefix="WEB-INF/lib" />
+        <zipfileset dir="lib/xmlbeans-2.5.0" prefix="WEB-INF/lib" />
+    </war>
+  </target>
+  <target depends="build-project" name="build" >
+    <delete file="${Node_v2.0.home}/lib/node/Node.jar" />
+  </target>
+  <target depends="build" description="Deploy" name="Deploy">
+    <!--<copy todir="${tomcat.dir}/webapps">
+			<fileset dir="${Node_v2.0.home}/OpenSource" includes="*.war" />
+		</copy>-->
+  </target>
+  <target depends="Deploy" name="tomcat-stop">
+    <java jar="${tomcat.dir}/bin/bootstrap.jar" fork="true">
+      <jvmarg value="-Dcatalina.home=${tomcat.dir}" />
+      <arg line="stop" />
+    </java>
+  </target>
+  <target depends="tomcat-stop" unless="quit" name="clean-tomcat">
+    <delete verbose="true" quiet="true" includeemptydirs="true">
+      <fileset dir="${tomcat.dir}/webapps/Node.Administration"  />
+    </delete>
+    <delete verbose="true" quiet="true" includeemptydirs="true">
+      <fileset dir="${tomcat.dir}/webapps/Node.Client"  />
+    </delete>
+    <delete verbose="true" quiet="true" includeemptydirs="true">
+      <fileset dir="${tomcat.dir}/webapps/Node.Task"  />
+    </delete>
+    <delete verbose="true" quiet="true" includeemptydirs="true">
+      <fileset dir="${tomcat.dir}/webapps/Node.WebServices" />
+    </delete>
+  </target>
+  <target depends="clean-tomcat" name="tomcat-start">
+    <java jar="${tomcat.dir}/bin/bootstrap.jar" fork="true">
+      <jvmarg value="-Dcatalina.home=${tomcat.dir}" />
+    </java>
+  </target>
+  <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects" />
+  <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+    <copy todir="${ant.library.dir}">
+      <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar" />
+    </copy>
+    <unzip dest="${ant.library.dir}">
+      <patternset includes="jdtCompilerAdapter.jar" />
+      <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar" />
+    </unzip>
+  </target>
+  <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+    <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter" />
+    <antcall target="build" />
+  </target>
+</project>

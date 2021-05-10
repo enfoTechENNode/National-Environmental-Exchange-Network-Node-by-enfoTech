@@ -1,0 +1,8 @@
+.gridHead1 {
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 9pt;
+  BACKGROUND-IMAGE: url(/Node.Administration/skin/images/aqua_bar_darkblue_47.gif);
+  CURSOR: hand;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #99cc99
+}

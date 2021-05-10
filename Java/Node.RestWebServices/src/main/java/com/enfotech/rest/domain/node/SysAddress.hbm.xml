@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.SysAddress" table="SYS_ADDRESS">
+        <id name="addressId" type="long">
+            <column name="ADDRESS_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="100" />
+        </property>
+        <property name="supplementalAddress" type="string">
+            <column name="SUPPLEMENTAL_ADDRESS" length="100" />
+        </property>
+        <property name="localityName" type="string">
+            <column name="LOCALITY_NAME" length="100" />
+        </property>
+        <property name="stateCd" type="string">
+            <column name="STATE_CD" length="2" />
+        </property>
+        <property name="zipCode" type="string">
+            <column name="ZIP_CODE" length="15" />
+        </property>
+        <property name="countryCd" type="string">
+            <column name="COUNTRY_CD" length="25" />
+        </property>
+        <property name="statusCd" type="java.lang.Character">
+            <column name="STATUS_CD" length="1" />
+        </property>
+        <property name="addressDesc" type="string">
+            <column name="ADDRESS_DESC" length="100" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" not-null="true" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" not-null="true" />
+        </property>
+        <set name="sysUserAddresses" table="SYS_USER_ADDRESS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ADDRESS_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.SysUserAddress" />
+        </set>
+    </class>
+</hibernate-mapping>

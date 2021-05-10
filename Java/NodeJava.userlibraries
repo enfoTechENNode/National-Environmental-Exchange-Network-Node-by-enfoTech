@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eclipse-userlibraries version="2">
+    <library name="axis-1_4" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis-1_4/axis.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis-1_4/axis-ant.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis-1_4/commons-discovery-0.2.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis-1_4/jaxrpc.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis-1_4/saaj.jar"/>
+    </library>
+    <library name="axis2-1.4.1" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/activation-1.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/annogen-0.1.0.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axiom-api-1.2.7.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axiom-dom-1.2.7.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axiom-impl-1.2.7.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-adb-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-adb-codegen-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-ant-plugin-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-clustering-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-codegen-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-corba-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-fastinfoset-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-java2wsdl-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-jaxbri-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-jaxws-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-jaxws-api-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-jibx-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-json-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-jws-api-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-kernel-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-metadata-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-mtompolicy-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-saaj-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-saaj-api-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-spring-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/axis2-xmlbeans-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/backport-util-concurrent-3.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/commons-codec-1.3.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/commons-fileupload-1.2.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/commons-httpclient-3.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/commons-io-1.4.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/commons-logging-1.1.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/geronimo-annotation_1.0_spec-1.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/geronimo-stax-api_1.0_spec-1.0.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/httpcore-4.0-beta1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/httpcore-nio-4.0-beta1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jalopy-1.5rc3.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jaxb-api-2.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jaxb-impl-2.1.6.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jaxb-xjc-2.1.6.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jaxen-1.1.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jettison-1.0-RC2.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jibx-bind-1.1.5.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/jibx-run-1.1.5.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/mex-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/neethi-2.0.4.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/soapmonitor-1.4.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/woden-api-1.0M8.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/woden-impl-dom-1.0M8.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/wsdl4j-1.6.2.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/wstx-asl-3.2.4.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/xalan-2.7.0.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/xercesImpl-2.8.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/xml-apis-1.3.04.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/xmlbeans-2.3.0.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/xml-resolver-1.2.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/axis2-1.4.1/XmlSchema-1.4.2.jar"/>
+    </library>
+    <library name="dataflow" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/dataflow/DataFlowComponent.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/dataflow/DataFlowEngine.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/dataflow/DataFlowPlugInCommon.jar" source="/DataFlowPlugInCommon"/>
+    </library>
+    <library name="enfotech" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/WebControl.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/DB.jar" source="D:/trenton/eftLib_Java/V1_0"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/EnfoTech.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/JNDI.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/SystemBase.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/TypeLib.jar" source="D:/trenton/eftLib_Java/V1_0"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/enfotech/Utility.jar" source="D:/trenton/eftLib_Java/V1_0/EnfoTechLibrary_java"/>
+    </library>
+    <library name="hibernate3.3" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/antlr-2.7.6.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/commons-collections-3.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/dom4j-1.6.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/hibernate3.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/hibernate-annotations.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/hibernate-commons-annotations.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/hibernate-entitymanager.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/javassist-3.4.GA.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/hibernate3.3/jta-1.1.jar"/>
+    </library>
+    <library name="JSON" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/JSON/json-lib-2.2.2-jdk13.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/JSON/easymock.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/JSON/ezmorph-1.0.5.jar"/>
+    </library>
+    <library name="jug" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/jug/jug-lgpl-2.0.0.jar"/>
+    </library>
+    <library name="mail" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/mail/smtp.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/mail/imap.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/mail/mail.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/mail/mailapi.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/mail/pop3.jar"/>
+    </library>
+    <library name="nitobi" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/nitobi/nitobi-struts2-plugin.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/nitobi/nitobi-cui-taglib.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/nitobi/nitobi-server-lib.jar"/>
+    </library>
+    <library name="node" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/node/Node_XML.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/node/NodePatch.jar"/>
+    </library>
+    <library name="NodeXMLBean" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/NodeXMLBean/GetServices_v4.jar"/>
+    </library>
+    <library name="oracle" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/oracle/ojdbc14_g.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/oracle/ojdbc14.jar"/>
+    </library>
+    <library name="servlet" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/servlet/jsp-api.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/servlet/servlet-api.jar"/>
+    </library>
+    <library name="SFTP" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/SFTP/jsch-0.1.42.jar"/>
+    </library>
+    <library name="spring2.5" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-webmvc-struts.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/cglib-nodep-2.1_3.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/log4j-1.2.15.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/slf4j-api-1.5.0.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/slf4j-log4j12-1.5.0.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-aop.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-beans.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-context.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-context-support.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-core.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-jdbc.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-jms.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-orm.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-test.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-tx.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-web.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-webmvc.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/spring2.5/spring-webmvc-portlet.jar"/>
+    </library>
+    <library name="struts1.1" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/struts.jar" source="D:/trenton/eNode2008Java/V1_0/src/Node/src/Node"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/commons-beanutils.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/commons-dbcp-1.2.1.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/commons-digester.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/commons-lang-2.0.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/commons-pool-1.2.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/commons-validator.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/struts1.1/jakarta-oro.jar"/>
+    </library>
+    <library name="xmlbeans-2.4.0" systemlibrary="false">
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/xmlbeans-2.4.0/xmlpublic.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/xmlbeans-2.4.0/jsr173_1.0_api.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/xmlbeans-2.4.0/resolver.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/xmlbeans-2.4.0/xbean.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/xmlbeans-2.4.0/xbean_xpath.jar"/>
+        <archive path="D:/TS_Dallas/TrentonCollection/eNode2008Java/V1_0/enNode2/Node_v2.0/lib/xmlbeans-2.4.0/xmlbeans-qname.jar"/>
+    </library>
+</eclipse-userlibraries>

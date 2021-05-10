@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Users.AccountType" table="NODE_ACCOUNT_TYPE">
+
+        <id name="accountTypeId" column="ACCOUNT_TYPE_ID" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="accountType" column="ACCOUNT_TYPE" not-null="false"/>
+        <property name="accountDesc" column="ACCOUNT_DESC" not-null="false"/>
+
+
+	    <set 
+	        name="accountTypeXref"
+	        cascade="all-delete-orphan" 
+	        inverse="true">
+	        
+	        <key column="ACCOUNT_TYPE_ID" />
+	        <one-to-many class="Node2.model.Users.AccountTypeXref" />
+     	</set>   
+        
+    </class>
+</hibernate-mapping>

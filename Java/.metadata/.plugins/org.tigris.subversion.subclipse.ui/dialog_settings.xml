@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="378" key="RevertDialog.location.x"/>
+	<item value="85" key="RevertDialog.location.y"/>
+	<item value="56" key="HistoryTableProvider.revisions.Revision"/>
+	<item value="140" key="HistoryTableProvider.revisions.Date"/>
+	<item value="61" key="BranchTag.location.y"/>
+	<item value="352" key="BranchTag.location.x"/>
+	<item value="337" key="SwitchDialog.location.x"/>
+	<item value="61" key="SwitchDialog.location.y"/>
+	<item value="http://en-node2.googlecode.com/svn/trunk/Java" key="UrlCombo.Node.0"/>
+	<item value="525" key="RevertDialog.size.x"/>
+	<item value="56" key="HistoryTableProvider.revisionsBlock.Revision"/>
+	<item value="525" key="ConfigureTagsDialog.size.x"/>
+	<item value="427" key="RevertDialog.size.y"/>
+	<item value="660" key="ConfigureTagsDialog.size.y"/>
+	<item value="111" key="HistoryTableProvider.MergeWizardChangeSetRevisionsPage.Author"/>
+	<item value="165" key="HistoryTableProvider.SVNHistoryPage.Date"/>
+	<item value="279" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Comment"/>
+	<item value="111" key="HistoryTableProvider.revisions.Author"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="497" key="ChooseUrlDialog.size.x"/>
+	<item value="368" key="ChooseUrlDialog.size.y"/>
+	<item value="56" key="HistoryTableProvider.MergeWizardChangeSetRevisionsPage.Revision"/>
+	<item value="427" key="BranchTag.size.y"/>
+	<item value="417" key="ConfigureTagsDialog.location.x"/>
+	<item value="2" key="ConfigureTagsDialog.location.y"/>
+	<item value="828" key="BranchTag.size.x"/>
+	<item value="606" key="SwitchDialog.size.x"/>
+	<item value="427" key="SwitchDialog.size.y"/>
+	<item value="525" key="UpdateDialog.size.x"/>
+	<item value="427" key="UpdateDialog.size.y"/>
+	<item value="140" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Date"/>
+	<item value="279" key="HistoryTableProvider.MergeWizardChangeSetRevisionsPage.Comment"/>
+	<item value="14" key="CommitDialog.location.y"/>
+	<item value="51" key="CommitDialog.location.x"/>
+	<item value="85" key="UpdateDialog.location.y"/>
+	<item value="140" key="HistoryTableProvider.MergeWizardChangeSetRevisionsPage.Date"/>
+	<item value="378" key="UpdateDialog.location.x"/>
+	<item value="111" key="HistoryTableProvider.revisionsBlock.Author"/>
+	<item value="514" key="SetSvnPropertyDialog.size.y"/>
+	<item value="525" key="SetSvnPropertyDialog.size.x"/>
+	<item value="214" key="ChooseUrlDialog.location.x"/>
+	<item value="187" key="ChooseUrlDialog.location.y"/>
+	<item value="329" key="HistoryTableProvider.SVNHistoryPage.Comment"/>
+	<item value="56" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Revision"/>
+	<item value="146" key="HistoryTableProvider.SVNHistoryPage.Revision"/>
+	<item value="27" key="SetSvnPropertyDialog.location.y"/>
+	<item value="111" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Author"/>
+	<item value="226" key="HistoryTableProvider.SVNHistoryPage.Author"/>
+	<item value="378" key="SetSvnPropertyDialog.location.x"/>
+	<item value="140" key="HistoryTableProvider.revisionsBlock.Date"/>
+	<item value="279" key="HistoryTableProvider.revisions.Comment"/>
+	<item value="1163" key="CommitDialog.size.x"/>
+	<item value="613" key="CommitDialog.size.y"/>
+	<item value="279" key="HistoryTableProvider.revisionsBlock.Comment"/>
+	<section name="CommitWizard">
+		<item value="false" key="ShowCompare"/>
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+	</section>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://en-node2.googlecode.com/svn/trunk/Java"/>
+			<item value="https://en-node2.googlecode.com/svn/trunk/Java --username node_support@enfotech.com"/>
+			<item value="https://en-node2.googlecode.com/svn/trunk"/>
+			<item value="https://en-node2.googlecode.com/svn/trunk/java"/>
+			<item value="https://en-node2.googlecode.com/svn/trunk/java --username node_support@enfotech.com"/>
+		</list>
+	</section>
+	<section name="SynchronizeResourceSelectionDialog">
+		<item value="" key="SynchronizeResourceSelectionDialog.STORE_WORKING_SETS"/>
+	</section>
+</section>

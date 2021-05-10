@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series
+END
+Bar.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Bar.js
+END
+Scatter.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Scatter.js
+END
+Line.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Line.js
+END
+Area.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Area.js
+END
+Gauge.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Gauge.js
+END
+Cartesian.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Cartesian.js
+END
+Radar.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Radar.js
+END
+Series.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Series.js
+END
+Column.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Column.js
+END
+Pie.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/chart/series/Pie.js
+END

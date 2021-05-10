@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Users.User" table="SYS_USER_INFO">
+
+        <id name="id" column="USER_ID" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        <property name="firstName" column="FIRST_NAME" not-null="false"/>
+        <property name="lastName" column="LAST_NAME" not-null="false"/>
+        <property name="midInit" column="MIDDLE_INITIAL" not-null="false"/>
+        <property name="loginName" column="LOGIN_NAME" not-null="false"/>
+        <property name="loginPassword" column="LOGIN_PASSWORD" not-null="false"/>
+        <property name="userStatusCD" column="USER_STATUS_CD" not-null="false"/>
+        <property name="last4SSN" column="LAST_4_SSN" not-null="false"/>
+        <property name="changePWDFlag" column="CHANGE_PWD_FLAG" not-null="false"/>
+        <property name="phone" column="PHONE_NUMBER" not-null="false"/>
+        <property name="comments" column="COMMENTS" not-null="false"/>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="createdDate" type="date" >
+	        <column name="CREATED_DTTM" not-null="true"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="updatedDate" type="date" >
+	        <column name="UPDATED_DTTM" not-null="true"/>
+	    </property>
+
+	    <set 
+	        name="accountTypeXrefs"
+	        cascade="all-delete-orphan" 
+	        inverse="true">
+	        
+	        <key column="USER_ID" />
+	        <one-to-many class="Node2.model.Users.AccountTypeXref" />
+     	</set>   
+        
+	    <one-to-one
+        name="pageLayout"
+        class="Node2.model.Configurations.PageLayout"
+        cascade="all"/>
+        
+    </class>
+</hibernate-mapping>

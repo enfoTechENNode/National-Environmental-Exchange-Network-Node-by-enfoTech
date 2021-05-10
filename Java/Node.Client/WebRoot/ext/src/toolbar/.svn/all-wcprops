@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar
+END
+Toolbar-legacy.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Toolbar-legacy.js
+END
+Paging.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Paging.js
+END
+Fill.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Fill.js
+END
+Spacer.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Spacer.js
+END
+Item.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Item.js
+END
+Separator.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Separator.js
+END
+Toolbar.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/Toolbar.js
+END
+TextItem.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/toolbar/TextItem.js
+END

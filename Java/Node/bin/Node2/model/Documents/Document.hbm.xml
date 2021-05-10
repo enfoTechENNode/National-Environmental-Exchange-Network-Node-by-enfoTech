@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Documents.Document" table="NODE_FILE_CABIN">
+        <id name="fileId" column="FILE_ID" type="long" unsaved-value="0">
+        </id>
+	    <property name="documentId" type="string" >
+	        <column name="DOCUMENT_ID" length="50" not-null="false"/>
+	    </property>
+	    <property name="transId" type="string" >
+	        <column name="TRANS_ID" length="50" not-null="true"/>
+	    </property>
+	    <property name="fileName" type="string" >
+	        <column name="FILE_NAME" length="200" not-null="false"/>
+	    </property>
+	    <property name="fileType" type="string" >
+	        <column name="FILE_TYPE" length="50" not-null="false"/>
+	    </property>
+	    <property name="statusCD" type="string" >
+	        <column name="STATUS_CD" length="10" not-null="false"/>
+	    </property>
+	    <property name="dataFlowName" type="string" >
+	        <column name="DATAFLOW_NAME" length="50" not-null="false"/>
+	    </property>
+	    <property name="submitUrl" type="string" >
+	        <column name="SUBMIT_URL" length="100" not-null="false"/>
+	    </property>
+	    <property name="submitToken" type="string" >
+	        <column name="SUBMIT_TOKEN" length="200" not-null="false"/>
+	    </property>
+	    <property name="submitDTTM" type="timestamp" >
+	        <column name="SUBMIT_DTTM" not-null="false"/>
+	    </property>
+	    <property name="fileContent" type="blob" >
+	        <column name="FILE_CONTENT" not-null="false"/>
+	    </property>
+	    <property name="fileSize" type="int" >
+	        <column name="FILE_SIZE" length="10" not-null="false"/>
+	    </property>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="createdDate" type="timestamp" >
+	        <column name="CREATED_DTTM" not-null="true"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="50" not-null="false"/>
+	    </property>
+	    <property name="updatedDate" type="timestamp" >
+	        <column name="UPDATED_DTTM" not-null="false"/>
+	    </property>
+	    
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeAccountType" table="NODE_ACCOUNT_TYPE">
+        <id name="accountTypeId" type="long">
+            <column name="ACCOUNT_TYPE_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="20" />
+        </property>
+        <property name="accountDesc" type="string">
+            <column name="ACCOUNT_DESC" length="50" />
+        </property>
+        <set name="nodeAccountTypeXrefs" table="NODE_ACCOUNT_TYPE_XREF" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNT_TYPE_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.NodeAccountTypeXref" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom
+END
+AbstractElement.insertion.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.insertion.js
+END
+AbstractQuery.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractQuery.js
+END
+AbstractElement.alignment.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.alignment.js
+END
+CompositeElementLite.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/CompositeElementLite.js
+END
+AbstractElement.style.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.style.js
+END
+CompositeElement.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/CompositeElement.js
+END
+AbstractElement.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.js
+END
+AbstractElement.traversal.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.traversal.js
+END
+DomQuery-aria.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/DomQuery-aria.js
+END
+AbstractElement.position.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.position.js
+END
+AbstractElement.static.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractElement.static.js
+END
+AbstractHelper.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/core/src/dom/AbstractHelper.js
+END

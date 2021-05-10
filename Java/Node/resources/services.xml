@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.4.1  Built on : Aug 19, 2008 (10:13:39 LKT) -->
+<serviceGroup>
+    <service name="NetworkNode2">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="net.exchangenetwork.www.wsdl.node._2.NetworkNode2MessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">net.exchangenetwork.www.wsdl.node._2.NetworkNode2Skeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="Execute" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Execute</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/ExecuteResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Execute/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:ExecuteNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="Authenticate" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Authenticate</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/AuthenticateResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Authenticate/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:AuthenticateNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="Download" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+		    <parameter name="enableMTOM">true</parameter>
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Download</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/DownloadResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Download/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:DownloadNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="GetStatus" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/GetStatus</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/GetStatusResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/GetStatus/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:GetStatusNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="NodePing" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/NodePing</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/NodePingResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/NodePing/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:NodePingNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="GetServices" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/GetServices</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/GetServicesResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/GetServices/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:GetServicesNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="Submit" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+		    <parameter name="enableMTOM">true</parameter>
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Submit</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/SubmitResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Submit/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:SubmitNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="Notify" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Notify</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/NotifyResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Notify/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:NotifyNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="Solicit" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Solicit</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/SolicitResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Solicit/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:SolicitNodeFaultMessage</faultActionMapping>
+        </operation>
+        <operation name="Query" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.exchangenetwork.net/wsdl/node/2">
+            <actionMapping>http://www.exchangenetwork.net/schema/node/2/Query</actionMapping>
+            <outputActionMapping>http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/QueryResponse</outputActionMapping>
+            <faultActionMapping faultName="NodeFaultDetail">http://www.exchangenetwork.net/wsdl/node/2/NetworkNodePortType2/Query/Fault/NodeFaultDetail</faultActionMapping>
+            <faultActionMapping faultName="NodeFaultMessage">urn:QueryNodeFaultMessage</faultActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

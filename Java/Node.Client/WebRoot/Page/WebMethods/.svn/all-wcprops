@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods
+END
+AuthenticateV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/AuthenticateV2.jsp
+END
+GetServicesV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/45/trunk/Java/Node.Client/WebRoot/Page/WebMethods/GetServicesV2.jsp
+END
+GetStatusV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/GetStatusV2.jsp
+END
+Execute.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Execute.jsp
+END
+NodePing.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/NodePing.jsp
+END
+Submit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Submit.jsp
+END
+Query.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/66/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Query.jsp
+END
+Solicit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Solicit.jsp
+END
+Download.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Download.jsp
+END
+Notify.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/45/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Notify.jsp
+END
+ExecuteV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/ExecuteV2.jsp
+END
+NodePingV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/NodePingV2.jsp
+END
+SubmitV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/SubmitV2.jsp
+END
+QueryV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/66/trunk/Java/Node.Client/WebRoot/Page/WebMethods/QueryV2.jsp
+END
+Authenticate.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/Authenticate.jsp
+END
+SolicitV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/45/trunk/Java/Node.Client/WebRoot/Page/WebMethods/SolicitV2.jsp
+END
+DownloadV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/DownloadV2.jsp
+END
+NotifyV2.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/45/trunk/Java/Node.Client/WebRoot/Page/WebMethods/NotifyV2.jsp
+END
+GetStatus.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/GetStatus.jsp
+END
+GetServices.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/Page/WebMethods/GetServices.jsp
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API
+END
+TempFileManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/TempFileManager.java
+END
+ConfigValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/API/ConfigValidation.java
+END
+XML.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/XML.java
+END
+WebServiceParameterMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/API/WebServiceParameterMode.java
+END
+ValidationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/ValidationManager.java
+END
+Stylizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/Stylizer.java
+END
+NodeUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/API/NodeUtils.java
+END
+PropertyFiles.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/PropertyFiles.java
+END
+Email.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/Email.java
+END
+DocumentManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/DocumentManagement.java
+END
+ActionParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/API/ActionParameter.java
+END

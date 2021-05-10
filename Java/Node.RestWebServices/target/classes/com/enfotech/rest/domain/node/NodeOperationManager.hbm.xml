@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeOperationManager" table="NODE_OPERATION_MANAGER">
+        <id name="submitId" type="long">
+            <column name="SUBMIT_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="operationName" type="string">
+            <column name="OPERATION_NAME" length="100" />
+        </property>
+        <property name="statusCd" type="string">
+            <column name="STATUS_CD" length="25" />
+        </property>
+        <property name="submittedDttm" type="date">
+            <column name="SUBMITTED_DTTM" length="7" />
+        </property>
+        <property name="submittedUrl" type="string">
+            <column name="SUBMITTED_URL" length="100" />
+        </property>
+        <property name="versionNo" type="string">
+            <column name="VERSION_NO" length="10" />
+        </property>
+        <property name="transId" type="string">
+            <column name="TRANS_ID" length="100" />
+        </property>
+        <property name="suppliedTransId" type="string">
+            <column name="SUPPLIED_TRANS_ID" length="100" />
+        </property>
+        <property name="fileContent" type="blob">
+            <column name="FILE_CONTENT" />
+        </property>
+        <property name="dataFlow" type="string">
+            <column name="DATA_FLOW" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

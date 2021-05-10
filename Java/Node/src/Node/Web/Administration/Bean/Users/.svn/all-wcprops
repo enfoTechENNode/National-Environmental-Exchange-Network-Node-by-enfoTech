@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Users
+END
+UsersBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Users/UsersBean.java
+END
+ConsoleUsersBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Users/ConsoleUsersBean.java
+END
+NodeUsersBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Administration/Bean/Users/NodeUsersBean.java
+END

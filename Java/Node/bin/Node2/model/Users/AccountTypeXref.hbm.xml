@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Users.AccountTypeXref" table="NODE_ACCOUNT_TYPE_XREF">
+
+        <id name="accountTypeXrefId" column="ACCOUNT_TYPE_XREF_ID" unsaved-value="0">
+            <generator class="increment"/>
+        </id>
+        
+	    <many-to-one
+        name="accountType"
+        column="ACCOUNT_TYPE_ID"
+        class="Node2.model.Users.AccountType"
+        cascade="save-update" 
+        not-null="false" />
+        
+	    <many-to-one
+        name="user"
+        column="USER_ID"
+        class="Node2.model.Users.User"
+        cascade="save-update"
+        not-null="false" />
+        
+	    <many-to-one
+        name="domain"
+        column="DOMAIN_ID"
+        class="Node2.model.Domains.Domain"
+        cascade="save-update"
+        not-null="false" />
+        
+    </class>
+</hibernate-mapping>

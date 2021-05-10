@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer
+END
+BorderSplitter.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/BorderSplitter.js
+END
+Splitter.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/Splitter.js
+END
+Handle.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/Handle.js
+END
+ResizeTracker.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/ResizeTracker.js
+END
+BorderSplitterTracker.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/BorderSplitterTracker.js
+END
+SplitterTracker.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/SplitterTracker.js
+END
+Resizer.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/resizer/Resizer.js
+END

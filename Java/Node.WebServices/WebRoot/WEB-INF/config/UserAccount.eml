@@ -1,0 +1,23 @@
+
+Node Administration System Message
+
+System Time: <%var_systime%>
+
+First Name:  <%var_first%>
+Last Name:   <%var_last%>
+
+
+Subject: Node Administration System User Account and Password
+-------------------------------------------------------
+
+This e-mail is in response to your Node Administration Account request. Your account information is as follows:
+
+
+Logon Name:
+<%var_login%>
+
+Temporary User Password:
+<%var_special_msg%>
+
+
+When you next access the Node Administration System, you will be prompted to establish a permanent user password.  

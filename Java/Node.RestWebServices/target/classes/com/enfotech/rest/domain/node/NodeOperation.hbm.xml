@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeOperation" table="NODE_OPERATION">
+        <id name="operationId" type="long">
+            <column name="OPERATION_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="nodeDomain" class="com.enfotech.rest.domain.node.NodeDomain" fetch="select">
+            <column name="DOMAIN_ID" precision="10" scale="0" />
+        </many-to-one>
+        <many-to-one name="nodeWebService" class="com.enfotech.rest.domain.node.NodeWebService" fetch="select">
+            <column name="WEB_SERVICE_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="operationName" type="string">
+            <column name="OPERATION_NAME" length="50" />
+        </property>
+        <property name="operationDesc" type="string">
+            <column name="OPERATION_DESC" />
+        </property>
+        <property name="operationType" type="string">
+            <column name="OPERATION_TYPE" length="25" />
+        </property>
+        <property name="operationConfig" type="clob">
+            <column name="OPERATION_CONFIG" />
+        </property>
+        <property name="operationStatusCd" type="string">
+            <column name="OPERATION_STATUS_CD" length="20" not-null="true" />
+        </property>
+        <property name="operationStatusMsg" type="string">
+            <column name="OPERATION_STATUS_MSG" length="1000" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" />
+        </property>
+        <property name="versionNo" type="string">
+            <column name="VERSION_NO" length="10" not-null="true" />
+        </property>
+        <property name="operationConfigClob" type="clob">
+            <column name="OPERATION_CONFIG_CLOB" />
+        </property>
+        <property name="publishInd" type="string">
+            <column name="PUBLISH_IND" length="1" />
+        </property>
+        <property name="restInd" type="string">
+            <column name="REST_IND" length="1" />
+        </property>
+        <set name="nodeOperationLogs" table="NODE_OPERATION_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OPERATION_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.NodeOperationLog" />
+        </set>
+        <set name="sysUserInfos" table="NODE_USER_OPERATION_XREF" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OPERATION_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.enfotech.rest.domain.node.SysUserInfo">
+                <column name="USER_ID" precision="10" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

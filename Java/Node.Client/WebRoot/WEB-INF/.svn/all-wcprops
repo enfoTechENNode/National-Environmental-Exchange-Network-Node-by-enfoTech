@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF
+END
+struts-template.tld
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF/struts-template.tld
+END
+struts-logic.tld
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF/struts-logic.tld
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF/struts-config.xml
+END
+struts-html.tld
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF/struts-html.tld
+END
+struts-bean.tld
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF/struts-bean.tld
+END
+eftwc.tld
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/14/trunk/Java/Node.Client/WebRoot/WEB-INF/eftwc.tld
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/77/trunk/Java/Node.Client/WebRoot/WEB-INF/web.xml
+END

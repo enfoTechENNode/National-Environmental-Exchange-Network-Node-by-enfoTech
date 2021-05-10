@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/service/Domains
+END
+OperationLogStatusManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/service/Domains/OperationLogStatusManager.java
+END
+DomainManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/service/Domains/DomainManager.java
+END
+WebserviceManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/service/Domains/WebserviceManager.java
+END
+OperationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/service/Domains/OperationManager.java
+END
+OperationLogManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/service/Domains/OperationLogManager.java
+END

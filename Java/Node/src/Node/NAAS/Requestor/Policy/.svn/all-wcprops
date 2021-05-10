@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Requestor/Policy
+END
+NetworkPolicyBindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Requestor/Policy/NetworkPolicyBindingStub.java
+END
+AuthorizationPolicyLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Requestor/Policy/AuthorizationPolicyLocator.java
+END

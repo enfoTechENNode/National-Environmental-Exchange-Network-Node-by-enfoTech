@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.SysUserPagelayout" table="SYS_USER_PAGELAYOUT">
+        <id name="userId" type="long">
+            <column name="USER_ID" precision="10" scale="0" />
+            <generator class="foreign">
+                <param name="property">sysUserInfo</param>
+            </generator>
+        </id>
+        <one-to-one name="sysUserInfo" class="com.enfotech.rest.domain.node.SysUserInfo" constrained="true"></one-to-one>
+        <property name="columns" type="string">
+            <column name="COLUMNS" length="500" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" not-null="true" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

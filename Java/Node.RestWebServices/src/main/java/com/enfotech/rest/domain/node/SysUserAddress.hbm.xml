@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.SysUserAddress" table="SYS_USER_ADDRESS">
+        <composite-id name="id" class="com.enfotech.rest.domain.node.SysUserAddressId">
+            <key-property name="addressId" type="long">
+                <column name="ADDRESS_ID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="userId" type="long">
+                <column name="USER_ID" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="sysUserInfo" class="com.enfotech.rest.domain.node.SysUserInfo" update="false" insert="false" fetch="select">
+            <column name="USER_ID" precision="10" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="sysAddress" class="com.enfotech.rest.domain.node.SysAddress" update="false" insert="false" fetch="select">
+            <column name="ADDRESS_ID" precision="10" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="addressTypeCd" type="string">
+            <column name="ADDRESS_TYPE_CD" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>

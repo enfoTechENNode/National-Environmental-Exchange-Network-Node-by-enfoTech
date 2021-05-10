@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/hibernate3.jar
+END
+hibernate-commons-annotations.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/hibernate-commons-annotations.jar
+END
+hibernate-entitymanager.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/hibernate-entitymanager.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/commons-collections-3.1.jar
+END
+hibernate-mapping-3.0.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/hibernate-mapping-3.0.dtd
+END
+antlr-2.7.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/antlr-2.7.6.jar
+END
+jta-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/jta-1.1.jar
+END
+hibernate-annotations.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/hibernate-annotations.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/dom4j-1.6.1.jar
+END
+javassist-3.4.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/javassist-3.4.GA.jar
+END
+hibernate-configuration-3.0.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/hibernate3.3/hibernate-configuration-3.0.dtd
+END

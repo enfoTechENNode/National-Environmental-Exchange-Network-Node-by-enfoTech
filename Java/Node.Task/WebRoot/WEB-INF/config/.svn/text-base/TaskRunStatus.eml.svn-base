@@ -1,0 +1,24 @@
+
+Node Administration System Message
+
+System Time: <%var_systime%>
+
+Transaction ID:  <%var_trans_id%>
+
+Subject: Node Administration System Task Status
+-------------------------------------------------------
+
+This e-mail is in response to your Node Administration Task request. Task information is as follows:
+
+
+Task Name:
+<%var_task_name%>
+
+Task Status:
+<%var_status%>
+
+Started date time:
+<%var_start_dttm%>
+
+Ended date time:
+<%var_end_dttm%>

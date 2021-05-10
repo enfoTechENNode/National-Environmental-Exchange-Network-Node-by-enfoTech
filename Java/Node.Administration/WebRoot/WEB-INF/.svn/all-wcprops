@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF
+END
+struts-logic.tld
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-logic.tld
+END
+struts-html.tld
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-html.tld
+END
+struts-bean.tld
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-bean.tld
+END
+ApplicationResources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/74/trunk/Java/Node.Administration/WebRoot/WEB-INF/ApplicationResources.properties
+END
+validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/validation.xml
+END
+eftwc.tld
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/eftwc.tld
+END
+tiles-defs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/tiles-defs.xml
+END
+action-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/action-servlet.xml
+END
+struts-template.tld
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-template.tld
+END
+struts-tiles.tld
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-tiles.tld
+END
+struts-nested.tld
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-nested.tld
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/74/trunk/Java/Node.Administration/WebRoot/WEB-INF/struts-config.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/74/trunk/Java/Node.Administration/WebRoot/WEB-INF/applicationContext.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/74/trunk/Java/Node.Administration/WebRoot/WEB-INF/web.xml
+END
+validator-rules.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/WEB-INF/validator-rules.xml
+END

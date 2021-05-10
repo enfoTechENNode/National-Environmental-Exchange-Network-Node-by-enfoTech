@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.SysConfig" table="SYS_CONFIG">
+        <id name="configId" type="long">
+            <column name="CONFIG_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="configName" type="string">
+            <column name="CONFIG_NAME" length="300" />
+        </property>
+        <property name="configXml" type="clob">
+            <column name="CONFIG_XML" />
+        </property>
+        <property name="configTypeCd" type="string">
+            <column name="CONFIG_TYPE_CD" length="25" />
+        </property>
+        <property name="statusCd" type="java.lang.Character">
+            <column name="STATUS_CD" length="1" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" />
+        </property>
+        <property name="configClob" type="clob">
+            <column name="CONFIG_CLOB" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+#Mon Oct 12 18:35:30 EDT 2009
+eclipse.preferences.version=1
+validator.Checked=/
+validator.Revalidate=true
+validator.Unchecked=lib,.settings,META-INF,.project,.mymetadata

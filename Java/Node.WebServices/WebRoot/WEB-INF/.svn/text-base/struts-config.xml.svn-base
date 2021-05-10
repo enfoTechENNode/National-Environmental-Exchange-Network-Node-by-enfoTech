@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="EntryBean" type="Node.Web.WebServices.Bean.EntryBean" />
+    <form-bean name="StatusBean" type="Node.Web.WebServices.Bean.StatusBean" />
+  </form-beans>
+  <action-mappings>
+    <action name="EntryBean" path="/Page/Entry" scope="request" type="Node.Web.WebServices.Action.EntryAction">
+      <forward name="view" path="/Page/Entry.jsp" />
+      <forward name="login" path="/Page/Status.do" />
+    </action>
+    <action name="StatusBean" path="/Page/Status" scope="session" type="Node.Web.WebServices.Action.StatusAction">
+      <forward name="back" path="/Page/FrameSet.jsp" />
+      <forward name="view" path="/Page/Status.jsp" />
+    </action>
+  </action-mappings>
+</struts-config>

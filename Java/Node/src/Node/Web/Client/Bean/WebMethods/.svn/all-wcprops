@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods
+END
+AuthenticateBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/AuthenticateBean.java
+END
+ExecuteBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/ExecuteBean.java
+END
+GetServicesBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/GetServicesBean.java
+END
+NodePingBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/NodePingBean.java
+END
+SubmitBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/SubmitBean.java
+END
+GetStatusBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/GetStatusBean.java
+END
+QueryBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/QueryBean.java
+END
+SolicitBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/SolicitBean.java
+END
+DownloadBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/DownloadBean.java
+END
+NotifyBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Web/Client/Bean/WebMethods/NotifyBean.java
+END

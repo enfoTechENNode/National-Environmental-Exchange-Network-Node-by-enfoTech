@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean name="/Page/Entry/user" class="Node2.web.Users.UserAction" singleton="false">
+        <property name="userManager"><ref bean="userManager"/></property>
+    </bean>
+    <bean name="/Page/Entry/operation" class="Node2.web.NodeMonitoring.OperationAction" singleton="false">
+        <property name="operationManager"><ref bean="operationManager"/></property>
+        <property name="operationLogManager"><ref bean="operationLogManager"/></property>
+        <property name="operationLogStatusManager"><ref bean="operationLogStatusManager"/></property>
+        <property name="domainManager"><ref bean="domainManager"/></property>
+        <property name="webserviceManager"><ref bean="webserviceManager"/></property>
+    </bean>
+    <bean name="/Page/Entry/Configurations" class="Node2.web.Configurations.ConfigurationsAction" singleton="false">
+        <property name="pageLayoutManager"><ref bean="pageLayoutManager"/></property>
+        <property name="operationLogManager"><ref bean="operationLogManager"/></property>
+    </bean>
+    <bean name="/Page/Entry/domain" class="Node2.web.Domains.DomainAction" singleton="false">
+        <property name="domainManager"><ref bean="domainManager"/></property>
+    </bean>
+    <bean name="/Page/Entry/document" class="Node2.web.Documents.DocumentAction" singleton="false">
+        <property name="documentManager"><ref bean="documentManager"/></property>
+    </bean>
+    <bean name="/Page/Entry/status" class="Node2.web.Status.StatusAction" singleton="false">
+        <property name="statusManager"><ref bean="statusManager"/></property>
+    </bean>
+    <bean name="/Page/Entry/Dashboard" class="Node2.web.Entry.DashboardAction" singleton="false">
+    </bean>
+</beans>

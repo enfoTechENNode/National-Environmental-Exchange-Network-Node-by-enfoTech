@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Task
+END
+UpdateTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Task/UpdateTask.java
+END
+LastUpdateTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Task/LastUpdateTime.java
+END
+GetStatusTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/Task/GetStatusTask.java
+END
+ScheduleManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Task/ScheduleManager.java
+END
+RunnableTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/Task/RunnableTask.java
+END
+ApplicationWatch.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Task/ApplicationWatch.java
+END

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="D:\TS_Dallas\TrentonCollection\eNode2008Java\V1_0\enNode2\NodeJava.userlibraries" key="org.eclipse.jdt.ui.lastuserlibrary"/>
+	<item value="480,510" key="UserLibraryLoadSaveDialog.size"/>
+	<item value="D:\TS_Dallas\TrentonCollection\eNode2008Java\V1_0\enNode2\Node_v2.0\lib\mssql" key="org.eclipse.jdt.ui.lastextjar"/>
+	<section name="org.eclipse.jdt.internal.ui.wizards.buildpaths.NewVariableEntryDialog">
+		<item value="577" key="DIALOG_WIDTH"/>
+		<item value="-124" key="DIALOG_Y_ORIGIN"/>
+		<item value="395" key="DIALOG_HEIGHT"/>
+		<item value="-174" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="1" key="pageIndex"/>
+	</section>
+	<section name="ProblemSeveritiesConfigurationBlock">
+		<item value="false" key="expanded4"/>
+		<item value="false" key="expanded3"/>
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="false" key="expanded6"/>
+		<item value="false" key="expanded5"/>
+		<item value="true" key="expanded0"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="8" key="index"/>
+	</section>
+	<section name="JavaBuildConfigurationBlock">
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="true" key="expanded0"/>
+	</section>
+	<section name="javadoc">
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="false" key="notree"/>
+		<item value="true" key="splitindex"/>
+		<item value="C:\j2sdk1.4.2_19\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="true" key="use"/>
+		<item value="false" key="nonavbar"/>
+		<item value="public" key="access"/>
+		<item value="true" key="version"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node\doc" key="destdir"/>
+		<item value="true" key="author"/>
+		<item value="" key="docletname"/>
+		<item value="1.3" key="source"/>
+		<item value="false" key="openinbrowser"/>
+		<item value="false" key="noindex"/>
+		<item value="" key="docletpath"/>
+		<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node\javadoc.xml" key="antpath"/>
+		<item value="true" key="fromStandard"/>
+		<section name="projects">
+			<section name="Node.WebServices">
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.WebServices\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.WebServices\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="Node">
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="Node.Task">
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.Task\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.Task\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="Node.Client">
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.Client\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.Client\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="Node_v2.0">
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node_v2.0\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node_v2.0\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="Node.Administration">
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.Administration\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="D:\trenton\eNode2008Java\V1_0\enNode2\Node.Administration\javadoc.xml" key="antpath"/>
+			</section>
+		</section>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="616" key="DIALOG_WIDTH"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+		<item value="609" key="DIALOG_HEIGHT"/>
+		<item value="340" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.SysUserInfo" table="SYS_USER_INFO">
+        <id name="userId" type="long">
+            <column name="USER_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="60" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" length="60" />
+        </property>
+        <property name="middleInitial" type="java.lang.Character">
+            <column name="MIDDLE_INITIAL" length="1" />
+        </property>
+        <property name="loginName" type="string">
+            <column name="LOGIN_NAME" length="50" />
+        </property>
+        <property name="loginPassword" type="string">
+            <column name="LOGIN_PASSWORD" length="100" />
+        </property>
+        <property name="userStatusCd" type="string">
+            <column name="USER_STATUS_CD" length="10" />
+        </property>
+        <property name="last4Ssn" type="string">
+            <column name="LAST_4_SSN" length="4" />
+        </property>
+        <property name="changePwdFlag" type="string">
+            <column name="CHANGE_PWD_FLAG" length="1" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="PHONE_NUMBER" length="15" />
+        </property>
+        <property name="comments" type="string">
+            <column name="COMMENTS" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" not-null="true" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" not-null="true" />
+        </property>
+        <set name="nodeAccountTypeXrefs" table="NODE_ACCOUNT_TYPE_XREF" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="USER_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.NodeAccountTypeXref" />
+        </set>
+        <one-to-one name="sysUserPagelayout" class="com.enfotech.rest.domain.node.SysUserPagelayout"></one-to-one>
+        <set name="sysEmails" table="SYS_USER_EMAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="USER_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.enfotech.rest.domain.node.SysEmail">
+                <column name="EMAIL_ID" precision="10" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="nodeOperations" table="NODE_USER_OPERATION_XREF" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="USER_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.enfotech.rest.domain.node.NodeOperation">
+                <column name="OPERATION_ID" precision="10" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="sysUserAddresses" table="SYS_USER_ADDRESS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="USER_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.SysUserAddress" />
+        </set>
+    </class>
+</hibernate-mapping>

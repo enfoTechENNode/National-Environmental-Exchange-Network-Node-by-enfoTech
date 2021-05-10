@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2
+END
+GenericXmlType.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/GenericXmlType.java
+END
+GetServicesResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/GetServicesResponse.java
+END
+GetStatusResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/GetStatusResponse.java
+END
+Submit.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Submit.java
+END
+Query.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Query.java
+END
+Download.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Download.java
+END
+NotificationURIType.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NotificationURIType.java
+END
+ExtensionMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/ExtensionMapper.java
+END
+SubmitResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/SubmitResponse.java
+END
+QueryResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/QueryResponse.java
+END
+NodeDocumentType.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NodeDocumentType.java
+END
+DownloadResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/DownloadResponse.java
+END
+NotificationMessageCategoryType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NotificationMessageCategoryType.java
+END
+ResultSetType.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/ResultSetType.java
+END
+NotificationMessageType.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NotificationMessageType.java
+END
+Execute.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Execute.java
+END
+NodePing.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NodePing.java
+END
+StatusResponseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/StatusResponseType.java
+END
+PasswordType.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/PasswordType.java
+END
+NodeFaultDetailType.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NodeFaultDetailType.java
+END
+Solicit.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Solicit.java
+END
+Notify.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Notify.java
+END
+AllNNI.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/AllNNI.java
+END
+Authenticate.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/Authenticate.java
+END
+ErrorCodeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/ErrorCodeList.java
+END
+ExecuteResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/ExecuteResponse.java
+END
+ParameterType.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/ParameterType.java
+END
+NodePingResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NodePingResponse.java
+END
+NotificationTypeCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NotificationTypeCode.java
+END
+GetStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/GetStatus.java
+END
+GetServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/GetServices.java
+END
+NodeStatusCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NodeStatusCode.java
+END
+TransactionStatusCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/TransactionStatusCode.java
+END
+SolicitResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/SolicitResponse.java
+END
+NotifyResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/NotifyResponse.java
+END
+EncodingType.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/EncodingType.java
+END
+DocumentFormatType.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/DocumentFormatType.java
+END
+AttachmentType.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/AttachmentType.java
+END
+AuthenticateResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/8/trunk/Java/Node/src/net/exchangenetwork/www/schema/node/_2/AuthenticateResponse.java
+END

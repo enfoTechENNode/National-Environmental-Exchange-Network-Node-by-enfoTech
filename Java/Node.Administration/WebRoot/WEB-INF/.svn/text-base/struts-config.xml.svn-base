@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="LoginBean" type="Node.Web.Administration.Bean.Entry.LoginBean" />
+    <form-bean name="LeftBean" type="Node.Patch.Texas.RCRA.Web.Administration.Bean.Entry.LeftBean" />
+    <form-bean name="HeaderBean" type="Node.Web.Administration.Bean.Entry.HeaderBean" />
+    <form-bean name="ConfigurationsBean" type="Node.Web.Administration.Bean.Configurations.ConfigurationsBean" />
+    <form-bean name="DataWizardConfigBean" type="Node2.web.Configurations.DataWizardConfigBean" />
+    <form-bean name="DocumentsBean" type="Node.Web.Administration.Bean.Documents.DocumentsBean" />
+    <form-bean name="DocumentsEditBean" type="Node.Web.Administration.Bean.Documents.DocumentsEditBean" />
+    <form-bean name="DownloadBean" type="Node.Web.Administration.Bean.Documents.DownloadBean" />
+    <form-bean name="DownloadStreamBean" type="Node.Web.Administration.Bean.Documents.DownloadStreamBean" />
+    <form-bean name="UploadBean" type="Node.Web.Administration.Bean.Documents.UploadBean" />
+    <form-bean name="UsersBean" type="Node.Web.Administration.Bean.Users.UsersBean" />
+    <form-bean name="NodeUsersBean" type="Node.Web.Administration.Bean.Users.NodeUsersBean" />
+    <form-bean name="ConsoleUsersBean" type="Node.Web.Administration.Bean.Users.ConsoleUsersBean" />
+    <form-bean name="DomainsBean" type="Node.Web.Administration.Bean.Domains.DomainsBean" />
+    <form-bean name="DomainsEditBean" type="Node.Web.Administration.Bean.Domains.DomainsEditBean" />
+    <form-bean name="OperationsBean" type="Node.Web.Administration.Bean.Domains.OperationsBean" />
+    <form-bean name="OperationsEditBean" type="Node.Web.Administration.Bean.Domains.OperationsEditBean" />
+    <form-bean name="NodeMonitoringBean" type="Node.Web.Administration.Bean.NodeMonitoring.NodeMonitoringBean" />
+    <form-bean name="TransactionViewBean" type="Node.Web.Administration.Bean.NodeMonitoring.TransactionViewBean" />
+    <form-bean name="NEISubManagementBean" type="Node.Web.Administration.Bean.NJNEI.NEISubManagementBean" />
+    <form-bean name="BrowseNEISubmissionBean" type="Node.Web.Administration.Bean.NJNEI.BrowseNEISubmissionBean" />
+    <form-bean name="CreateNEIXmlBean" type="Node.Web.Administration.Bean.NJNEI.CreateNEIXmlBean" />
+    <form-bean name="AQDEDataflowsManagementBean" type="Node.Web.Administration.Bean.NJAQDE.AQDEDataflowsManagementBean" />
+    <form-bean name="AQDEEditDataflowsManagementBean" type="Node.Web.Administration.Bean.NJAQDE.AQDEEditDataflowsManagementBean" />
+    <form-bean name="AQSSubmissionGenerationBean" type="Node.Web.Administration.Bean.NJAQDE.AQSSubmissionGenerationBean" />
+    <form-bean name="AQDEFlowTypeDetailsBean" type="Node.Web.Administration.Bean.NJAQDE.AQDEFlowTypeDetailsBean" />
+    <form-bean name="AQDEEditFlowTypeConfigurationBean" type="Node.Web.Administration.Bean.NJAQDE.AQDEEditFlowTypeConfigurationBean" />
+    <form-bean name="PreValidationBean" type="Node.Patch.Texas.AQS.Web.Administration.Bean.PreValidation.PreValidationBean" />
+    <form-bean name="PreValidationReviewBean" type="Node.Patch.Texas.AQS.Web.Administration.Bean.PreValidation.PreValidationReviewBean" />
+    <form-bean name="PreValidationDetailBean" type="Node.Patch.Texas.AQS.Web.Administration.Bean.PreValidation.PreValidationDetailBean" />
+    <form-bean name="ReconciliationEntryBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.ReconciliationEntryBean" />
+    <form-bean name="ReconciliationEntryBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.ReconciliationEntryBean" />
+    <form-bean name="ReconciliationReportBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.ReconciliationReportBean" />
+    <form-bean name="CustomerNumberEntryBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.CustomerNumberEntryBean" />
+    <form-bean name="ProphecyReportingBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.ProphecyReportingBean" />
+    <form-bean name="ProphecyReportingDownloadBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.ProphecyReportingDownloadBean" />
+    <form-bean name="ProphecyReportingDownloadStreamBean" type="Node.Patch.Texas.TRI.Web.Administration.Bean.Submission.ProphecyReportingDownloadStreamBean" />
+	<form-bean name="ViewSubmissionBean" type="Node.Patch.Texas.RCRA.Web.Administration.Bean.Submission.ViewSubmissionBean" />
+	<form-bean name="ViewSubmissionMsgBean" type="Node.Patch.Texas.RCRA.Web.Administration.Bean.Submission.ViewSubmissionMsgBean" />
+	<form-bean name="ViewSubmissionDownloadStreamBean" type="Node.Patch.Texas.RCRA.Web.Administration.Bean.Submission.ViewSubmissionDownloadStreamBean" />
+	<form-bean name="ReSubmissionBean" type="Node.Patch.Texas.RCRA.Web.Administration.Bean.Submission.ReSubmissionBean" />
+    <form-bean name="operationForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="operationLogForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="configurationsForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="domainForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="documentForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="statusForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="dashboardForm" type="org.apache.struts.validator.DynaValidatorForm"/>
+    <form-bean name="GetServicesBean" type="Node2.web.Services.GetServicesBean" />
+    <form-bean name="OperationsWizardBean" type="Node.Web.Administration.Bean.Domains.OperationsWizardBean" />
+    <form-bean name="OperationMgrBean" type="Node2.web.OperationMgr.model.OperationMgrBean" />
+  </form-beans>
+  <global-forwards>
+    <forward name="invalidSession" path="/Page/Entry/SessionTimeOut.jsp" />
+  </global-forwards>
+  <action-mappings>
+    <action name="LoginBean" path="/Page/Entry/Login" scope="request" type="Node.Web.Administration.Action.Entry.LoginAction">
+      <forward name="success" path="/Page/Entry/Link.jsp" />
+      <forward name="changePWD" path="/Page/Entry/Login.jsp" />
+      <forward name="resetPWD" path="/Page/Entry/Login.jsp" />
+      <forward name="failed" path="/Page/Entry/Login.jsp" />
+    </action>
+    <action name="LeftBean" path="/Patch/Texas/RCRA/Page/Entry/Left" scope="request" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Entry.LeftAction">
+      <forward name="left" path="/Patch/Texas/RCRA/Page/Entry/Left.jsp" />
+    </action>
+    <action name="HeaderBean" path="/Page/Entry/Header" scope="request" type="Node.Web.Administration.Action.Entry.HeaderAction">
+      <forward name="header" path="/Page/Entry/Header.jsp" />
+    </action>
+    <action name="ConfigurationsBean" path="/Page/Configurations/Configurations" scope="session" type="Node.Web.Administration.Action.Configurations.ConfigurationsAction">
+      <forward name="save" path="/Page/Configurations/Configurations.jsp" />
+      <forward name="upload" path="/Page/Configurations/SysconfigUpload.jsp" />
+      <forward name="download" path="/Page/Configurations/SysconfigDownload.jsp" />
+    </action>
+    <action name="DataWizardConfigBean" path="/Page/Configurations/DataWizardConfig" scope="session" type="Node2.web.Configurations.DataWizardConfigAction">
+      <forward name="save" path="/Page/Configurations/DataWizardConfigUpload.jsp" />
+      <forward name="upload" path="/Page/Configurations/DataWizardConfigUpload.jsp" />
+      <forward name="download" path="/Page/Configurations/DataWizardConfigUpload.jsp" />
+    </action>
+    <action name="DocumentsBean" path="/Page/Documents/Documents" scope="session" type="Node.Web.Administration.Action.Documents.DocumentsAction">
+      <forward name="update" path="/Page/Documents/Documents.jsp" />
+      <forward name="upload" path="/Page/Documents/Upload.do" />
+    </action>
+    <action name="DocumentsEditBean" path="/Page/Documents/DocumentsEdit" scope="session" type="Node.Web.Administration.Action.Documents.DocumentsEditAction">
+      <forward name="update" path="/Page/Documents/DocumentsEdit.jsp" />
+    </action>
+    <action name="DownloadBean" path="/Page/Documents/Download" scope="request" type="Node.Web.Administration.Action.Documents.DownloadAction">
+      <forward name="success" path="/Page/Documents/Download.jsp" />
+    </action>
+    <action name="DownloadStreamBean" path="/Page/Documents/DownloadStream" scope="request" type="Node.Web.Administration.Action.Documents.DownloadStreamAction">
+      <forward name="success" path="/Page/Documents/DownloadStream.jsp" />
+    </action>
+    <action name="UploadBean" path="/Page/Documents/Upload" scope="session" type="Node.Web.Administration.Action.Documents.UploadAction">
+      <forward name="success" path="/Page/Documents/Upload.jsp" />
+    </action>
+    <action name="UsersBean" path="/Page/Users/Users" scope="request" type="Node.Web.Administration.Action.Users.UsersAction">
+      <forward name="search" path="/Page/Users/Users.jsp" />
+      <forward name="newNodeUser" path="/Page/Users/NodeUsers.do?new=true" />
+      <forward name="newConsoleUser" path="/Page/Users/ConsoleUsers.do?new=true" />
+      <forward name="existConsoleUser" path="/Page/Users/ConsoleUsers.do" />
+      <forward name="existNodeUser" path="/Page/Users/NodeUsers.do" />
+    </action>
+    <action name="NodeUsersBean" path="/Page/Users/NodeUsers" scope="session" type="Node.Web.Administration.Action.Users.NodeUsersAction">
+      <forward name="save" path="/Page/Users/NodeUsers.jsp" />
+      <forward name="delete" path="/Page/Users/Users.do" />
+    </action>
+    <action name="ConsoleUsersBean" path="/Page/Users/ConsoleUsers" scope="session" type="Node.Web.Administration.Action.Users.ConsoleUsersAction">
+      <forward name="save" path="/Page/Users/ConsoleUsers.jsp" />
+      <forward name="delete" path="/Page/Users/Users.do" />
+    </action>
+    <action name="DomainsBean" path="/Page/Domains/Domains" scope="request" type="Node.Web.Administration.Action.Domains.DomainsAction">
+      <forward name="search" path="/Page/Domains/Domains.jsp" />
+      <forward name="create" path="/Page/Domains/DomainsEdit.do?new=true" />
+      <forward name="operations" path="/Page/Domains/Operations.do" />
+    </action>
+    <action name="DomainsEditBean" path="/Page/Domains/DomainsEdit" scope="session" type="Node.Web.Administration.Action.Domains.DomainsEditAction">
+      <forward name="update" path="/Page/Domains/DomainsEdit.jsp" />
+      <forward name="newUser" path="/Page/Users/ConsoleUsers.do" />
+    </action>
+    <action name="OperationsBean" path="/Page/Domains/Operations" scope="session" type="Node.Web.Administration.Action.Domains.OperationsAction">
+      <forward name="search" path="/Page/Domains/Operations.jsp" />
+      <forward name="create" path="/Page/Domains/OperationsEdit.do?new=true" />
+      <forward name="wizard" path="/Page/Domains/OperationsWizard.do?new=true" />
+      <forward name="failed" path="/Page/Domains/Domains.do?fail=true" />
+    </action>
+    <action name="OperationsWizardBean" path="/Page/Domains/OperationsWizard" scope="session" type="Node.Web.Administration.Action.Domains.OperationsWizardAction">
+      <forward name="create" path="/Page/Domains/OperationsWizard1.jsp" />
+      <forward name="next" path="/Page/Domains/OperationsWizard2.jsp" />
+      <forward name="back" path="/Page/Domains/OperationsWizard1.jsp" />
+      <forward name="cancel" path="/Page/Domains/Operations.do" />
+      <forward name="changeParams" path="/Page/Domains/OperationsWizard2.jsp" />
+      <forward name="save" path="/Page/Domains/OperationsWizard2.jsp" />
+      <forward name="deleted" path="/Page/Domains/Operations.do" />
+    </action>
+    <action name="OperationsEditBean" path="/Page/Domains/OperationsEdit" scope="session" type="Node.Web.Administration.Action.Domains.OperationsEditAction">
+      <forward name="save" path="/Page/Domains/OperationsEdit.jsp" />
+      <forward name="deleted" path="/Page/Domains/Operations.do" />
+    </action>
+    <action name="NodeMonitoringBean" path="/Page/NodeMonitoring/NodeMonitoring" scope="session" type="Node.Web.Administration.Action.NodeMonitoring.NodeMonitoringAction">
+      <forward name="search" path="/Page/NodeMonitoring/NodeMonitoring.jsp" />
+      <forward name="view" path="/Page/NodeMonitoring/TransactionView.do" />
+    </action>
+    <action name="TransactionViewBean" path="/Page/NodeMonitoring/TransactionView" scope="session" type="Node.Web.Administration.Action.NodeMonitoring.TransactionViewAction">
+      <forward name="view" path="/Page/NodeMonitoring/TransactionView.jsp" />
+      <forward name="back" path="/Page/NodeMonitoring/NodeMonitoring.do?back=true" />
+    </action>
+    <action name="NEISubManagementBean" path="/Page/NJNEI/NEISubManagement" scope="session" type="Node.Web.Administration.Action.NJNEI.NEISubManagementHandler">
+      <forward name="view" path="/Page/NJNEI/NEISubManagement.jsp" />
+    </action>
+    <action name="BrowseNEISubmissionBean" path="/Page/NJNEI/BrowseNEISubmission" scope="session" type="Node.Web.Administration.Action.NJNEI.BrowseNEISubmissionHandler">
+      <forward name="browse" path="/Page/NJNEI/BrowseNEISubmission.jsp" />
+    </action>
+    <action name="CreateNEIXmlBean" path="/Page/NJNEI/CreateNEIXml" scope="session" type="Node.Web.Administration.Action.NJNEI.CreateNEIXmlHandler">
+      <forward name="display" path="/Page/NJNEI/CreateNEIXml.jsp" />
+      <forward name="scheduled" path="/Page/NJNEI/NEISubManagement.do" />
+    </action>
+    <action name="AQDEDataflowsManagementBean" path="/Page/NJAQDE/AQDEDataflowsManagement" scope="session" type="Node.Web.Administration.Action.NJAQDE.AQDEDataflowsManagementHandler">
+      <forward name="view" path="/Page/NJAQDE/AQDEDataflowsManagement.jsp" />
+      <forward name="AQSSubmission" path="/Page/NJAQDE/AQSSubmissionGeneration.do?filegenPurposeID=" />
+      <forward name="Edit" path="/Page/NJAQDE/AQDEEditDataflowsManagement.do?filegenPurposeID=" />
+      <forward name="ViewConfigDetail" path="/Page/NJAQDE/AQDEFlowTypeDetails.do?filegenPurposeID=" />
+    </action>
+    <action name="AQDEEditDataflowsManagementBean" path="/Page/NJAQDE/AQDEEditDataflowsManagement" scope="session" type="Node.Web.Administration.Action.NJAQDE.AQDEEditDataflowsManagementHandler">
+      <forward name="view" path="/Page/NJAQDE/AQDEEditDataflowsManagement.jsp" />
+    </action>
+    <action name="AQSSubmissionGenerationBean" path="/Page/NJAQDE/AQSSubmissionGeneration" scope="session" type="Node.Web.Administration.Action.NJAQDE.AQSSubmissionGenerationHandler">
+      <forward name="view" path="/Page/NJAQDE/AQSSubmissionGeneration.jsp" />
+      <forward name="back" path="/Page/NJAQDE/AQDEDataflowsManagement.do" />
+      <forward name="ViewConfigDetail" path="/Page/NJAQDE/AQDEFlowTypeDetails.do?filegenPurposeID=" />
+    </action>
+    <action name="AQDEFlowTypeDetailsBean" path="/Page/NJAQDE/AQDEFlowTypeDetails" scope="session" type="Node.Web.Administration.Action.NJAQDE.AQDEFlowTypeDetailsHandler">
+      <forward name="view" path="/Page/NJAQDE/AQDEFlowTypeDetails.jsp" />
+      <forward name="back" path="/Page/NJAQDE/AQDEDataflowsManagement.do" />
+      <forward name="add"  path="/Page/NJAQDE/AQDEEditFlowTypeConfiguration.do?filegenPurposeID=" />
+    </action>
+    <action name="AQDEEditFlowTypeConfigurationBean" path="/Page/NJAQDE/AQDEEditFlowTypeConfiguration" scope="session" type="Node.Web.Administration.Action.NJAQDE.AQDEEditFlowTypeConfigurationHandler">
+      <forward name="view" path="/Page/NJAQDE/AQDEEditFlowTypeConfiguration.jsp" />
+      <forward name="back" path="/Page/NJAQDE/AQDEFlowTypeDetails.do?filegenPurposeID=" />
+    </action>
+    <action name="PreValidationBean" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationSelection" scope="session" type="Node.Patch.Texas.AQS.Web.Administration.Action.PreValidation.PreValidationSelectionAction">
+      <forward name="PreValidationSelection" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationSelection.jsp" />
+      <forward name="insert" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.do" />
+      <forward name="update" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.do" />
+      <forward name="delete" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.do" />
+    </action>
+    <action name="PreValidationReviewBean" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview" scope="session" type="Node.Patch.Texas.AQS.Web.Administration.Action.PreValidation.PreValidationReviewAction">
+      <forward name="PreValidationReview" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.jsp" />
+      <forward name="selectReady" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.jsp" />
+      <forward name="selectNotReady" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.jsp" />
+      <forward name="insert" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.jsp" />
+      <forward name="update" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.jsp" />
+      <forward name="delete" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.jsp" />
+      <forward name="goBack" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationSelection.do" />
+    </action>
+    <action name="PreValidationDetailBean" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationDetail" scope="session" type="Node.Patch.Texas.AQS.Web.Administration.Action.PreValidation.PreValidationDetailAction">
+      <forward name="PreValidationDetail" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationDetail.jsp" />
+      <forward name="save" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationDetail.jsp" />
+      <forward name="close" path="/Patch/Texas/AQS/Page/PreValidation/PreValidationReview.do?act=Ready" />
+    </action>
+    <action name="ReconciliationEntryBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationEntry" scope="session" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationEntryAction">
+      <forward name="RetrieveData" path="/Patch/Texas/TRI/Page/Submission/ReconciliationEntry.jsp" />
+    </action>
+    <action name="ReconciliationEntryBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationEntryGetHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationEntryGetHandlerAction">
+    </action>
+    <action name="ReconciliationEntryBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationEntrySaveHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationEntrySaveHandlerAction">
+    </action>
+    <action name="ReconciliationEntryBean" path="/Patch/Texas/TRI/Page/Submission/AllocateRecord" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.AllocateRecordAction">
+		<forward name="success" path="/Patch/Texas/TRI/Page/Submission/ReconciliationEntry.jsp" />
+    </action>
+    <action name="ReconciliationEntryBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationEntryListBox" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationEntryListBoxAction">
+    </action>
+    <action name="ReconciliationReportBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationReport" scope="session" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationReportAction">
+      <forward name="RetrieveReportData" path="/Patch/Texas/TRI/Page/Submission/ReconciliationReport.jsp" />
+    </action>
+    <action name="ReconciliationReportBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationReportGetHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationReportGetHandlerAction">
+    </action>
+    <action name="ReconciliationReportBean" path="/Patch/Texas/TRI/Page/Submission/ReconciliationReportSaveHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ReconciliationReportSaveHandlerAction">
+    </action>
+    <action name="CustomerNumberEntryBean" path="/Patch/Texas/TRI/Page/Submission/CustomerNumberEntry" scope="session" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.CustomerNumberEntryAction">
+      <forward name="RetrieveData" path="/Patch/Texas/TRI/Page/Submission/CustomerNumberEntry.jsp" />
+    </action>
+    <action name="CustomerNumberEntryBean" path="/Patch/Texas/TRI/Page/Submission/CustomerNumberEntryGetHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.CustomerNumberEntryGetHandlerAction">
+    </action>
+    <action name="CustomerNumberEntryBean" path="/Patch/Texas/TRI/Page/Submission/CustomerNumberEntrySaveHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.CustomerNumberEntrySaveHandlerAction">
+    </action>
+    <action name="ProphecyReportingBean" path="/Patch/Texas/TRI/Page/Submission/ProphecyReporting" scope="session" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ProphecyReportingAction">
+      <forward name="GenerateReport" path="/Patch/Texas/TRI/Page/Submission/ProphecyReporting.jsp" />
+    </action>
+    <action name="ProphecyReportingBean" path="/Patch/Texas/TRI/Page/Submission/ProphecyReportingGetHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ProphecyReportingGetHandlerAction">
+    </action>
+    <action name="ProphecyReportingBean" path="/Patch/Texas/TRI/Page/Submission/ProphecyReportingSaveHandler" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ProphecyReportingSaveHandlerAction">
+    </action>
+    <action name="ProphecyReportingDownloadBean" path="/Patch/Texas/TRI/Page/Submission/ProphecyReportingDownload" scope="request" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ProphecyReportingDownloadAction">
+      <forward name="success" path="/Patch/Texas/TRI/Page/Submission/ProphecyReportingDownload.jsp" />
+    </action>
+    <action name="ProphecyReportingDownloadStreamBean" path="/Patch/Texas/TRI/Page/Submission/ProphecyReportingDownloadStream" scope="request" type="Node.Patch.Texas.TRI.Web.Administration.Action.Submission.ProphecyReportingDownloadStreamAction">
+      <forward name="success" path="/Patch/Texas/TRI/Page/Submission/ProphecyReportingDownloadStream.jsp" />
+    </action>
+    <action name="ViewSubmissionBean" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmission" scope="session" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Submission.ViewSubmissionAction">
+      <forward name="success" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmission.jsp" />
+    </action>
+    <action name="ViewSubmissionDownloadBean" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionDownload" scope="request" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Submission.ViewSubmissionDownloadAction">
+      <forward name="success" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionDownload.jsp" />
+    </action>
+    <action name="ViewSubmissionDownloadStreamBean" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionDownloadStream" scope="request" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Submission.ViewSubmissionDownloadStreamAction">
+      <forward name="success" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionDownloadStream.jsp" />
+    </action>
+	  <action name="ViewSubmissionBean" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionGetHandler" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Submission.ViewSubmissionGetHandlerAction">
+	  </action>
+    <action name="ReSubmissionBean" path="/Patch/Texas/RCRA/Page/Submission/ReSubmission" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Submission.ReSubmissionAction">
+       <forward name="success" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionReSubmission.jsp" />
+   </action>
+	<action name="ViewSubmissionMsgBean" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionMsg" scope="session" type="Node.Patch.Texas.RCRA.Web.Administration.Action.Submission.ViewSubmissionMsgAction">
+		<forward name="success" path="/Patch/Texas/RCRA/Page/Submission/ViewSubmissionMsg.jsp" redirect="false" />
+	</action>
+    <action path="/Page/Entry/operation" type="org.springframework.web.struts.DelegatingActionProxy" 
+            name="operationForm" scope="request" parameter="method" validate="false">
+    	<forward name="initial" path="/Page/Entry/Dashboard.jsp" />
+    	<forward name="delegateTransactionView" path="/Page/NodeMonitoring/TransactionView.do" />
+    </action>
+    <action path="/Page/Entry/Configurations" type="org.springframework.web.struts.DelegatingActionProxy" 
+            name="configurationsForm" scope="request" parameter="method" validate="false">
+    </action>
+    <action path="/Page/Entry/domain" type="org.springframework.web.struts.DelegatingActionProxy" 
+            name="domainForm" scope="request" parameter="method" validate="false">
+    </action>
+    <action path="/Page/Entry/document" type="org.springframework.web.struts.DelegatingActionProxy" 
+            name="documentForm" scope="request" parameter="method" validate="false">
+    </action>
+    <action path="/Page/Entry/status" type="org.springframework.web.struts.DelegatingActionProxy" 
+            name="statusForm" scope="request" parameter="method" validate="false">
+    </action>
+    <action path="/Page/Entry/GetServices" type="Node2.web.Services.GetServicesAction" name="GetServicesBean" scope="session" >
+      <forward name="upload" path="/Page/Configurations/GetServicesUpload.jsp" />
+      <forward name="download" path="/Page/Configurations/GetServicesDownload.jsp" />
+    </action>
+    <action path="/Page/Entry/Dashboard" type="org.springframework.web.struts.DelegatingActionProxy" 
+            name="dashboardForm" scope="request" parameter="method" validate="false">
+    	<forward name="success" path="/Page/Entry/Dashboard.jsp" />
+    	<forward name="fail" path="/Page/Entry/Login.jsp" />
+    </action>
+    <action path="/Page/Entry/OperationMgr" type="Node2.web.OperationMgr.OperationMgrAction" name="OperationMgrBean" scope="session" >
+      <forward name="uploadTemplateFile" path="/Page/Configurations/OperationMgrTemplateUpload.jsp" />
+      <forward name="uploadValidationFile" path="/Page/Configurations/OperationMgrValidateUpload.jsp" />
+      <forward name="uploadOperationFile" path="/Page/Configurations/OperationMgrOperationUpload.jsp" />
+      <forward name="uploadSubmissionFile" path="/Page/Configurations/OperationMgrSubmissionUpload.jsp" />
+      <forward name="viewDocument" path="/Page/Configurations/OperationMgrViewStyleSheet.jsp" />
+      <forward name="downloadViewDocument" path="/Page/Configurations/OperationMgrDownloadStyleSheet.jsp" />
+    </action>
+  </action-mappings>
+
+    <!-- ======================================= Plug Ins Configuration -->
+
+    <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+        <set-property property="contextConfigLocation" 
+            value="/WEB-INF/applicationContext.xml,
+                   /WEB-INF/action-servlet.xml"/>
+    </plug-in>
+
+</struts-config>

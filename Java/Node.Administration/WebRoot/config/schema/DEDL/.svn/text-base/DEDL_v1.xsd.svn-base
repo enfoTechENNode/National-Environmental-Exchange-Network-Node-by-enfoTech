@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.exchangenetwork.net/schema/dedl/1" targetNamespace="http://www.exchangenetwork.net/schema/dedl/1" elementFormDefault="qualified">
+
+  <simpleType name="DataSourceListType">
+    <restriction base='string'>
+      <enumeration value="DBMS"/>
+      <enumeration value="SOAP"/>
+      <enumeration value="HTTP"/>
+    </restriction>
+  </simpleType>
+  <complexType name="DataElementValueType">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="ValueLabel" type="string" use="optional"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="DataElementPropertyType">
+    <sequence>
+      <element name="PropertyName" type="NCName"/>
+      <element name="PropertyValue" type="anyType"/>
+    </sequence>
+  </complexType>
+  <complexType name="ElementDataSourceType">
+    <sequence>
+      <element name="DataSourceType" type="typens:DataSourceListType"/>
+      <element name="ConnectionDescriptor" type="string"/>
+      <element name="AccessStatement" type="string"/>
+      <element name="Parameters" type="string"/>
+      <element name="Transformation" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="DataConstrainType">
+    <sequence>
+      <element name="AllowMultiSelect" type="boolean" default="false"/>
+      <element name="AdditionalValuesIndicator" type="boolean" default="false"/>
+      <element name="Optionality" type="boolean" default="false"/>
+      <element name="Wildcard" type="string" />
+      <element name="FormatString" type="string" />
+      <element name="ValidationRules" type="string" />
+      <element name="UpperLimit" type="integer" minOccurs="0"/>
+      <element name="LowerLimit" type="integer" minOccurs="0"/>
+    </sequence>
+  </complexType>  
+  <complexType name="DataElementDescriptionType">
+    <sequence>
+      <element name="ElementIdentifier" type="Name"/>
+      <element name="ApplicationDomain" type="string"/>
+      <element name="ElementType" type="string"/>
+      <element name="Description" type="string" />
+      <element name="Keywords" type="string" />
+      <element name="Owner" type="string"/>
+      <element name="ElementLabel" type="string" />     
+      <element name="DefaultValue" type="string" />   
+      <element name="LastUpdated" type="dateTime"/>
+      <element name="DataSource" type="typens:ElementDataSourceType" minOccurs="0" />
+      <element name="DataConstrains" type="typens:DataConstrainType"  minOccurs="0" />
+      <element name="Property" type="typens:DataElementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+      <element name="ElementValue" type="typens:DataElementValueType" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="DataElementListType">
+    <sequence>
+      <element name="DataElement" type="typens:DataElementDescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <element name="DataElementList" type="typens:DataElementListType"/>
+</schema>

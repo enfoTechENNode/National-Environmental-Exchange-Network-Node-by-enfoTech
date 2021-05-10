@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Biz/Handler/WebMethods
+END
+ExecuteHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/ExecuteHandler.java
+END
+SubmitHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/SubmitHandler.java
+END
+GetStatusHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/GetStatusHandler.java
+END
+GetServicesHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/GetServicesHandler.java
+END
+NodePingHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/NodePingHandler.java
+END
+QueryHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/QueryHandler.java
+END
+SolicitHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/SolicitHandler.java
+END
+DownloadHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/DownloadHandler.java
+END
+NotifyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/NotifyHandler.java
+END
+AuthenticateHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Handler/WebMethods/AuthenticateHandler.java
+END

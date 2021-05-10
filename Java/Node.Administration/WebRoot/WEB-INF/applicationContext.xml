@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<bean id="myDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin://@VN08TUCSON:1521:TUCSONDB" />
+		<property name="username" value="neadm" />
+		<property name="password" value="neadm" />
+	</bean>
+
+	<!--<bean id="myDataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName"> 		
+			<value>java:comp/env/jdbc/yourdbname</value> 	
+		</property> 
+	</bean> -->
+
+	<!-- Hibernate SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>Node2/model/Users/User.hbm.xml</value>
+				<value>Node2/model/Domains/Operation.hbm.xml</value>
+				<value>Node2/model/Domains/OperationLog.hbm.xml</value>
+				<value>Node2/model/Domains/OperationLogStatus.hbm.xml</value>
+				<value>Node2/model/Domains/Domain.hbm.xml</value>
+				<value>Node2/model/Domains/Webservice.hbm.xml</value>
+				<value>Node2/model/Documents/Document.hbm.xml</value>
+				<value>Node2/model/Users/AccountType.hbm.xml</value>
+				<value>Node2/model/Users/AccountTypeXref.hbm.xml</value>
+				<value>Node2/model/Configurations/PageLayout.hbm.xml</value>
+				<value>Node2/model/Status/Status.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+        <!-- Print SQL to stdout. -->
+				hibernate.show_sql=true
+			</value>
+		</property>
+	</bean>
+
+	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="userDAO"
+		class="Node2.dao.hibernate.Users.UserDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="operationDAO"
+		class="Node2.dao.hibernate.Domains.OperationDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="operationLogDAO"
+		class="Node2.dao.hibernate.Domains.OperationLogDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="operationLogStatusDAO"
+		class="Node2.dao.hibernate.Domains.OperationLogStatusDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="domainDAO"
+		class="Node2.dao.hibernate.Domains.DomainDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="webserviceDAO"
+		class="Node2.dao.hibernate.Domains.WebserviceDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="pageLayoutDAO"
+		class="Node2.dao.hibernate.Configurations.PageLayoutDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="documentDAO"
+		class="Node2.dao.hibernate.Documents.DocumentDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="statusDAO"
+		class="Node2.dao.hibernate.Status.StatusDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+    <bean id="userManagerTarget" class="Node2.service.impl.Users.UserManagerImpl">
+        <property name="userDAO" ref="userDAO"/>
+    </bean>
+
+	<bean id="operationManagerTarget" class="Node2.service.impl.Domains.OperationManagerImpl">
+		<property name="operationDAO" ref="operationDAO" />
+	</bean>
+
+	<bean id="operationLogManagerTarget" class="Node2.service.impl.Domains.OperationLogManagerImpl">
+		<property name="operationLogDAO" ref="operationLogDAO" />
+	</bean>
+
+	<bean id="operationLogStatusManagerTarget" class="Node2.service.impl.Domains.OperationLogStatusManagerImpl">
+		<property name="operationLogStatusDAO" ref="operationLogStatusDAO" />
+	</bean>
+
+	<bean id="domainManagerTarget" class="Node2.service.impl.Domains.DomainManagerImpl">
+		<property name="domainDAO" ref="domainDAO" />
+	</bean>
+
+	<bean id="webserviceManagerTarget" class="Node2.service.impl.Domains.WebserviceManagerImpl">
+		<property name="webserviceDAO" ref="webserviceDAO" />
+	</bean>
+
+	<bean id="pageLayoutManagerTarget" class="Node2.service.impl.Configurations.PageLayoutManagerImpl">
+		<property name="pageLayoutDAO" ref="pageLayoutDAO" />
+	</bean>
+
+	<bean id="documentManagerTarget" class="Node2.service.impl.Documents.DocumentManagerImpl">
+		<property name="documentDAO" ref="documentDAO" />
+	</bean>
+
+    <bean id="statusManagerTarget" class="Node2.service.impl.Status.StatusManagerImpl">
+        <property name="statusDAO" ref="statusDAO"/>
+    </bean>
+
+	<bean id="userManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="userManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="operationManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="operationManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="operationLogManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="operationLogManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="operationLogStatusManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="operationLogStatusManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="domainManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="domainManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="webserviceManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="webserviceManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="pageLayoutManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="pageLayoutManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="documentManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="documentManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="statusManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="statusManagerTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	
+
+</beans>

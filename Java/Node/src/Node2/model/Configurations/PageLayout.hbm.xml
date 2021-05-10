@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Configurations.PageLayout" table="SYS_USER_PAGELAYOUT">
+        <id name="userId" column="USER_ID" type="long" unsaved-value="-1">
+        </id>
+	    <property name="columns" type="string" >
+	        <column name="COLUMNS" length="500" not-null="false"/>
+	    </property>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="createdDate" type="timestamp" >
+	        <column name="CREATED_DTTM" not-null="true"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="updatedDate" type="timestamp" >
+	        <column name="UPDATED_DTTM" not-null="true"/>
+	    </property>
+	    
+	    <one-to-one
+        name="user"
+        class="Node2.model.Users.User"/>
+	    
+    </class>
+</hibernate-mapping>

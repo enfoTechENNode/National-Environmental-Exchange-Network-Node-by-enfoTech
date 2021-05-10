@@ -1,0 +1,561 @@
+	
+	// Create search panel
+    var scheduledTasksSearch = Ext.create('Ext.FormPanel', {
+        labelWidth: 120, // label settings here cascade unless overridden
+        frame:true,
+        title: 'Search Scheduled Tasks',
+        bodyStyle:'padding:5px 5px 0',
+        width: 400,
+        defaults: {width: 300},
+        defaultType: 'textfield',
+
+        items: [Ext.create('Ext.form.field.ComboBox',  {
+        	id:'scheduledTasksNameCombox',
+            fieldLabel: 'Operation Name',
+            listeners: {
+                    // delete the previous query in the beforequery event or set
+                    // combo.lastQuery = null (this will reload the store the next time it expands)
+                    'beforequery': function(qe){
+                        delete qe.combo.lastQuery;
+                    }
+            	},
+            store: Ext.create('Ext.data.JsonStore',  {
+                root: 'results',
+                totalProperty: 'total',
+                remoteSort: true,
+        		id: 'id',					
+                fields: [
+        			{name: 'operationName', type: 'string', mapping: 'operationName'}
+                ],
+
+                // load using script tags for cross domain, if the data in on the same domain as
+                // this page, an HttpProxy would be better
+                proxy: Ext.create('Ext.data.HttpProxy',   {
+                    url: 'operation.do?method=getOperationNameList',
+                    method: 'POST'
+                })
+            }),
+            allowBlank:true,
+            displayField:'operationName',
+            typeAhead: true,
+            queryMode: 'remote',
+            triggerAction: 'all',
+            emptyText:'Select an Operation Name...',
+            selectOnFocus:true        
+        }),new Ext.form.field.ComboBox({
+        				id:'scheduledTasksStatusCombox',
+                        fieldLabel: 'Status',
+    	                listeners: {
+	   	                     // delete the previous query in the beforequery event or set
+	   	                     // combo.lastQuery = null (this will reload the store the next time it expands)
+	   	                     'beforequery': function(qe){
+	   	                         delete qe.combo.lastQuery;
+	   	                     }
+   	                 	},
+                        store: Ext.create('Ext.data.JsonStore',  {
+					        root: 'results',
+					        totalProperty: 'total',
+					        remoteSort: true,
+							id: 'id',					
+					        fields: [
+								{name: 'opStatus', type: 'string', mapping: 'opStatus'}
+					        ],
+					
+					        // load using script tags for cross domain, if the data in on the same domain as
+					        // this page, an HttpProxy would be better
+					        proxy: Ext.create('Ext.data.HttpProxy', {
+					            url: 'operation.do?method=getOperationStatusList',
+					            method: 'POST'
+					        })
+                        }),
+                        allowBlank:true,
+                        displayField:'opStatus',
+                        typeAhead: true,
+                        queryMode: 'remote',
+                        triggerAction: 'all',
+                        emptyText:'Select a Status...',
+                        selectOnFocus:true
+                    }),new Ext.form.field.ComboBox({
+        				id:'scheduledTasksDomainCombox',
+                        fieldLabel: 'Domain',
+    	                listeners: {
+	   	                     // delete the previous query in the beforequery event or set
+	   	                     // combo.lastQuery = null (this will reload the store the next time it expands)
+	   	                     'beforequery': function(qe){
+	   	                         delete qe.combo.lastQuery;
+	   	                     }
+  	                 	},
+                        store: Ext.create('Ext.data.JsonStore', {
+					        root: 'results',
+					        totalProperty: 'total',
+					        remoteSort: true,
+							id: 'id',					
+					        fields: [
+								{name: 'opDomain', type: 'string', mapping: 'opDomain'}
+					        ],
+					
+					        // load using script tags for cross domain, if the data in on the same domain as
+					        // this page, an HttpProxy would be better
+					        proxy: Ext.create('Ext.data.HttpProxy', {
+					            url: 'operation.do?method=getDomainList',
+					            method: 'POST'
+					        })
+                        }),
+                        allowBlank:true,
+                        displayField:'opDomain',
+                        typeAhead: true,
+                        queryMode: 'remote',
+                        triggerAction: 'all',
+                        emptyText:'Select a Domain...',
+                        selectOnFocus:true
+                    }),{
+                    	id:'scheduledTasksUserId',
+                        fieldLabel: 'User ID',
+                        name: 'scheduledTasksUserId'
+                    }, {
+                    	id:'scheduledTasksSecurityToken',
+                        fieldLabel: 'Security Token',
+                        name: 'scheduledTasksSecurityToken'
+                    }, {
+                    	id:'scheduledTasksTransactionId',
+                        fieldLabel: 'Scheduled Tasks ID',
+                        name: 'scheduledTasksTransactionId'
+                    },{
+				        id: 'scheduledTasksStartdt',
+				        fieldLabel: 'Start Date',
+				        name: 'startdt',
+				        xtype:'datefield',
+				        vtype: 'daterange',
+				        endDateField: 'scheduledTasksEnddt' // id of the end date field
+				    },{
+				        id: 'scheduledTasksEnddt',
+				        fieldLabel: 'End Date',
+				        name: 'enddt',
+				        xtype:'datefield',
+				        vtype: 'daterange',
+				        startDateField: 'scheduledTasksStartdt' // id of the start date field
+      	}],
+        buttons: [{
+ 	    		id:'scheduledTasksLogSearch',
+	    		text:'Search',
+	    		type:'submit',
+	    		handler:function (){
+	    			Ext.Msg.wait('loading'); 
+	    			scheduledTasksLogStoreList.load({
+	    				params:{start:startIndexList, limit:topNum},
+	    				callback:function(r,options,success){
+		    				if(success){
+				    			scheduledTasksLogStore.load({
+				    				params:{start:startIndex, limit:rowNum},
+				    				callback:function(r,options,success){
+					    				if(success){
+					    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 	    				
+					    					Ext.getCmp('scheduledTasksLogSearchWin').hide('scheduledTasksLogPortlet');	    				
+					    				}else{
+					    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+											Ext.Ajax.request({
+												url:'operation.do?method=getTaskLogList',
+												success:function(response,options){						
+													var rsp = response.responseText;							
+								            		Ext.Msg.alert('Message', rsp);	        		
+												},		
+												failure:function(){
+													Ext.Msg.alert('Message', "Fail to access database.");												
+												}
+											})
+					    				}
+				    				}
+				    			});
+		    				}else{
+		    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+								Ext.Ajax.request({
+									url:'operation.do?method=getTaskLogList',
+									success:function(response,options){						
+										var rsp = response.responseText;							
+					            		Ext.Msg.alert('Message', rsp);	        		
+									},		
+									failure:function(){
+										Ext.Msg.alert('Message', "Fail to access database.");												
+									}
+								})
+		    				}
+	    				}
+	    			});
+				}
+        }]
+    });
+	    
+    // create the Data Store of List
+    var scheduledTasksLogStoreList = new Ext.data.JsonStore({
+    	storeId:'scheduledTasksLogStoreList',
+        root: 'results',
+        totalProperty: 'total',
+        id: 'gridId',
+        remoteSort: true,
+        baseParams:scheduledTasksLogParams,
+        listeners: {
+     		'beforeload':function(myStore,myOption){
+    			scheduledTasksLogParams.opName=Ext.getCmp('scheduledTasksNameCombox').getValue();
+    			scheduledTasksLogParams.opType=operationTypeData[0];
+    			scheduledTasksLogParams.opWebservice='';
+    			scheduledTasksLogParams.opStatus=Ext.getCmp('scheduledTasksStatusCombox').getValue();
+    			scheduledTasksLogParams.opDomain=Ext.getCmp('scheduledTasksDomainCombox').getValue();
+    			scheduledTasksLogParams.opUserId=Ext.getCmp('scheduledTasksUserId').getValue();
+    			scheduledTasksLogParams.opSecurityToken=Ext.getCmp('scheduledTasksSecurityToken').getValue();
+    			scheduledTasksLogParams.opTransactionId=Ext.getCmp('scheduledTasksTransactionId').getValue();
+    			scheduledTasksLogParams.startdt=Ext.getCmp('scheduledTasksStartdt').getValue();
+    			scheduledTasksLogParams.enddt=Ext.getCmp('scheduledTasksEnddt').getValue();
+    			scheduledTasksLogParams.ver=version;
+
+    			this.baseParams=scheduledTasksLogParams;	    			
+			}
+        }, 	                    
+        fields: [
+	        {name: 'operationLogId', type: 'string', mapping: 'operationLogId'},
+	        {name: 'operationName', type: 'string', mapping: 'operationName'},
+			{name: 'operationType', type: 'string', mapping: 'operationType'},
+	        {name: 'webServiceName', type: 'string', mapping: 'webServiceName'},
+			{name: 'domainName', type: 'string', mapping: 'domainName'},
+	        {name: 'userName', type: 'string', mapping: 'userName'},
+			{name: 'token', type: 'string', mapping: 'token'},
+			{name: 'transId', type: 'string', mapping: 'transId'},
+	        {name: 'operationLogStatusCD', type: 'string', mapping: 'operationLogStatusCD'},
+			{name: 'startDate', type: 'string', mapping: 'startDate'},
+			{name: 'endDate', type: 'string', mapping: 'endDate'}
+        ],
+
+        // load using script tags for cross domain, if the data in on the same domain as
+        // this page, an HttpProxy would be better
+        proxy: Ext.create('Ext.data.HttpProxy',  {
+            url: 'operation.do?method=getTaskLogList',
+            timeout: gridTimeout,
+            method: 'POST'
+        }),
+        sortOnLoad: true,
+        sorters: { property: 'operationLogId', direction : 'DESC' }
+    });
+//    scheduledTasksLogStoreList.setDefaultSort('operationLogId', 'desc');
+
+
+    // create the Data Store
+    var scheduledTasksLogStore = new Ext.data.JsonStore({
+    	storeId:'scheduledTasksLogStore',
+        root: 'results',
+        totalProperty: 'total',
+        id: 'gridId',
+        remoteSort: true,
+        baseParams:scheduledTasksLogParams,
+        listeners: {
+     		'beforeload':function(myStore,myOption){
+    			scheduledTasksLogParams.opName=Ext.getCmp('scheduledTasksNameCombox').getValue();
+    			scheduledTasksLogParams.opType=operationTypeData[0];
+    			scheduledTasksLogParams.opWebservice='';
+    			scheduledTasksLogParams.opStatus=Ext.getCmp('scheduledTasksStatusCombox').getValue();
+    			scheduledTasksLogParams.opDomain=Ext.getCmp('scheduledTasksDomainCombox').getValue();
+    			scheduledTasksLogParams.opUserId=Ext.getCmp('scheduledTasksUserId').getValue();
+    			scheduledTasksLogParams.opSecurityToken=Ext.getCmp('scheduledTasksSecurityToken').getValue();
+    			scheduledTasksLogParams.opTransactionId=Ext.getCmp('scheduledTasksTransactionId').getValue();
+    			scheduledTasksLogParams.startdt=Ext.getCmp('scheduledTasksStartdt').getValue();
+    			scheduledTasksLogParams.enddt=Ext.getCmp('scheduledTasksEnddt').getValue();
+    			scheduledTasksLogParams.ver=version;
+
+    			this.baseParams=scheduledTasksLogParams;	    			
+			}
+        }, 	                    
+        fields: [
+	        {name: 'operationLogId', type: 'string', mapping: 'operationLogId'},
+	        {name: 'operationName', type: 'string', mapping: 'operationName'},
+			{name: 'operationType', type: 'string', mapping: 'operationType'},
+	        {name: 'webServiceName', type: 'string', mapping: 'webServiceName'},
+			{name: 'domainName', type: 'string', mapping: 'domainName'},
+	        {name: 'userName', type: 'string', mapping: 'userName'},
+			{name: 'token', type: 'string', mapping: 'token'},
+			{name: 'transId', type: 'string', mapping: 'transId'},
+	        {name: 'operationLogStatusCD', type: 'string', mapping: 'operationLogStatusCD'},
+			{name: 'startDate', type: 'string', mapping: 'startDate'},
+			{name: 'endDate', type: 'string', mapping: 'endDate'}
+        ],
+
+        // load using script tags for cross domain, if the data in on the same domain as
+        // this page, an HttpProxy would be better
+        proxy: Ext.create('Ext.data.HttpProxy',  {
+            url: 'operation.do?method=getTaskLogList',
+            timeout: gridTimeout,
+            method: 'POST'
+        }),
+        sortOnLoad: true,
+        sorters: { property: 'operationLogId', direction : 'DESC' }
+    });
+//   scheduledTasksLogStore.setDefaultSort('operationLogId', 'desc');
+
+    function renderScheduledTasksNameSmall(value, p, record){
+        return String.format(
+                '<table style="color:#0055A6;background-color:#FFFFCC;"><tr><td width="8%"><a href="#" onclick="openScheduledTasksLogDetailWin({0})"><img src="../../images/PnlIco/pnlico_view.gif" ext:qtip="Click to view {1}"/></a></td><td>{1}</td></table>'
+                +'<span style="color:#000000;">Domain Name:</span> <span style="color:green;">{2}</span><br/>'
+                +'<span style="color:#000000;">Status:</span> <span style="color:green;">{3}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#000000;">Date Finished:</span> <span style="color:green;">{4}</span>',
+                record.get('operationLogId'), record.get('operationName'),record.get('domainName'),record.get('operationLogStatusCD'),record.get('endDate'));
+    }
+    
+    function renderScheduledTasksNameLarge(value, p, record){
+        return String.format(
+                '<span style="color:#0055A6;"><a href="#" onclick="openScheduledTasksLogDetailWin({0})">{1}</a></span>',
+                record.get('operationLogId'), record.get('operationName'));
+    }
+    
+
+    var ScheduledTasksLogGridSmall = Ext.create('Ext.grid.GridPanel', {
+		id: 'ScheduledTasksLogGridSmall',
+        store: scheduledTasksLogStoreList,
+        trackMouseOver:true,
+        disableSelection:false,
+        autoScroll:true,
+        height:240,
+        border:false,
+        autoExpandColumn : 'searchHeader',
+
+        // grid columns
+        columns:[{
+        	id:'searchHeader',
+            header: '&nbsp;',
+	        dataIndex: 'operation_Name',
+            renderer: renderScheduledTasksNameSmall,
+			sortable: true
+        }],
+
+        // paging bar on the bottom to control the page size
+        bbar: new Ext.PagingToolbar({
+	    	id:'scheduledTasksLogPagingBarSmall',
+	        pageSize: topNum,
+	        store: scheduledTasksLogStoreList,
+	        hidden:false
+    	})
+    });
+
+    var ScheduledTasksLogGridLarge = new Ext.grid.GridPanel({
+		id: 'ScheduledTasksLogGridLarge',
+        store: scheduledTasksLogStore,
+        trackMouseOver:true,
+        disableSelection:false,
+        autoScroll:true,
+        height:240,
+
+        // grid columns
+        columns:[{
+        	id:'operation_Name',
+            header: 'Operation',
+	        dataIndex: 'operationName',
+            renderer: renderScheduledTasksNameLarge,
+			sortable: true
+        },{
+        	id:'domain_Name',
+            header: 'Domain',
+	        dataIndex: 'domainName',
+			sortable: true
+        },{
+        	id:'trans_Id',
+            header: 'Transaction',
+	        dataIndex: 'transId',
+			sortable: true
+        },{
+        	id:'operationLog_StatusCD',
+            header: 'Status',
+	        dataIndex: 'operationLogStatusCD',
+			sortable: true
+        },{
+        	id:'operation_Type',
+            header: 'Operation Type',
+	        dataIndex: 'operationType',
+			sortable: true
+        },{
+        	id:'startDate',
+            header: 'Start',
+	        dataIndex: 'startDate',
+	        width: 110,
+			sortable: true
+        },{
+        	id:'endDate',
+            header: 'End',
+	        dataIndex: 'endDate',
+	        width: 110,
+			sortable: true
+        }],
+
+        // paging bar on the bottom
+        bbar: new Ext.PagingToolbar({
+	    	id:'scheduledTasksLogPagingBarLarge',
+	        pageSize: rowNum,
+	        store: scheduledTasksLogStore,
+	        displayInfo: true,
+	        displayMsg: 'Total:{2}',
+	        emptyMsg: "Total:0"
+	    })
+    });
+
+    var ScheduledTasksLogGridSeperate = new Ext.grid.GridPanel({
+		id: 'ScheduledTasksLogGridSeperate',
+        store: scheduledTasksLogStore,
+        trackMouseOver:true,
+        disableSelection:false,
+        autoScroll:true,
+
+        // grid columns
+        columns:[{
+        	id:'operation_Name',
+            header: 'Operation',
+	        dataIndex: 'operationName',
+	        width: 100,
+            renderer: renderScheduledTasksNameLarge,
+			sortable: true
+        },{
+        	id:'domain_Name',
+            header: 'Domain',
+	        dataIndex: 'domainName',
+	        width: 100,
+			sortable: true
+        },{
+        	id:'trans_Id',
+            header: 'Transaction',
+	        dataIndex: 'transId',
+	        width: 100,
+			sortable: true
+        },{
+        	id:'operationLog_StatusCD',
+            header: 'Status',
+	        dataIndex: 'operationLogStatusCD',
+	        width: 70,
+			sortable: true
+        },{
+        	id:'operation_Type',
+            header: 'Operation Type',
+	        dataIndex: 'operationType',
+	        width: 106,
+			sortable: true
+        },{
+        	id:'startDate',
+            header: 'Start',
+	        dataIndex: 'startDate',
+	        width: 110,
+			sortable: true
+        },{
+        	id:'endDate',
+            header: 'End',
+	        dataIndex: 'endDate',
+	        width: 110,
+			sortable: true
+        }],
+
+        // paging bar on the bottom
+        bbar: new Ext.PagingToolbar({
+	    	id:'scheduledTasksLogPagingBarSeperate',
+	        pageSize: rowNum,
+	        store: scheduledTasksLogStore,
+	        displayInfo: true,
+	        displayMsg: 'Total:{0}-{1} of {2}',
+	        emptyMsg: "Total:0"
+	    })
+    });
+
+    // base parameter
+    var scheduledTasksLogParams = {opName:Ext.getCmp('scheduledTasksNameCombox').getValue(),
+	    				opType:operationTypeData[0],opWebservice:'',
+	    				opStatus:Ext.getCmp('scheduledTasksStatusCombox').getValue(),opDomain:Ext.getCmp('scheduledTasksDomainCombox').getValue(),
+	    				opUserId:Ext.getCmp('scheduledTasksUserId').getValue(),opSecurityToken:Ext.getCmp('scheduledTasksSecurityToken').getValue(),
+	    				opTransactionId:Ext.getCmp('scheduledTasksTransactionId').getValue(),
+	    				startdt: Ext.getCmp('scheduledTasksStartdt').getValue(),
+	    				enddt: Ext.getCmp('scheduledTasksEnddt').getValue(),
+	    				ver:version};
+
+    // trigger the list data store  load
+    var loadScheduledTasksLogStoreList=function(){
+    	scheduledTasksLogStoreList.load({params:{start:startIndexList, limit:topNum},
+	    				callback:function(r,options,success){
+		    				if(success ){
+		    				// if success and return record number bigger than switch number then load Grid	    				
+							//	loadScheduledTasksLogStore();
+		    				}else{
+		    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+								Ext.Ajax.request({
+									url:'operation.do?method=getTaskLogList',
+									success:function(response,options){						
+										var rsp = response.responseText;							
+					            		Ext.Msg.alert('Message', rsp);	        		
+									},		
+									failure:function(){
+										Ext.Msg.alert('Message', "Fail to access database.");												
+									}
+								})
+		    				}
+	    				}
+	    });
+    }
+    
+    // trigger the grid data store load
+    var loadScheduledTasksLogStore=function(){
+    	scheduledTasksLogStore.load({params:{start:startIndex, limit:rowNum},
+	    				callback:function(r,options,success){
+		    				if(success){
+		    				// switch list and grid	    				
+								if(r.length > pageSize){
+									Ext.getCmp('ScheduledTasksLogGridSmall').hide();
+									Ext.getCmp('ScheduledTasksLogGridLarge').show();
+									Ext.getCmp('scheduledTasksLogPortlet').remove(Ext.getCmp('ScheduledTasksLogGridSmall'),false);
+									Ext.getCmp('scheduledTasksLogPortlet').add(Ext.getCmp('ScheduledTasksLogGridLarge'));
+									scheduledTasksLogGridShow = 'large';
+								    // trigger the data store load
+								    //loadScheduledTasksLogStore();
+								    Ext.getCmp('viewport').doLayout();
+								}
+		    				}else{
+		    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+								Ext.Ajax.request({
+									url:'operation.do?method=getTaskLogList',
+									success:function(response,options){						
+										var rsp = response.responseText;							
+					            		Ext.Msg.alert('Message', rsp);	        		
+									},		
+									failure:function(){
+										Ext.Msg.alert('Message', "Fail to access database.");												
+									}
+								})
+		    				}
+	    				}
+	    });
+    }
+    
+    // function to open a detail window
+    
+   var openScheduledTasksLogDetailWin=function(scheduledTasksLogId){
+		if(!scheduledTasksLogDetailWin){
+			scheduledTasksLogIframe = new Ext.ux.IFrameComponent({  
+				id : 'scheduledTasksLogIframe',  
+				url : '/Node.Administration/Page/NodeMonitoring/TransactionView.do?opLogID='+scheduledTasksLogId
+			});		
+			scheduledTasksLogDetailWin = new Ext.Window({
+				id:'scheduledTasksLogDetailWin',
+				layout      : 'fit',
+				width       : 800,
+				height      : 530,
+				minWidth 	: 300,
+				miniHeight	: 300,
+				closeAction :'hide',
+				maximizable:true,
+				autoScroll:true,
+				modal:false,
+				plain       : true,
+				items : [scheduledTasksLogIframe]
+			});
+		}else{
+		    // define initial form submit 		    
+			/*var scheduledTasksLogDetailForm = new Ext.form.BasicForm(
+						'scheduledTasksLogDetailForm',
+					{	method:'post',
+						url:'operation.do?method=delegateScheduledTasksView&opLogID='+scheduledTasksLogId
+					});
+			scheduledTasksLogDetailForm.submit();*/
+			// refresh data
+			Ext.get('iframe-scheduledTasksLogIframe').dom.src='/Node.Administration/Page/NodeMonitoring/TransactionView.do?opLogID='+scheduledTasksLogId;
+		}
+		scheduledTasksLogDetailWin.show('scheduledTasksLogPortlet');
+
+   };
+

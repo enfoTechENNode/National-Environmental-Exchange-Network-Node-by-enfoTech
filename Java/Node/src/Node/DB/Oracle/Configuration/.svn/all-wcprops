@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle/Configuration
+END
+GetServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/DB/Oracle/Configuration/GetServices.java
+END
+OperationMgr.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/62/trunk/Java/Node/src/Node/DB/Oracle/Configuration/OperationMgr.java
+END
+TaskConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle/Configuration/TaskConfiguration.java
+END
+SystemConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Oracle/Configuration/SystemConfiguration.java
+END
+ConfigurationMgr.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Oracle/Configuration/ConfigurationMgr.java
+END

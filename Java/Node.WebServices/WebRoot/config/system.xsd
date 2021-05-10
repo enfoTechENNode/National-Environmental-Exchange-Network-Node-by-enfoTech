@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Lih-Farn Soong (enfoTech & Consulting, Inc.) -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Configuration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Application">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NodeStatus">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Status" type="Exists"/>
+										<xs:element name="Message" type="Exists"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="LoggingLevel">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Node.Administration" type="LogLevel"/>
+										<xs:element name="Node.Client" type="LogLevel"/>
+										<xs:element name="Node.Task" type="LogLevel"/>
+										<xs:element name="Node.WebServices" type="LogLevel"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ProxySettings" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Credentials" type="Credentials"/>
+						</xs:sequence>
+						<xs:attribute name="status" type="Status" use="required"/>
+						<xs:attribute name="host" type="Exists" use="required"/>
+						<xs:attribute name="port" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NodeSettings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NodeURL" type="Exists"/>
+							<xs:element name="TokenLifeTime">
+								<xs:complexType>
+									<xs:attribute name="Enabled" type="xs:boolean" use="required"/>
+									<xs:attribute name="time" type="xs:int" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NAAS">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="URL" type="Exists"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NodeAdministrator">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Name" type="Exists"/>
+										<xs:element name="Credentials" type="Credentials"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Query" type="Exists" minOccurs="0" maxOccurs="unbounded" />
+						</xs:sequence>
+						<xs:attribute name="name" type="Exists" use="required"/>
+						<xs:attribute name="status" type="Status" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ClientSettings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="WebServicesURL" type="Exists" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AutoMail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EmailServer" minOccurs="2" maxOccurs="2">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Sender">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Name" type="Exists"/>
+													<xs:element name="EmailAddress" type="Exists"/>
+													<xs:element name="Credentials" type="Credentials" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required"/>
+									<xs:attribute name="status" type="Status" use="required"/>
+									<xs:attribute name="host" use="required"/>
+									<xs:attribute name="port" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="EmailTemplate" minOccurs="2" maxOccurs="2">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Subject" type="Exists"/>
+										<xs:element name="cc" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="to" type="Exists" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="bcc" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="to" type="Exists" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required"/>
+									<xs:attribute name="status" type="Status" use="required"/>
+									<xs:attribute name="server" use="required"/>
+									<xs:attribute name="template" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="LogLevel">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEBUG"/>
+			<xs:enumeration value="INFO"/>
+			<xs:enumeration value="WARN"/>
+			<xs:enumeration value="ERROR"/>
+			<xs:enumeration value="FATAL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Credentials">
+		<xs:sequence>
+			<xs:element name="UserID" type="Exists"/>
+			<xs:element name="Password" type="Exists"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Exists">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Status">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="I"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

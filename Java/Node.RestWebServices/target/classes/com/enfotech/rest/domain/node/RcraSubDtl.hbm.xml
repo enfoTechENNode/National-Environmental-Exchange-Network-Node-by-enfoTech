@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 3, 2013 4:48:48 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.enfotech.rest.domain.node.RcraSubDtl" table="RCRA_SUB_DTL">
+  <composite-id class="com.enfotech.rest.domain.node.RcraSubDtlId"
+   mapped="false" name="id" unsaved-value="undefined">
+   <key-property name="rcraSubId" type="big_decimal">
+    <column name="RCRA_SUB_ID" precision="22" scale="0"/>
+   </key-property>
+   <key-property name="facEpaId" type="string">
+    <column length="200" name="FAC_EPA_ID"/>
+   </key-property>
+  </composite-id>
+  <many-to-one class="com.enfotech.rest.domain.node.RcraSub" fetch="select"
+   insert="false" name="rcraSub" update="false">
+   <column name="RCRA_SUB_ID" not-null="true" precision="22" scale="0"/>
+  </many-to-one>
+ </class>
+</hibernate-mapping>

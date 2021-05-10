@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Domains.Operation" table="NODE_OPERATION">
+
+        <id name="operationId" column="OPERATION_ID" type="long" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+	    <property name="operationName" type="string" >
+	        <column name="OPERATION_NAME" length="50" not-null="false"/>
+	    </property>
+	    <property name="operationDesc" type="string" >
+	        <column name="OPERATION_DESC" length="255" not-null="false"/>
+	    </property>
+	    <property name="operationType" type="string" >
+	        <column name="OPERATION_TYPE" length="25" not-null="false"/>
+	    </property>
+	    <property name="operationConfig" type="string" >
+	        <column name="OPERATION_CONFIG" length="500" not-null="false"/>
+	    </property>
+	    <property name="operationStatusCD" type="string" >
+	        <column name="OPERATION_STATUS_CD" length="500" not-null="false"/>
+	    </property>
+	    <property name="operationStatusMSG" type="string" >
+	        <column name="OPERATION_STATUS_MSG" length="500" not-null="false"/>
+	    </property>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="false"/>
+	    </property>
+	    <property name="createdDate" type="date" >
+	        <column name="CREATED_DTTM" not-null="false"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="50" not-null="false"/>
+	    </property>
+	    <property name="updatedDate" type="date" >
+	        <column name="UPDATED_DTTM" not-null="false"/>
+	    </property>
+	    <property name="versionNo" type="string" >
+	        <column name="VERSION_NO" length="10" not-null="true"/>
+	    </property>
+	    
+	    <set 
+	        name="operationLogs"
+	        cascade="all-delete-orphan" 
+	        inverse="true">
+	        
+	        <key column="OPERATION_ID" />
+	        <one-to-many class="Node2.model.Domains.OperationLog" />
+     	</set>   
+	    
+	    <many-to-one
+        name="domain"
+        column="DOMAIN_ID"
+        class="Node2.model.Domains.Domain"
+        cascade="save-update"
+        not-null="false" />
+
+	    <many-to-one
+        name="webservice"
+        column="WEB_SERVICE_ID"
+        class="Node2.model.Domains.Webservice"
+        cascade="save-update"
+        not-null="false" />	    
+	    
+    </class>
+</hibernate-mapping>

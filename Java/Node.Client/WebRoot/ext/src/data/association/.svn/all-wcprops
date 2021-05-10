@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/data/association
+END
+Association.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/data/association/Association.js
+END
+BelongsTo.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/data/association/BelongsTo.js
+END
+HasOne.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/data/association/HasOne.js
+END
+HasMany.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/79/trunk/Java/Node.Client/WebRoot/ext/src/data/association/HasMany.js
+END

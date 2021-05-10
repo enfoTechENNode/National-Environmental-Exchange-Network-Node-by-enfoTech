@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Node.WebServices">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <property name="context-root" value="Node.WebServices"/>
+        <property name="java-output-path" value="/Node.WebServices/build/classes"/>
+    </wb-module>
+</project-modules>

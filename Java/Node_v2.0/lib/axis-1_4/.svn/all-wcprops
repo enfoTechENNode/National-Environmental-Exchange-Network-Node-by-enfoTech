@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/axis-1_4
+END
+axis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/axis-1_4/axis.jar
+END
+axis-ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/axis-1_4/axis-ant.jar
+END
+jaxrpc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/axis-1_4/jaxrpc.jar
+END
+commons-discovery-0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/axis-1_4/commons-discovery-0.2.jar
+END
+saaj.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/axis-1_4/saaj.jar
+END

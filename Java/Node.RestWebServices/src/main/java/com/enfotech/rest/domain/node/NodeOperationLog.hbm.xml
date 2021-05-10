@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeOperationLog" table="NODE_OPERATION_LOG">
+        <id name="operationLogId" type="long">
+            <column name="OPERATION_LOG_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="nodeOperation" class="com.enfotech.rest.domain.node.NodeOperation" fetch="select">
+            <column name="OPERATION_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="transId" type="string">
+            <column name="TRANS_ID" length="50" />
+        </property>
+        <property name="userName" type="string">
+            <column name="USER_NAME" length="50" />
+        </property>
+        <property name="requestorIp" type="string">
+            <column name="REQUESTOR_IP" length="30" />
+        </property>
+        <property name="suppliedTransId" type="string">
+            <column name="SUPPLIED_TRANS_ID" length="50" />
+        </property>
+        <property name="token" type="string">
+            <column name="TOKEN" length="200" />
+        </property>
+        <property name="nodeAddress" type="string">
+            <column name="NODE_ADDRESS" length="100" />
+        </property>
+        <property name="returnUrl" type="string">
+            <column name="RETURN_URL" length="100" />
+        </property>
+        <property name="serviceType" type="string">
+            <column name="SERVICE_TYPE" length="50" />
+        </property>
+        <property name="startDttm" type="date">
+            <column name="START_DTTM" length="7" />
+        </property>
+        <property name="endDttm" type="date">
+            <column name="END_DTTM" length="7" />
+        </property>
+        <property name="hostName" type="string">
+            <column name="HOST_NAME" length="40" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" />
+        </property>
+        <set name="nodeOperationLogStatuses" table="NODE_OPERATION_LOG_STATUS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OPERATION_LOG_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.NodeOperationLogStatus" />
+        </set>
+        <set name="nodeOperationLogParameters" table="NODE_OPERATION_LOG_PARAMETER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OPERATION_LOG_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.NodeOperationLogParameter" />
+        </set>
+    </class>
+</hibernate-mapping>

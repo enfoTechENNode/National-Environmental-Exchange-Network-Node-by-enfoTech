@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Types/UserMgr
+END
+UserType.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Types/UserMgr/UserType.java
+END
+PasswordType.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Types/UserMgr/PasswordType.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Types/UserMgr/UserInfo.java
+END
+StateId.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/NAAS/Types/UserMgr/StateId.java
+END

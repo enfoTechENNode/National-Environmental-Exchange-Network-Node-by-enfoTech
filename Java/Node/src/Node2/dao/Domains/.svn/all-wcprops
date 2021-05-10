@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/Domains
+END
+WebserviceDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/Domains/WebserviceDAO.java
+END
+OperationDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/Domains/OperationDAO.java
+END
+OperationLogDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/Domains/OperationLogDAO.java
+END
+OperationLogStatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/Domains/OperationLogStatusDAO.java
+END
+DomainDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/Domains/DomainDAO.java
+END

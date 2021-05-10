@@ -1,0 +1,104 @@
+.ntb-dp {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.ntb-dp table {
+    background-color: #9ABFF5;
+    color: #293A4B;
+    text-align: center;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ntb-dp-monthheader th{
+    border-bottom: 1px solid #84A4D3;
+}
+
+a.ntb-dp-month, a.ntb-dp-year {
+    text-decoration: none;
+    color: #293A4B;
+    padding: 2px;
+}
+
+a.ntb-dp-prevmonth {
+    color: #293A4B;
+    text-decoration: none;
+
+}
+
+a.ntb-dp-nextmonth {
+    color: #293A4B;
+    text-decoration: none;
+}
+
+/*
+a.ntb-dp-month:hover, a.ntb-dp-year:hover {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D2D2D2 #293A4B #293A4B #D2D2D2;
+    background-color: #C3C3C3;
+    padding: 1px; 
+}
+
+a.ntb-dp-month:active, a.ntb-dp-year:active {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #293A4B #D2D2D2 #D2D2D2 #293A4B;
+    background-color: #C3C3C3;
+    padding: 1px; 
+}
+*/
+
+.ntb-dp-dayheader {
+    border-top: 1px solid #AEC9F1;
+    border-bottom: 1px solid #AEC9F1;
+}
+
+.ntb-dp-day {
+    color: white;
+    border-left: 1px solid #AEC9F1;
+    border-right: 1px solid #7997C1;
+    background-color: #6782A8;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;    
+}
+
+
+.ntb-dp table tr {
+    height:12%;
+}
+
+.ntb-dp-lastmonth {
+}
+
+.ntb-dp-nextmonth {
+}
+
+.ntb-dp-thismonth {
+    background-color: #7591BC;
+}
+
+.ntb-dp .ntb-dp-currentday {
+    background-color: white;
+    text-decoration: underline;
+    color: #293A4B;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+    .nitobi-hide {
+	display:none;
+}
+
+.ntb-effects-small {
+	clear:both;
+	display:block;
+	float:none;
+	height:0px;
+	//height:1px;
+	overflow:hidden;
+	width:auto;
+}

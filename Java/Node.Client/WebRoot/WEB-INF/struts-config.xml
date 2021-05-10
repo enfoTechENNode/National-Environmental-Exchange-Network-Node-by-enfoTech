@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="LeftBean" type="Node.Web.Client.Bean.Entry.LeftBean" />
+    <form-bean name="AuthenticateBean" type="Node.Web.Client.Bean.WebMethods.AuthenticateBean" />
+    <form-bean name="NodePingBean" type="Node.Web.Client.Bean.WebMethods.NodePingBean" />
+    <form-bean name="GetServicesBean" type="Node.Web.Client.Bean.WebMethods.GetServicesBean" />
+    <form-bean name="SubmitBean" type="Node.Web.Client.Bean.WebMethods.SubmitBean" />
+    <form-bean name="DownloadBean" type="Node.Web.Client.Bean.WebMethods.DownloadBean" />
+    <form-bean name="QueryBean" type="Node.Web.Client.Bean.WebMethods.QueryBean" />
+    <form-bean name="SolicitBean" type="Node.Web.Client.Bean.WebMethods.SolicitBean" />
+    <form-bean name="ExecuteBean" type="Node.Web.Client.Bean.WebMethods.ExecuteBean" />
+    <form-bean name="GetStatusBean" type="Node.Web.Client.Bean.WebMethods.GetStatusBean" />
+    <form-bean name="NotifyBean" type="Node.Web.Client.Bean.WebMethods.NotifyBean" />
+    <form-bean name="DownloadDocBean" type="Node.Web.Client.Bean.WebMethods.Download.DownloadBean" />
+    <form-bean name="DownloadStreamBean" type="Node.Web.Client.Bean.WebMethods.Download.DownloadStreamBean" />
+    <form-bean name="XMLBuilderBean" type="Node.Web.Client.Bean.Utility.XMLBuilderBean" />
+  </form-beans>
+  <action-mappings>
+    <action path="/Page/Entry/Left" type="Node.Web.Client.Action.Entry.LeftAction" name="LeftBean" scope="request">
+      <forward name="left" path="/Page/Entry/Left.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Authenticate" type="Node.Web.Client.Action.WebMethods.AuthenticateAction" name="AuthenticateBean" scope="request">
+      <forward name="authenticate" path="/Page/WebMethods/Authenticate.jsp" />
+      <forward name="authenticateV2" path="/Page/WebMethods/AuthenticateV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/NodePing" type="Node.Web.Client.Action.WebMethods.NodePingAction" name="NodePingBean" scope="request">
+      <forward name="nodeping" path="/Page/WebMethods/NodePing.jsp" />
+      <forward name="nodepingV2" path="/Page/WebMethods/NodePingV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/GetServices" type="Node.Web.Client.Action.WebMethods.GetServicesAction" name="GetServicesBean" scope="request">
+      <forward name="getservices" path="/Page/WebMethods/GetServices.jsp" />
+      <forward name="getservicesV2" path="/Page/WebMethods/GetServicesV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Submit" type="Node.Web.Client.Action.WebMethods.SubmitAction" name="SubmitBean" scope="request">
+      <forward name="submit" path="/Page/WebMethods/Submit.jsp" />
+      <forward name="submitV2" path="/Page/WebMethods/SubmitV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Download" type="Node.Web.Client.Action.WebMethods.DownloadAction" name="DownloadBean" scope="session">
+      <forward name="download" path="/Page/WebMethods/Download.jsp" />
+      <forward name="downloadV2" path="/Page/WebMethods/DownloadV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Query" type="Node.Web.Client.Action.WebMethods.QueryAction" name="QueryBean" scope="session">
+      <forward name="query" path="/Page/WebMethods/Query.jsp" />
+      <forward name="queryV2" path="/Page/WebMethods/QueryV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Solicit" type="Node.Web.Client.Action.WebMethods.SolicitAction" name="SolicitBean" scope="session">
+      <forward name="solicit" path="/Page/WebMethods/Solicit.jsp" />
+      <forward name="solicitV2" path="/Page/WebMethods/SolicitV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Execute" type="Node.Web.Client.Action.WebMethods.ExecuteAction" name="ExecuteBean" scope="session">
+      <forward name="execute" path="/Page/WebMethods/Execute.jsp" />
+      <forward name="executeV2" path="/Page/WebMethods/ExecuteV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/GetStatus" type="Node.Web.Client.Action.WebMethods.GetStatusAction" name="GetStatusBean" scope="request">
+      <forward name="getstatus" path="/Page/WebMethods/GetStatus.jsp" />
+      <forward name="getstatusV2" path="/Page/WebMethods/GetStatusV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Notify" type="Node.Web.Client.Action.WebMethods.NotifyAction" name="NotifyBean" scope="request">
+      <forward name="notify" path="/Page/WebMethods/Notify.jsp" />
+      <forward name="notifyV2" path="/Page/WebMethods/NotifyV2.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Download/Download" type="Node.Web.Client.Action.WebMethods.Download.DownloadAction" name="DownloadDocBean" scope="request">
+      <forward name="success" path="/Page/WebMethods/Download/Download.jsp" />
+    </action>
+    <action path="/Page/WebMethods/Download/DownloadStream" type="Node.Web.Client.Action.WebMethods.Download.DownloadStreamAction" name="DownloadStreamBean" scope="request">
+      <forward name="success" path="/Page/WebMethods/Download/DownloadStream.jsp" />
+    </action>
+     <action path="/Page/Utility/XMLBuilder" type="Node.Web.Client.Action.Utility.XMLBuilderAction" name="XMLBuilderBean" scope="request">
+      <forward name="success" path="/Page/Utility/XMLBuilder.jsp"/>
+    </action>
+  </action-mappings>
+</struts-config>

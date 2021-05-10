@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/hibernate/Domains
+END
+WebserviceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/hibernate/Domains/WebserviceDAOHibernate.java
+END
+OperationDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/hibernate/Domains/OperationDAOHibernate.java
+END
+OperationLogDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/72/trunk/Java/Node/src/Node2/dao/hibernate/Domains/OperationLogDAOHibernate.java
+END
+OperationLogStatusDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/hibernate/Domains/OperationLogStatusDAOHibernate.java
+END
+DomainDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/dao/hibernate/Domains/DomainDAOHibernate.java
+END

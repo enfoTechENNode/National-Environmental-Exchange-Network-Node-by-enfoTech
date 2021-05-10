@@ -1,0 +1,383 @@
+	
+	// Create search panel
+    var notificationSearch = Ext.create('Ext.FormPanel',{
+        labelWidth: 120, // label settings here cascade unless overridden
+        frame:true,
+        title: 'Search Notifications',
+        bodyStyle:'padding:5px 5px 0',
+        width: 400,
+        defaults: {width: 300},
+        defaultType: 'textfield',
+
+        items: [{
+            	id:'notificationNodeAddress',
+                fieldLabel: 'Node Address',
+                name: 'notificationNodeAddress'
+                },{
+		        id: 'notificationStartdt',
+		        fieldLabel: 'Start Date',
+		        name: 'startdt',
+		        xtype:'datefield',
+		        vtype: 'daterange',
+		        endDateField: 'scheduledTasksEnddt' // id of the end date field
+			    },{
+		        id: 'notificationEnddt',
+		        fieldLabel: 'End Date',
+		        name: 'enddt',
+		        xtype:'datefield',
+		        vtype: 'daterange',
+		        startDateField: 'notificationStartdt' // id of the start date field		        
+			    }],
+        buttons: [{
+ 	    		id:'notificationLogSearch',
+	    		text:'Search',
+	    		type:'submit',
+	    		handler:function (){
+		    		/* check if both start date and end date have been input
+			        if((statdt!='' && enddt=='')||(statdt =='' && enddt!='')){
+			        	Ext.Msg.alert('Message', 'You must input both start date and end date.');
+			        	return;
+			        };*/
+	    			// update store of pagebar
+	    			notificationLogStoreList.on('beforeload',function(){
+		    			notificationLogParams.nodeAddress=Ext.getCmp('notificationNodeAddress').getValue();
+		    			notificationLogParams.startdt=Ext.getCmp('notificationStartdt').getValue();
+		    			notificationLogParams.enddt=Ext.getCmp('notificationEnddt').getValue();
+
+		    			this.baseParams=notificationLogParams;	    			
+	    			});
+	    			notificationLogStore.on('beforeload',function(){
+		    			notificationLogParams.nodeAddress=Ext.getCmp('notificationNodeAddress').getValue();
+		    			notificationLogParams.startdt=Ext.getCmp('notificationStartdt').getValue();
+		    			notificationLogParams.enddt=Ext.getCmp('notificationEnddt').getValue();
+
+		    			this.baseParams=notificationLogParams;	    			
+	    			});
+	    			Ext.Msg.wait('loading'); 
+	    			notificationLogStoreList.load({
+	    				params:{start:startIndexList, limit:topNum},
+	    				callback:function(r,options,success){
+		    				if(success){
+				    			notificationLogStore.load({
+				    				params:{start:startIndex, limit:rowNum},
+				    				callback:function(r,options,success){
+					    				if(success){
+					    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 	    				
+					    					Ext.getCmp('notificationLogSearchWin').hide('notificationLogPortlet');	    				
+					    				}else{
+					    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+											Ext.Ajax.request({
+												url:'operation.do?method=getNotificationLogList',
+												success:function(response,options){						
+													var rsp = response.responseText;							
+								            		Ext.Msg.alert('Message', rsp);	        		
+												},		
+												failure:function(){
+													Ext.Msg.alert('Message', "Fail to access database.");												
+												}
+											})
+					    				}
+				    				}
+				    			});
+		    				}else{
+		    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+								Ext.Ajax.request({
+									url:'operation.do?method=getNotificationLogList',
+									success:function(response,options){						
+										var rsp = response.responseText;							
+					            		Ext.Msg.alert('Message', rsp);	        		
+									},		
+									failure:function(){
+										Ext.Msg.alert('Message', "Fail to access database.");												
+									}
+								})
+		    				}
+	    				}
+	    			});
+				}
+        }]
+    });
+	    
+    // create the Data Store of List
+    var notificationLogStoreList = new Ext.data.JsonStore({
+    	storeId:'notificationLogStoreList',
+        root: 'results',
+        totalProperty: 'total',
+        id: 'gridId',
+        remoteSort: true,
+        baseParams:notificationLogParams,
+        listeners: {
+     		'beforeload':function(myStore,myOption){
+    			notificationLogParams.nodeAddress=Ext.getCmp('notificationNodeAddress').getValue();
+    			notificationLogParams.startdt=Ext.getCmp('notificationStartdt').getValue();
+    			notificationLogParams.enddt=Ext.getCmp('notificationEnddt').getValue();
+    			notificationLogParams.ver=version;
+
+    			this.baseParams=notificationLogParams;	    			
+			}
+        }, 	                    
+        fields: [
+	        {name: 'operationLogId', type: 'string', mapping: 'operationLogId'},
+	        {name: 'nodeAddress', type: 'string', mapping: 'nodeAddress'},
+			{name: 'startDate', type: 'string', mapping: 'startDate'}
+        ],
+
+        // load using script tags for cross domain, if the data in on the same domain as
+        // this page, an HttpProxy would be better
+        proxy: new Ext.data.HttpProxy({
+            url: 'operation.do?method=getNotificationLogList',
+            timeout: gridTimeout,
+            method: 'POST'
+        }),
+        sortOnLoad: true,
+        sorters: { property: 'operationLogId', direction : 'DESC' }
+    });
+//    notificationLogStoreList.setDefaultSort('operationLogId', 'desc');
+
+
+    // create the Data Store
+    var notificationLogStore = new Ext.data.JsonStore({
+    	storeId:'notificationLogStore',
+        root: 'results',
+        totalProperty: 'total',
+        id: 'gridId',
+        remoteSort: true,
+        baseParams:notificationLogParams,
+        listeners: {
+     		'beforeload':function(myStore,myOption){
+    			notificationLogParams.nodeAddress=Ext.getCmp('notificationNodeAddress').getValue();
+    			notificationLogParams.startdt=Ext.getCmp('notificationStartdt').getValue();
+    			notificationLogParams.enddt=Ext.getCmp('notificationEnddt').getValue();
+    			notificationLogParams.ver=version;
+
+    			this.baseParams=notificationLogParams;	    			
+			}
+        }, 	                    
+        fields: [
+	        {name: 'operationLogId', type: 'string', mapping: 'operationLogId'},
+	        {name: 'nodeAddress', type: 'string', mapping: 'nodeAddress'},
+			{name: 'startDate', type: 'string', mapping: 'startDate'}
+        ],
+
+        // load using script tags for cross domain, if the data in on the same domain as
+        // this page, an HttpProxy would be better
+        proxy: new Ext.data.HttpProxy({
+            url: 'operation.do?method=getNotificationLogList',
+            timeout: gridTimeout,
+            method: 'POST'
+        }),
+        sortOnLoad: true,
+        sorters: { property: 'operationLogId', direction : 'DESC' }
+    });
+//    notificationLogStore.setDefaultSort('operationLogId', 'desc');
+
+    function renderNotificationNameSmall(value, p, record){
+        return String.format(
+                '<div style="color:#0055A6;background-color:#FFFFCC;" >Node Address: <a href="#" onclick="openNotificationLogDetailWin({0})">{1}</a></div> <br/>'
+                +'<span style="color:#000000;">Date Created:</span> <span style="color:green;">{2}</span>',
+                record.get('operationLogId'), record.get('nodeAddress'),record.get('startDate'));
+    }
+    
+    function renderNotificationNameLarge(value, p, record){
+        return String.format(
+                '<span style="color:#0055A6;"><a href="#" onclick="openNotificationLogDetailWin({0})">{1}</a></span>',
+                record.get('operationLogId'), record.get('nodeAddress'));
+    }
+    
+
+    var NotificationLogGridSmall = new Ext.grid.GridPanel({
+		id: 'NotificationLogGridSmall',
+        store: notificationLogStoreList,
+        trackMouseOver:true,
+        disableSelection:false,
+        autoScroll:true,
+        height:240,
+        border:false,
+        autoExpandColumn : 'searchHeader',
+
+        // grid columns
+        columns:[{
+        	id:'searchHeader',
+            header: '&nbsp;',
+	        dataIndex: 'operation_Name',
+            renderer: renderNotificationNameSmall,
+			sortable: true
+        }],
+
+        // paging bar on the bottom to control the page size
+        bbar: new Ext.PagingToolbar({
+	    	id:'notificationLogPagingBarSmall',
+	        pageSize: topNum,
+	        store: notificationLogStoreList,
+	        hidden:false
+    	})
+    });
+
+    var NotificationLogGridLarge = new Ext.grid.GridPanel({
+		id: 'NotificationLogGridLarge',
+        store: notificationLogStore,
+        trackMouseOver:true,
+        disableSelection:false,
+        autoScroll:true,
+        height:240,
+
+        // grid columns
+        columns:[{
+        	id:'node_Address',
+            header: 'Node Address',
+	        dataIndex: 'nodeAddress',
+            renderer: renderNotificationNameLarge,
+			sortable: true
+        },{
+        	id:'created_Date',
+            header: 'Date Created',
+	        dataIndex: 'startDate',
+	        width: 110,
+			sortable: true
+        }],
+
+        // paging bar on the bottom
+        bbar: new Ext.PagingToolbar({
+	    	id:'notificationLogPagingBarLarge',
+	        pageSize: rowNum,
+	        store: notificationLogStore,
+	        displayInfo: true,
+	        displayMsg: 'Total:{2}',
+	        emptyMsg: "Total:0"
+	    })
+    });
+
+    var NotificationLogGridSeperate = new Ext.grid.GridPanel({
+		id: 'NotificationLogGridSeperate',
+        store: notificationLogStore,
+        trackMouseOver:true,
+        disableSelection:false,
+        autoScroll:true,
+
+        // grid columns
+        columns:[{
+        	id:'node_Address',
+            header: 'Node Address',
+	        dataIndex: 'nodeAddress',
+            renderer: renderNotificationNameLarge,
+			sortable: true
+        },{
+        	id:'created_Date',
+            header: 'Date Created',
+	        dataIndex: 'startDate',
+	        width: 110,
+			sortable: true
+        }],
+
+        // paging bar on the bottom
+        bbar: new Ext.PagingToolbar({
+	    	id:'notificationLogPagingBarSeperate',
+	        pageSize: rowNum,
+	        store: notificationLogStore,
+	        displayInfo: true,
+	        displayMsg: 'Total:{0}-{1} of {2}',
+	        emptyMsg: "Total:0"
+	    })
+    });
+
+    // base parameter
+    var notificationLogParams = {nodeAddress:Ext.getCmp('notificationNodeAddress').getValue(),
+    					opWebservice:opWebserviceData[5],
+	    				startdt: Ext.getCmp('notificationStartdt').getValue(),
+	    				enddt: Ext.getCmp('notificationEnddt').getValue(),
+	    				ver:version};
+
+    // trigger the list data store  load
+    var loadNotificationLogStoreList=function(){
+    	notificationLogStoreList.load({params:{start:startIndexList, limit:topNum},
+	    				callback:function(r,options,success){
+		    				if(success ){
+		    				// if success and return record number bigger than switch number then load Grid	    				
+							//	loadNotificationLogStore();
+		    				}else{
+		    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+								Ext.Ajax.request({
+									url:'operation.do?method=getNotificationLogList',
+									success:function(response,options){						
+										var rsp = response.responseText;							
+					            		Ext.Msg.alert('Message', rsp);	        		
+									},		
+									failure:function(){
+										Ext.Msg.alert('Message', "Fail to access database.");												
+									}
+								})
+		    				}
+	    				}
+	    });
+    }
+    
+    // trigger the grid data store load
+    var loadNotificationLogStore=function(){
+    	notificationLogStore.load({params:{start:startIndex, limit:rowNum},
+	    				callback:function(r,options,success){
+		    				if(success){
+		    				// switch list and grid	    				
+								if(r.length > pageSize){
+									Ext.getCmp('NotificationLogGridSmall').hide();
+									Ext.getCmp('NotificationLogGridLarge').show();
+									Ext.getCmp('notificationLogPortlet').remove(Ext.getCmp('NotificationLogGridSmall'),false);
+									Ext.getCmp('notificationLogPortlet').add(Ext.getCmp('NotificationLogGridLarge'));
+									notificationLogGridShow = 'large';
+								    // trigger the data store load
+								    //loadNotificationLogStore();
+								    Ext.getCmp('viewport').doLayout();
+								}
+		    				}else{
+		    					if(Ext.Msg.isVisible('loading')) Ext.Msg.hide('loading'); 
+								Ext.Ajax.request({
+									url:'operation.do?method=getNotificationLogList',
+									success:function(response,options){						
+										var rsp = response.responseText;							
+					            		Ext.Msg.alert('Message', rsp);	        		
+									},		
+									failure:function(){
+										Ext.Msg.alert('Message', "Fail to access database.");												
+									}
+								})
+		    				}
+	    				}
+	    });
+    }
+    
+    // function to open a detail window
+    
+   var openNotificationLogDetailWin=function(notificationLogId){
+		if(!notificationLogDetailWin){
+			notificationLogIframe = new Ext.ux.IFrameComponent({  
+				id : 'notificationLogIframe',  
+				url : '/Node.Administration/Page/NodeMonitoring/TransactionView.do?opLogID='+notificationLogId
+			});		
+			notificationLogDetailWin = new Ext.Window({
+				id:'notificationLogDetailWin',
+				layout      : 'fit',
+				width       : 800,
+				height      : 530,
+				minWidth 	: 300,
+				miniHeight	: 300,
+				closeAction :'hide',
+				maximizable:true,
+				autoScroll:true,
+				modal:false,
+				plain       : true,
+				items : [notificationLogIframe]
+			});
+		}else{
+		    // define initial form submit 		    
+			/*var notificationLogDetailForm = new Ext.form.BasicForm(
+						'notificationLogDetailForm',
+					{	method:'post',
+						url:'operation.do?method=delegateNotificationView&opLogID='+notificationLogId
+					});
+			notificationLogDetailForm.submit();*/
+			// refresh data
+			Ext.get('iframe-notificationLogIframe').dom.src='/Node.Administration/Page/NodeMonitoring/TransactionView.do?opLogID='+notificationLogId;
+		}
+		notificationLogDetailWin.show('notificationLogPortlet');
+
+   };
+

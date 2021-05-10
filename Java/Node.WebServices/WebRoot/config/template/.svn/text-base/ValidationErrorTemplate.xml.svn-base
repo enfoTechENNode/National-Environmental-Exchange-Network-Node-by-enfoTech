@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ErrorMessages submissionID="" reportFormID="" labStateIdentifier="">
+	<ErrorMessage>
+		<Value></Value>
+		<XPath fieldName=""></XPath>
+		<Location></Location>
+		<ErrorMessageText></ErrorMessageText>
+		<Category></Category>
+	</ErrorMessage>
+</ErrorMessages>

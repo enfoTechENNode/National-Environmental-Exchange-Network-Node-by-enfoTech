@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeAccountTypeXref" table="NODE_ACCOUNT_TYPE_XREF">
+        <id name="accountTypeXrefId" type="long">
+            <column name="ACCOUNT_TYPE_XREF_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="sysUserInfo" class="com.enfotech.rest.domain.node.SysUserInfo" fetch="select">
+            <column name="USER_ID" precision="10" scale="0" />
+        </many-to-one>
+        <many-to-one name="nodeAccountType" class="com.enfotech.rest.domain.node.NodeAccountType" fetch="select">
+            <column name="ACCOUNT_TYPE_ID" precision="10" scale="0" />
+        </many-to-one>
+        <many-to-one name="nodeDomain" class="com.enfotech.rest.domain.node.NodeDomain" fetch="select">
+            <column name="DOMAIN_ID" precision="10" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

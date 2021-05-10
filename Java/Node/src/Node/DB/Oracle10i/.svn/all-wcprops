@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i
+END
+NodeAccountType.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeAccountType.java
+END
+NodeWebService.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeWebService.java
+END
+NodeUserOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeUserOperation.java
+END
+SequenceNo.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/SequenceNo.java
+END
+NodeOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/DB/Oracle10i/NodeOperation.java
+END
+NodeOperationParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeOperationParameter.java
+END
+NodeOperationLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/DB/Oracle10i/NodeOperationLog.java
+END
+OracleDBAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/OracleDBAdapter.java
+END
+NodeOperationLogStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeOperationLogStatus.java
+END
+NodeDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeDomain.java
+END
+NodeFileCabin.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/57/trunk/Java/Node/src/Node/DB/Oracle10i/NodeFileCabin.java
+END
+NodeUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Oracle10i/NodeUser.java
+END
+SYSUserEmail.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/SYSUserEmail.java
+END
+SYSEmail.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/SYSEmail.java
+END
+NodeAccountTypeXREF.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Oracle10i/NodeAccountTypeXREF.java
+END
+NodeDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Oracle10i/NodeDB.java
+END

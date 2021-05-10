@@ -1,0 +1,384 @@
+/* CSS Document - Nitobi Style */
+.ntbgrid  
+{
+    border-top:#CCCCCC 1px solid;
+    border-left:#CCCCCC 1px solid;
+    border-bottom:#CCCCCC 1px solid;
+    border-right:#CCCCCC 1px solid;
+    font:12px Tahoma,Arial;
+    padding: 0px;
+    margin: 0px;    
+}
+.ntbgridheader
+{
+	background-image:url(column_deadspace.gif);
+}
+.ntbcolumnascending 
+{
+    background-color:#EFEFEF;
+    color:#000000;          
+}
+.ntbcolumndescending 
+{
+    background-color:#EFEFEF;   
+    color:#000000;          
+}
+
+.ntbrowindicator 
+{
+    font:12px Tahoma,Arial;
+    background-position:4px 4px;
+    background-repeat:no-repeat;
+    color:#000000;
+    background-color:#D4D0C8;
+    text-align:right;
+    padding: 0px;
+    margin: 0px;        
+}
+.ntbcolumnindicator {
+    font:12px Tahoma,Arial;
+    padding:2px 2px 2px 2px;
+}
+.ntbcolumnindicatorborder {
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    cursor: hand;
+    text-align:left;
+    background-image:url('column_header.gif');
+	padding-right: 1px;
+	height:auto;
+}
+.ntbcolumnindicatorborderhover {
+    background-image:url('column_header_over.gif');
+}
+.ntbcolumnindicatorborderpressed {
+    padding-left:5px;
+    padding-top:4px;
+    padding-right:12px;
+    border-right:1px solid #808080;
+    border-bottom:1px outset #808080;
+    background-image:url('column_header_pressed.gif');
+}
+.ntbcolumnindicatorborderascending {
+    padding:0px;
+    background-image:url('column_asc.gif');    
+    font:12px Tahoma,Arial;
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    margin: 0px;
+    cursor: hand;
+    text-align:left;
+}
+.ntbcolumnindicatorborderascendingpressed {
+    padding-left:5px;
+    padding-top:4px;
+    padding-right:12px;
+    background-image:url('column_asc_pressed.gif');
+    border-right:1px solid #808080;
+    border-bottom:1px outset #808080;
+}
+.ntbcolumnindicatorborderdescending {
+    padding:0px;
+    background-image:url('column_desc.gif');
+    font:12px Tahoma,Arial;
+    background-position:right bottom;
+    background-repeat:no-repeat;
+    margin: 0px;
+    cursor: hand;
+    text-align:left;
+}
+.ntbcolumnindicatorborderdescendingpressed {
+    background-image:url('column_desc_pressed.gif');
+    border-right:1px solid #808080;
+    border-bottom:1px outset #808080;
+}
+
+.ntbcolumnresizeline 
+{
+    filter:alpha(opacity=50);
+    -moz-opacity:.50;
+    opacity:.50;
+    background-color:gray;
+    width:3px;
+    position:absolute;
+    visibility:hidden;
+    top:0;
+    left:0;
+    cursor:w-resize;
+    z-index:900;
+    font:12px Tahoma,Arial;
+}
+.ntbmousewait
+{
+    filter:alpha(opacity=1);
+    -moz-opacity:.01;
+    background-color:white;
+    position:absolute;
+    display:none;
+    top:0;
+    left:0;
+    width:100;
+    height:100;
+    z-index:900;
+    cursor: wait;
+    font:12px Tahoma,Arial;
+}
+
+.ntbrow {
+    margin:0px;
+    font:12px Tahoma,Arial;
+    color:#333333;
+    cursor:default
+    }
+.ntbrowhover 
+{
+    background-color:#E7E3D6
+}
+.ntbrowselect
+{
+    margin:0px;
+    clear:both;
+}
+
+.ntbcell
+{
+    overflow:hidden;
+    padding-bottom:0px;
+    padding-left:4px;
+    padding-top:4px;
+    padding-right:2px;
+    text-decoration:none;
+    font:12px Arial,Tahoma,Arial;
+    white-space:nowrap;
+    height:100%;
+}
+.ntbcellhover 
+{
+    background-color:#FCD661;
+}
+
+.ntbselectionborder 
+{
+    border:1px solid #F0B604;
+    z-index:1000000;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.ntb-grid-selectionbackground
+{
+    background-color:#F0B604;
+    filter:alpha(opacity=25);
+    -moz-opacity:.25;
+    opacity:.25;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:10;
+}
+
+.ntbloading 
+{
+    background-color:white;
+    filter:alpha(opacity=85);
+    -moz-opacity:.85;
+    opacity:.85;
+    z-index:200000;
+    position:absolute;
+    border:1px solid black;
+}
+.ntbloadingIcon 
+{
+    overflow:hidden;
+    z-index:300000;
+}
+
+.ntbloadingError 
+{
+    background-color:#CCCCCC;
+    filter:alpha(opacity=40);
+    -moz-opacity:.40;
+    opacity:.40;
+    text-align:center;
+    z-index:200000;
+    position:absolute;
+    display:none;
+    text-align:center;
+}
+.ntbloadingErrorIcon
+{
+    position:absolute;
+    display:none;
+    text-align:center;
+    background-image: url('broken.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow:hidden;
+    z-index:300000;
+}
+
+.ntbcheckboxchecked 
+{
+    background-image: url('checked.gif');
+    background-repeat: no-repeat;
+    width: 17px;    
+    height: 15px;   
+}
+.ntbcheckboxunchecked 
+{
+    background-image: url('unchecked.gif');
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 15px;   
+}
+
+.ntbinput , input.ntbinput
+{
+	padding-bottom:0px;
+    padding-left:4px;
+    padding-top:4px;
+    padding-right:2px;
+    border:0px solid black;
+    font:12px Tahoma,Arial;     
+}
+
+.ntbinputborder
+{
+	border: 1px solid black;
+    background-color: white;
+}
+
+.ntblookupoptions {
+	border: 0px solid black;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ntbresizecorner 
+{
+    background-image: url('resizecorner.png');
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 16px;   
+    z-index:3000000;
+    position:absolute;
+}
+
+.ntbresizeindicatorright
+{
+	background-color:blue;
+	position:absolute;
+	bottom:0px;
+	right:-4px;
+	width:4px;
+	height:10px;
+	line-height:1px;
+	overflow:hidden;
+}
+
+.ntbresizeindicatorbottom
+{
+	background-color:blue;
+	position:absolute;
+	bottom:-4px;
+	right:-4px;
+	width:15px;
+	height:4px;
+	line-height:1px;
+	overflow:hidden;
+}
+
+.ntb-grid-selection {
+    background-color:transparent;
+    border: 1px solid black;
+    display:block;
+    height:10px;
+    width:10px;
+    position:absolute;
+    left:-2000px;
+    top:-2000px;
+}
+
+.ntb-grid-selectionexpandergrabby {
+    position:absolute;
+    right:-4px;
+    bottom:-4px;
+    width:5px;
+    height:5px;
+    border:1px solid white;
+    overflow:hidden;
+    background-color:black;
+    cursor:pointer;
+    cursor:hand;
+    z-index:20;
+}
+
+.ntb-grid-selectionexpanderborder {
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+.ntb-grid-copybuffer {
+    position:absolute;
+    top:1px;
+    left:1px;
+    height:0px;
+    width:0px;
+    z-index:-1;
+}
+
+.ntb-grid-selectionexpanderborder-active {
+    border:1px dashed black;
+}
+
+.ntb-dp-input {
+    background-color:white;
+    border:1px solid black;
+}
+
+.ntb-dp-input .ntb-dp-inputbutton {
+    width:20px;
+    text-align:center;
+}
+
+.ntb-dp-input .ntb-dp-inputbutton a {
+    display:block;
+    height:16px;
+    width:16px;
+    background:url("date.gif") no-repeat;
+}
+.ntb-dp-input .ntb-dp-inputbutton a:hover {
+    background-position: -16px 0;
+}
+
+.ntb-dp-input input {
+    text-align:left;
+    padding:0;
+    margin:0;
+    border:0;
+}
+
+.ntbhyperlinkeditor {
+	text-decoration: underline;
+	cursor: pointer;
+	color: blue;
+}.nitobi-hide {
+	display:none;
+}
+
+.ntb-effects-small {
+	clear:both;
+	display:block;
+	float:none;
+	height:0px;
+	//height:1px;
+	overflow:hidden;
+	width:auto;
+}

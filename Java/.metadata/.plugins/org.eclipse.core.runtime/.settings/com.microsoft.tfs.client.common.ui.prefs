@@ -1,0 +1,4 @@
+#Fri Dec 23 11:24:40 EST 2011
+com.microsoft.tfs.vc.hideAllFilesUpToDatePrompt=never
+eclipse.preferences.version=1
+com.microsoft.tfs.vc.promptBeforeCheckin=never

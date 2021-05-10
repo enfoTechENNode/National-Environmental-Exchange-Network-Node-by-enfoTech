@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/19/trunk/Java/Node.WebServices/WebRoot/WEB-INF
+END
+axis2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/19/trunk/Java/Node.WebServices/WebRoot/WEB-INF/axis2.xml
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/19/trunk/Java/Node.WebServices/WebRoot/WEB-INF/struts-config.xml
+END
+server-config.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/19/trunk/Java/Node.WebServices/WebRoot/WEB-INF/server-config.wsdd
+END
+struts-bean.tld
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/19/trunk/Java/Node.WebServices/WebRoot/WEB-INF/struts-bean.tld
+END
+eftwc.tld
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/19/trunk/Java/Node.WebServices/WebRoot/WEB-INF/eftwc.tld
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/76/trunk/Java/Node.WebServices/WebRoot/WEB-INF/web.xml
+END

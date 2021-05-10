@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Status.Status" table="NODE_PROCESS_MONITOR">
+        <id name="processId" column="PID" type="long" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+	    <property name="transId" type="string" >
+	        <column name="TRANSACTION_ID" length="100" not-null="false"/>
+	    </property>
+	    <property name="operationId" type="long" >
+	        <column name="OPERATION_ID" length="10" not-null="false"/>
+	    </property>
+	    <property name="processName" type="string" >
+	        <column name="PROCESS_NAME" length="300" not-null="false"/>
+	    </property>
+	    <property name="processStatus" type="string" >
+	        <column name="PROCESS_STATUS" length="100" not-null="false"/>
+	    </property>
+	    <property name="nodeAddress" type="string" >
+	        <column name="NODE_ADDRESS" length="300" not-null="false"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="100" not-null="false"/>
+	    </property>
+	    <property name="updatedDate" type="timestamp" >
+	        <column name="UPDATED_DTTM" not-null="false"/>
+	    </property>	    	    
+    </class>
+</hibernate-mapping>

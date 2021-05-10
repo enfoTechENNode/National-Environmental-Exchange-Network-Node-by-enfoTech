@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/Biz/Interfaces/Query
+END
+IProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Interfaces/Query/IProcess.java
+END
+IPostProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Interfaces/Query/IPostProcess.java
+END
+IPreProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/Biz/Interfaces/Query/IPreProcess.java
+END

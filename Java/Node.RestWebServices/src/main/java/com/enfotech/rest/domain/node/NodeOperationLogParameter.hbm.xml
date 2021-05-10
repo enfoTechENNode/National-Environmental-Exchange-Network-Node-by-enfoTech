@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeOperationLogParameter" table="NODE_OPERATION_LOG_PARAMETER">
+        <composite-id name="id" class="com.enfotech.rest.domain.node.NodeOperationLogParameterId">
+            <key-property name="operationLogId" type="long">
+                <column name="OPERATION_LOG_ID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="parameterName" type="string">
+                <column name="PARAMETER_NAME" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="nodeOperationLog" class="com.enfotech.rest.domain.node.NodeOperationLog" update="false" insert="false" fetch="select">
+            <column name="OPERATION_LOG_ID" precision="10" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="parameterValue" type="string">
+            <column name="PARAMETER_VALUE" length="4000" />
+        </property>
+    </class>
+</hibernate-mapping>

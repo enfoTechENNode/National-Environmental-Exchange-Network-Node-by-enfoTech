@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2013 2:00:05 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.enfotech.rest.domain.node.NodeFileCabin" table="NODE_FILE_CABIN">
+        <id name="fileId" type="long">
+            <column name="FILE_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="transId" type="string">
+            <column name="TRANS_ID" length="50" not-null="true" />
+        </property>
+        <property name="fileName" type="string">
+            <column name="FILE_NAME" length="200" />
+        </property>
+        <property name="fileType" type="string">
+            <column name="FILE_TYPE" length="50" />
+        </property>
+        <property name="statusCd" type="string">
+            <column name="STATUS_CD" length="10" />
+        </property>
+        <property name="dataflowName" type="string">
+            <column name="DATAFLOW_NAME" length="50" />
+        </property>
+        <property name="submitUrl" type="string">
+            <column name="SUBMIT_URL" length="100" />
+        </property>
+        <property name="submitToken" type="string">
+            <column name="SUBMIT_TOKEN" length="200" />
+        </property>
+        <property name="submitDttm" type="date">
+            <column name="SUBMIT_DTTM" length="7" />
+        </property>
+        <property name="fileContent" type="blob">
+            <column name="FILE_CONTENT" />
+        </property>
+        <property name="fileSize" type="java.lang.Long">
+            <column name="FILE_SIZE" precision="10" scale="0" />
+        </property>
+        <property name="createdDttm" type="date">
+            <column name="CREATED_DTTM" length="7" not-null="true" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="50" not-null="true" />
+        </property>
+        <property name="updatedDttm" type="date">
+            <column name="UPDATED_DTTM" length="7" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="UPDATED_BY" length="50" />
+        </property>
+        <property name="documentId" type="string">
+            <column name="DOCUMENT_ID" length="50" />
+        </property>
+        <set name="rcraSubs" table="RCRA_SUB" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FILE_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.enfotech.rest.domain.node.RcraSub" />
+        </set>
+    </class>
+</hibernate-mapping>

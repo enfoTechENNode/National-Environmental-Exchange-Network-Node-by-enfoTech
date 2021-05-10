@@ -1,0 +1,25 @@
+a { text-decoration: none; color:#0066CC }
+a:hover { text-decoration: underline }
+td {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+select { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #FFFFFF; background-color: #003366; font-weight: bold}
+select.white { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #003366; background-color: #FFFFFF;}
+input { font-family: Arial,Helvetica,sans-serif; font-size: 9pt; color: #003366; font-weight: normal }
+
+.xxs {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt}
+.xs {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt}
+.s {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt}
+.l {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt}
+.title {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: bold}
+
+.actionbtn { font-family: Arial,Helvetica,sans-serif; font-size: 9pt; font-weight: normal; color: #FFFFFF; background-color:#1D459D }
+.actionbtn2 { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-weight: normal; color: #FFFFFF; background-color:#990000}
+
+.ccrs { border-color: #cccccc; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; }
+
+
+.xxs {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt}
+.tableBG {
+	background-attachment: fixed;
+	background-image: url(../images/loginbg.gif);
+	background-repeat: no-repeat;
+}

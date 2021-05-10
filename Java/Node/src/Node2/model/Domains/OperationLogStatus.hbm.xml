@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Domains.OperationLogStatus" table="NODE_OPERATION_LOG_STATUS">
+        <id name="operationLogStatusId" column="OPERATION_LOG_STATUS_ID"  type="long" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+	    <property name="operationLogStatusCD" type="string" >
+	        <column name="STATUS_CD" length="20" not-null="false"/>
+	    </property>
+	    <property name="operationLogStatusMessage" type="string" >
+	        <column name="MESSAGE" length="4000" not-null="false"/>
+	    </property>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="false"/>
+	    </property>
+	    <property name="createdDate" type="timestamp" >
+	        <column name="CREATED_DTTM" not-null="false"/>
+	    </property>
+	    
+	    <many-to-one
+        name="operationLog"
+        column="OPERATION_LOG_ID"
+        class="Node2.model.Domains.OperationLog"
+        cascade="save-update"
+        not-null="true" />
+	    
+    </class>
+</hibernate-mapping>

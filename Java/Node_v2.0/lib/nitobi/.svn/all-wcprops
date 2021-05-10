@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/nitobi
+END
+nitobi-struts2-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/nitobi/nitobi-struts2-plugin.jar
+END
+nitobi-server-lib.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/nitobi/nitobi-server-lib.jar
+END
+nitobi-cui-taglib.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/10/trunk/Java/Node_v2.0/lib/nitobi/nitobi-cui-taglib.jar
+END

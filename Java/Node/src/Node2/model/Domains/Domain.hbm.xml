@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Node2.model.Domains.Domain" table="NODE_DOMAIN">
+        <id name="domainId" column="DOMAIN_ID" type="long" unsaved-value="0">
+            <generator class="native"/>
+        </id>
+	    <property name="domainName" type="string" >
+	        <column name="DOMAIN_NAME" length="50" not-null="false"/>
+	    </property>
+	    <property name="domainDesc" type="string" >
+	        <column name="DOMAIN_DESC" length="255" not-null="false"/>
+	    </property>
+	    <property name="domainStatusCD" type="string" >
+	        <column name="DOMAIN_STATUS_CD" length="10" not-null="false"/>
+	    </property>
+	    <property name="domainStatusMSG" type="string" >
+	        <column name="DOMAIN_STATUS_MSG" length="1000" not-null="false"/>
+	    </property>
+	    <property name="createdBy" type="string" >
+	        <column name="CREATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="createdDate" type="date" >
+	        <column name="CREATED_DTTM" not-null="true"/>
+	    </property>
+	    <property name="updatedBy" type="string" >
+	        <column name="UPDATED_BY" length="50" not-null="true"/>
+	    </property>
+	    <property name="updatedDate" type="date" >
+	        <column name="UPDATED_DTTM" not-null="true"/>
+	    </property>
+	    
+	    <set 
+	        name="operations"
+	        cascade="all-delete-orphan" 
+	        inverse="true">
+	        
+	        <key column="DOMAIN_ID" />
+	        <one-to-many class="Node2.model.Domains.Operation" />
+     	</set>   
+
+	    <set 
+	        name="webservices"
+	        table="NODE_DOMAIN_WEB_SERVICE_XREF"
+	        cascade="save-update"
+	        lazy="true" 
+	        inverse="true">
+	        
+	        <key column="DOMAIN_ID" />
+	        <many-to-many class="Node2.model.Domains.Webservice" column="WEB_SERVICE_ID"/>
+     	</set>   
+
+	    <set 
+	        name="accountTypeXrefs"
+	        cascade="all-delete-orphan" 
+	        inverse="true">
+	        
+	        <key column="DOMAIN_ID" />
+	        <one-to-many class="Node2.model.Users.AccountTypeXref" />
+     	</set>   
+	    
+    </class>
+</hibernate-mapping>

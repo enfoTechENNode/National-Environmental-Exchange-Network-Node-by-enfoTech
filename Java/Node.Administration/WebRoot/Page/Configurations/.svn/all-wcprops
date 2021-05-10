@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations
+END
+DataWizardConfigUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/DataWizardConfigUpload.jsp
+END
+OperationMgrValidateUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/OperationMgrValidateUpload.jsp
+END
+OperationMgrSubmissionUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/OperationMgrSubmissionUpload.jsp
+END
+OperationMgrTemplateUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/OperationMgrTemplateUpload.jsp
+END
+GetServicesUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/GetServicesUpload.jsp
+END
+OperationMgrDownloadStyleSheet.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/45/trunk/Java/Node.Administration/WebRoot/Page/Configurations/OperationMgrDownloadStyleSheet.jsp
+END
+SysconfigUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/SysconfigUpload.jsp
+END
+Configurations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/45/trunk/Java/Node.Administration/WebRoot/Page/Configurations/Configurations.jsp
+END
+OperationMgrViewStyleSheet.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/45/trunk/Java/Node.Administration/WebRoot/Page/Configurations/OperationMgrViewStyleSheet.jsp
+END
+GetServicesDownload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/GetServicesDownload.jsp
+END
+OperationMgrOperationUpload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/OperationMgrOperationUpload.jsp
+END
+SysconfigDownload.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/12/trunk/Java/Node.Administration/WebRoot/Page/Configurations/SysconfigDownload.jsp
+END

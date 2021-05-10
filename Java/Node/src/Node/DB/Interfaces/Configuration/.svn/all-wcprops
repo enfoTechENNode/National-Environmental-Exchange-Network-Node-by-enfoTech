@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/Configuration
+END
+IOperationMgr.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/DB/Interfaces/Configuration/IOperationMgr.java
+END
+ITaskConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/8/trunk/Java/Node/src/Node/DB/Interfaces/Configuration/ITaskConfiguration.java
+END
+ISystemConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Interfaces/Configuration/ISystemConfiguration.java
+END
+IConfigurationMgr.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/72/trunk/Java/Node/src/Node/DB/Interfaces/Configuration/IConfigurationMgr.java
+END
+IGetServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/45/trunk/Java/Node/src/Node/DB/Interfaces/Configuration/IGetServices.java
+END

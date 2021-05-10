@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/OperationMgr/model
+END
+OperationMgrValidateBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/OperationMgr/model/OperationMgrValidateBean.java
+END
+OperationMgrTemplateBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/45/trunk/Java/Node/src/Node2/web/OperationMgr/model/OperationMgrTemplateBean.java
+END
+OperationMgrGenerateParameterBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/OperationMgr/model/OperationMgrGenerateParameterBean.java
+END
+OperationMgrSubmissionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/OperationMgr/model/OperationMgrSubmissionBean.java
+END
+OperationMgrBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/OperationMgr/model/OperationMgrBean.java
+END
+OperationMgrParameterBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/OperationMgr/model/OperationMgrParameterBean.java
+END

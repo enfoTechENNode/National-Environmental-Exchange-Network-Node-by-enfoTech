@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data
+END
+Types.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Types.js
+END
+NodeInterface.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/NodeInterface.js
+END
+JsonPStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/JsonPStore.js
+END
+Errors.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Errors.js
+END
+SortTypes.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/SortTypes.js
+END
+TreeStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/TreeStore.js
+END
+UuidGenerator.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/UuidGenerator.js
+END
+XmlStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/XmlStore.js
+END
+validations.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/validations.js
+END
+AbstractStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/AbstractStore.js
+END
+Batch.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Batch.js
+END
+Field.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Field.js
+END
+JsonStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/JsonStore.js
+END
+BufferStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/BufferStore.js
+END
+DirectStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/DirectStore.js
+END
+StoreManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/StoreManager.js
+END
+Request.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Request.js
+END
+JsonP.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/JsonP.js
+END
+ResultSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/ResultSet.js
+END
+ArrayStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/ArrayStore.js
+END
+Store.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Store.js
+END
+SequentialIdGenerator.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/SequentialIdGenerator.js
+END
+Connection.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Connection.js
+END
+Tree.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Tree.js
+END
+Model.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Model.js
+END
+Operation.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/Operation.js
+END
+NodeStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/NodeStore.js
+END
+IdGenerator.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/71/trunk/Java/Node.Administration/WebRoot/ext/src/data/IdGenerator.js
+END

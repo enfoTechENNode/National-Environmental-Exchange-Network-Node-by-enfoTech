@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/Services/model
+END
+GetServicesDataBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/Services/model/GetServicesDataBean.java
+END
+GetServicesNodeServicesBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/Services/model/GetServicesNodeServicesBean.java
+END
+DedlPropertyBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/45/trunk/Java/Node/src/Node2/web/Services/model/DedlPropertyBean.java
+END
+GetServicesNodePropertyBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/Services/model/GetServicesNodePropertyBean.java
+END
+DedlElementValueBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/45/trunk/Java/Node/src/Node2/web/Services/model/DedlElementValueBean.java
+END
+GetServicesNodeServicesParametersBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/Services/model/GetServicesNodeServicesParametersBean.java
+END
+GetServicesNodeServicesPropertyBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/8/trunk/Java/Node/src/Node2/web/Services/model/GetServicesNodeServicesPropertyBean.java
+END
+DedlGeneralBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/45/trunk/Java/Node/src/Node2/web/Services/model/DedlGeneralBean.java
+END
