@@ -5,7 +5,7 @@ The EN-Node is an open-source National Environmental Information Exchange Networ
 
 This Node supports both the Exchange Network Node Specifications version 1.1 and version 2.1. It is available for both .Net and Java platforms and includes a number of common data exchanges used by EPA and Exchange Network partners. This repository will include source code, a binary installation package, Installation Guide, Administrator Guide, Data Flow Developer documentation, and sample code for both the .NET and Java versions.
 
-EN-Node is owned and maintained by the Environmental Council of the States on behalf of the Exchange Network.
+enfoTech & Consulting Inc. is the original developer of the EN Node software and has transferred the license to the Environmental Council of the States (ECOS).  On behalf of the Exchange Network, EOCS will coordinate future technical service requests and inquiries received from the user community.  For technical support or product inquiry, please visit https://www.ecos.org/contact/ or  https://www.enfotech.com/#/contact// to submit your request.  
 
 Features
 
